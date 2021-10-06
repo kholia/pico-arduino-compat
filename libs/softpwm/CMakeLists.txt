@@ -1,0 +1,19 @@
+add_library(softpwm INTERFACE)
+
+target_sources(softpwm INTERFACE
+  "${CMAKE_CURRENT_LIST_DIR}/SoftPWM/SoftPWM.cpp"
+  "${CMAKE_CURRENT_LIST_DIR}/SoftPWM/SoftPWM_timer.h"
+  "${CMAKE_CURRENT_LIST_DIR}/SoftPWM/SoftPWM.h"
+)
+
+target_include_directories(softpwm INTERFACE
+ "${CMAKE_CURRENT_LIST_DIR}/SoftPWM"
+)
+
+if (NOT TARGET arduino-compat)
+    add_subdirectory(../../arduino-compat build_arduino-compat)
+endif()
+
+target_link_libraries(softpwm INTERFACE
+    arduino-compat
+)

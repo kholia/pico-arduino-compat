@@ -1,0 +1,20 @@
+add_library(sevensegmentpanel INTERFACE)
+
+target_sources(sevensegmentpanel INTERFACE
+  "${CMAKE_CURRENT_LIST_DIR}/SevenSegmentPanel/src/SevenSegmentPanel.cpp"
+  "${CMAKE_CURRENT_LIST_DIR}/SevenSegmentPanel/src/SevenSegmentPanel.h"
+  "${CMAKE_CURRENT_LIST_DIR}/SevenSegmentPanel/src/basic_font.h"
+  "${CMAKE_CURRENT_LIST_DIR}/SevenSegmentPanel/src/basic_r_font.h"
+)
+
+target_include_directories(sevensegmentpanel INTERFACE
+ "${CMAKE_CURRENT_LIST_DIR}/SevenSegmentPanel/src"
+)
+
+if (NOT TARGET arduino-compat)
+    add_subdirectory(../../arduino-compat build_arduino-compat)
+endif()
+
+target_link_libraries(sevensegmentpanel INTERFACE
+    arduino-compat
+)

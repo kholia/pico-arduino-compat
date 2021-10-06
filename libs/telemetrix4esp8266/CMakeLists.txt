@@ -1,0 +1,18 @@
+add_library(telemetrix4esp8266 INTERFACE)
+
+target_sources(telemetrix4esp8266 INTERFACE
+  "${CMAKE_CURRENT_LIST_DIR}/Telemetrix4Esp8266/Telemetrix4Esp8266.cpp"
+  "${CMAKE_CURRENT_LIST_DIR}/Telemetrix4Esp8266/Telemetrix4Esp8266.h"
+)
+
+target_include_directories(telemetrix4esp8266 INTERFACE
+ "${CMAKE_CURRENT_LIST_DIR}/Telemetrix4Esp8266"
+)
+
+if (NOT TARGET arduino-compat)
+    add_subdirectory(../../arduino-compat build_arduino-compat)
+endif()
+
+target_link_libraries(telemetrix4esp8266 INTERFACE
+    arduino-compat
+)

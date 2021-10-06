@@ -1,0 +1,18 @@
+add_library(lc_lilparser INTERFACE)
+
+target_sources(lc_lilparser INTERFACE
+  "${CMAKE_CURRENT_LIST_DIR}/LC_lilParser/src/lilParser.cpp"
+  "${CMAKE_CURRENT_LIST_DIR}/LC_lilParser/src/lilParser.h"
+)
+
+target_include_directories(lc_lilparser INTERFACE
+ "${CMAKE_CURRENT_LIST_DIR}/LC_lilParser/src"
+)
+
+if (NOT TARGET arduino-compat)
+    add_subdirectory(../../arduino-compat build_arduino-compat)
+endif()
+
+target_link_libraries(lc_lilparser INTERFACE
+    arduino-compat
+)

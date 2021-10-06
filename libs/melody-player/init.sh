@@ -1,0 +1,2 @@
+#!/bin/sh
+git submodule update --init ../../libs/melody-player/melody-player-arduino
