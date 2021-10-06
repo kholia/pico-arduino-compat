@@ -10054,3 +10054,2418 @@
 [submodule "libs/ant-arduino/ant-arduino"]
 	path = libs/ant-arduino/ant-arduino
 	url = https://github.com/cujomalainey/ant-arduino
+[submodule "libs/iftttwebhook/IFTTTWebhook"]
+	path = libs/iftttwebhook/IFTTTWebhook
+	url = https://github.com/romkey/IFTTTWebhook
+[submodule "libs/jeve_easyota/JeVe_EasyOTA"]
+	path = libs/jeve_easyota/JeVe_EasyOTA
+	url = https://github.com/jeroenvermeulen/JeVe_EasyOTA
+[submodule "libs/mdash/mDash"]
+	path = libs/mdash/mDash
+	url = https://github.com/cesanta/mDash
+[submodule "libs/grove-lora-radio-433mhz-868mhz/Grove_LoRa_433MHz_and_915MHz_RF"]
+	path = libs/grove-lora-radio-433mhz-868mhz/Grove_LoRa_433MHz_and_915MHz_RF
+	url = https://github.com/Seeed-Studio/Grove_LoRa_433MHz_and_915MHz_RF
+[submodule "libs/thingesp/ThingESP-Arduino-Library"]
+	path = libs/thingesp/ThingESP-Arduino-Library
+	url = https://github.com/SiddheshNan/ThingESP-Arduino-Library
+[submodule "libs/remotedebugger/RemoteDebugger"]
+	path = libs/remotedebugger/RemoteDebugger
+	url = https://github.com/JoaoLopesF/RemoteDebugger
+[submodule "libs/noolite_tx/arduino-noolite-tx"]
+	path = libs/noolite_tx/arduino-noolite-tx
+	url = https://github.com/foxel/arduino-noolite-tx
+[submodule "libs/wifiwebserver/WiFiWebServer"]
+	path = libs/wifiwebserver/WiFiWebServer
+	url = https://github.com/khoih-prog/WiFiWebServer
+[submodule "libs/esp8266-microgear/microgear-esp8266-arduino"]
+	path = libs/esp8266-microgear/microgear-esp8266-arduino
+	url = https://github.com/netpieio/microgear-esp8266-arduino
+[submodule "libs/wificonnect-lite/WiFiConnectLite"]
+	path = libs/wificonnect-lite/WiFiConnectLite
+	url = https://github.com/mrfaptastic/WiFiConnectLite
+[submodule "libs/tee-uc20-shield/TEE_UC20_Shield"]
+	path = libs/tee-uc20-shield/TEE_UC20_Shield
+	url = https://github.com/ThaiEasyElec/TEE_UC20_Shield
+[submodule "libs/asyncelegantota/AsyncElegantOTA"]
+	path = libs/asyncelegantota/AsyncElegantOTA
+	url = https://github.com/ayushsharma82/AsyncElegantOTA
+[submodule "libs/virtuino/virtuino"]
+	path = libs/virtuino/virtuino
+	url = https://github.com/iliaslamprou/virtuino
+[submodule "libs/adafruit-fona-library/Adafruit_FONA"]
+	path = libs/adafruit-fona-library/Adafruit_FONA
+	url = https://github.com/adafruit/Adafruit_FONA
+[submodule "libs/arest-ui/aREST_UI"]
+	path = libs/arest-ui/aREST_UI
+	url = https://github.com/marcoschwartz/aREST_UI
+[submodule "libs/spacecat/RFID-Spacecat"]
+	path = libs/spacecat/RFID-Spacecat
+	url = https://github.com/Asyasyarif/RFID-Spacecat
+[submodule "libs/esp-battery/ESPBattery"]
+	path = libs/esp-battery/ESPBattery
+	url = https://github.com/LennartHennigs/ESPBattery
+[submodule "libs/fttech-samd51-xbee/FTTech_XBee"]
+	path = libs/fttech-samd51-xbee/FTTech_XBee
+	url = https://github.com/FTTechBrasil/FTTech_XBee
+[submodule "libs/ark-cpp-crypto/cpp-crypto"]
+	path = libs/ark-cpp-crypto/cpp-crypto
+	url = https://github.com/ArkEcosystem/cpp-crypto
+[submodule "libs/lm35/LM35"]
+	path = libs/lm35/LM35
+	url = https://github.com/ggzucco/LM35
+[submodule "libs/mcp3xxx/MCP3XXX"]
+	path = libs/mcp3xxx/MCP3XXX
+	url = https://github.com/bakercp/MCP3XXX
+[submodule "libs/blynk_async_esp32_bt_wf/Blynk_Async_ESP32_BT_WF"]
+	path = libs/blynk_async_esp32_bt_wf/Blynk_Async_ESP32_BT_WF
+	url = https://github.com/khoih-prog/Blynk_Async_ESP32_BT_WF
+[submodule "libs/firebase-esp8266-client/Firebase-ESP8266"]
+	path = libs/firebase-esp8266-client/Firebase-ESP8266
+	url = https://github.com/mobizt/Firebase-ESP8266
+[submodule "libs/arduinocloudstorage/Arduino-CloudStorage"]
+	path = libs/arduinocloudstorage/Arduino-CloudStorage
+	url = https://github.com/gilmaimon/Arduino-CloudStorage
+[submodule "libs/statsdclient/arduino-statsdclient"]
+	path = libs/statsdclient/arduino-statsdclient
+	url = https://github.com/jasiek/arduino-statsdclient
+[submodule "libs/almavioslitmqtt/almavios-lit-mqtt"]
+	path = libs/almavioslitmqtt/almavios-lit-mqtt
+	url = https://github.com/almavios/almavios-lit-mqtt
+[submodule "libs/esp32-ble-midi/ESP32-BLE-MIDI"]
+	path = libs/esp32-ble-midi/ESP32-BLE-MIDI
+	url = https://github.com/max22-/ESP32-BLE-MIDI
+[submodule "libs/homekit-esp8266/Arduino-HomeKit-ESP8266"]
+	path = libs/homekit-esp8266/Arduino-HomeKit-ESP8266
+	url = https://github.com/Mixiaoxiao/Arduino-HomeKit-ESP8266
+[submodule "libs/arduino_debugutils/Arduino_DebugUtils"]
+	path = libs/arduino_debugutils/Arduino_DebugUtils
+	url = https://github.com/arduino-libraries/Arduino_DebugUtils
+[submodule "libs/azureiotprotocol_mqtt/azure-iot-arduino-protocol-mqtt"]
+	path = libs/azureiotprotocol_mqtt/azure-iot-arduino-protocol-mqtt
+	url = https://github.com/Azure/azure-iot-arduino-protocol-mqtt
+[submodule "libs/virtuino-library-for-stm32-boards/virtuino_stm32"]
+	path = libs/virtuino-library-for-stm32-boards/virtuino_stm32
+	url = https://github.com/iliaslamprou/virtuino_stm32
+[submodule "libs/ethernetbonjour/EthernetBonjour"]
+	path = libs/ethernetbonjour/EthernetBonjour
+	url = https://github.com/lathoub/EthernetBonjour
+[submodule "libs/msgpacketizer/MsgPacketizer"]
+	path = libs/msgpacketizer/MsgPacketizer
+	url = https://github.com/hideakitai/MsgPacketizer
+[submodule "libs/elmduino/ELMduino"]
+	path = libs/elmduino/ELMduino
+	url = https://github.com/PowerBroker2/ELMduino
+[submodule "libs/makestrocloudclient/MakestroCloudClient"]
+	path = libs/makestrocloudclient/MakestroCloudClient
+	url = https://github.com/dycodex/MakestroCloudClient
+[submodule "libs/serialutil/SerialUtil"]
+	path = libs/serialutil/SerialUtil
+	url = https://github.com/AlexanderLL95/SerialUtil
+[submodule "libs/cmmc_interval/CMMC_Interval"]
+	path = libs/cmmc_interval/CMMC_Interval
+	url = https://github.com/cmmakerclub/CMMC_Interval
+[submodule "libs/pinoutgroup/PinOutGroup"]
+	path = libs/pinoutgroup/PinOutGroup
+	url = https://github.com/RobTillaart/PinOutGroup
+[submodule "libs/aiomodule/AIO-module-nodemcu-arduino"]
+	path = libs/aiomodule/AIO-module-nodemcu-arduino
+	url = https://github.com/AIO-Javeriana/AIO-module-nodemcu-arduino
+[submodule "libs/sakuraio/SakuraIOArduino"]
+	path = libs/sakuraio/SakuraIOArduino
+	url = https://github.com/sakuraio/SakuraIOArduino
+[submodule "libs/msgpack/MsgPack"]
+	path = libs/msgpack/MsgPack
+	url = https://github.com/hideakitai/MsgPack
+[submodule "libs/arduino-websocket-fast/Arduino-Websocket-Fast"]
+	path = libs/arduino-websocket-fast/Arduino-Websocket-Fast
+	url = https://github.com/u0078867/Arduino-Websocket-Fast
+[submodule "libs/espasync_wifimanager_lite/ESPAsync_WiFiManager_Lite"]
+	path = libs/espasync_wifimanager_lite/ESPAsync_WiFiManager_Lite
+	url = https://github.com/khoih-prog/ESPAsync_WiFiManager_Lite
+[submodule "libs/cmmc-wifi-connector/WiFiConnector"]
+	path = libs/cmmc-wifi-connector/WiFiConnector
+	url = https://github.com/cmmakerclub/WiFiConnector
+[submodule "libs/gps/GPS"]
+	path = libs/gps/GPS
+	url = https://github.com/offcircuit/GPS
+[submodule "libs/arduinomqtt/ArduinoMqtt"]
+	path = libs/arduinomqtt/ArduinoMqtt
+	url = https://github.com/monstrenyatko/ArduinoMqtt
+[submodule "libs/arduino_machinecontrol/Arduino_MachineControl"]
+	path = libs/arduino_machinecontrol/Arduino_MachineControl
+	url = https://github.com/arduino-libraries/Arduino_MachineControl
+[submodule "libs/serialdebug/SerialDebug"]
+	path = libs/serialdebug/SerialDebug
+	url = https://github.com/JoaoLopesF/SerialDebug
+[submodule "libs/rbd_serialmanager/RBD_SerialManager"]
+	path = libs/rbd_serialmanager/RBD_SerialManager
+	url = https://github.com/alextaujenis/RBD_SerialManager
+[submodule "libs/espectro32/ESPectro32"]
+	path = libs/espectro32/ESPectro32
+	url = https://github.com/dycodex/ESPectro32
+[submodule "libs/allthingstalk-wifi-sdk/arduino-wifi-sdk"]
+	path = libs/allthingstalk-wifi-sdk/arduino-wifi-sdk
+	url = https://github.com/allthingstalk/arduino-wifi-sdk
+[submodule "libs/someserial/SomeSerial"]
+	path = libs/someserial/SomeSerial
+	url = https://github.com/asukiaaa/SomeSerial
+[submodule "libs/j1850-arduino-transceiver-library/J1850-Arduino-Transceiver-Library"]
+	path = libs/j1850-arduino-transceiver-library/J1850-Arduino-Transceiver-Library
+	url = https://github.com/VittorioEsposito/J1850-Arduino-Transceiver-Library
+[submodule "libs/seeeduino-gprs/Seeeduino_GPRS"]
+	path = libs/seeeduino-gprs/Seeeduino_GPRS
+	url = https://github.com/Seeed-Studio/Seeeduino_GPRS
+[submodule "libs/tinylora/TinyLoRa"]
+	path = libs/tinylora/TinyLoRa
+	url = https://github.com/adafruit/TinyLoRa
+[submodule "libs/arduinoirc/ArduinoIRC"]
+	path = libs/arduinoirc/ArduinoIRC
+	url = https://github.com/Fredi/ArduinoIRC
+[submodule "libs/aws-sdk-esp8266/aws-sdk-arduino-esp8266"]
+	path = libs/aws-sdk-esp8266/aws-sdk-arduino-esp8266
+	url = https://github.com/Schm1tz1/aws-sdk-arduino-esp8266
+[submodule "libs/ethernetenc/EthernetENC"]
+	path = libs/ethernetenc/EthernetENC
+	url = https://github.com/jandrassy/EthernetENC
+[submodule "libs/mkrnb/MKRNB"]
+	path = libs/mkrnb/MKRNB
+	url = https://github.com/arduino-libraries/MKRNB
+[submodule "libs/serialcommand/SerialCommand"]
+	path = libs/serialcommand/SerialCommand
+	url = https://github.com/argandas/SerialCommand
+[submodule "libs/twibus/Nb_TwiBus"]
+	path = libs/twibus/Nb_TwiBus
+	url = https://github.com/casanovg/Nb_TwiBus
+[submodule "libs/usbpause/usb-pause-arduino"]
+	path = libs/usbpause/usb-pause-arduino
+	url = https://github.com/pololu/usb-pause-arduino
+[submodule "libs/azureiothub/azure-iot-arduino"]
+	path = libs/azureiothub/azure-iot-arduino
+	url = https://github.com/Azure/azure-iot-arduino
+[submodule "libs/ambient-esp32-esp8266-lib/Ambient_ESP8266_lib"]
+	path = libs/ambient-esp32-esp8266-lib/Ambient_ESP8266_lib
+	url = https://github.com/AmbientDataInc/Ambient_ESP8266_lib
+[submodule "libs/lewis/lewis"]
+	path = libs/lewis/lewis
+	url = https://github.com/DefProc/lewis
+[submodule "libs/blynk_wifinina_wm/Blynk_WiFiNINA_WM"]
+	path = libs/blynk_wifinina_wm/Blynk_WiFiNINA_WM
+	url = https://github.com/khoih-prog/Blynk_WiFiNINA_WM
+[submodule "libs/soapesp32/SoapESP32"]
+	path = libs/soapesp32/SoapESP32
+	url = https://github.com/yellobyte/SoapESP32
+[submodule "libs/embui/EmbUI"]
+	path = libs/embui/EmbUI
+	url = https://github.com/DmytroKorniienko/EmbUI
+[submodule "libs/ghaemshopsmsim/ghaemShopSmSim"]
+	path = libs/ghaemshopsmsim/ghaemShopSmSim
+	url = https://github.com/ghaemshop/ghaemShopSmSim
+[submodule "libs/simpleespnowconnection/SimpleEspNowConnection"]
+	path = libs/simpleespnowconnection/SimpleEspNowConnection
+	url = https://github.com/saghonfly/SimpleEspNowConnection
+[submodule "libs/rs485hwserial/RS485HwSerial"]
+	path = libs/rs485hwserial/RS485HwSerial
+	url = https://github.com/sauttefk/RS485HwSerial
+[submodule "libs/wedo-2.0-ble-for-esp32/esp32_ble_wedo"]
+	path = libs/wedo-2.0-ble-for-esp32/esp32_ble_wedo
+	url = https://github.com/lemio/esp32_ble_wedo
+[submodule "libs/omesphelpers/OmEspHelpers"]
+	path = libs/omesphelpers/OmEspHelpers
+	url = https://github.com/distrakt/OmEspHelpers
+[submodule "libs/stm32duino-st25dv/ST25DV"]
+	path = libs/stm32duino-st25dv/ST25DV
+	url = https://github.com/stm32duino/ST25DV
+[submodule "libs/arduinoarcherpanelclient/ArduinoArcherPanelClient"]
+	path = libs/arduinoarcherpanelclient/ArduinoArcherPanelClient
+	url = https://github.com/byteAgenten/ArduinoArcherPanelClient
+[submodule "libs/mbed-ble-mouse/mbed-BLE-Mouse"]
+	path = libs/mbed-ble-mouse/mbed-BLE-Mouse
+	url = https://github.com/csash7/mbed-BLE-Mouse
+[submodule "libs/firebase-arduino-based-on-wifi101/Firebase-Arduino-WiFi101"]
+	path = libs/firebase-arduino-based-on-wifi101/Firebase-Arduino-WiFi101
+	url = https://github.com/mobizt/Firebase-Arduino-WiFi101
+[submodule "libs/exodecore/ExodeCore"]
+	path = libs/exodecore/ExodeCore
+	url = https://github.com/sne3ks/ExodeCore
+[submodule "libs/instructableapi/arduino-instructables-api"]
+	path = libs/instructableapi/arduino-instructables-api
+	url = https://github.com/witnessmenow/arduino-instructables-api
+[submodule "libs/lora-node/arduino-library-lora-node-shield"]
+	path = libs/lora-node/arduino-library-lora-node-shield
+	url = https://github.com/arduino-org/arduino-library-lora-node-shield
+[submodule "libs/awot/aWOT"]
+	path = libs/awot/aWOT
+	url = https://github.com/lasselukkari/aWOT
+[submodule "libs/tinysuite/TinySuite"]
+	path = libs/tinysuite/TinySuite
+	url = https://github.com/Alex079/TinySuite
+[submodule "libs/telnetstream/TelnetStream"]
+	path = libs/telnetstream/TelnetStream
+	url = https://github.com/jandrassy/TelnetStream
+[submodule "libs/approximate/Approximate"]
+	path = libs/approximate/Approximate
+	url = https://github.com/davidchatting/Approximate
+[submodule "libs/exosite/arduino_exosite_library"]
+	path = libs/exosite/arduino_exosite_library
+	url = https://github.com/exosite-garage/arduino_exosite_library
+[submodule "libs/hyperdeck/HyperDeck"]
+	path = libs/hyperdeck/HyperDeck
+	url = https://github.com/hideakitai/HyperDeck
+[submodule "libs/rf24network/RF24Network"]
+	path = libs/rf24network/RF24Network
+	url = https://github.com/TMRh20/RF24Network
+[submodule "libs/arduinoosc/ArduinoOSC"]
+	path = libs/arduinoosc/ArduinoOSC
+	url = https://github.com/hideakitai/ArduinoOSC
+[submodule "libs/hid-buttons/HID_Buttons"]
+	path = libs/hid-buttons/HID_Buttons
+	url = https://github.com/dmadison/HID_Buttons
+[submodule "libs/blynkethernet_manager/BlynkEthernet_WM"]
+	path = libs/blynkethernet_manager/BlynkEthernet_WM
+	url = https://github.com/khoih-prog/BlynkEthernet_WM
+[submodule "libs/cww-morse-transmit/cww_MorseTx"]
+	path = libs/cww-morse-transmit/cww_MorseTx
+	url = https://github.com/ridencww/cww_MorseTx
+[submodule "libs/microshell/microshell"]
+	path = libs/microshell/microshell
+	url = https://github.com/marcinbor85/microshell
+[submodule "libs/vscp/vscp-arduino"]
+	path = libs/vscp/vscp-arduino
+	url = https://github.com/BlueAndi/vscp-arduino
+[submodule "libs/rs485_asukiaaa/arduino-rs485"]
+	path = libs/rs485_asukiaaa/arduino-rs485
+	url = https://github.com/asukiaaa/arduino-rs485
+[submodule "libs/esp32_https_server/esp32_https_server"]
+	path = libs/esp32_https_server/esp32_https_server
+	url = https://github.com/fhessel/esp32_https_server
+[submodule "libs/dcd-sdk-for-arduino/dcd-sdk-arduino"]
+	path = libs/dcd-sdk-for-arduino/dcd-sdk-arduino
+	url = https://github.com/datacentricdesign/dcd-sdk-arduino
+[submodule "libs/tinymqtt/TinyMqtt"]
+	path = libs/tinymqtt/TinyMqtt
+	url = https://github.com/hsaturn/TinyMqtt
+[submodule "libs/altsoftserial/AltSoftSerial"]
+	path = libs/altsoftserial/AltSoftSerial
+	url = https://github.com/PaulStoffregen/AltSoftSerial
+[submodule "libs/acan_t4/acan-t4"]
+	path = libs/acan_t4/acan-t4
+	url = https://github.com/pierremolinaro/acan-t4
+[submodule "libs/rf24g/RF24G"]
+	path = libs/rf24g/RF24G
+	url = https://github.com/Hobietime/RF24G
+[submodule "libs/ipgeolocation/IPGeolocation"]
+	path = libs/ipgeolocation/IPGeolocation
+	url = https://github.com/dushyantahuja/IPGeolocation
+[submodule "libs/topview-nbduino-library/NBduinoLibrary"]
+	path = libs/topview-nbduino-library/NBduinoLibrary
+	url = https://github.com/tcafiero/NBduinoLibrary
+[submodule "libs/xxtea-iot-crypt/xxtea-iot-crypt"]
+	path = libs/xxtea-iot-crypt/xxtea-iot-crypt
+	url = https://github.com/boseji/xxtea-iot-crypt
+[submodule "libs/serde/serde"]
+	path = libs/serde/serde
+	url = https://github.com/FortySevenEffects/serde
+[submodule "libs/pstring-arduino-lib/PString-Arduino-lib"]
+	path = libs/pstring-arduino-lib/PString-Arduino-lib
+	url = https://github.com/boseji/PString-Arduino-lib
+[submodule "libs/wifi/WiFi"]
+	path = libs/wifi/WiFi
+	url = https://github.com/arduino-libraries/WiFi
+[submodule "libs/atmel-tss463c-van-bus-datalink-controller-library/arduino_tss463_van"]
+	path = libs/atmel-tss463c-van-bus-datalink-controller-library/arduino_tss463_van
+	url = https://github.com/morcibacsi/arduino_tss463_van
+[submodule "libs/green-beacon/green-beacon-esp32"]
+	path = libs/green-beacon/green-beacon-esp32
+	url = https://github.com/ukkz/green-beacon-esp32
+[submodule "libs/youtubeapi/arduino-youtube-api"]
+	path = libs/youtubeapi/arduino-youtube-api
+	url = https://github.com/witnessmenow/arduino-youtube-api
+[submodule "libs/restclient/RESTClient"]
+	path = libs/restclient/RESTClient
+	url = https://github.com/robbie-remote/RESTClient
+[submodule "libs/libprintf/arduino-printf"]
+	path = libs/libprintf/arduino-printf
+	url = https://github.com/embeddedartistry/arduino-printf
+[submodule "libs/aspen-sim800/SIM800"]
+	path = libs/aspen-sim800/SIM800
+	url = https://github.com/aspenforest/SIM800
+[submodule "libs/tfl-status/TFL-Status"]
+	path = libs/tfl-status/TFL-Status
+	url = https://github.com/dushyantahuja/TFL-Status
+[submodule "libs/simpleshell/SimpleShell"]
+	path = libs/simpleshell/SimpleShell
+	url = https://github.com/cafehaine/SimpleShell
+[submodule "libs/adafruit-mfrc630-rfid/Adafruit_MFRC630"]
+	path = libs/adafruit-mfrc630-rfid/Adafruit_MFRC630
+	url = https://github.com/adafruit/Adafruit_MFRC630
+[submodule "libs/slipstream/SLIPStream"]
+	path = libs/slipstream/SLIPStream
+	url = https://github.com/ssilverman/SLIPStream
+[submodule "libs/tca9548a/TCA9548A"]
+	path = libs/tca9548a/TCA9548A
+	url = https://github.com/WifWaf/TCA9548A
+[submodule "libs/mysensors/MySensors"]
+	path = libs/mysensors/MySensors
+	url = https://github.com/mysensors/MySensors
+[submodule "libs/dmxserial2/DMXSerial2"]
+	path = libs/dmxserial2/DMXSerial2
+	url = https://github.com/mathertel/DMXSerial2
+[submodule "libs/arest/aREST"]
+	path = libs/arest/aREST
+	url = https://github.com/marcoschwartz/aREST
+[submodule "libs/mkrgsm/MKRGSM"]
+	path = libs/mkrgsm/MKRGSM
+	url = https://github.com/arduino-libraries/MKRGSM
+[submodule "libs/ethernet_manager/Ethernet_Manager"]
+	path = libs/ethernet_manager/Ethernet_Manager
+	url = https://github.com/khoih-prog/Ethernet_Manager
+[submodule "libs/ubidots-gprs-library/ubidots-arduino-gprs"]
+	path = libs/ubidots-gprs-library/ubidots-arduino-gprs
+	url = https://github.com/ubidots/ubidots-arduino-gprs
+[submodule "libs/stm32duino-x-nucleo-s2915a1/X-NUCLEO-S2915A1"]
+	path = libs/stm32duino-x-nucleo-s2915a1/X-NUCLEO-S2915A1
+	url = https://github.com/stm32duino/X-NUCLEO-S2915A1
+[submodule "libs/alertme/AlertMe"]
+	path = libs/alertme/AlertMe
+	url = https://github.com/connornishijima/AlertMe
+[submodule "libs/uipethernet/UIPEthernet"]
+	path = libs/uipethernet/UIPEthernet
+	url = https://github.com/UIPEthernet/UIPEthernet
+[submodule "libs/iotkaran/Arduino"]
+	path = libs/iotkaran/Arduino
+	url = https://github.com/iotkaran/Arduino
+[submodule "libs/advancedserial/advancedSerial"]
+	path = libs/advancedserial/advancedSerial
+	url = https://github.com/klenov/advancedSerial
+[submodule "libs/chirpsdk/chirp-arduino"]
+	path = libs/chirpsdk/chirp-arduino
+	url = https://github.com/chirp/chirp-arduino
+[submodule "libs/byteconvert/ByteConvert_arduino"]
+	path = libs/byteconvert/ByteConvert_arduino
+	url = https://github.com/SloCompTech/ByteConvert_arduino
+[submodule "libs/perswifimanager/PersWiFiManager"]
+	path = libs/perswifimanager/PersWiFiManager
+	url = https://github.com/r-downing/PersWiFiManager
+[submodule "libs/http/Arduino_HTTP"]
+	path = libs/http/Arduino_HTTP
+	url = https://github.com/qub1750ul/Arduino_HTTP
+[submodule "libs/ps3-controller-host/esp32-ps3"]
+	path = libs/ps3-controller-host/esp32-ps3
+	url = https://github.com/jvpernis/esp32-ps3
+[submodule "libs/crmx_timotwo/CRMX_TimoTwo"]
+	path = libs/crmx_timotwo/CRMX_TimoTwo
+	url = https://github.com/marccolemont/CRMX_TimoTwo
+[submodule "libs/nbmicro/Nb_Micro"]
+	path = libs/nbmicro/Nb_Micro
+	url = https://github.com/casanovg/Nb_Micro
+[submodule "libs/vt100/VT100"]
+	path = libs/vt100/VT100
+	url = https://github.com/kcl93/VT100
+[submodule "libs/rbl_nrf8001/nRF8001"]
+	path = libs/rbl_nrf8001/nRF8001
+	url = https://github.com/RedBearLab/nRF8001
+[submodule "libs/arduinoeccx08/ArduinoECCX08"]
+	path = libs/arduinoeccx08/ArduinoECCX08
+	url = https://github.com/arduino-libraries/ArduinoECCX08
+[submodule "libs/oneiot-connectivity/cloud-connectivity-lib"]
+	path = libs/oneiot-connectivity/cloud-connectivity-lib
+	url = https://github.com/1IoT/cloud-connectivity-lib
+[submodule "libs/algoduino/algoduino"]
+	path = libs/algoduino/algoduino
+	url = https://github.com/algoduino/algoduino
+[submodule "libs/easyiot-esp8266/Easyiot-Esp8266"]
+	path = libs/easyiot-esp8266/Easyiot-Esp8266
+	url = https://github.com/EasyIoT-BR/Easyiot-Esp8266
+[submodule "libs/octoprintapi/OctoPrintAPI"]
+	path = libs/octoprintapi/OctoPrintAPI
+	url = https://github.com/chunkysteveo/OctoPrintAPI
+[submodule "libs/sodaq_rn2483/Sodaq_RN2483"]
+	path = libs/sodaq_rn2483/Sodaq_RN2483
+	url = https://github.com/SodaqMoja/Sodaq_RN2483
+[submodule "libs/packetizer/Packetizer"]
+	path = libs/packetizer/Packetizer
+	url = https://github.com/hideakitai/Packetizer
+[submodule "libs/esp32tinyusb/EspTinyUSB"]
+	path = libs/esp32tinyusb/EspTinyUSB
+	url = https://github.com/chegewara/EspTinyUSB
+[submodule "libs/aliyuniotsdk/arduino-aliyun-iot-sdk"]
+	path = libs/aliyuniotsdk/arduino-aliyun-iot-sdk
+	url = https://github.com/xinyu198736/arduino-aliyun-iot-sdk
+[submodule "libs/sunezy-mon/arduino-pv"]
+	path = libs/sunezy-mon/arduino-pv
+	url = https://github.com/guglicap/arduino-pv
+[submodule "libs/iottweetesp32/IoTtweetESP32"]
+	path = libs/iottweetesp32/IoTtweetESP32
+	url = https://github.com/Isaranu/IoTtweetESP32
+[submodule "libs/esp32-mail-client/ESP32-Mail-Client"]
+	path = libs/esp32-mail-client/ESP32-Mail-Client
+	url = https://github.com/mobizt/ESP32-Mail-Client
+[submodule "libs/neoswserial/NeoSWSerial"]
+	path = libs/neoswserial/NeoSWSerial
+	url = https://github.com/SlashDevin/NeoSWSerial
+[submodule "libs/redis-for-arduino/arduino-redis"]
+	path = libs/redis-for-arduino/arduino-redis
+	url = https://github.com/electric-sheep-co/arduino-redis
+[submodule "libs/mcp2515-nb/arduino-MCP2515-nb"]
+	path = libs/mcp2515-nb/arduino-MCP2515-nb
+	url = https://github.com/WitchCraftWorks/arduino-MCP2515-nb
+[submodule "libs/telegrambot/TelegramBot-Library"]
+	path = libs/telegrambot/TelegramBot-Library
+	url = https://github.com/CasaJasmina/TelegramBot-Library
+[submodule "libs/esp-dash/ESP-DASH"]
+	path = libs/esp-dash/ESP-DASH
+	url = https://github.com/ayushsharma82/ESP-DASH
+[submodule "libs/openlcb_single_thread/OpenLCB_Single_Thread"]
+	path = libs/openlcb_single_thread/OpenLCB_Single_Thread
+	url = https://github.com/openlcb/OpenLCB_Single_Thread
+[submodule "libs/cmmc_nb-iot/CMMC_NB-IoT"]
+	path = libs/cmmc_nb-iot/CMMC_NB-IoT
+	url = https://github.com/cmmakerclub/CMMC_NB-IoT
+[submodule "libs/toggl-api-v8-arduino-implementation/Arduino-Toggl-API"]
+	path = libs/toggl-api-v8-arduino-implementation/Arduino-Toggl-API
+	url = https://github.com/JoeyStrandnes/Arduino-Toggl-API
+[submodule "libs/streaming/Streaming"]
+	path = libs/streaming/Streaming
+	url = https://github.com/janelia-arduino/Streaming
+[submodule "libs/thethingsnetwork/arduino-device-lib"]
+	path = libs/thethingsnetwork/arduino-device-lib
+	url = https://github.com/TheThingsNetwork/arduino-device-lib
+[submodule "libs/esp-async-e1.31/ESPAsyncE131"]
+	path = libs/esp-async-e1.31/ESPAsyncE131
+	url = https://github.com/forkineye/ESPAsyncE131
+[submodule "libs/serialvariable/SerialVariable"]
+	path = libs/serialvariable/SerialVariable
+	url = https://github.com/janthefischer/SerialVariable
+[submodule "libs/parallelprinter/ParallelPrinter"]
+	path = libs/parallelprinter/ParallelPrinter
+	url = https://github.com/RobTillaart/ParallelPrinter
+[submodule "libs/temboo/Temboo"]
+	path = libs/temboo/Temboo
+	url = https://github.com/arduino-libraries/Temboo
+[submodule "libs/iotappstory-esp/ESP-Library"]
+	path = libs/iotappstory-esp/ESP-Library
+	url = https://github.com/iotappstory/ESP-Library
+[submodule "libs/pulsecom/PulseCom"]
+	path = libs/pulsecom/PulseCom
+	url = https://github.com/fire1/PulseCom
+[submodule "libs/jsonlogger/JsonLogger"]
+	path = libs/jsonlogger/JsonLogger
+	url = https://github.com/ravelab/JsonLogger
+[submodule "libs/iottweet/IoTtweet"]
+	path = libs/iottweet/IoTtweet
+	url = https://github.com/Isaranu/IoTtweet
+[submodule "libs/usiwire/USIWire"]
+	path = libs/usiwire/USIWire
+	url = https://github.com/puuu/USIWire
+[submodule "libs/blinker/blinker-library"]
+	path = libs/blinker/blinker-library
+	url = https://github.com/blinker-iot/blinker-library
+[submodule "libs/esppassthrough/ESPpassthrough"]
+	path = libs/esppassthrough/ESPpassthrough
+	url = https://github.com/Saruccio/ESPpassthrough
+[submodule "libs/arduinors485/ArduinoRS485"]
+	path = libs/arduinors485/ArduinoRS485
+	url = https://github.com/arduino-libraries/ArduinoRS485
+[submodule "libs/cc3000-mdns/CC3000_MDNS"]
+	path = libs/cc3000-mdns/CC3000_MDNS
+	url = https://github.com/adafruit/CC3000_MDNS
+[submodule "libs/acetmi/AceTMI"]
+	path = libs/acetmi/AceTMI
+	url = https://github.com/bxparks/AceTMI
+[submodule "libs/simpleudpcontroller/SimpleUDPController"]
+	path = libs/simpleudpcontroller/SimpleUDPController
+	url = https://github.com/Toernblom/SimpleUDPController
+[submodule "libs/gigabits/gigabits-arduino"]
+	path = libs/gigabits/gigabits-arduino
+	url = https://github.com/gigabits-org/gigabits-arduino
+[submodule "libs/twitterapi/arduino-twitter-api"]
+	path = libs/twitterapi/arduino-twitter-api
+	url = https://github.com/witnessmenow/arduino-twitter-api
+[submodule "libs/halakekitfirst/HaLakeKitFirst-Library"]
+	path = libs/halakekitfirst/HaLakeKitFirst-Library
+	url = https://github.com/nyampass/HaLakeKitFirst-Library
+[submodule "libs/usbmidi/USBMIDI"]
+	path = libs/usbmidi/USBMIDI
+	url = https://github.com/BlokasLabs/USBMIDI
+[submodule "libs/arduinosinspace/arduinosinspace"]
+	path = libs/arduinosinspace/arduinosinspace
+	url = https://bitbucket.org/pjhardy/arduinosinspace.git
+[submodule "libs/thetroll/TheTroll"]
+	path = libs/thetroll/TheTroll
+	url = https://github.com/kd8bxp/TheTroll
+[submodule "libs/twilio-esp32-client/twilio-esp32-client"]
+	path = libs/twilio-esp32-client/twilio-esp32-client
+	url = https://github.com/ademuri/twilio-esp32-client
+[submodule "libs/simpleserialprotocol/simple-serial-protocol-arduino"]
+	path = libs/simpleserialprotocol/simple-serial-protocol-arduino
+	url = https://gitlab.com/yesbotics/simple-serial-protocol/simple-serial-protocol-arduino.git
+[submodule "libs/arduino-async-modem/arduino-async-modem"]
+	path = libs/arduino-async-modem/arduino-async-modem
+	url = https://github.com/coddingtonbear/arduino-async-modem
+[submodule "libs/cmmc-mqtt-connector/MQTT-Connector"]
+	path = libs/cmmc-mqtt-connector/MQTT-Connector
+	url = https://github.com/cmmakerclub/MQTT-Connector
+[submodule "libs/rtt-ethernet/RTT-Ethernet"]
+	path = libs/rtt-ethernet/RTT-Ethernet
+	url = https://github.com/onelife/RTT-Ethernet
+[submodule "libs/mfrc522/rfid"]
+	path = libs/mfrc522/rfid
+	url = https://github.com/miguelbalboa/rfid
+[submodule "libs/indhilib/indhi-lib-arduino-esp32"]
+	path = libs/indhilib/indhi-lib-arduino-esp32
+	url = https://github.com/dhi-nikhil/indhi-lib-arduino-esp32
+[submodule "libs/easyui/EasyUI"]
+	path = libs/easyui/EasyUI
+	url = https://github.com/ayushsharma82/EasyUI
+[submodule "libs/wifispi/WiFiSpi"]
+	path = libs/wifispi/WiFiSpi
+	url = https://github.com/JiriBilek/WiFiSpi
+[submodule "libs/arduinohttpserver/ArduinoHttpServer"]
+	path = libs/arduinohttpserver/ArduinoHttpServer
+	url = https://github.com/QuickSander/ArduinoHttpServer
+[submodule "libs/melopero-ubx-protocol/Melopero_UBX"]
+	path = libs/melopero-ubx-protocol/Melopero_UBX
+	url = https://github.com/melopero/Melopero_UBX
+[submodule "libs/button2/Button2"]
+	path = libs/button2/Button2
+	url = https://github.com/LennartHennigs/Button2
+[submodule "libs/dynamixel2arduino/Dynamixel2Arduino"]
+	path = libs/dynamixel2arduino/Dynamixel2Arduino
+	url = https://github.com/ROBOTIS-GIT/Dynamixel2Arduino
+[submodule "libs/cytron-espwifi-shield/CytronWiFiShield"]
+	path = libs/cytron-espwifi-shield/CytronWiFiShield
+	url = https://github.com/CytronTechnologies/CytronWiFiShield
+[submodule "libs/easyssdp/EasySSDP"]
+	path = libs/easyssdp/EasySSDP
+	url = https://github.com/r-downing/EasySSDP
+[submodule "libs/sodaq_lis3de/Sodaq_LIS3DE"]
+	path = libs/sodaq_lis3de/Sodaq_LIS3DE
+	url = https://github.com/SodaqMoja/Sodaq_LIS3DE
+[submodule "libs/pagebuilder/PageBuilder"]
+	path = libs/pagebuilder/PageBuilder
+	url = https://github.com/Hieromon/PageBuilder
+[submodule "libs/dmxserial/DMXSerial"]
+	path = libs/dmxserial/DMXSerial
+	url = https://github.com/mathertel/DMXSerial
+[submodule "libs/openmrnlite/OpenMRNLite"]
+	path = libs/openmrnlite/OpenMRNLite
+	url = https://github.com/openmrn/OpenMRNLite
+[submodule "libs/libedge/libedge"]
+	path = libs/libedge/libedge
+	url = https://github.com/EdgeiLAB/libedge
+[submodule "libs/espmail/ESPMail"]
+	path = libs/espmail/ESPMail
+	url = https://github.com/grzesl/ESPMail
+[submodule "libs/adafruit-cc3000-library/Adafruit_CC3000_Library"]
+	path = libs/adafruit-cc3000-library/Adafruit_CC3000_Library
+	url = https://github.com/adafruit/Adafruit_CC3000_Library
+[submodule "libs/ansi/ANSI"]
+	path = libs/ansi/ANSI
+	url = https://github.com/RobTillaart/ANSI
+[submodule "libs/ctbot/CTBot"]
+	path = libs/ctbot/CTBot
+	url = https://github.com/shurillu/CTBot
+[submodule "libs/honeylemon/HONEYLemon"]
+	path = libs/honeylemon/HONEYLemon
+	url = https://github.com/jackrobotics/HONEYLemon
+[submodule "libs/esp8266restclient/ESP8266RestClient"]
+	path = libs/esp8266restclient/ESP8266RestClient
+	url = https://github.com/fabianofranca/ESP8266RestClient
+[submodule "libs/aqualabosensor/AqualaboSensorsLibrary"]
+	path = libs/aqualabosensor/AqualaboSensorsLibrary
+	url = https://github.com/ElectronicCats/AqualaboSensorsLibrary
+[submodule "libs/connectthings_esp8266/ConnectThings_ESP8266"]
+	path = libs/connectthings_esp8266/ConnectThings_ESP8266
+	url = https://github.com/connect-things/ConnectThings_ESP8266
+[submodule "libs/sodaq_n2x/Sodaq_N2X"]
+	path = libs/sodaq_n2x/Sodaq_N2X
+	url = https://github.com/SodaqMoja/Sodaq_N2X
+[submodule "libs/acan2515tiny/acan2515Tiny"]
+	path = libs/acan2515tiny/acan2515Tiny
+	url = https://github.com/pierremolinaro/acan2515Tiny
+[submodule "libs/nullserial/NullSerial"]
+	path = libs/nullserial/NullSerial
+	url = https://github.com/iitaka1142/NullSerial
+[submodule "libs/gyverbus/GyverBus"]
+	path = libs/gyverbus/GyverBus
+	url = https://github.com/GyverLibs/GyverBus
+[submodule "libs/dwarf433/dwarf433"]
+	path = libs/dwarf433/dwarf433
+	url = https://github.com/fterrier/dwarf433
+[submodule "libs/allthingstalk-lte-m-sdk/arduino-ltem-sdk"]
+	path = libs/allthingstalk-lte-m-sdk/arduino-ltem-sdk
+	url = https://github.com/allthingstalk/arduino-ltem-sdk
+[submodule "libs/simplewificlient/SimpleWiFiClient"]
+	path = libs/simplewificlient/SimpleWiFiClient
+	url = https://github.com/Toernblom/SimpleWiFiClient
+[submodule "libs/stm32duino-ism43362-m3g-l44/WiFi-ISM43362-M3G-L44"]
+	path = libs/stm32duino-ism43362-m3g-l44/WiFi-ISM43362-M3G-L44
+	url = https://github.com/stm32duino/WiFi-ISM43362-M3G-L44
+[submodule "libs/buffered-streams/ArduinoBufferedStreams"]
+	path = libs/buffered-streams/ArduinoBufferedStreams
+	url = https://github.com/paulo-raca/ArduinoBufferedStreams
+[submodule "libs/swrtc/swRTC"]
+	path = libs/swrtc/swRTC
+	url = https://github.com/leomil72/swRTC
+[submodule "libs/neobufferedprint/NeoBufferedPrint"]
+	path = libs/neobufferedprint/NeoBufferedPrint
+	url = https://github.com/SlashDevin/NeoBufferedPrint
+[submodule "libs/snappyproto/arduino-snappy-proto"]
+	path = libs/snappyproto/arduino-snappy-proto
+	url = https://github.com/grafana/arduino-snappy-proto
+[submodule "libs/commander/Commander"]
+	path = libs/commander/Commander
+	url = https://github.com/CreativeRobotics/Commander
+[submodule "libs/the-iot-guru-integration/theiotguru-arduino-library"]
+	path = libs/the-iot-guru-integration/theiotguru-arduino-library
+	url = https://github.com/IoTGuruLive/theiotguru-arduino-library
+[submodule "libs/podenosim/PodEnoSim"]
+	path = libs/podenosim/PodEnoSim
+	url = https://github.com/PodgroupConnectivity/PodEnoSim
+[submodule "libs/serialcom/SerialCom"]
+	path = libs/serialcom/SerialCom
+	url = https://github.com/BEAT-System/SerialCom
+[submodule "libs/justwifi/justwifi"]
+	path = libs/justwifi/justwifi
+	url = https://github.com/xoseperez/justwifi
+[submodule "libs/helium/helium-arduino"]
+	path = libs/helium/helium-arduino
+	url = https://github.com/helium/helium-arduino
+[submodule "libs/antares-esp8266-mqtt/antares-esp8266-mqtt"]
+	path = libs/antares-esp8266-mqtt/antares-esp8266-mqtt
+	url = https://github.com/antaresdocumentation/antares-esp8266-mqtt
+[submodule "libs/grove-125khz-rfid-reader/RFID_Library"]
+	path = libs/grove-125khz-rfid-reader/RFID_Library
+	url = https://github.com/Seeed-Studio/RFID_Library
+[submodule "libs/mysql_mariadb_generic/MySQL_MariaDB_Generic"]
+	path = libs/mysql_mariadb_generic/MySQL_MariaDB_Generic
+	url = https://github.com/khoih-prog/MySQL_MariaDB_Generic
+[submodule "libs/maerklinmotorola/MaerklinMotorola"]
+	path = libs/maerklinmotorola/MaerklinMotorola
+	url = https://github.com/Laserlicht/MaerklinMotorola
+[submodule "libs/blynk_teensy/Blynk_Teensy"]
+	path = libs/blynk_teensy/Blynk_Teensy
+	url = https://github.com/khoih-prog/Blynk_Teensy
+[submodule "libs/mdnsresolver/mDNSResolver"]
+	path = libs/mdnsresolver/mDNSResolver
+	url = https://github.com/lbussy/mDNSResolver
+[submodule "libs/ufox/Ufox"]
+	path = libs/ufox/Ufox
+	url = https://github.com/TECA-IOT/Ufox
+[submodule "libs/adafruit-bluefruitle-nrf51/Adafruit_BluefruitLE_nRF51"]
+	path = libs/adafruit-bluefruitle-nrf51/Adafruit_BluefruitLE_nRF51
+	url = https://github.com/adafruit/Adafruit_BluefruitLE_nRF51
+[submodule "libs/mkrwan/MKRWAN"]
+	path = libs/mkrwan/MKRWAN
+	url = https://github.com/arduino-libraries/MKRWAN
+[submodule "libs/promlokitransport/arduino-prom-loki-transport"]
+	path = libs/promlokitransport/arduino-prom-loki-transport
+	url = https://github.com/grafana/arduino-prom-loki-transport
+[submodule "libs/esp8266-ping/esp8266-ping"]
+	path = libs/esp8266-ping/esp8266-ping
+	url = https://github.com/bluemurder/esp8266-ping
+[submodule "libs/emucant4/EMUcanT4"]
+	path = libs/emucant4/EMUcanT4
+	url = https://github.com/designer2k2/EMUcanT4
+[submodule "libs/blynk_async_wm/Blynk_Async_WM"]
+	path = libs/blynk_async_wm/Blynk_Async_WM
+	url = https://github.com/khoih-prog/Blynk_Async_WM
+[submodule "libs/ci2c/cI2C"]
+	path = libs/ci2c/cI2C
+	url = https://github.com/SMFSW/cI2C
+[submodule "libs/closedcube-tca9548a/ClosedCube_TCA9548A_Arduino"]
+	path = libs/closedcube-tca9548a/ClosedCube_TCA9548A_Arduino
+	url = https://github.com/closedcube/ClosedCube_TCA9548A_Arduino
+[submodule "libs/lora/arduino-LoRa"]
+	path = libs/lora/arduino-LoRa
+	url = https://github.com/sandeepmistry/arduino-LoRa
+[submodule "libs/artnet/ArtNet"]
+	path = libs/artnet/ArtNet
+	url = https://github.com/hideakitai/ArtNet
+[submodule "libs/multi_bitbang/Multi_BitBang"]
+	path = libs/multi_bitbang/Multi_BitBang
+	url = https://github.com/bitbank2/Multi_BitBang
+[submodule "libs/autoconnect/AutoConnect"]
+	path = libs/autoconnect/AutoConnect
+	url = https://github.com/Hieromon/AutoConnect
+[submodule "libs/websockets_generic/WebSockets_Generic"]
+	path = libs/websockets_generic/WebSockets_Generic
+	url = https://github.com/khoih-prog/WebSockets_Generic
+[submodule "libs/somoiod/SOMOIoD"]
+	path = libs/somoiod/SOMOIoD
+	url = https://github.com/4dsystems/SOMOIoD
+[submodule "libs/blaeckserial/BlaeckSerial"]
+	path = libs/blaeckserial/BlaeckSerial
+	url = https://github.com/sebaJoSt/BlaeckSerial
+[submodule "libs/i2c-helper/I2CHelper"]
+	path = libs/i2c-helper/I2CHelper
+	url = https://github.com/Basirk/I2CHelper
+[submodule "libs/dropboxmanager/DropboxManager"]
+	path = libs/dropboxmanager/DropboxManager
+	url = https://github.com/lucasromeiro/DropboxManager
+[submodule "libs/grafanaloki/loki-arduino"]
+	path = libs/grafanaloki/loki-arduino
+	url = https://github.com/grafana/loki-arduino
+[submodule "libs/cbusconfig/CBUSconfig"]
+	path = libs/cbusconfig/CBUSconfig
+	url = https://github.com/MERG-DEV/CBUSconfig
+[submodule "libs/homeyduino/homey-arduino-library"]
+	path = libs/homeyduino/homey-arduino-library
+	url = https://github.com/athombv/homey-arduino-library
+[submodule "libs/sixfab_nbiot/Sixfab_Arduino_NBIoT_Shield"]
+	path = libs/sixfab_nbiot/Sixfab_Arduino_NBIoT_Shield
+	url = https://github.com/sixfab/Sixfab_Arduino_NBIoT_Shield
+[submodule "libs/wifiespat/WiFiEspAT"]
+	path = libs/wifiespat/WiFiEspAT
+	url = https://github.com/jandrassy/WiFiEspAT
+[submodule "libs/sma-sunnyboy-reader/SMA-SunnyBoy-Reader"]
+	path = libs/sma-sunnyboy-reader/SMA-SunnyBoy-Reader
+	url = https://github.com/pkoerber/SMA-SunnyBoy-Reader
+[submodule "libs/wizfi310/WizFi310_arduino_library"]
+	path = libs/wizfi310/WizFi310_arduino_library
+	url = https://github.com/Wiznet/WizFi310_arduino_library
+[submodule "libs/multitrans/MultiTrans"]
+	path = libs/multitrans/MultiTrans
+	url = https://github.com/feklee/MultiTrans
+[submodule "libs/esp_wifimanager/ESP_WiFiManager"]
+	path = libs/esp_wifimanager/ESP_WiFiManager
+	url = https://github.com/khoih-prog/ESP_WiFiManager
+[submodule "libs/ppposclient/ppposclient"]
+	path = libs/ppposclient/ppposclient
+	url = https://github.com/levkovigor/ppposclient
+[submodule "libs/bleserial/BLESerial"]
+	path = libs/bleserial/BLESerial
+	url = https://github.com/5pIO/BLESerial
+[submodule "libs/moduleinterface/ModuleInterface"]
+	path = libs/moduleinterface/ModuleInterface
+	url = https://github.com/fredilarsen/ModuleInterface
+[submodule "libs/yet-another-arduino-wiegand-library/YetAnotherArduinoWiegandLibrary"]
+	path = libs/yet-another-arduino-wiegand-library/YetAnotherArduinoWiegandLibrary
+	url = https://github.com/paulo-raca/YetAnotherArduinoWiegandLibrary
+[submodule "libs/acewire/AceWire"]
+	path = libs/acewire/AceWire
+	url = https://github.com/bxparks/AceWire
+[submodule "libs/ble_definitions/ble_definitions"]
+	path = libs/ble_definitions/ble_definitions
+	url = https://github.com/amaxilat/ble_definitions
+[submodule "libs/blynk_async_gsm_manager/Blynk_Async_GSM_Manager"]
+	path = libs/blynk_async_gsm_manager/Blynk_Async_GSM_Manager
+	url = https://github.com/khoih-prog/Blynk_Async_GSM_Manager
+[submodule "libs/rcn600/Rcn600"]
+	path = libs/rcn600/Rcn600
+	url = https://github.com/TheFidax/Rcn600
+[submodule "libs/iotwebconf/IotWebConf"]
+	path = libs/iotwebconf/IotWebConf
+	url = https://github.com/prampec/IotWebConf
+[submodule "libs/ethercard/EtherCard"]
+	path = libs/ethercard/EtherCard
+	url = https://github.com/njh/EtherCard
+[submodule "libs/due_can/due_can"]
+	path = libs/due_can/due_can
+	url = https://github.com/collin80/due_can
+[submodule "libs/azureiotutility/azure-iot-arduino-utility"]
+	path = libs/azureiotutility/azure-iot-arduino-utility
+	url = https://github.com/Azure/azure-iot-arduino-utility
+[submodule "libs/arduino_connectionhandler/Arduino_ConnectionHandler"]
+	path = libs/arduino_connectionhandler/Arduino_ConnectionHandler
+	url = https://github.com/arduino-libraries/Arduino_ConnectionHandler
+[submodule "libs/adafruit-io-arduino/Adafruit_IO_Arduino"]
+	path = libs/adafruit-io-arduino/Adafruit_IO_Arduino
+	url = https://github.com/adafruit/Adafruit_IO_Arduino
+[submodule "libs/beelan-lorawan/arduino-LoRaWAN"]
+	path = libs/beelan-lorawan/arduino-LoRaWAN
+	url = https://github.com/BeelanMX/arduino-LoRaWAN
+[submodule "libs/dw1000/arduino-dw1000"]
+	path = libs/dw1000/arduino-dw1000
+	url = https://github.com/thotro/arduino-dw1000
+[submodule "libs/microchip_rn487x/Microchip_RN487x"]
+	path = libs/microchip_rn487x/Microchip_RN487x
+	url = https://github.com/SodaqMoja/Microchip_RN487x
+[submodule "libs/radiolib/RadioLib"]
+	path = libs/radiolib/RadioLib
+	url = https://github.com/jgromes/RadioLib
+[submodule "libs/dlpacket/DLPacket"]
+	path = libs/dlpacket/DLPacket
+	url = https://github.com/kremio/DLPacket
+[submodule "libs/datavisualizer/DataVisualizer"]
+	path = libs/datavisualizer/DataVisualizer
+	url = https://github.com/LaCocoRoco/DataVisualizer
+[submodule "libs/arduinoserialtotcpbridgeclient/ArduinoSerialToTCPBridgeClient"]
+	path = libs/arduinoserialtotcpbridgeclient/ArduinoSerialToTCPBridgeClient
+	url = https://github.com/RoanBrand/ArduinoSerialToTCPBridgeClient
+[submodule "libs/aprs-is-lib/APRS-IS-Lib"]
+	path = libs/aprs-is-lib/APRS-IS-Lib
+	url = https://github.com/peterus/APRS-IS-Lib
+[submodule "libs/seeed_arduino_mbedtls/Seeed_Arduino_mbedtls"]
+	path = libs/seeed_arduino_mbedtls/Seeed_Arduino_mbedtls
+	url = https://github.com/Seeed-Studio/Seeed_Arduino_mbedtls
+[submodule "libs/nb-twi-cmd/nb-twi-cmd"]
+	path = libs/nb-twi-cmd/nb-twi-cmd
+	url = https://github.com/casanovg/nb-twi-cmd
+[submodule "libs/robocore-smw_sx1276m0/RoboCore_SMW-SX1276M0"]
+	path = libs/robocore-smw_sx1276m0/RoboCore_SMW-SX1276M0
+	url = https://github.com/RoboCore/RoboCore_SMW-SX1276M0
+[submodule "libs/seeed-arduino-rpcble/Seeed_Arduino_rpcBLE"]
+	path = libs/seeed-arduino-rpcble/Seeed_Arduino_rpcBLE
+	url = https://github.com/Seeed-Studio/Seeed_Arduino_rpcBLE
+[submodule "libs/opcserver/OpcServer"]
+	path = libs/opcserver/OpcServer
+	url = https://github.com/plasticrake/OpcServer
+[submodule "libs/jm_wire/jm_Wire"]
+	path = libs/jm_wire/jm_Wire
+	url = https://github.com/jmparatte/jm_Wire
+[submodule "libs/sodaq_nbiot/Sodaq_nbIOT"]
+	path = libs/sodaq_nbiot/Sodaq_nbIOT
+	url = https://github.com/SodaqMoja/Sodaq_nbIOT
+[submodule "libs/btle/BTLE"]
+	path = libs/btle/BTLE
+	url = https://github.com/floe/BTLE
+[submodule "libs/vitconiot/VitconIOT"]
+	path = libs/vitconiot/VitconIOT
+	url = https://github.com/vitcon-iot/VitconIOT
+[submodule "libs/asyncstream/AsyncStream"]
+	path = libs/asyncstream/AsyncStream
+	url = https://github.com/GyverLibs/AsyncStream
+[submodule "libs/gyveruart/GyverUART"]
+	path = libs/gyveruart/GyverUART
+	url = https://github.com/GyverLibs/GyverUART
+[submodule "libs/crmui3/CRMui3"]
+	path = libs/crmui3/CRMui3
+	url = https://github.com/WonderCRM/CRMui3
+[submodule "libs/asyncwebserver_wt32_eth01/AsyncWebServer_WT32_ETH01"]
+	path = libs/asyncwebserver_wt32_eth01/AsyncWebServer_WT32_ETH01
+	url = https://github.com/khoih-prog/AsyncWebServer_WT32_ETH01
+[submodule "libs/pushdata_esp8266_ssl/Arduino_ESP8266_SSL"]
+	path = libs/pushdata_esp8266_ssl/Arduino_ESP8266_SSL
+	url = https://github.com/pushdata-io/Arduino_ESP8266_SSL
+[submodule "libs/smarteverything-sigfox-le51-868/sme-le51-868-library"]
+	path = libs/smarteverything-sigfox-le51-868/sme-le51-868-library
+	url = https://github.com/ameltech/sme-le51-868-library
+[submodule "libs/hid-project/HID"]
+	path = libs/hid-project/HID
+	url = https://github.com/NicoHood/HID
+[submodule "libs/gtt/MatrixOrbitalGTTClientLibrary"]
+	path = libs/gtt/MatrixOrbitalGTTClientLibrary
+	url = https://github.com/MatrixOrbital/MatrixOrbitalGTTClientLibrary
+[submodule "libs/hardwarebleserial/Arduino-HardwareBLESerial"]
+	path = libs/hardwarebleserial/Arduino-HardwareBLESerial
+	url = https://github.com/Uberi/Arduino-HardwareBLESerial
+[submodule "libs/artnetwifi/ArtnetWifi"]
+	path = libs/artnetwifi/ArtnetWifi
+	url = https://github.com/rstephan/ArtnetWifi
+[submodule "libs/nrflite/NRFLite"]
+	path = libs/nrflite/NRFLite
+	url = https://github.com/dparson55/NRFLite
+[submodule "libs/sodaq_r4x/Sodaq_R4X"]
+	path = libs/sodaq_r4x/Sodaq_R4X
+	url = https://github.com/SodaqMoja/Sodaq_R4X
+[submodule "libs/thingspeak/thingspeak-arduino"]
+	path = libs/thingspeak/thingspeak-arduino
+	url = https://github.com/mathworks/thingspeak-arduino
+[submodule "libs/iridiumsbdi2c/SparkFun_IridiumSBD_I2C_Arduino_Library"]
+	path = libs/iridiumsbdi2c/SparkFun_IridiumSBD_I2C_Arduino_Library
+	url = https://github.com/sparkfun/SparkFun_IridiumSBD_I2C_Arduino_Library
+[submodule "libs/thinx/thinx-lib-esp8266-arduinoc"]
+	path = libs/thinx/thinx-lib-esp8266-arduinoc
+	url = https://github.com/suculent/thinx-lib-esp8266-arduinoc
+[submodule "libs/sparkfun-argos-artic-r2-arduino-library/SparkFun_ARGOS_ARTIC_R2_Arduino_Library"]
+	path = libs/sparkfun-argos-artic-r2-arduino-library/SparkFun_ARGOS_ARTIC_R2_Arduino_Library
+	url = https://github.com/sparkfun/SparkFun_ARGOS_ARTIC_R2_Arduino_Library
+[submodule "libs/mjson/mjson"]
+	path = libs/mjson/mjson
+	url = https://github.com/cesanta/mjson
+[submodule "libs/elegantota/ElegantOTA"]
+	path = libs/elegantota/ElegantOTA
+	url = https://github.com/ayushsharma82/ElegantOTA
+[submodule "libs/fishydiydevices/fishyDIYdevices"]
+	path = libs/fishydiydevices/fishyDIYdevices
+	url = https://github.com/sefisher/fishyDIYdevices
+[submodule "libs/brzo-i2c/brzo_i2c"]
+	path = libs/brzo-i2c/brzo_i2c
+	url = https://github.com/pasko-zh/brzo_i2c
+[submodule "libs/arduino_oauth/Arduino_OAuth"]
+	path = libs/arduino_oauth/Arduino_OAuth
+	url = https://github.com/arduino-libraries/Arduino_OAuth
+[submodule "libs/esp_at_lib/ESP_AT_Lib"]
+	path = libs/esp_at_lib/ESP_AT_Lib
+	url = https://github.com/khoih-prog/ESP_AT_Lib
+[submodule "libs/balemessengerbot_arduino/BaleMessengerBot_Arduino"]
+	path = libs/balemessengerbot_arduino/BaleMessengerBot_Arduino
+	url = https://github.com/arash77/BaleMessengerBot_Arduino
+[submodule "libs/canon-ble-remote/ESP32-Canon-BLE-Remote"]
+	path = libs/canon-ble-remote/ESP32-Canon-BLE-Remote
+	url = https://github.com/maxmacstn/ESP32-Canon-BLE-Remote
+[submodule "libs/m5facesencoder/M5FacesEncoder"]
+	path = libs/m5facesencoder/M5FacesEncoder
+	url = https://github.com/LennartHennigs/M5FacesEncoder
+[submodule "libs/t6iot/t6iot"]
+	path = libs/t6iot/t6iot
+	url = https://github.com/mathcoll/t6iot
+[submodule "libs/bip66/BIP66"]
+	path = libs/bip66/BIP66
+	url = https://github.com/sleepdefic1t/BIP66
+[submodule "libs/wharehauorawifimanager/WiFiManager"]
+	path = libs/wharehauorawifimanager/WiFiManager
+	url = https://github.com/jakerabid/WiFiManager
+[submodule "libs/vitconmqtt/VitconMQTT"]
+	path = libs/vitconmqtt/VitconMQTT
+	url = https://github.com/vitcon-iot/VitconMQTT
+[submodule "libs/dabble/Dabble"]
+	path = libs/dabble/Dabble
+	url = https://github.com/STEMpedia/Dabble
+[submodule "libs/syncano-arduino-library/syncano-arduino"]
+	path = libs/syncano-arduino-library/syncano-arduino
+	url = https://github.com/Syncano/syncano-arduino
+[submodule "libs/word100-library/Word100"]
+	path = libs/word100-library/Word100
+	url = https://github.com/kd8bxp/Word100
+[submodule "libs/linxesp32/LinxESP32"]
+	path = libs/linxesp32/LinxESP32
+	url = https://github.com/tanakamasayuki/LinxESP32
+[submodule "libs/lora-payload-bku/LoRa-payload-BKU"]
+	path = libs/lora-payload-bku/LoRa-payload-BKU
+	url = https://github.com/Technickfreak/LoRa-payload-BKU
+[submodule "libs/rfm69_lowpowerlab/RFM69"]
+	path = libs/rfm69_lowpowerlab/RFM69
+	url = https://github.com/LowPowerLab/RFM69
+[submodule "libs/attinyserialout/ATtinySerialOut"]
+	path = libs/attinyserialout/ATtinySerialOut
+	url = https://github.com/ArminJo/ATtinySerialOut
+[submodule "libs/astromech/AstroMech"]
+	path = libs/astromech/AstroMech
+	url = https://github.com/weckbach/AstroMech
+[submodule "libs/wifimanager/WiFiManager"]
+	path = libs/wifimanager/WiFiManager
+	url = https://github.com/tzapu/WiFiManager
+[submodule "libs/sharer/Sharer"]
+	path = libs/sharer/Sharer
+	url = https://github.com/Rufus31415/Sharer
+[submodule "libs/i2cextension/I2CExtension"]
+	path = libs/i2cextension/I2CExtension
+	url = https://github.com/hideakitai/I2CExtension
+[submodule "libs/printex/PrintEx"]
+	path = libs/printex/PrintEx
+	url = https://github.com/Chris--A/PrintEx
+[submodule "libs/fastble/nina-fast-bluetooth"]
+	path = libs/fastble/nina-fast-bluetooth
+	url = https://github.com/joonazan/nina-fast-bluetooth
+[submodule "libs/azureiothubmqttclient/AzureIoTHubMQTTClient"]
+	path = libs/azureiothubmqttclient/AzureIoTHubMQTTClient
+	url = https://github.com/andriyadi/AzureIoTHubMQTTClient
+[submodule "libs/xlr8wire/XLR8Wire"]
+	path = libs/xlr8wire/XLR8Wire
+	url = https://github.com/AloriumTechnology/XLR8Wire
+[submodule "libs/beacon/ABeacon"]
+	path = libs/beacon/ABeacon
+	url = https://github.com/bengtmartensson/ABeacon
+[submodule "libs/rn487x/RN487x"]
+	path = libs/rn487x/RN487x
+	url = https://github.com/chipKIT32-libraries/RN487x
+[submodule "libs/azureiotprotocol_http/azure-iot-arduino-protocol-http"]
+	path = libs/azureiotprotocol_http/azure-iot-arduino-protocol-http
+	url = https://github.com/Azure/azure-iot-arduino-protocol-http
+[submodule "libs/youmadeit/youmadeit-arduino"]
+	path = libs/youmadeit/youmadeit-arduino
+	url = https://github.com/lperez31/youmadeit-arduino
+[submodule "libs/simplebox/simple-box"]
+	path = libs/simplebox/simple-box
+	url = https://github.com/cima-qro/simple-box
+[submodule "libs/instagramstats/arduino-instagram-stats"]
+	path = libs/instagramstats/arduino-instagram-stats
+	url = https://github.com/witnessmenow/arduino-instagram-stats
+[submodule "libs/websockets2_generic/WebSockets2_Generic"]
+	path = libs/websockets2_generic/WebSockets2_Generic
+	url = https://github.com/khoih-prog/WebSockets2_Generic
+[submodule "libs/ethernetwebserver_ssl/EthernetWebServer_SSL"]
+	path = libs/ethernetwebserver_ssl/EthernetWebServer_SSL
+	url = https://github.com/khoih-prog/EthernetWebServer_SSL
+[submodule "libs/cayennelpp/CayenneLPP"]
+	path = libs/cayennelpp/CayenneLPP
+	url = https://github.com/ElectronicCats/CayenneLPP
+[submodule "libs/emucan/EMUcan"]
+	path = libs/emucan/EMUcan
+	url = https://github.com/designer2k2/EMUcan
+[submodule "libs/abb-powerone-aurora-inverter-communication-protocol/ABB_Aurora_Solar_Inverter_Library"]
+	path = libs/abb-powerone-aurora-inverter-communication-protocol/ABB_Aurora_Solar_Inverter_Library
+	url = https://github.com/xreef/ABB_Aurora_Solar_Inverter_Library
+[submodule "libs/pushetta/arduino-pushetta-lib"]
+	path = libs/pushetta/arduino-pushetta-lib
+	url = https://github.com/guglielmino/arduino-pushetta-lib
+[submodule "libs/mideairwrapper/ArduMideaWrapper"]
+	path = libs/mideairwrapper/ArduMideaWrapper
+	url = https://github.com/WiserUFBA/ArduMideaWrapper
+[submodule "libs/wifi101/WiFi101"]
+	path = libs/wifi101/WiFi101
+	url = https://github.com/arduino-libraries/WiFi101
+[submodule "libs/hellothing_bg96_nbiot/hellothing_NBIoT_Arduino_Shield"]
+	path = libs/hellothing_bg96_nbiot/hellothing_NBIoT_Arduino_Shield
+	url = https://github.com/Fastcomm/hellothing_NBIoT_Arduino_Shield
+[submodule "libs/netsgpclient/NETSGPClient"]
+	path = libs/netsgpclient/NETSGPClient
+	url = https://github.com/atc1441/NETSGPClient
+[submodule "libs/layad-circuits-saleng-gsm-shield/Saleng-GSM"]
+	path = libs/layad-circuits-saleng-gsm-shield/Saleng-GSM
+	url = https://github.com/layadcircuits/Saleng-GSM
+[submodule "libs/googlemapsapi/arduino-google-maps-api"]
+	path = libs/googlemapsapi/arduino-google-maps-api
+	url = https://github.com/witnessmenow/arduino-google-maps-api
+[submodule "libs/esp32-ble-arduino/ESP32_BLE_Arduino"]
+	path = libs/esp32-ble-arduino/ESP32_BLE_Arduino
+	url = https://github.com/nkolban/ESP32_BLE_Arduino
+[submodule "libs/serial-data-exporter/arduino-serial-data-exporter"]
+	path = libs/serial-data-exporter/arduino-serial-data-exporter
+	url = https://github.com/lyvewave/arduino-serial-data-exporter
+[submodule "libs/arduinowebsockets/ArduinoWebsockets"]
+	path = libs/arduinowebsockets/ArduinoWebsockets
+	url = https://github.com/gilmaimon/ArduinoWebsockets
+[submodule "libs/wifi-link/arduino-library-wifilink"]
+	path = libs/wifi-link/arduino-library-wifilink
+	url = https://github.com/arduino-org/arduino-library-wifilink
+[submodule "libs/opc/OPC"]
+	path = libs/opc/OPC
+	url = https://github.com/SoftwareTools4Makers/OPC
+[submodule "libs/adafruit-tinyusb-library/Adafruit_TinyUSB_Arduino"]
+	path = libs/adafruit-tinyusb-library/Adafruit_TinyUSB_Arduino
+	url = https://github.com/adafruit/Adafruit_TinyUSB_Arduino
+[submodule "libs/ciao/Ciao"]
+	path = libs/ciao/Ciao
+	url = https://github.com/arduino-libraries/Ciao
+[submodule "libs/lin-master-emulation-with-background-operation/LIN_master_Arduino"]
+	path = libs/lin-master-emulation-with-background-operation/LIN_master_Arduino
+	url = https://github.com/gicking/LIN_master_Arduino
+[submodule "libs/smos/SMoS-cpp"]
+	path = libs/smos/SMoS-cpp
+	url = https://github.com/ChrisDinhNZ/SMoS-cpp
+[submodule "libs/easy-mfrc522/easy_mfrc522"]
+	path = libs/easy-mfrc522/easy_mfrc522
+	url = https://github.com/pablo-sampaio/easy_mfrc522
+[submodule "libs/midi-library/arduino_midi_library"]
+	path = libs/midi-library/arduino_midi_library
+	url = https://github.com/FortySevenEffects/arduino_midi_library
+[submodule "libs/rapifiremqttclient/rapifire-arduino-mqtt"]
+	path = libs/rapifiremqttclient/rapifire-arduino-mqtt
+	url = https://github.com/rapifireio/rapifire-arduino-mqtt
+[submodule "libs/telegrambotclient/TelegramBotClient"]
+	path = libs/telegrambotclient/TelegramBotClient
+	url = https://github.com/schlingensiepen/TelegramBotClient
+[submodule "libs/canbusdata_asukiaaa/CanBusData-arduino"]
+	path = libs/canbusdata_asukiaaa/CanBusData-arduino
+	url = https://github.com/asukiaaa/CanBusData-arduino
+[submodule "libs/thingsiot/Things-IoT-Arduino-Library"]
+	path = libs/thingsiot/Things-IoT-Arduino-Library
+	url = https://github.com/SiddheshNan/Things-IoT-Arduino-Library
+[submodule "libs/esp32-ble-gamepad/ESP32-BLE-Gamepad"]
+	path = libs/esp32-ble-gamepad/ESP32-BLE-Gamepad
+	url = https://github.com/lemmingDev/ESP32-BLE-Gamepad
+[submodule "libs/easyddns/EasyDDNS"]
+	path = libs/easyddns/EasyDDNS
+	url = https://github.com/ayushsharma82/EasyDDNS
+[submodule "libs/tinygsm/TinyGSM"]
+	path = libs/tinygsm/TinyGSM
+	url = https://github.com/vshymanskyy/TinyGSM
+[submodule "libs/plcustomdevices/PLCustomDevicesLibrary"]
+	path = libs/plcustomdevices/PLCustomDevicesLibrary
+	url = https://github.com/oguzkaganyaglioglu/PLCustomDevicesLibrary
+[submodule "libs/ardtap/Arduino-Tap"]
+	path = libs/ardtap/Arduino-Tap
+	url = https://github.com/iotize-sas/Arduino-Tap
+[submodule "libs/stm32duino-semihosting/STM32duino-Semihosting"]
+	path = libs/stm32duino-semihosting/STM32duino-Semihosting
+	url = https://github.com/koendv/STM32duino-Semihosting
+[submodule "libs/remotedebug/RemoteDebug"]
+	path = libs/remotedebug/RemoteDebug
+	url = https://github.com/JoaoLopesF/RemoteDebug
+[submodule "libs/thingfaceclient/arduino"]
+	path = libs/thingfaceclient/arduino
+	url = https://github.com/thingface/arduino
+[submodule "libs/synapse/synapse"]
+	path = libs/synapse/synapse
+	url = https://github.com/shaduzlabs/synapse
+[submodule "libs/rcreceiver/RCReceiver"]
+	path = libs/rcreceiver/RCReceiver
+	url = https://github.com/willie68/RCReceiver
+[submodule "libs/wsn_rfm69/WSN-for-RFM69-LowPowerLab"]
+	path = libs/wsn_rfm69/WSN-for-RFM69-LowPowerLab
+	url = https://github.com/SunitRaut/WSN-for-RFM69-LowPowerLab
+[submodule "libs/snailwalkpromptpay/SnailwalkPromptpay"]
+	path = libs/snailwalkpromptpay/SnailwalkPromptpay
+	url = https://github.com/natchaipon/SnailwalkPromptpay
+[submodule "libs/thingplus/arduino_library"]
+	path = libs/thingplus/arduino_library
+	url = https://github.com/daliworks/arduino_library
+[submodule "libs/mrmx-aw9523b/AW9523B"]
+	path = libs/mrmx-aw9523b/AW9523B
+	url = https://github.com/mrmx/AW9523B
+[submodule "libs/esp8266mqttclient/ESP8266MQTTClient"]
+	path = libs/esp8266mqttclient/ESP8266MQTTClient
+	url = https://github.com/tuanpmt/ESP8266MQTTClient
+[submodule "libs/stm32duino-x-nucleo-nfc03a1/X-NUCLEO-NFC03A1"]
+	path = libs/stm32duino-x-nucleo-nfc03a1/X-NUCLEO-NFC03A1
+	url = https://github.com/stm32duino/X-NUCLEO-NFC03A1
+[submodule "libs/antaresloraid/lorawan-loraid"]
+	path = libs/antaresloraid/lorawan-loraid
+	url = https://github.com/antaresdocumentation/lorawan-loraid
+[submodule "libs/coinmarketcapapi/arduino-coinmarketcap-api"]
+	path = libs/coinmarketcapapi/arduino-coinmarketcap-api
+	url = https://github.com/witnessmenow/arduino-coinmarketcap-api
+[submodule "libs/oatmeal-protocol/oatmeal-protocol"]
+	path = libs/oatmeal-protocol/oatmeal-protocol
+	url = https://github.com/shielddx/oatmeal-protocol
+[submodule "libs/websockets/arduinoWebSockets"]
+	path = libs/websockets/arduinoWebSockets
+	url = https://github.com/Links2004/arduinoWebSockets
+[submodule "libs/gopro/GoPRO"]
+	path = libs/gopro/GoPRO
+	url = https://github.com/agdl/GoPRO
+[submodule "libs/sixfab_cellulariot/Sixfab_Arduino_CellularIoT_Library"]
+	path = libs/sixfab_cellulariot/Sixfab_Arduino_CellularIoT_Library
+	url = https://github.com/sixfab/Sixfab_Arduino_CellularIoT_Library
+[submodule "libs/midier/Midier"]
+	path = libs/midier/Midier
+	url = https://github.com/levosos/Midier
+[submodule "libs/fmdataclient/FMDataClient"]
+	path = libs/fmdataclient/FMDataClient
+	url = https://github.com/bmts/FMDataClient
+[submodule "libs/liveobjectssdk/LiveObjects_SDK_for_Arduino"]
+	path = libs/liveobjectssdk/LiveObjects_SDK_for_Arduino
+	url = https://github.com/DatavenueLiveObjects/LiveObjects_SDK_for_Arduino
+[submodule "libs/sx126x-arduino/SX126x-Arduino"]
+	path = libs/sx126x-arduino/SX126x-Arduino
+	url = https://github.com/beegee-tokyo/SX126x-Arduino
+[submodule "libs/sdi-12/Arduino-SDI-12"]
+	path = libs/sdi-12/Arduino-SDI-12
+	url = https://github.com/EnviroDIY/Arduino-SDI-12
+[submodule "libs/asynctelegram2/AsyncTelegram2"]
+	path = libs/asynctelegram2/AsyncTelegram2
+	url = https://github.com/cotestatnt/AsyncTelegram2
+[submodule "libs/anto-esp8266-arduino/anto-esp8266-arduino"]
+	path = libs/anto-esp8266-arduino/anto-esp8266-arduino
+	url = https://github.com/AntoIOT/anto-esp8266-arduino
+[submodule "libs/ipmidi/Arduino-ipMIDI"]
+	path = libs/ipmidi/Arduino-ipMIDI
+	url = https://github.com/lathoub/Arduino-ipMIDI
+[submodule "libs/bowlercom/BowlerCom"]
+	path = libs/bowlercom/BowlerCom
+	url = https://github.com/CommonWealthRobotics/BowlerCom
+[submodule "libs/rbase64/rBASE64"]
+	path = libs/rbase64/rBASE64
+	url = https://github.com/boseji/rBASE64
+[submodule "libs/esp_at_wifimanager/ESP_AT_WiFiManager"]
+	path = libs/esp_at_wifimanager/ESP_AT_WiFiManager
+	url = https://github.com/khoih-prog/ESP_AT_WiFiManager
+[submodule "libs/telit-ge910-gsm-library/GE910"]
+	path = libs/telit-ge910-gsm-library/GE910
+	url = https://github.com/akkoyun/GE910
+[submodule "libs/wifiwebserver_rtl8720/WiFiWebServer_RTL8720"]
+	path = libs/wifiwebserver_rtl8720/WiFiWebServer_RTL8720
+	url = https://github.com/khoih-prog/WiFiWebServer_RTL8720
+[submodule "libs/stm32duino-x-nucleo-s2868a2/X-NUCLEO-S2868A2"]
+	path = libs/stm32duino-x-nucleo-s2868a2/X-NUCLEO-S2868A2
+	url = https://github.com/stm32duino/X-NUCLEO-S2868A2
+[submodule "libs/nrf_hal/NRF_HAL"]
+	path = libs/nrf_hal/NRF_HAL
+	url = https://github.com/pstolarz/NRF_HAL
+[submodule "libs/socketioclient/socket.io-client"]
+	path = libs/socketioclient/socket.io-client
+	url = https://github.com/timum-viw/socket.io-client
+[submodule "libs/stm32duino-x-nucleo-nfc01a1/X-NUCLEO-NFC01A1"]
+	path = libs/stm32duino-x-nucleo-nfc01a1/X-NUCLEO-NFC01A1
+	url = https://github.com/stm32duino/X-NUCLEO-NFC01A1
+[submodule "libs/komootbleconnect/KomootBLEConnect"]
+	path = libs/komootbleconnect/KomootBLEConnect
+	url = https://github.com/miathedev/KomootBLEConnect
+[submodule "libs/espcanary/ESPCanary"]
+	path = libs/espcanary/ESPCanary
+	url = https://github.com/mudmin/ESPCanary
+[submodule "libs/arduino_sciencejournal/Arduino_ScienceJournal"]
+	path = libs/arduino_sciencejournal/Arduino_ScienceJournal
+	url = https://github.com/arduino-libraries/Arduino_ScienceJournal
+[submodule "libs/acan/acan"]
+	path = libs/acan/acan
+	url = https://github.com/pierremolinaro/acan
+[submodule "libs/ethernet2/Ethernet2"]
+	path = libs/ethernet2/Ethernet2
+	url = https://github.com/adafruit/Ethernet2
+[submodule "libs/gprsbee/GPRSbee"]
+	path = libs/gprsbee/GPRSbee
+	url = https://github.com/SodaqMoja/GPRSbee
+[submodule "libs/applemidi/Arduino-AppleMidi-Library"]
+	path = libs/applemidi/Arduino-AppleMidi-Library
+	url = https://github.com/lathoub/Arduino-AppleMidi-Library
+[submodule "libs/simplemotionv2-arduino/SimpleMotionV2-Arduino"]
+	path = libs/simplemotionv2-arduino/SimpleMotionV2-Arduino
+	url = https://github.com/JSC-electronics/SimpleMotionV2-Arduino
+[submodule "libs/redis-for-esp8266/esp8266-redis"]
+	path = libs/redis-for-esp8266/esp8266-redis
+	url = https://github.com/remicaumette/esp8266-redis
+[submodule "libs/sensirion-core/arduino-core"]
+	path = libs/sensirion-core/arduino-core
+	url = https://github.com/sensirion/arduino-core
+[submodule "libs/wifinina/WiFiNINA"]
+	path = libs/wifinina/WiFiNINA
+	url = https://github.com/arduino-libraries/WiFiNINA
+[submodule "libs/fortniteapi/FortniteAPI"]
+	path = libs/fortniteapi/FortniteAPI
+	url = https://github.com/chunkysteveo/FortniteAPI
+[submodule "libs/azureiotsocket_wifi/azure-iot-arduino-socket-esp32-wifi"]
+	path = libs/azureiotsocket_wifi/azure-iot-arduino-socket-esp32-wifi
+	url = https://github.com/Azure/azure-iot-arduino-socket-esp32-wifi
+[submodule "libs/cayennemqtt/Cayenne-MQTT-Arduino"]
+	path = libs/cayennemqtt/Cayenne-MQTT-Arduino
+	url = https://github.com/myDevicesIoT/Cayenne-MQTT-Arduino
+[submodule "libs/webserial/WebSerial"]
+	path = libs/webserial/WebSerial
+	url = https://github.com/ayushsharma82/WebSerial
+[submodule "libs/tsydmaspi/TsyDMASPI"]
+	path = libs/tsydmaspi/TsyDMASPI
+	url = https://github.com/hideakitai/TsyDMASPI
+[submodule "libs/espconnect/ESPConnect"]
+	path = libs/espconnect/ESPConnect
+	url = https://github.com/ayushsharma82/ESPConnect
+[submodule "libs/bm64-library/BM64_arduino"]
+	path = libs/bm64-library/BM64_arduino
+	url = https://github.com/konikoni428/BM64_arduino
+[submodule "libs/remotexy/RemoteXY-Arduino-library"]
+	path = libs/remotexy/RemoteXY-Arduino-library
+	url = https://github.com/RemoteXY/RemoteXY-Arduino-library
+[submodule "libs/m2m-solutions-tlv-library/M2M_TLV"]
+	path = libs/m2m-solutions-tlv-library/M2M_TLV
+	url = https://github.com/m2m-solutions/M2M_TLV
+[submodule "libs/restfully/Restfully"]
+	path = libs/restfully/Restfully
+	url = https://github.com/flyingeinstein/Restfully
+[submodule "libs/zaber-ascii/zaber-ascii-for-arduino"]
+	path = libs/zaber-ascii/zaber-ascii-for-arduino
+	url = https://gitlab.com/zaber-core-libs/zaber-ascii-for-arduino.git
+[submodule "libs/sodaq_r4x_mqtt/Sodaq_R4X_MQTT"]
+	path = libs/sodaq_r4x_mqtt/Sodaq_R4X_MQTT
+	url = https://github.com/SodaqMoja/Sodaq_R4X_MQTT
+[submodule "libs/konnekting-device-library/KonnektingDeviceLibrary"]
+	path = libs/konnekting-device-library/KonnektingDeviceLibrary
+	url = https://github.com/KONNEKTING/KonnektingDeviceLibrary
+[submodule "libs/spacebrewyun/SpacebrewYun"]
+	path = libs/spacebrewyun/SpacebrewYun
+	url = https://github.com/arduino-libraries/SpacebrewYun
+[submodule "libs/padcomlib/PadComLib"]
+	path = libs/padcomlib/PadComLib
+	url = https://github.com/RockoonTechnologies/PadComLib
+[submodule "libs/opendevice/opendevice-lib-arduino"]
+	path = libs/opendevice/opendevice-lib-arduino
+	url = https://github.com/OpenDevice/opendevice-lib-arduino
+[submodule "libs/youtube-sight/arduino-youtube-sight"]
+	path = libs/youtube-sight/arduino-youtube-sight
+	url = https://github.com/bkolicoski/arduino-youtube-sight
+[submodule "libs/opentherm-library/opentherm_library"]
+	path = libs/opentherm-library/opentherm_library
+	url = https://github.com/ihormelnyk/opentherm_library
+[submodule "libs/wio-3g-for-arduino/Wio_3G_for_Arduino"]
+	path = libs/wio-3g-for-arduino/Wio_3G_for_Arduino
+	url = https://github.com/SeeedJP/Wio_3G_for_Arduino
+[submodule "libs/microgear-nbiot/microgear-nbiot-arduino"]
+	path = libs/microgear-nbiot/microgear-nbiot-arduino
+	url = https://github.com/netpieio/microgear-nbiot-arduino
+[submodule "libs/pubsubclienttools/ArduinoPubSubClientTools"]
+	path = libs/pubsubclienttools/ArduinoPubSubClientTools
+	url = https://github.com/dersimn/ArduinoPubSubClientTools
+[submodule "libs/telemetryjet/telemetryjet-arduino-sdk"]
+	path = libs/telemetryjet/telemetryjet-arduino-sdk
+	url = https://github.com/telemetryjet/telemetryjet-arduino-sdk
+[submodule "libs/easywebserver/EasyWebServer"]
+	path = libs/easywebserver/EasyWebServer
+	url = https://github.com/llelundberg/EasyWebServer
+[submodule "libs/arduino_mkrmem/Arduino_MKRMEM"]
+	path = libs/arduino_mkrmem/Arduino_MKRMEM
+	url = https://github.com/arduino-libraries/Arduino_MKRMEM
+[submodule "libs/ibusbm/IBusBM"]
+	path = libs/ibusbm/IBusBM
+	url = https://github.com/bmellink/IBusBM
+[submodule "libs/sslclient/SSLClient"]
+	path = libs/sslclient/SSLClient
+	url = https://github.com/OPEnSLab-OSU/SSLClient
+[submodule "libs/sim800l-http-connector/Arduino-SIM800L-driver"]
+	path = libs/sim800l-http-connector/Arduino-SIM800L-driver
+	url = https://github.com/ostaquet/Arduino-SIM800L-driver
+[submodule "libs/xinput/ArduinoXInput"]
+	path = libs/xinput/ArduinoXInput
+	url = https://github.com/dmadison/ArduinoXInput
+[submodule "libs/zentser-esp-sdk/esp-zentser-sdk"]
+	path = libs/zentser-esp-sdk/esp-zentser-sdk
+	url = https://github.com/Zentser/esp-zentser-sdk
+[submodule "libs/websocketstreamclient/WebSocketStreamClient"]
+	path = libs/websocketstreamclient/WebSocketStreamClient
+	url = https://github.com/areve/WebSocketStreamClient
+[submodule "libs/pyduinobridge/PyDuinoBridge"]
+	path = libs/pyduinobridge/PyDuinoBridge
+	url = https://github.com/DanielSaromo/PyDuinoBridge
+[submodule "libs/arduinoiotcloudbearssl/ArduinoIoTCloudBearSSL"]
+	path = libs/arduinoiotcloudbearssl/ArduinoIoTCloudBearSSL
+	url = https://github.com/arduino-libraries/ArduinoIoTCloudBearSSL
+[submodule "libs/arduinomqttclient/ArduinoMqttClient"]
+	path = libs/arduinomqttclient/ArduinoMqttClient
+	url = https://github.com/arduino-libraries/ArduinoMqttClient
+[submodule "libs/physicslabfirmware/PhysicsLabFirmware"]
+	path = libs/physicslabfirmware/PhysicsLabFirmware
+	url = https://github.com/arduino-libraries/PhysicsLabFirmware
+[submodule "libs/krpc/krpc-arduino"]
+	path = libs/krpc/krpc-arduino
+	url = https://github.com/krpc/krpc-arduino
+[submodule "libs/mfrc522-spi-i2c-uart-async/rfid"]
+	path = libs/mfrc522-spi-i2c-uart-async/rfid
+	url = https://github.com/MakerSpaceLeiden/rfid
+[submodule "libs/wizfi250/WizFi250_arduino_library"]
+	path = libs/wizfi250/WizFi250_arduino_library
+	url = https://github.com/Wiznet/WizFi250_arduino_library
+[submodule "libs/el_dev_arduino/EL_dev_arduino"]
+	path = libs/el_dev_arduino/EL_dev_arduino
+	url = https://github.com/Hiroshi-Sugimura/EL_dev_arduino
+[submodule "libs/blynkethernet_stm32_wm/BlynkEthernet_STM32_WM"]
+	path = libs/blynkethernet_stm32_wm/BlynkEthernet_STM32_WM
+	url = https://github.com/khoih-prog/BlynkEthernet_STM32_WM
+[submodule "libs/morse/Morse"]
+	path = libs/morse/Morse
+	url = https://github.com/offcircuit/Morse
+[submodule "libs/ethernetindustruino/EthernetIndustruino"]
+	path = libs/ethernetindustruino/EthernetIndustruino
+	url = https://github.com/Industruino/EthernetIndustruino
+[submodule "libs/emailsender/EMailSender"]
+	path = libs/emailsender/EMailSender
+	url = https://github.com/xreef/EMailSender
+[submodule "libs/onewireng/OneWireNg"]
+	path = libs/onewireng/OneWireNg
+	url = https://github.com/pstolarz/OneWireNg
+[submodule "libs/arduino_portenta_ota/Arduino_Portenta_OTA"]
+	path = libs/arduino_portenta_ota/Arduino_Portenta_OTA
+	url = https://github.com/arduino-libraries/Arduino_Portenta_OTA
+[submodule "libs/esp8266_mdns/esp8266_mdns"]
+	path = libs/esp8266_mdns/esp8266_mdns
+	url = https://github.com/mrdunk/esp8266_mdns
+[submodule "libs/vma11/VMA11"]
+	path = libs/vma11/VMA11
+	url = https://github.com/Velleman/VMA11
+[submodule "libs/ethernetwebserver/EthernetWebServer"]
+	path = libs/ethernetwebserver/EthernetWebServer
+	url = https://github.com/khoih-prog/EthernetWebServer
+[submodule "libs/tridenttd_simplepair/TridentTD_SimplePair"]
+	path = libs/tridenttd_simplepair/TridentTD_SimplePair
+	url = https://github.com/TridentTD/TridentTD_SimplePair
+[submodule "libs/esp8266-webhooks/ESP8266Webhook"]
+	path = libs/esp8266-webhooks/ESP8266Webhook
+	url = https://github.com/Rupakpoddar/ESP8266Webhook
+[submodule "libs/arduinocloudthing/ArduinoCloudThing"]
+	path = libs/arduinocloudthing/ArduinoCloudThing
+	url = https://github.com/arduino-libraries/ArduinoCloudThing
+[submodule "libs/esp32_ftpclient/ESP32_FTPClient"]
+	path = libs/esp32_ftpclient/ESP32_FTPClient
+	url = https://github.com/ldab/ESP32_FTPClient
+[submodule "libs/asynctelegram/AsyncTelegram"]
+	path = libs/asynctelegram/AsyncTelegram
+	url = https://github.com/cotestatnt/AsyncTelegram
+[submodule "libs/loraid/arduino-loraid"]
+	path = libs/loraid/arduino-loraid
+	url = https://git.antares.id/lorawan-loraid/arduino-loraid.git
+[submodule "libs/fastbot/FastBot"]
+	path = libs/fastbot/FastBot
+	url = https://github.com/GyverLibs/FastBot
+[submodule "libs/cbus/CBUS"]
+	path = libs/cbus/CBUS
+	url = https://github.com/MERG-DEV/CBUS
+[submodule "libs/pjon/PJON"]
+	path = libs/pjon/PJON
+	url = https://github.com/gioblu/PJON
+[submodule "libs/vrekrer-scpi-parser/Vrekrer_scpi_parser"]
+	path = libs/vrekrer-scpi-parser/Vrekrer_scpi_parser
+	url = https://github.com/Vrekrer/Vrekrer_scpi_parser
+[submodule "libs/esp-mail-client/ESP-Mail-Client"]
+	path = libs/esp-mail-client/ESP-Mail-Client
+	url = https://github.com/mobizt/ESP-Mail-Client
+[submodule "libs/electronic-cats-pn7150/ElectronicCats-PN7150"]
+	path = libs/electronic-cats-pn7150/ElectronicCats-PN7150
+	url = https://github.com/ElectronicCats/ElectronicCats-PN7150
+[submodule "libs/openmv-arduino-rpc/openmv-arduino-rpc"]
+	path = libs/openmv-arduino-rpc/openmv-arduino-rpc
+	url = https://github.com/openmv/openmv-arduino-rpc
+[submodule "libs/nfc-tag-m24lr6e/NFC_Tag_M24LR6E"]
+	path = libs/nfc-tag-m24lr6e/NFC_Tag_M24LR6E
+	url = https://github.com/Seeed-Studio/NFC_Tag_M24LR6E
+[submodule "libs/arduinolang/ArduinoLang"]
+	path = libs/arduinolang/ArduinoLang
+	url = https://github.com/jefersonla/ArduinoLang
+[submodule "libs/thingspeak_asukiaaa/ThingSpeak_asukiaaa"]
+	path = libs/thingspeak_asukiaaa/ThingSpeak_asukiaaa
+	url = https://github.com/asukiaaa/ThingSpeak_asukiaaa
+[submodule "libs/wizfi360/WizFi360"]
+	path = libs/wizfi360/WizFi360
+	url = https://github.com/ekkai/WizFi360
+[submodule "libs/smarteverything-cc2541/sme-cc2541-library"]
+	path = libs/smarteverything-cc2541/sme-cc2541-library
+	url = https://github.com/ameltech/sme-cc2541-library
+[submodule "libs/tinymegai2c/TinyMegaI2C"]
+	path = libs/tinymegai2c/TinyMegaI2C
+	url = https://github.com/dattasaurabh82/TinyMegaI2C
+[submodule "libs/espui/ESPUI"]
+	path = libs/espui/ESPUI
+	url = https://github.com/s00500/ESPUI
+[submodule "libs/thingsboard/ThingsBoard-Arduino-MQTT-SDK"]
+	path = libs/thingsboard/ThingsBoard-Arduino-MQTT-SDK
+	url = https://github.com/thingsboard/ThingsBoard-Arduino-MQTT-SDK
+[submodule "libs/pololumaestro/maestro-arduino"]
+	path = libs/pololumaestro/maestro-arduino
+	url = https://github.com/pololu/maestro-arduino
+[submodule "libs/iridium-sbd/IridiumSBD"]
+	path = libs/iridium-sbd/IridiumSBD
+	url = https://github.com/mikalhart/IridiumSBD
+[submodule "libs/jeager-one/jeager-one"]
+	path = libs/jeager-one/jeager-one
+	url = https://github.com/mchwalfajar/jeager-one
+[submodule "libs/adafruit-pn532/Adafruit-PN532"]
+	path = libs/adafruit-pn532/Adafruit-PN532
+	url = https://github.com/adafruit/Adafruit-PN532
+[submodule "libs/telnetstream2/TelnetStream2"]
+	path = libs/telnetstream2/TelnetStream2
+	url = https://github.com/ameer1234567890/TelnetStream2
+[submodule "libs/serialui/SerialUI"]
+	path = libs/serialui/SerialUI
+	url = https://github.com/psychogenic/SerialUI
+[submodule "libs/arduinomodbus/ArduinoModbus"]
+	path = libs/arduinomodbus/ArduinoModbus
+	url = https://github.com/arduino-libraries/ArduinoModbus
+[submodule "libs/ubidots-fona-library/Ubidots-FONA"]
+	path = libs/ubidots-fona-library/Ubidots-FONA
+	url = https://github.com/ubidots/Ubidots-FONA
+[submodule "libs/gsmsim/GSMSim"]
+	path = libs/gsmsim/GSMSim
+	url = https://github.com/erdemarslan/GSMSim
+[submodule "libs/cmmc-packet/CMMC-Packet"]
+	path = libs/cmmc-packet/CMMC-Packet
+	url = https://github.com/cmmakerclub/CMMC-Packet
+[submodule "libs/max3100-serial/MAX3100Serial"]
+	path = libs/max3100-serial/MAX3100Serial
+	url = https://github.com/ewpa/MAX3100Serial
+[submodule "libs/simple-web-dashboard/esp-simple-web-dashboard"]
+	path = libs/simple-web-dashboard/esp-simple-web-dashboard
+	url = https://github.com/ademuri/esp-simple-web-dashboard
+[submodule "libs/uardecs_mega-library/UARDECS_MEGA"]
+	path = libs/uardecs_mega-library/UARDECS_MEGA
+	url = https://github.com/H-Kurosaki/UARDECS_MEGA
+[submodule "libs/blynk_wifimanager/Blynk_WM"]
+	path = libs/blynk_wifimanager/Blynk_WM
+	url = https://github.com/khoih-prog/Blynk_WM
+[submodule "libs/espwii/EspWii"]
+	path = libs/espwii/EspWii
+	url = https://github.com/madhephaestus/EspWii
+[submodule "libs/easymorse/EasyMorse"]
+	path = libs/easymorse/EasyMorse
+	url = https://github.com/milador/EasyMorse
+[submodule "libs/sensirion-gadget-ble-arduino-lib/arduino-ble-gadget"]
+	path = libs/sensirion-gadget-ble-arduino-lib/arduino-ble-gadget
+	url = https://github.com/Sensirion/arduino-ble-gadget
+[submodule "libs/facebookapi/arduino-facebook-api"]
+	path = libs/facebookapi/arduino-facebook-api
+	url = https://github.com/witnessmenow/arduino-facebook-api
+[submodule "libs/isync_bc95_arduino/iSYNC_BC95_Arduino"]
+	path = libs/isync_bc95_arduino/iSYNC_BC95_Arduino
+	url = https://github.com/jackrobotics/iSYNC_BC95_Arduino
+[submodule "libs/rf24ethernet/RF24Ethernet"]
+	path = libs/rf24ethernet/RF24Ethernet
+	url = https://github.com/TMRh20/RF24Ethernet
+[submodule "libs/i2c/Arduino-I2C"]
+	path = libs/i2c/Arduino-I2C
+	url = https://github.com/Wh1teRabbitHU/Arduino-I2C
+[submodule "libs/slipmassage/SlipMassage"]
+	path = libs/slipmassage/SlipMassage
+	url = https://github.com/SofaPirate/SlipMassage
+[submodule "libs/troykagps/TroykaGPS"]
+	path = libs/troykagps/TroykaGPS
+	url = https://github.com/amperka/TroykaGPS
+[submodule "libs/mucom/muCom"]
+	path = libs/mucom/muCom
+	url = https://github.com/kcl93/muCom
+[submodule "libs/tinydebug/TinyDebug"]
+	path = libs/tinydebug/TinyDebug
+	url = https://github.com/wokwi/TinyDebug
+[submodule "libs/esphtmltemplateprocessor/EspHtmlTemplateProcessor"]
+	path = libs/esphtmltemplateprocessor/EspHtmlTemplateProcessor
+	url = https://github.com/plapointe6/EspHtmlTemplateProcessor
+[submodule "libs/arduino-managed-serial-device/arduino-managed-serial-device"]
+	path = libs/arduino-managed-serial-device/arduino-managed-serial-device
+	url = https://github.com/coddingtonbear/arduino-managed-serial-device
+[submodule "libs/modbusmaster/ModbusMaster"]
+	path = libs/modbusmaster/ModbusMaster
+	url = https://github.com/4-20ma/ModbusMaster
+[submodule "libs/obloqadafruit/ObloqAdafruit"]
+	path = libs/obloqadafruit/ObloqAdafruit
+	url = https://github.com/diegodorado/ObloqAdafruit
+[submodule "libs/esp-fs-webserver/esp-fs-webserver"]
+	path = libs/esp-fs-webserver/esp-fs-webserver
+	url = https://github.com/cotestatnt/esp-fs-webserver
+[submodule "libs/esp32spislave/ESP32SPISlave"]
+	path = libs/esp32spislave/ESP32SPISlave
+	url = https://github.com/hideakitai/ESP32SPISlave
+[submodule "libs/sparkfun-u-blox-sara-r5-arduino-library/SparkFun_u-blox_SARA-R5_Arduino_Library"]
+	path = libs/sparkfun-u-blox-sara-r5-arduino-library/SparkFun_u-blox_SARA-R5_Arduino_Library
+	url = https://github.com/sparkfun/SparkFun_u-blox_SARA-R5_Arduino_Library
+[submodule "libs/ethernetwebserver_ssl_stm32/EthernetWebServer_SSL_STM32"]
+	path = libs/ethernetwebserver_ssl_stm32/EthernetWebServer_SSL_STM32
+	url = https://github.com/khoih-prog/EthernetWebServer_SSL_STM32
+[submodule "libs/mcreator-link/MCreatorLinkArduino"]
+	path = libs/mcreator-link/MCreatorLinkArduino
+	url = https://github.com/Pylo/MCreatorLinkArduino
+[submodule "libs/debuglog/Debug"]
+	path = libs/debuglog/Debug
+	url = https://github.com/hideakitai/Debug
+[submodule "libs/easy-iot-with-cc1101-sub-1ghz-lora-like/Easy-IoT-Arduino-CC1101-LORA"]
+	path = libs/easy-iot-with-cc1101-sub-1ghz-lora-like/Easy-IoT-Arduino-CC1101-LORA
+	url = https://github.com/mrfaptastic/Easy-IoT-Arduino-CC1101-LORA
+[submodule "libs/ev3-arduino/ev3-arduino"]
+	path = libs/ev3-arduino/ev3-arduino
+	url = https://github.com/tasos12/ev3-arduino
+[submodule "libs/esp_abus/esp_abus"]
+	path = libs/esp_abus/esp_abus
+	url = https://github.com/killer0071234/esp_abus
+[submodule "libs/mqtt-client/mqtt-client"]
+	path = libs/mqtt-client/mqtt-client
+	url = https://bitbucket.org/amotzek/mqtt-client.git
+[submodule "libs/ddns_generic/DDNS_Generic"]
+	path = libs/ddns_generic/DDNS_Generic
+	url = https://github.com/khoih-prog/DDNS_Generic
+[submodule "libs/espessentials/ESPEssentials"]
+	path = libs/espessentials/ESPEssentials
+	url = https://github.com/stnkl/ESPEssentials
+[submodule "libs/bitbang_i2c/BitBang_I2C"]
+	path = libs/bitbang_i2c/BitBang_I2C
+	url = https://github.com/bitbank2/BitBang_I2C
+[submodule "libs/adafruit-esp8266/Adafruit_ESP8266"]
+	path = libs/adafruit-esp8266/Adafruit_ESP8266
+	url = https://github.com/adafruit/Adafruit_ESP8266
+[submodule "libs/esp_wifimanager_lite/ESP_WiFiManager_Lite"]
+	path = libs/esp_wifimanager_lite/ESP_WiFiManager_Lite
+	url = https://github.com/khoih-prog/ESP_WiFiManager_Lite
+[submodule "libs/esp32_https_server_compat/esp32_https_server_compat"]
+	path = libs/esp32_https_server_compat/esp32_https_server_compat
+	url = https://github.com/fhessel/esp32_https_server_compat
+[submodule "libs/redkea/arduino-library"]
+	path = libs/redkea/arduino-library
+	url = https://github.com/redkea/arduino-library
+[submodule "libs/mbed-ble-hid/mbed-ble-hid"]
+	path = libs/mbed-ble-hid/mbed-ble-hid
+	url = https://github.com/tcoppex/mbed-ble-hid
+[submodule "libs/isync/iSYNC"]
+	path = libs/isync/iSYNC
+	url = https://github.com/jackrobotics/iSYNC
+[submodule "libs/mkrgsm1400iot/MkrGsm1400IoT"]
+	path = libs/mkrgsm1400iot/MkrGsm1400IoT
+	url = https://github.com/phlpjo/MkrGsm1400IoT
+[submodule "libs/pointznet/PointzNet"]
+	path = libs/pointznet/PointzNet
+	url = https://github.com/Isaranu/PointzNet
+[submodule "libs/stm32duino-x-nucleo-s2868a1/X-NUCLEO-S2868A1"]
+	path = libs/stm32duino-x-nucleo-s2868a1/X-NUCLEO-S2868A1
+	url = https://github.com/stm32duino/X-NUCLEO-S2868A1
+[submodule "libs/thingsml/thingsml-c-library"]
+	path = libs/thingsml/thingsml-c-library
+	url = https://github.com/kpn-iot/thingsml-c-library
+[submodule "libs/blynk/blynk-library"]
+	path = libs/blynk/blynk-library
+	url = https://github.com/blynkkk/blynk-library
+[submodule "libs/j1850-vpw-arduino-transceiver-library/J1850-VPW-Arduino-Transceiver-Library"]
+	path = libs/j1850-vpw-arduino-transceiver-library/J1850-VPW-Arduino-Transceiver-Library
+	url = https://github.com/matafonoff/J1850-VPW-Arduino-Transceiver-Library
+[submodule "libs/ndnoverudp/NDNOverUDP"]
+	path = libs/ndnoverudp/NDNOverUDP
+	url = https://github.com/ichigo663/NDNOverUDP
+[submodule "libs/arduino-uno-wifi-dev-ed-library/UnoWiFi-Developer-Edition-Lib"]
+	path = libs/arduino-uno-wifi-dev-ed-library/UnoWiFi-Developer-Edition-Lib
+	url = https://github.com/arduino-libraries/UnoWiFi-Developer-Edition-Lib
+[submodule "libs/spiffsreadserver/SPIFFSReadServer"]
+	path = libs/spiffsreadserver/SPIFFSReadServer
+	url = https://github.com/r-downing/SPIFFSReadServer
+[submodule "libs/e131/E131"]
+	path = libs/e131/E131
+	url = https://github.com/forkineye/E131
+[submodule "libs/thinx32/thinx-firmware-esp32"]
+	path = libs/thinx32/thinx-firmware-esp32
+	url = https://github.com/suculent/thinx-firmware-esp32
+[submodule "libs/stm32duino-x-nucleo-idb05a1/X-NUCLEO-IDB05A1"]
+	path = libs/stm32duino-x-nucleo-idb05a1/X-NUCLEO-IDB05A1
+	url = https://github.com/stm32duino/X-NUCLEO-IDB05A1
+[submodule "libs/espnow2mqtt/ESPNow2Mqtt"]
+	path = libs/espnow2mqtt/ESPNow2Mqtt
+	url = https://github.com/eccnil/ESPNow2Mqtt
+[submodule "libs/cbusswitch/CBUSswitch"]
+	path = libs/cbusswitch/CBUSswitch
+	url = https://github.com/MERG-DEV/CBUSswitch
+[submodule "libs/youless-arduino-library/Youless-Arduino-lib"]
+	path = libs/youless-arduino-library/Youless-Arduino-lib
+	url = https://github.com/NickvanTholen/Youless-Arduino-lib
+[submodule "libs/nintendo-extension-ctrl/NintendoExtensionCtrl"]
+	path = libs/nintendo-extension-ctrl/NintendoExtensionCtrl
+	url = https://github.com/dmadison/NintendoExtensionCtrl
+[submodule "libs/serialtransfer/SerialTransfer"]
+	path = libs/serialtransfer/SerialTransfer
+	url = https://github.com/PowerBroker2/SerialTransfer
+[submodule "libs/losant-mqtt-arduino/losant-mqtt-arduino"]
+	path = libs/losant-mqtt-arduino/losant-mqtt-arduino
+	url = https://github.com/Losant/losant-mqtt-arduino
+[submodule "libs/wifi-picker/WiFiPicker"]
+	path = libs/wifi-picker/WiFiPicker
+	url = https://github.com/Tvde1/WiFiPicker
+[submodule "libs/arduinohttpclient/ArduinoHttpClient"]
+	path = libs/arduinohttpclient/ArduinoHttpClient
+	url = https://github.com/arduino-libraries/ArduinoHttpClient
+[submodule "libs/pololurpislave/pololu-rpi-slave-arduino-library"]
+	path = libs/pololurpislave/pololu-rpi-slave-arduino-library
+	url = https://github.com/pololu/pololu-rpi-slave-arduino-library
+[submodule "libs/ble-midi/Arduino-BLE-MIDI"]
+	path = libs/ble-midi/Arduino-BLE-MIDI
+	url = https://github.com/lathoub/Arduino-BLE-MIDI
+[submodule "libs/thingsofvalue-sdk-for-arduino/ArduinoThingsOfValueSDK"]
+	path = libs/thingsofvalue-sdk-for-arduino/ArduinoThingsOfValueSDK
+	url = https://github.com/kyuseok-oh/ArduinoThingsOfValueSDK
+[submodule "libs/sinricpro/esp8266-esp32-sdk"]
+	path = libs/sinricpro/esp8266-esp32-sdk
+	url = https://github.com/sinricpro/esp8266-esp32-sdk
+[submodule "libs/utlgbotlib/uTLGBotLib-arduino"]
+	path = libs/utlgbotlib/uTLGBotLib-arduino
+	url = https://github.com/J-Rios/uTLGBotLib-arduino
+[submodule "libs/cs5490/CS5490"]
+	path = libs/cs5490/CS5490
+	url = https://github.com/tiagolobao/CS5490
+[submodule "libs/gsm/GSM"]
+	path = libs/gsm/GSM
+	url = https://github.com/arduino-libraries/GSM
+[submodule "libs/wioterminal_wifimanager/WIOTerminal_WiFiManager"]
+	path = libs/wioterminal_wifimanager/WIOTerminal_WiFiManager
+	url = https://github.com/khoih-prog/WIOTerminal_WiFiManager
+[submodule "libs/senses_wifi/Senses_wifi"]
+	path = libs/senses_wifi/Senses_wifi
+	url = https://github.com/Isaranu/Senses_wifi
+[submodule "libs/ubxgps/UbxGps"]
+	path = libs/ubxgps/UbxGps
+	url = https://github.com/1oginov/UbxGps
+[submodule "libs/cayennelppdec/CayenneLPPdec"]
+	path = libs/cayennelppdec/CayenneLPPdec
+	url = https://github.com/gmag11/CayenneLPPdec
+[submodule "libs/homeding/HomeDing"]
+	path = libs/homeding/HomeDing
+	url = https://github.com/HomeDing/HomeDing
+[submodule "libs/esp_at_wm_lite/ESP_AT_WM_Lite"]
+	path = libs/esp_at_wm_lite/ESP_AT_WM_Lite
+	url = https://github.com/khoih-prog/ESP_AT_WM_Lite
+[submodule "libs/constellation/constellation-arduino"]
+	path = libs/constellation/constellation-arduino
+	url = https://github.com/myconstellation/constellation-arduino
+[submodule "libs/107-arduino-mcp2515/107-Arduino-MCP2515"]
+	path = libs/107-arduino-mcp2515/107-Arduino-MCP2515
+	url = https://github.com/107-systems/107-Arduino-MCP2515
+[submodule "libs/firebasejson/FirebaseJson"]
+	path = libs/firebasejson/FirebaseJson
+	url = https://github.com/mobizt/FirebaseJson
+[submodule "libs/texie-arduino-client/TeXie_arduino"]
+	path = libs/texie-arduino-client/TeXie_arduino
+	url = https://github.com/texie/TeXie_arduino
+[submodule "libs/tr4cker/tr4cker"]
+	path = libs/tr4cker/tr4cker
+	url = https://github.com/tr4cker-app/tr4cker
+[submodule "libs/esp32-rest-client/arduino-esp32-restclient"]
+	path = libs/esp32-rest-client/arduino-esp32-restclient
+	url = https://github.com/eduardomarcos/arduino-esp32-restclient
+[submodule "libs/tinyfox/Tinyfox"]
+	path = libs/tinyfox/Tinyfox
+	url = https://github.com/TECA-IOT/Tinyfox
+[submodule "libs/bluepad32/bluepad32-arduino"]
+	path = libs/bluepad32/bluepad32-arduino
+	url = https://github.com/ricardoquesada/bluepad32-arduino
+[submodule "libs/oroca-edubot/OROCA-EduBot-Library"]
+	path = libs/oroca-edubot/OROCA-EduBot-Library
+	url = https://github.com/oroca/OROCA-EduBot-Library
+[submodule "libs/fauxmoesp/fauxmoESP"]
+	path = libs/fauxmoesp/fauxmoESP
+	url = https://github.com/vintlabs/fauxmoESP
+[submodule "libs/upnp_generic/UPnP_Generic"]
+	path = libs/upnp_generic/UPnP_Generic
+	url = https://github.com/khoih-prog/UPnP_Generic
+[submodule "libs/blinker_pmsx003st/Blinker_PMSX003ST"]
+	path = libs/blinker_pmsx003st/Blinker_PMSX003ST
+	url = https://github.com/i3water/Blinker_PMSX003ST
+[submodule "libs/allthingstalk-lorawan-sdk/arduino-lorawan-sdk"]
+	path = libs/allthingstalk-lorawan-sdk/arduino-lorawan-sdk
+	url = https://github.com/allthingstalk/arduino-lorawan-sdk
+[submodule "libs/starterremote/starterremote"]
+	path = libs/starterremote/starterremote
+	url = https://gitlab.com/robostarter/starterremote.git
+[submodule "libs/seeed-arduino-rpcunified/Seeed_Arduino_rpcUnified"]
+	path = libs/seeed-arduino-rpcunified/Seeed_Arduino_rpcUnified
+	url = https://github.com/Seeed-Studio/Seeed_Arduino_rpcUnified
+[submodule "libs/firebase-esp32-client/Firebase-ESP32"]
+	path = libs/firebase-esp32-client/Firebase-ESP32
+	url = https://github.com/mobizt/Firebase-ESP32
+[submodule "libs/multiplex/Multiplex"]
+	path = libs/multiplex/Multiplex
+	url = https://github.com/RobTillaart/Multiplex
+[submodule "libs/logger/Logger"]
+	path = libs/logger/Logger
+	url = https://github.com/bakercp/Logger
+[submodule "libs/remoteme/RemoteMeArduinoLibrary"]
+	path = libs/remoteme/RemoteMeArduinoLibrary
+	url = https://github.com/remoteme/RemoteMeArduinoLibrary
+[submodule "libs/swarmtile/SwarmTile"]
+	path = libs/swarmtile/SwarmTile
+	url = https://github.com/astuder/SwarmTile
+[submodule "libs/simplerpc/simpleRPC"]
+	path = libs/simplerpc/simpleRPC
+	url = https://github.com/jfjlaros/simpleRPC
+[submodule "libs/prometheusarduino/prometheus-arduino"]
+	path = libs/prometheusarduino/prometheus-arduino
+	url = https://github.com/grafana/prometheus-arduino
+[submodule "libs/libaprs_tracker/LibAPRS_Tracker"]
+	path = libs/libaprs_tracker/LibAPRS_Tracker
+	url = https://github.com/barisdinc/LibAPRS_Tracker
+[submodule "libs/ethernet/Ethernet"]
+	path = libs/ethernet/Ethernet
+	url = https://github.com/arduino-libraries/Ethernet
+[submodule "libs/meteolabbeacon/MeteoLabBeacon"]
+	path = libs/meteolabbeacon/MeteoLabBeacon
+	url = https://github.com/meteolab/MeteoLabBeacon
+[submodule "libs/cumulocity-iot-client/CumulocityClient"]
+	path = libs/cumulocity-iot-client/CumulocityClient
+	url = https://github.com/elpinjo/CumulocityClient
+[submodule "libs/viziotmqttclient/viziot-mqtt-client-arduino"]
+	path = libs/viziotmqttclient/viziot-mqtt-client-arduino
+	url = https://github.com/VizIoT-com/viziot-mqtt-client-arduino
+[submodule "libs/107-arduino-uavcan/107-Arduino-UAVCAN"]
+	path = libs/107-arduino-uavcan/107-Arduino-UAVCAN
+	url = https://github.com/107-systems/107-Arduino-UAVCAN
+[submodule "libs/rosserial-arduino-library/rosserial_arduino_lib"]
+	path = libs/rosserial-arduino-library/rosserial_arduino_lib
+	url = https://github.com/frankjoshua/rosserial_arduino_lib
+[submodule "libs/sercomspislave/SercomSPISlave"]
+	path = libs/sercomspislave/SercomSPISlave
+	url = https://github.com/lenvm/SercomSPISlave
+[submodule "libs/sparkfun-lte-shield-arduino-library/SparkFun_LTE_Shield_Arduino_Library"]
+	path = libs/sparkfun-lte-shield-arduino-library/SparkFun_LTE_Shield_Arduino_Library
+	url = https://github.com/sparkfun/SparkFun_LTE_Shield_Arduino_Library
+[submodule "libs/tscontroller/TSController"]
+	path = libs/tscontroller/TSController
+	url = https://github.com/VassilyDev/TSController
+[submodule "libs/webthing-arduino/webthing-arduino"]
+	path = libs/webthing-arduino/webthing-arduino
+	url = https://github.com/mozilla-iot/webthing-arduino
+[submodule "libs/richhttpserver/rich_http_server"]
+	path = libs/richhttpserver/rich_http_server
+	url = https://github.com/sidoh/rich_http_server
+[submodule "libs/uulm-mcp23008-core/uulm_mcp23008_core"]
+	path = libs/uulm-mcp23008-core/uulm_mcp23008_core
+	url = https://gitlab.com/F-Schmidt/uulm_mcp23008_core.git
+[submodule "libs/iotway/IoTWay-Arduino"]
+	path = libs/iotway/IoTWay-Arduino
+	url = https://github.com/IoTWay/IoTWay-Arduino
+[submodule "libs/irremote/Arduino-IRremote"]
+	path = libs/irremote/Arduino-IRremote
+	url = https://github.com/z3t0/Arduino-IRremote
+[submodule "libs/wio-cell-lib-for-arduino/Wio_cell_lib_for_Arduino"]
+	path = libs/wio-cell-lib-for-arduino/Wio_cell_lib_for_Arduino
+	url = https://github.com/SeeedJP/Wio_cell_lib_for_Arduino
+[submodule "libs/thethingsnode/arduino-node-lib"]
+	path = libs/thethingsnode/arduino-node-lib
+	url = https://github.com/TheThingsNetwork/arduino-node-lib
+[submodule "libs/hamqttdevice/HAMqttDevice"]
+	path = libs/hamqttdevice/HAMqttDevice
+	url = https://github.com/plapointe6/HAMqttDevice
+[submodule "libs/mqttlogger/MqttLogger"]
+	path = libs/mqttlogger/MqttLogger
+	url = https://github.com/androbi-com/MqttLogger
+[submodule "libs/twitchapi/arduino_twitch_api"]
+	path = libs/twitchapi/arduino_twitch_api
+	url = https://github.com/witnessmenow/arduino_twitch_api
+[submodule "libs/optigatruste/OPTIGA-Trust-E-Security-Controller"]
+	path = libs/optigatruste/OPTIGA-Trust-E-Security-Controller
+	url = https://github.com/Infineon/OPTIGA-Trust-E-Security-Controller
+[submodule "libs/wio-lte-for-arduino/WioLTEforArduino"]
+	path = libs/wio-lte-for-arduino/WioLTEforArduino
+	url = https://github.com/SeeedJP/WioLTEforArduino
+[submodule "libs/boodskaptransceiver/BoodskapTransceiver"]
+	path = libs/boodskaptransceiver/BoodskapTransceiver
+	url = https://github.com/BoodskapPlatform/BoodskapTransceiver
+[submodule "libs/m2m-solutions-logger-library/M2M_Logger"]
+	path = libs/m2m-solutions-logger-library/M2M_Logger
+	url = https://github.com/m2m-solutions/M2M_Logger
+[submodule "libs/xbeeatcmds/XBeeATCmds"]
+	path = libs/xbeeatcmds/XBeeATCmds
+	url = https://github.com/hideakitai/XBeeATCmds
+[submodule "libs/uhs2-midi/Arduino-UHS2MIDI"]
+	path = libs/uhs2-midi/Arduino-UHS2MIDI
+	url = https://github.com/YuuichiAkagawa/Arduino-UHS2MIDI
+[submodule "libs/espnexupload/ESPNexUpload"]
+	path = libs/espnexupload/ESPNexUpload
+	url = https://github.com/Nredor/ESPNexUpload
+[submodule "libs/cbusbuzzer/CBUSBUZZER"]
+	path = libs/cbusbuzzer/CBUSBUZZER
+	url = https://github.com/MERG-DEV/CBUSBUZZER
+[submodule "libs/wiichuck/WiiChuck"]
+	path = libs/wiichuck/WiiChuck
+	url = https://github.com/madhephaestus/WiiChuck
+[submodule "libs/xbee_serial_array/xbee_serial_array"]
+	path = libs/xbee_serial_array/xbee_serial_array
+	url = https://github.com/cDnNeMeSiS/xbee_serial_array
+[submodule "libs/ibustrx/arduino-ibustrx"]
+	path = libs/ibustrx/arduino-ibustrx
+	url = https://github.com/just-oblivious/arduino-ibustrx
+[submodule "libs/dabbleesp32/DabbleESP32"]
+	path = libs/dabbleesp32/DabbleESP32
+	url = https://github.com/STEMpedia/DabbleESP32
+[submodule "libs/gsm-playground/gsm-playground"]
+	path = libs/gsm-playground/gsm-playground
+	url = https://github.com/cniweb/gsm-playground
+[submodule "libs/sony9pinremote/Sony9PinRemote"]
+	path = libs/sony9pinremote/Sony9PinRemote
+	url = https://github.com/hideakitai/Sony9PinRemote
+[submodule "libs/allwize/allwize"]
+	path = libs/allwize/allwize
+	url = https://github.com/AllWize/allwize
+[submodule "libs/ble-sdk-for-arduino/ble-sdk-arduino"]
+	path = libs/ble-sdk-for-arduino/ble-sdk-arduino
+	url = https://github.com/Cheong2K/ble-sdk-arduino
+[submodule "libs/packetserial/PacketSerial"]
+	path = libs/packetserial/PacketSerial
+	url = https://github.com/bakercp/PacketSerial
+[submodule "libs/hoverboardapi/bipropellant-hoverboard-api"]
+	path = libs/hoverboardapi/bipropellant-hoverboard-api
+	url = https://github.com/bipropellant/bipropellant-hoverboard-api
+[submodule "libs/dataserverios/DataServeriOS"]
+	path = libs/dataserverios/DataServeriOS
+	url = https://github.com/MHeeres/DataServeriOS
+[submodule "libs/m2m-solutions-purplepoint-boards-library/M2M_Boards"]
+	path = libs/m2m-solutions-purplepoint-boards-library/M2M_Boards
+	url = https://github.com/m2m-solutions/M2M_Boards
+[submodule "libs/barebonesim800/BareBoneSim800"]
+	path = libs/barebonesim800/BareBoneSim800
+	url = https://github.com/thehapyone/BareBoneSim800
+[submodule "libs/slackapi/arduino-slack-api"]
+	path = libs/slackapi/arduino-slack-api
+	url = https://github.com/witnessmenow/arduino-slack-api
+[submodule "libs/tridenttd_linenotify/TridentTD_LineNotify"]
+	path = libs/tridenttd_linenotify/TridentTD_LineNotify
+	url = https://github.com/TridentTD/TridentTD_LineNotify
+[submodule "libs/dmxusb/dmxusb"]
+	path = libs/dmxusb/dmxusb
+	url = https://github.com/DaAwesomeP/dmxusb
+[submodule "libs/tinyproto/tinyproto"]
+	path = libs/tinyproto/tinyproto
+	url = https://github.com/lexus2k/tinyproto
+[submodule "libs/blynk_esp8266at_wm/Blynk_Esp8266AT_WM"]
+	path = libs/blynk_esp8266at_wm/Blynk_Esp8266AT_WM
+	url = https://github.com/khoih-prog/Blynk_Esp8266AT_WM
+[submodule "libs/stm32duino-lwip/LwIP"]
+	path = libs/stm32duino-lwip/LwIP
+	url = https://github.com/stm32duino/LwIP
+[submodule "libs/commandparser/Arduino-CommandParser"]
+	path = libs/commandparser/Arduino-CommandParser
+	url = https://github.com/Uberi/Arduino-CommandParser
+[submodule "libs/dfl168a_async/DFL168A_Async"]
+	path = libs/dfl168a_async/DFL168A_Async
+	url = https://github.com/Dafulai/DFL168A_Async
+[submodule "libs/wificonnect/WiFiConnect"]
+	path = libs/wificonnect/WiFiConnect
+	url = https://github.com/smurf0969/WiFiConnect
+[submodule "libs/serialterminal/SerialTerminal"]
+	path = libs/serialterminal/SerialTerminal
+	url = https://github.com/SMFSW/SerialTerminal
+[submodule "libs/midea-ac-infrared-remote-controller-with-esp32-rmt-peripheral/esp32_rmt_midea_ir_tx"]
+	path = libs/midea-ac-infrared-remote-controller-with-esp32-rmt-peripheral/esp32_rmt_midea_ir_tx
+	url = https://github.com/morcibacsi/esp32_rmt_midea_ir_tx
+[submodule "libs/sparkfun-hm1x-bluetooth-arduino-library/SparkFun_HM1X_Bluetooth_Arduino_Library"]
+	path = libs/sparkfun-hm1x-bluetooth-arduino-library/SparkFun_HM1X_Bluetooth_Arduino_Library
+	url = https://github.com/sparkfun/SparkFun_HM1X_Bluetooth_Arduino_Library
+[submodule "libs/radio/Radio"]
+	path = libs/radio/Radio
+	url = https://github.com/mathertel/Radio
+[submodule "libs/loralayer2/LoRaLayer2"]
+	path = libs/loralayer2/LoRaLayer2
+	url = https://github.com/sudomesh/LoRaLayer2
+[submodule "libs/bleperipheral/arduino-BLEPeripheral"]
+	path = libs/bleperipheral/arduino-BLEPeripheral
+	url = https://github.com/sandeepmistry/arduino-BLEPeripheral
+[submodule "libs/iottweetsiemens_simatic/IoTtweetSIEMENS_SIMATIC"]
+	path = libs/iottweetsiemens_simatic/IoTtweetSIEMENS_SIMATIC
+	url = https://github.com/Isaranu/IoTtweetSIEMENS_SIMATIC
+[submodule "libs/mqttpubsubclient/MQTTPubSubClient"]
+	path = libs/mqttpubsubclient/MQTTPubSubClient
+	url = https://github.com/hideakitai/MQTTPubSubClient
+[submodule "libs/youtubelivestreamarduino/youtube-livestream-arduino"]
+	path = libs/youtubelivestreamarduino/youtube-livestream-arduino
+	url = https://github.com/witnessmenow/youtube-livestream-arduino
+[submodule "libs/adafruit-nrf8001/Adafruit_nRF8001"]
+	path = libs/adafruit-nrf8001/Adafruit_nRF8001
+	url = https://github.com/adafruit/Adafruit_nRF8001
+[submodule "libs/rf433send/rf433send"]
+	path = libs/rf433send/rf433send
+	url = https://github.com/sebmillet/rf433send
+[submodule "libs/zforce-air-library/zforce-arduino"]
+	path = libs/zforce-air-library/zforce-arduino
+	url = https://github.com/neonode-inc/zforce-arduino
+[submodule "libs/arduinoespat/ArduinoESPAT-Library"]
+	path = libs/arduinoespat/ArduinoESPAT-Library
+	url = https://github.com/nyampass/ArduinoESPAT-Library
+[submodule "libs/i2commands/i2commands"]
+	path = libs/i2commands/i2commands
+	url = https://gitlab.com/arduino-libraries/i2commands.git
+[submodule "libs/m2m-solutions-miraone-library/M2M_MiraOne"]
+	path = libs/m2m-solutions-miraone-library/M2M_MiraOne
+	url = https://github.com/m2m-solutions/M2M_MiraOne
+[submodule "libs/rootcertificates/RootCertificates"]
+	path = libs/rootcertificates/RootCertificates
+	url = https://github.com/VMinute/RootCertificates
+[submodule "libs/app-fernando-k/AppFernandok"]
+	path = libs/app-fernando-k/AppFernandok
+	url = https://github.com/ferkoyanagi/AppFernandok
+[submodule "libs/virtuino-library-for-all-esp8266-and-esp32-boards/virtuinoESP"]
+	path = libs/virtuino-library-for-all-esp8266-and-esp32-boards/virtuinoESP
+	url = https://github.com/iliaslamprou/virtuinoESP
+[submodule "libs/acan2517fd/acan2517FD"]
+	path = libs/acan2517fd/acan2517FD
+	url = https://github.com/pierremolinaro/acan2517FD
+[submodule "libs/google-cloud-iot-core-jwt/google-cloud-iot-arduino"]
+	path = libs/google-cloud-iot-core-jwt/google-cloud-iot-arduino
+	url = https://github.com/GoogleCloudPlatform/google-cloud-iot-arduino
+[submodule "libs/pathvariablehandlers/path_variable_handlers"]
+	path = libs/pathvariablehandlers/path_variable_handlers
+	url = https://github.com/sidoh/path_variable_handlers
+[submodule "libs/ttn_esp32/TheThingsNetwork_esp32"]
+	path = libs/ttn_esp32/TheThingsNetwork_esp32
+	url = https://github.com/rgot-org/TheThingsNetwork_esp32
+[submodule "libs/mtcparser/MTCParser"]
+	path = libs/mtcparser/MTCParser
+	url = https://github.com/hideakitai/MTCParser
+[submodule "libs/piningroup/PinInGroup"]
+	path = libs/piningroup/PinInGroup
+	url = https://github.com/RobTillaart/PinInGroup
+[submodule "libs/stm32duino-i-nucleo-lrwan1/I-NUCLEO-LRWAN1"]
+	path = libs/stm32duino-i-nucleo-lrwan1/I-NUCLEO-LRWAN1
+	url = https://github.com/stm32duino/I-NUCLEO-LRWAN1
+[submodule "libs/rotarydial/RotaryDial"]
+	path = libs/rotarydial/RotaryDial
+	url = https://github.com/Harvie/RotaryDial
+[submodule "libs/kerbal-sim-pit/kerbalsimpit-arduino"]
+	path = libs/kerbal-sim-pit/kerbalsimpit-arduino
+	url = https://bitbucket.org/pjhardy/kerbalsimpit-arduino.git
+[submodule "libs/home-assistant-integration/arduino-home-assistant"]
+	path = libs/home-assistant-integration/arduino-home-assistant
+	url = https://github.com/dawidchyrzynski/arduino-home-assistant
+[submodule "libs/esp8266_at_webserver/ESP8266_AT_WebServer"]
+	path = libs/esp8266_at_webserver/ESP8266_AT_WebServer
+	url = https://github.com/khoih-prog/ESP8266_AT_WebServer
+[submodule "libs/arduinobearssl/ArduinoBearSSL"]
+	path = libs/arduinobearssl/ArduinoBearSSL
+	url = https://github.com/arduino-libraries/ArduinoBearSSL
+[submodule "libs/libssh-esp32/LibSSH-ESP32"]
+	path = libs/libssh-esp32/LibSSH-ESP32
+	url = https://github.com/ewpa/LibSSH-ESP32
+[submodule "libs/tca6416a/TCA6416A"]
+	path = libs/tca6416a/TCA6416A
+	url = https://github.com/haakonnessjoen/TCA6416A
+[submodule "libs/statsd/ArduinoStatsd"]
+	path = libs/statsd/ArduinoStatsd
+	url = https://github.com/aelse/ArduinoStatsd
+[submodule "libs/espalexa/Espalexa"]
+	path = libs/espalexa/Espalexa
+	url = https://github.com/Aircoookie/Espalexa
+[submodule "libs/sim800l-library-revised/Sim800L-Arduino-Library-revised"]
+	path = libs/sim800l-library-revised/Sim800L-Arduino-Library-revised
+	url = https://github.com/VittorioEsposito/Sim800L-Arduino-Library-revised
+[submodule "libs/jsonlib/jsonlib"]
+	path = libs/jsonlib/jsonlib
+	url = https://github.com/wyolum/jsonlib
+[submodule "libs/orvibo-wiwo-s20-library/OrviboS20_Arduino"]
+	path = libs/orvibo-wiwo-s20-library/OrviboS20_Arduino
+	url = https://github.com/antevir/OrviboS20_Arduino
+[submodule "libs/tmrpcm/TMRpcm"]
+	path = libs/tmrpcm/TMRpcm
+	url = https://github.com/TMRh20/TMRpcm
+[submodule "libs/rf24/RF24"]
+	path = libs/rf24/RF24
+	url = https://github.com/TMRh20/RF24
+[submodule "libs/teensysimplepacketcoms/TeensySimplePacketComs"]
+	path = libs/teensysimplepacketcoms/TeensySimplePacketComs
+	url = https://github.com/madhephaestus/TeensySimplePacketComs
+[submodule "libs/mqtt/arduino-mqtt"]
+	path = libs/mqtt/arduino-mqtt
+	url = https://github.com/256dpi/arduino-mqtt
+[submodule "libs/espasync_wifimanager/ESPAsync_WiFiManager"]
+	path = libs/espasync_wifimanager/ESPAsync_WiFiManager
+	url = https://github.com/khoih-prog/ESPAsync_WiFiManager
+[submodule "libs/swap/swap"]
+	path = libs/swap/swap
+	url = https://github.com/panStamp/swap
+[submodule "libs/modbusconfig/ModbusConfig"]
+	path = libs/modbusconfig/ModbusConfig
+	url = https://github.com/Warlib1975/ModbusConfig
+[submodule "libs/tinyupnp/TinyUPnP"]
+	path = libs/tinyupnp/TinyUPnP
+	url = https://github.com/ofekp/TinyUPnP
+[submodule "libs/arduinoiotcloud/ArduinoIoTCloud"]
+	path = libs/arduinoiotcloud/ArduinoIoTCloud
+	url = https://github.com/arduino-libraries/ArduinoIoTCloud
+[submodule "libs/mcci-lorawan-lmic-library/arduino-lmic"]
+	path = libs/mcci-lorawan-lmic-library/arduino-lmic
+	url = https://github.com/mcci-catena/arduino-lmic
+[submodule "libs/bbq10keyboard/arduino_bbq10kbd"]
+	path = libs/bbq10keyboard/arduino_bbq10kbd
+	url = https://github.com/arturo182/arduino_bbq10kbd
+[submodule "libs/simple-web-serial/simplewebserial-arduino-library"]
+	path = libs/simple-web-serial/simplewebserial-arduino-library
+	url = https://github.com/fmgrafikdesign/simplewebserial-arduino-library
+[submodule "libs/ps2dev/ps2dev"]
+	path = libs/ps2dev/ps2dev
+	url = https://github.com/harvie/ps2dev
+[submodule "libs/espectro/EspX"]
+	path = libs/espectro/EspX
+	url = https://github.com/andriyadi/EspX
+[submodule "libs/kmp_rs485/KMP_RS485"]
+	path = libs/kmp_rs485/KMP_RS485
+	url = https://github.com/kmpelectronics/KMP_RS485
+[submodule "libs/cmmc-ota/CMMC_OTA"]
+	path = libs/cmmc-ota/CMMC_OTA
+	url = https://github.com/cmmakerclub/CMMC_OTA
+[submodule "libs/onewire/OneWire"]
+	path = libs/onewire/OneWire
+	url = https://github.com/PaulStoffregen/OneWire
+[submodule "libs/antplus-arduino/antplus-arduino"]
+	path = libs/antplus-arduino/antplus-arduino
+	url = https://github.com/cujomalainey/antplus-arduino
+[submodule "libs/senses_nbiot/Senses_NBIoT"]
+	path = libs/senses_nbiot/Senses_NBIoT
+	url = https://github.com/Isaranu/Senses_NBIoT
+[submodule "libs/arduinoihc/arduinoihc"]
+	path = libs/arduinoihc/arduinoihc
+	url = https://github.com/dingusdk/arduinoihc
+[submodule "libs/ppm-reader/PPM-reader"]
+	path = libs/ppm-reader/PPM-reader
+	url = https://github.com/dimag0g/PPM-reader
+[submodule "libs/smarteverything-lion-rn2483/sme-rn2483-library"]
+	path = libs/smarteverything-lion-rn2483/sme-rn2483-library
+	url = https://github.com/axelelettronica/sme-rn2483-library
+[submodule "libs/ardosc/ArdOSC"]
+	path = libs/ardosc/ArdOSC
+	url = https://github.com/Chris--A/ArdOSC
+[submodule "libs/fhem/FHEM_Arduino"]
+	path = libs/fhem/FHEM_Arduino
+	url = https://github.com/kingmathers313/FHEM_Arduino
+[submodule "libs/loranow/LoRaNow"]
+	path = libs/loranow/LoRaNow
+	url = https://github.com/ricaun/LoRaNow
+[submodule "libs/pubnub/arduino"]
+	path = libs/pubnub/arduino
+	url = https://github.com/pubnub/arduino
+[submodule "libs/comdriverspi/ComDriverSpi"]
+	path = libs/comdriverspi/ComDriverSpi
+	url = https://github.com/IGB-Germany/ComDriverSpi
+[submodule "libs/cmdmessenger/Arduino-CmdMessenger"]
+	path = libs/cmdmessenger/Arduino-CmdMessenger
+	url = https://github.com/thijse/Arduino-CmdMessenger
+[submodule "libs/pubsubclient/pubsubclient"]
+	path = libs/pubsubclient/pubsubclient
+	url = https://github.com/knolleary/pubsubclient
+[submodule "libs/rf24mesh/RF24Mesh"]
+	path = libs/rf24mesh/RF24Mesh
+	url = https://github.com/TMRh20/RF24Mesh
+[submodule "libs/esp32fota/esp32FOTA"]
+	path = libs/esp32fota/esp32FOTA
+	url = https://github.com/chrisjoyce911/esp32FOTA
+[submodule "libs/wireupdate/WireUpdate"]
+	path = libs/wireupdate/WireUpdate
+	url = https://github.com/agdl/WireUpdate
+[submodule "libs/nmeaparser/NMEAParser"]
+	path = libs/nmeaparser/NMEAParser
+	url = https://github.com/Glinnes/NMEAParser
+[submodule "libs/ros2arduino/ros2arduino"]
+	path = libs/ros2arduino/ros2arduino
+	url = https://github.com/ROBOTIS-GIT/ros2arduino
+[submodule "libs/rx8010sj/RX8010SJ"]
+	path = libs/rx8010sj/RX8010SJ
+	url = https://github.com/Wh1teRabbitHU/RX8010SJ
+[submodule "libs/dfl168a_sync/DFL168A-Sync-Library"]
+	path = libs/dfl168a_sync/DFL168A-Sync-Library
+	url = https://github.com/Dafulai/DFL168A-Sync-Library
+[submodule "libs/liquidcrystal_pcf8574/LiquidCrystal_PCF8574"]
+	path = libs/liquidcrystal_pcf8574/LiquidCrystal_PCF8574
+	url = https://github.com/mathertel/LiquidCrystal_PCF8574
+[submodule "libs/slight_debugmenu/slight_DebugMenu"]
+	path = libs/slight_debugmenu/slight_DebugMenu
+	url = https://github.com/s-light/slight_DebugMenu
+[submodule "libs/coap-simple-library/CoAP-simple-library"]
+	path = libs/coap-simple-library/CoAP-simple-library
+	url = https://github.com/hirotakaster/CoAP-simple-library
+[submodule "libs/microwire/microWire"]
+	path = libs/microwire/microWire
+	url = https://github.com/GyverLibs/microWire
+[submodule "libs/jma_spcomm/JMASPComm"]
+	path = libs/jma_spcomm/JMASPComm
+	url = https://github.com/mobinrg/JMASPComm
+[submodule "libs/ark-cpp-client/cpp-client"]
+	path = libs/ark-cpp-client/cpp-client
+	url = https://github.com/ArkEcosystem/cpp-client
+[submodule "libs/obd2/arduino-OBD2"]
+	path = libs/obd2/arduino-OBD2
+	url = https://github.com/sandeepmistry/arduino-OBD2
+[submodule "libs/ti-tca9548a/TI_TCA9548A"]
+	path = libs/ti-tca9548a/TI_TCA9548A
+	url = https://github.com/jeremycole/TI_TCA9548A
+[submodule "libs/stm32duino-s2-lp/S2-LP"]
+	path = libs/stm32duino-s2-lp/S2-LP
+	url = https://github.com/stm32duino/S2-LP
+[submodule "libs/esp32simplepacketcoms/Esp32SimplePacketComs"]
+	path = libs/esp32simplepacketcoms/Esp32SimplePacketComs
+	url = https://github.com/madhephaestus/Esp32SimplePacketComs
+[submodule "libs/remotemeutils/RemoteMeArduinoLibraryUtils"]
+	path = libs/remotemeutils/RemoteMeArduinoLibraryUtils
+	url = https://github.com/remoteme/RemoteMeArduinoLibraryUtils
+[submodule "libs/tinyusbsimplepacketcoms/TinyUSBSimplePacketComs"]
+	path = libs/tinyusbsimplepacketcoms/TinyUSBSimplePacketComs
+	url = https://github.com/madhephaestus/TinyUSBSimplePacketComs
+[submodule "libs/zaber-binary/zaber-binary-for-arduino"]
+	path = libs/zaber-binary/zaber-binary-for-arduino
+	url = https://gitlab.com/zaber-core-libs/zaber-binary-for-arduino.git
+[submodule "libs/seeed-arduino-rpcwifi/Seeed_Arduino_rpcWiFi"]
+	path = libs/seeed-arduino-rpcwifi/Seeed_Arduino_rpcWiFi
+	url = https://github.com/Seeed-Studio/Seeed_Arduino_rpcWiFi
+[submodule "libs/wireguard-esp32/WireGuard-ESP32-Arduino"]
+	path = libs/wireguard-esp32/WireGuard-ESP32-Arduino
+	url = https://github.com/ciniml/WireGuard-ESP32-Arduino
+[submodule "libs/homecontrol-mqtt/homecontrol-mqtt"]
+	path = libs/homecontrol-mqtt/homecontrol-mqtt
+	url = https://github.com/HomeControlAS/homecontrol-mqtt
+[submodule "libs/neteeprom/NetEEPROM"]
+	path = libs/neteeprom/NetEEPROM
+	url = https://github.com/gregington/NetEEPROM
+[submodule "libs/simpleserialshell/SimpleSerialShell"]
+	path = libs/simpleserialshell/SimpleSerialShell
+	url = https://github.com/philj404/SimpleSerialShell
+[submodule "libs/asciimassage/AsciiMassage"]
+	path = libs/asciimassage/AsciiMassage
+	url = https://github.com/SofaPirate/AsciiMassage
+[submodule "libs/acespi/AceSPI"]
+	path = libs/acespi/AceSPI
+	url = https://github.com/bxparks/AceSPI
+[submodule "libs/phpoc/arduino-Phpoc"]
+	path = libs/phpoc/arduino-Phpoc
+	url = https://github.com/phpoc/arduino-Phpoc
+[submodule "libs/blynkesp32_bt_wf/BlynkESP32_BT_WF"]
+	path = libs/blynkesp32_bt_wf/BlynkESP32_BT_WF
+	url = https://github.com/khoih-prog/BlynkESP32_BT_WF
+[submodule "libs/esp8266_multipart/ESP8266_multipart"]
+	path = libs/esp8266_multipart/ESP8266_multipart
+	url = https://github.com/nailujx86/ESP8266_multipart
+[submodule "libs/iottweetnbiot/IoTtweetNBIoT"]
+	path = libs/iottweetnbiot/IoTtweetNBIoT
+	url = https://github.com/Isaranu/IoTtweetNBIoT
+[submodule "libs/sparkfun-ateccx08a-arduino-library/SparkFun_ATECCX08a_Arduino_Library"]
+	path = libs/sparkfun-ateccx08a-arduino-library/SparkFun_ATECCX08a_Arduino_Library
+	url = https://github.com/sparkfun/SparkFun_ATECCX08a_Arduino_Library
+[submodule "libs/grove-infrared-receiver-and-emitter/IRSendRev"]
+	path = libs/grove-infrared-receiver-and-emitter/IRSendRev
+	url = https://github.com/Seeed-Studio/IRSendRev
+[submodule "libs/vrpc/arduino-vrpc"]
+	path = libs/vrpc/arduino-vrpc
+	url = https://github.com/heisenware/arduino-vrpc
+[submodule "libs/cserialwatcher/arduino-serial-variable-table"]
+	path = libs/cserialwatcher/arduino-serial-variable-table
+	url = https://github.com/lozziboy/arduino-serial-variable-table
+[submodule "libs/canbusmcp2515_asukiaaa/CanBusMCP2515-arduino"]
+	path = libs/canbusmcp2515_asukiaaa/CanBusMCP2515-arduino
+	url = https://github.com/asukiaaa/CanBusMCP2515-arduino
+[submodule "libs/wire_asukiaaa/arduino-wire"]
+	path = libs/wire_asukiaaa/arduino-wire
+	url = https://github.com/asukiaaa/arduino-wire
+[submodule "libs/modbus-esp8266/modbus-esp8266"]
+	path = libs/modbus-esp8266/modbus-esp8266
+	url = https://github.com/emelianov/modbus-esp8266
+[submodule "libs/dra818/arduino-dra818"]
+	path = libs/dra818/arduino-dra818
+	url = https://github.com/fatpat/arduino-dra818
+[submodule "libs/vivicoreserial/VivicoreSerial"]
+	path = libs/vivicoreserial/VivicoreSerial
+	url = https://github.com/vivitainc/VivicoreSerial
+[submodule "libs/smarteverything-nfc-nt3h1101/sme-nt3h1x01-library"]
+	path = libs/smarteverything-nfc-nt3h1101/sme-nt3h1x01-library
+	url = https://github.com/ameltech/sme-nt3h1x01-library
+[submodule "libs/firebase-arduino-client-library-for-esp8266-and-esp32/Firebase-ESP-Client"]
+	path = libs/firebase-arduino-client-library-for-esp8266-and-esp32/Firebase-ESP-Client
+	url = https://github.com/mobizt/Firebase-ESP-Client
+[submodule "libs/unified-log/ArduinoUnifiedLog"]
+	path = libs/unified-log/ArduinoUnifiedLog
+	url = https://github.com/dersimn/ArduinoUnifiedLog
+[submodule "libs/cbusled/CBUSLED"]
+	path = libs/cbusled/CBUSLED
+	url = https://github.com/MERG-DEV/CBUSLED
+[submodule "libs/ceclient/ArduinoLib_CEClient"]
+	path = libs/ceclient/ArduinoLib_CEClient
+	url = https://github.com/lucadentella/ArduinoLib_CEClient
+[submodule "libs/ttn_m5stack/TTN_M5Stack"]
+	path = libs/ttn_m5stack/TTN_M5Stack
+	url = https://github.com/rgot-org/TTN_M5Stack
+[submodule "libs/esp8266-mqtt-mesh/ESP8266MQTTMesh"]
+	path = libs/esp8266-mqtt-mesh/ESP8266MQTTMesh
+	url = https://github.com/PhracturedBlue/ESP8266MQTTMesh
+[submodule "libs/wifiman/WiFiMan"]
+	path = libs/wifiman/WiFiMan
+	url = https://github.com/ChipTechno/WiFiMan
+[submodule "libs/usb-midi/USB-MIDI"]
+	path = libs/usb-midi/USB-MIDI
+	url = https://github.com/lathoub/USB-MIDI
+[submodule "libs/aprs-decoder-lib/APRS-Decoder-Lib"]
+	path = libs/aprs-decoder-lib/APRS-Decoder-Lib
+	url = https://github.com/peterus/APRS-Decoder-Lib
+[submodule "libs/espert/ESPert"]
+	path = libs/espert/ESPert
+	url = https://github.com/JimmySoftware/ESPert
+[submodule "libs/serialwireoutput/SerialWireOutput"]
+	path = libs/serialwireoutput/SerialWireOutput
+	url = https://github.com/koendv/SerialWireOutput
+[submodule "libs/vanbus/VanBus"]
+	path = libs/vanbus/VanBus
+	url = https://github.com/0xCAFEDECAF/VanBus
+[submodule "libs/stm32duinoble/STM32duinoBLE"]
+	path = libs/stm32duinoble/STM32duinoBLE
+	url = https://github.com/stm32duino/STM32duinoBLE
+[submodule "libs/httpclient/HttpClient"]
+	path = libs/httpclient/HttpClient
+	url = https://github.com/amcewen/HttpClient
+[submodule "libs/loconet/LocoNet"]
+	path = libs/loconet/LocoNet
+	url = https://github.com/mrrwa/LocoNet
+[submodule "libs/esp32-rmt-peripheral-van-bus-reader-library/esp32_rmt_van_rx"]
+	path = libs/esp32-rmt-peripheral-van-bus-reader-library/esp32_rmt_van_rx
+	url = https://github.com/morcibacsi/esp32_rmt_van_rx
+[submodule "libs/usbhid/USBHID_stm32f1"]
+	path = libs/usbhid/USBHID_stm32f1
+	url = https://github.com/arpruss/USBHID_stm32f1
+[submodule "libs/streamlabsarduinoalerts/StreamlabsArduinoAlerts"]
+	path = libs/streamlabsarduinoalerts/StreamlabsArduinoAlerts
+	url = https://github.com/lucalas/StreamlabsArduinoAlerts
+[submodule "libs/supladevice/supla-arduino"]
+	path = libs/supladevice/supla-arduino
+	url = https://github.com/SUPLA/supla-arduino
+[submodule "libs/acan2517/acan2517"]
+	path = libs/acan2517/acan2517
+	url = https://github.com/pierremolinaro/acan2517
+[submodule "libs/pm25senses/pm25senses"]
+	path = libs/pm25senses/pm25senses
+	url = https://github.com/Isaranu/pm25senses
+[submodule "libs/tuya_wifi_mcu_sdk/tuya-wifi-mcu-sdk-arduino-library"]
+	path = libs/tuya_wifi_mcu_sdk/tuya-wifi-mcu-sdk-arduino-library
+	url = https://github.com/tuya/tuya-wifi-mcu-sdk-arduino-library
+[submodule "libs/thinger.io/Arduino-Library"]
+	path = libs/thinger.io/Arduino-Library
+	url = https://github.com/thinger-io/Arduino-Library
+[submodule "libs/serialmenucmd/SerialMenuCmd"]
+	path = libs/serialmenucmd/SerialMenuCmd
+	url = https://github.com/ARTS37/SerialMenuCmd
+[submodule "libs/iotwebconf_for_visuino_modified_by_iot_jedi/IoTWebConf_for_Visuino_modified_by_IoT_Jedi"]
+	path = libs/iotwebconf_for_visuino_modified_by_iot_jedi/IoTWebConf_for_Visuino_modified_by_IoT_Jedi
+	url = https://github.com/BadASszZ/IoTWebConf_for_Visuino_modified_by_IoT_Jedi
+[submodule "libs/esp32_easy_wifi_data/ESP32_easy_wifi_data"]
+	path = libs/esp32_easy_wifi_data/ESP32_easy_wifi_data
+	url = https://github.com/joshua-8/ESP32_easy_wifi_data
+[submodule "libs/rf433any/RF433any"]
+	path = libs/rf433any/RF433any
+	url = https://github.com/sebmillet/RF433any
+[submodule "libs/arduinoble/ArduinoBLE"]
+	path = libs/arduinoble/ArduinoBLE
+	url = https://github.com/arduino-libraries/ArduinoBLE
+[submodule "libs/wirewrapper/WireWrapper"]
+	path = libs/wirewrapper/WireWrapper
+	url = https://github.com/SMFSW/WireWrapper
+[submodule "libs/wifimanager_nina_lite/WiFiManager_NINA_Lite"]
+	path = libs/wifimanager_nina_lite/WiFiManager_NINA_Lite
+	url = https://github.com/khoih-prog/WiFiManager_NINA_Lite
+[submodule "libs/snmp-manager/Arduino_SNMP_Manager"]
+	path = libs/snmp-manager/Arduino_SNMP_Manager
+	url = https://github.com/shortbloke/Arduino_SNMP_Manager
+[submodule "libs/mfrc522_i2c/MFRC522_I2C"]
+	path = libs/mfrc522_i2c/MFRC522_I2C
+	url = https://github.com/kkloesener/MFRC522_I2C
+[submodule "libs/uardecs-library/UARDECS"]
+	path = libs/uardecs-library/UARDECS
+	url = https://github.com/H-Kurosaki/UARDECS
+[submodule "libs/antares-esp8266-http/antares-esp8266-http"]
+	path = libs/antares-esp8266-http/antares-esp8266-http
+	url = https://github.com/antaresdocumentation/antares-esp8266-http
+[submodule "libs/arduinolog/Arduino-Log"]
+	path = libs/arduinolog/Arduino-Log
+	url = https://github.com/thijse/Arduino-Log
+[submodule "libs/universaltelegrambot/Universal-Arduino-Telegram-Bot"]
+	path = libs/universaltelegrambot/Universal-Arduino-Telegram-Bot
+	url = https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot
+[submodule "libs/grandeur/arduino-sdk"]
+	path = libs/grandeur/arduino-sdk
+	url = https://github.com/grandeurtech/arduino-sdk
+[submodule "libs/hardwire/HardWire-Arduino-Library"]
+	path = libs/hardwire/HardWire-Arduino-Library
+	url = https://github.com/thexeno/HardWire-Arduino-Library
+[submodule "libs/wifimanager_generic_lite/WiFiManager_Generic_Lite"]
+	path = libs/wifimanager_generic_lite/WiFiManager_Generic_Lite
+	url = https://github.com/khoih-prog/WiFiManager_Generic_Lite
+[submodule "libs/elmo/ELMo"]
+	path = libs/elmo/ELMo
+	url = https://github.com/rudydelorenzo/ELMo
+[submodule "libs/can/arduino-CAN"]
+	path = libs/can/arduino-CAN
+	url = https://github.com/sandeepmistry/arduino-CAN
+[submodule "libs/nrf905-radio-library/nRF905-arduino"]
+	path = libs/nrf905-radio-library/nRF905-arduino
+	url = https://github.com/zkemble/nRF905-arduino
+[submodule "libs/teensydmx/TeensyDMX"]
+	path = libs/teensydmx/TeensyDMX
+	url = https://github.com/ssilverman/TeensyDMX
+[submodule "libs/ucloudiotsdk/ucloud-iot-sdk-arduino"]
+	path = libs/ucloudiotsdk/ucloud-iot-sdk-arduino
+	url = https://github.com/ucloud/ucloud-iot-sdk-arduino
+[submodule "libs/closedcube-tca9546a/ClosedCube_TCA9546A_Arduino"]
+	path = libs/closedcube-tca9546a/ClosedCube_TCA9546A_Arduino
+	url = https://github.com/closedcube/ClosedCube_TCA9546A_Arduino
+[submodule "libs/adafruit-blefirmata/Adafruit_BLEFirmata"]
+	path = libs/adafruit-blefirmata/Adafruit_BLEFirmata
+	url = https://github.com/adafruit/Adafruit_BLEFirmata
+[submodule "libs/nmradcc/NmraDcc"]
+	path = libs/nmradcc/NmraDcc
+	url = https://github.com/mrrwa/NmraDcc
+[submodule "libs/bridgehttpclient/BridgeHttpClient"]
+	path = libs/bridgehttpclient/BridgeHttpClient
+	url = https://github.com/imrehorvath/BridgeHttpClient
+[submodule "libs/esp32wifimanager/Esp32WifiManager"]
+	path = libs/esp32wifimanager/Esp32WifiManager
+	url = https://github.com/madhephaestus/Esp32WifiManager
+[submodule "libs/ibm-lmic-framework/arduino-lmic"]
+	path = libs/ibm-lmic-framework/arduino-lmic
+	url = https://github.com/matthijskooijman/arduino-lmic
+[submodule "libs/ethernetwebserver_stm32/EthernetWebServer_STM32"]
+	path = libs/ethernetwebserver_stm32/EthernetWebServer_STM32
+	url = https://github.com/khoih-prog/EthernetWebServer_STM32
+[submodule "libs/espmqttclient/EspMQTTClient"]
+	path = libs/espmqttclient/EspMQTTClient
+	url = https://github.com/plapointe6/EspMQTTClient
+[submodule "libs/can-adafruit-fork/arduino-CAN"]
+	path = libs/can-adafruit-fork/arduino-CAN
+	url = https://github.com/adafruit/arduino-CAN
+[submodule "libs/codec2/codec2-arduino"]
+	path = libs/codec2/codec2-arduino
+	url = https://github.com/blanu/codec2-arduino
+[submodule "libs/simplepacketcoms/SimplePacketComs"]
+	path = libs/simplepacketcoms/SimplePacketComs
+	url = https://github.com/madhephaestus/SimplePacketComs
+[submodule "libs/esp8266-firebase/ESP8266Firebase"]
+	path = libs/esp8266-firebase/ESP8266Firebase
+	url = https://github.com/Rupakpoddar/ESP8266Firebase
+[submodule "libs/107-arduino-nmea-parser/107-Arduino-NMEA-Parser"]
+	path = libs/107-arduino-nmea-parser/107-Arduino-NMEA-Parser
+	url = https://github.com/107-systems/107-Arduino-NMEA-Parser
+[submodule "libs/cloudchip-iot/cloudchip-iot-arduino-sdk"]
+	path = libs/cloudchip-iot/cloudchip-iot-arduino-sdk
+	url = https://github.com/cloudchip-io/cloudchip-iot-arduino-sdk
+[submodule "libs/esp32-i2c-slave/ESP32_I2C_Slave"]
+	path = libs/esp32-i2c-slave/ESP32_I2C_Slave
+	url = https://github.com/gutierrezps/ESP32_I2C_Slave
+[submodule "libs/iot-pipe/esp8266-arduino-iotpipe"]
+	path = libs/iot-pipe/esp8266-arduino-iotpipe
+	url = https://github.com/iotpipe/esp8266-arduino-iotpipe

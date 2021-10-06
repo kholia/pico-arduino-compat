@@ -1,0 +1,18 @@
+add_library(senses_nbiot INTERFACE)
+
+target_sources(senses_nbiot INTERFACE
+  "${CMAKE_CURRENT_LIST_DIR}/Senses_NBIoT/src/Senses_NBIoT.cpp"
+  "${CMAKE_CURRENT_LIST_DIR}/Senses_NBIoT/src/Senses_NBIoT.h"
+)
+
+target_include_directories(senses_nbiot INTERFACE
+ "${CMAKE_CURRENT_LIST_DIR}/Senses_NBIoT/src"
+)
+
+if (NOT TARGET arduino-compat)
+    add_subdirectory(../../arduino-compat build_arduino-compat)
+endif()
+
+target_link_libraries(senses_nbiot INTERFACE
+    arduino-compat
+)

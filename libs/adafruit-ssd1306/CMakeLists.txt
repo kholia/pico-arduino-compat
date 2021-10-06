@@ -2,8 +2,6 @@ add_library(adafruit-ssd1306 INTERFACE)
 
 target_sources(adafruit-ssd1306 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_SSD1306/Adafruit_SSD1306.cpp"
-  "${CMAKE_CURRENT_LIST_DIR}/pico-sdk-examples/text-i2c.cpp"
-  "${CMAKE_CURRENT_LIST_DIR}/pico-sdk-examples/ssd1306_128x32_i2c.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_SSD1306/Adafruit_SSD1306.h"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_SSD1306/splash.h"
 )
