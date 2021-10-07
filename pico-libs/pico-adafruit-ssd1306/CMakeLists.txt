@@ -10,9 +10,9 @@ target_include_directories(pico-adafruit-ssd1306 INTERFACE
 )
 
 add_subdirectory(../pico-adafruit-gfx-library build_pico-adafruit-gfx-library)
-add_subdirectory(../../libs/adafruit-ssd1306 build_adafruit-ssd1306)
+add_subdirectory(../../libs/adafruit-ssd1306 build_pac-adafruit-ssd1306)
 
 target_link_libraries(pico-adafruit-ssd1306 INTERFACE
     pico-adafruit-gfx-library
-    adafruit-ssd1306
+    pac-adafruit-ssd1306
 )

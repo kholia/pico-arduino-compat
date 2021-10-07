@@ -10,9 +10,9 @@ target_include_directories(pico-official-liquid-crystal INTERFACE
 )
 
 if (NOT TARGET official-liquid-crystal)
-    add_subdirectory(../../official-libs/liquid-crystal build_official-liquid-crystal)
+    add_subdirectory(../../libs/liquidcrystal build_pac-liquid-crystal)
 endif()
 
 target_link_libraries(pico-official-liquid-crystal INTERFACE
-    official-liquid-crystal
+    pac-liquidcrystal
 )

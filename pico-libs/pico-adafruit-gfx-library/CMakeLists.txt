@@ -10,9 +10,9 @@ target_include_directories(pico-adafruit-gfx-library INTERFACE
 )
 
 if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
 target_link_libraries(pico-adafruit-gfx-library INTERFACE
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )
