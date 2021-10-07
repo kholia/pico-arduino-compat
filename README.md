@@ -17,7 +17,7 @@ git submodule update --init arduino-compat/arduino-pico
 
 ## How to include an Arduino library into an existing project
 
-First find the library from the list [here](arduino-libraries.md). Take note of the ID and the cmake target name.
+First find the library from the list [here](docs/README.md). Take note of the ID and the cmake target name.
 
 Get the submodule for the library and dependent libraries
 ````
@@ -63,29 +63,40 @@ The table below shows how the Arduino global variables such as SPI, Wire, Serial
 
 ## Compatibility
 
-Arduino libraries that use direct register access or interrupts will not work.
+Arduino libraries that rely on architecture specific code such as direct register access will not work.
 
 ## Directory structure
 
 The directory structure of this repository is as follows:   
 arduino-compat: The compatibility layer    
 libs: The Arduino libraries and associated CMakeLists.txt files and examples    
-official-libs: Selected libraries from the official Arduino libraries repository   
 pico-libs: The C/C++ wrappers for the Arduino libraries    
 
 ## FAQ
 
 ### How is pico-arduino-compat different from the Arduino RP2040 mbed core or the Arduino-Pico core?
-These cores allow you to use the Arduino IDE to program the Pico/RP2040. pico-arduino-compat is for using Arduino libraries with the Pico C/C++ SDK.
+Those cores allow you to use the Arduino IDE to program the Pico/RP2040. pico-arduino-compat is for using Arduino libraries with the Pico C/C++ SDK.
 
 ### Can Arduino sketches be used with pico-arduino-compat?
-If the sketch uses functions and libraries implemented by pico-arduino-compat then it should run with a little modification. Most of the examples under arduino-libs are just modified Arduino sketches.
+If the sketch doesn't use architecture specific code then then it should run with a little modification. eg. See libs/liquidcrystal/pico-sdk-examples
 
 ### Do applications using pico-arduino-compat run slower or use more resources?
-Probably!
+Probably! You're better off using a library specifically written for the Pico C/C++ SDK. However if nothing is available and you just want to get something working quickly then pico-arduino-compat might be useful.
 
 ### Do Arduino Libraries need to be modified to work with pico-arduino-compat?
 Some don't. Some probably do. Some probably wont work at all.
+
+### If the library list shows an error status does that mean the library can't be used with the Pico C/C++ SDK?
+Not necessarily. The fix might be as simple as adding a dependency in the CMakeList.txt file. If it is, let me know!
+
+### If the library list shows an OK status does that mean the library has been tested?
+No. It just means that the source files compiled. Only a small number of the libraries have been tested on a device.
+
+### How did you choose which Arduino libraries to include?
+The libraries are those listed in the [Arduino reference documentation](https://www.arduino.cc/reference/en/libraries/). I simply scraped the relevant web pages to get the required information and generated the CMakeList.txt files from that.
+
+### Can I only use a library if it is in the 'list of libraries'?
+No. To use a different library, just add the arduino-compat directory and arduino-compat target to your CMakeLists.txt file. No guarantees it will work tho'!
 
 ## Acknowledgments
 Much of the code uses earlephilhower's Pi Pico Arduino core.
