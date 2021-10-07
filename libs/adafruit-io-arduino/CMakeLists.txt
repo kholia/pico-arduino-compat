@@ -1,6 +1,6 @@
-add_library(adafruit-io-arduino INTERFACE)
+add_library(pac-adafruit-io-arduino INTERFACE)
 
-target_sources(adafruit-io-arduino INTERFACE
+target_sources(pac-adafruit-io-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_IO_Arduino/src/AdafruitIO_Time.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_IO_Arduino/src/AdafruitIO_Data.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_IO_Arduino/src/AdafruitIO.cpp"
@@ -82,7 +82,7 @@ target_sources(adafruit-io-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_IO_Arduino/examples/adafruitio_13_rgb/config.h"
 )
 
-target_include_directories(adafruit-io-arduino INTERFACE
+target_include_directories(pac-adafruit-io-arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_IO_Arduino/src"
 )
 
@@ -90,6 +90,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(adafruit-io-arduino INTERFACE
+target_link_libraries(pac-adafruit-io-arduino INTERFACE
     arduino-compat
 )

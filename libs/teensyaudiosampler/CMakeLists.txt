@@ -1,6 +1,6 @@
-add_library(teensyaudiosampler INTERFACE)
+add_library(pac-teensyaudiosampler INTERFACE)
 
-target_sources(teensyaudiosampler INTERFACE
+target_sources(pac-teensyaudiosampler INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/teensy-polyphony/extras/linux/array/array.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/teensy-polyphony/extras/linux/sample_launcher/sample_launcher.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/teensy-polyphony/src/loopsampler.cpp"
@@ -26,7 +26,7 @@ target_sources(teensyaudiosampler INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/teensy-polyphony/examples/polyphony_demo/piano-studio-octave1_raw.h"
 )
 
-target_include_directories(teensyaudiosampler INTERFACE
+target_include_directories(pac-teensyaudiosampler INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/teensy-polyphony/src"
 )
 
@@ -34,11 +34,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(teensyaudiosampler INTERFACE
+target_link_libraries(pac-teensyaudiosampler INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

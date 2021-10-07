@@ -1,6 +1,6 @@
-add_library(nimble-arduino INTERFACE)
+add_library(pac-nimble-arduino INTERFACE)
 
-target_sources(nimble-arduino INTERFACE
+target_sources(pac-nimble-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NimBLE-Arduino/src/NimBLEScan.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NimBLE-Arduino/src/NimBLEService.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NimBLE-Arduino/src/NimBLEServer.cpp"
@@ -338,7 +338,7 @@ target_sources(nimble-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NimBLE-Arduino/src/nimble/ext/tinycrypt/include/tinycrypt/sha256.h"
 )
 
-target_include_directories(nimble-arduino INTERFACE
+target_include_directories(pac-nimble-arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/NimBLE-Arduino/src"
 )
 
@@ -346,6 +346,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(nimble-arduino INTERFACE
+target_link_libraries(pac-nimble-arduino INTERFACE
     arduino-compat
 )

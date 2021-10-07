@@ -1,6 +1,6 @@
-add_library(analogio-arduino INTERFACE)
+add_library(pac-analogio-arduino INTERFACE)
 
-target_sources(analogio-arduino INTERFACE
+target_sources(pac-analogio-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AnalogIO-Arduino/src/incl/AnalogOut.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AnalogIO-Arduino/src/incl/AnalogIn.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AnalogIO-Arduino/src/incl/AnalogController.cpp"
@@ -11,7 +11,7 @@ target_sources(analogio-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AnalogIO-Arduino/src/incl/AnalogIn.h"
 )
 
-target_include_directories(analogio-arduino INTERFACE
+target_include_directories(pac-analogio-arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AnalogIO-Arduino/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(analogio-arduino INTERFACE
+target_link_libraries(pac-analogio-arduino INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(upnp_generic INTERFACE)
+add_library(pac-upnp_generic INTERFACE)
 
-target_sources(upnp_generic INTERFACE
+target_sources(pac-upnp_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/UPnP_Generic/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/UPnP_Generic/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/UPnP_Generic/LibraryPatches/UIPEthernet-2.0.9/UIPEthernet.cpp"
@@ -147,7 +147,7 @@ target_sources(upnp_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/UPnP_Generic/examples/Generic/WiFi/Portenta_H7/Portenta_H7_PWM_LEDServer/defines.h"
 )
 
-target_include_directories(upnp_generic INTERFACE
+target_include_directories(pac-upnp_generic INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/UPnP_Generic/src"
 )
 
@@ -155,6 +155,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(upnp_generic INTERFACE
+target_link_libraries(pac-upnp_generic INTERFACE
     arduino-compat
 )

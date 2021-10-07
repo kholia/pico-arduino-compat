@@ -1,6 +1,6 @@
-add_library(scenemanager INTERFACE)
+add_library(pac-scenemanager INTERFACE)
 
-target_sources(scenemanager INTERFACE
+target_sources(pac-scenemanager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SceneManager/SceneManager.h"
   "${CMAKE_CURRENT_LIST_DIR}/SceneManager/SceneManager/SceneBase.h"
   "${CMAKE_CURRENT_LIST_DIR}/SceneManager/SceneManager/util/PollingTimer/OneShotTimer.h"
@@ -34,7 +34,7 @@ target_sources(scenemanager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SceneManager/examples/simple/Blink.h"
 )
 
-target_include_directories(scenemanager INTERFACE
+target_include_directories(pac-scenemanager INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SceneManager"
 )
 
@@ -42,6 +42,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(scenemanager INTERFACE
+target_link_libraries(pac-scenemanager INTERFACE
     arduino-compat
 )

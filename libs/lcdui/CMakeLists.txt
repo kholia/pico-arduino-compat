@@ -1,6 +1,6 @@
-add_library(lcdui INTERFACE)
+add_library(pac-lcdui INTERFACE)
 
-target_sources(lcdui INTERFACE
+target_sources(pac-lcdui INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LcdUi/VStudio/ArduinoIno.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LcdUi/src/WindowInterruptConfirm.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LcdUi/src/WindowYesNo.cpp"
@@ -45,7 +45,7 @@ target_sources(lcdui INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LcdUi/src/LcdUi.h"
 )
 
-target_include_directories(lcdui INTERFACE
+target_include_directories(pac-lcdui INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/LcdUi/src"
 )
 
@@ -53,11 +53,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-liquid-crystal)
-    add_subdirectory(../../official-libs/liquid-crystal build_official-liquid-crystal)
+if (NOT TARGET pac-liquidcrystal)
+    add_subdirectory(../../libs/liquidcrystal build_pac-liquidcrystal)
 endif()
 
-target_link_libraries(lcdui INTERFACE
+target_link_libraries(pac-lcdui INTERFACE
     arduino-compat
-    official-liquid-crystal
+    pac-liquidcrystal
 )

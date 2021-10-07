@@ -1,6 +1,6 @@
-add_library(tinyoled-fonts INTERFACE)
+add_library(pac-tinyoled-fonts INTERFACE)
 
-target_sources(tinyoled-fonts INTERFACE
+target_sources(pac-tinyoled-fonts INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TinyOLED-Fonts/src/Raumsond_font.h"
   "${CMAKE_CURRENT_LIST_DIR}/TinyOLED-Fonts/src/formplex12_font.h"
   "${CMAKE_CURRENT_LIST_DIR}/TinyOLED-Fonts/src/PixelOperator.h"
@@ -38,7 +38,7 @@ target_sources(tinyoled-fonts INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TinyOLED-Fonts/src/ModernDos8.h"
 )
 
-target_include_directories(tinyoled-fonts INTERFACE
+target_include_directories(pac-tinyoled-fonts INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TinyOLED-Fonts/src"
 )
 
@@ -46,6 +46,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tinyoled-fonts INTERFACE
+target_link_libraries(pac-tinyoled-fonts INTERFACE
     arduino-compat
 )

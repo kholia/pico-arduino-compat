@@ -1,6 +1,6 @@
-add_library(onewirehub INTERFACE)
+add_library(pac-onewirehub INTERFACE)
 
-target_sources(onewirehub INTERFACE
+target_sources(pac-onewirehub INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OneWireHub/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OneWireHub/src/DS2413.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OneWireHub/src/DS2433.cpp"
@@ -39,7 +39,7 @@ target_sources(onewirehub INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OneWireHub/src/DS2405.h"
 )
 
-target_include_directories(onewirehub INTERFACE
+target_include_directories(pac-onewirehub INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/OneWireHub/src"
 )
 
@@ -47,6 +47,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(onewirehub INTERFACE
+target_link_libraries(pac-onewirehub INTERFACE
     arduino-compat
 )

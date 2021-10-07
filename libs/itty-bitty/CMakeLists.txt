@@ -1,6 +1,6 @@
-add_library(itty-bitty INTERFACE)
+add_library(pac-itty-bitty INTERFACE)
 
-target_sources(itty-bitty INTERFACE
+target_sources(pac-itty-bitty INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IttyBitty/IttyBitty_messages.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IttyBitty/IttyBitty_UI_display_adapters.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IttyBitty/IttyBitty_EEPROM_I2C.cpp"
@@ -89,7 +89,7 @@ target_sources(itty-bitty INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IttyBitty/IttyBitty_UI_nav_adapters.h"
 )
 
-target_include_directories(itty-bitty INTERFACE
+target_include_directories(pac-itty-bitty INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/IttyBitty"
 )
 
@@ -97,6 +97,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(itty-bitty INTERFACE
+target_link_libraries(pac-itty-bitty INTERFACE
     arduino-compat
 )

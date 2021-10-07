@@ -1,6 +1,6 @@
-add_library(teensystep INTERFACE)
+add_library(pac-teensystep INTERFACE)
 
-target_sources(teensystep INTERFACE
+target_sources(pac-teensystep INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TeensyStep/src/Stepper.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TeensyStep/src/ErrorHandler.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TeensyStep/src/timer/stm32/TimerField.cpp"
@@ -33,7 +33,7 @@ target_sources(teensystep INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TeensyStep/examples/Applications/Winder/Winder.h"
 )
 
-target_include_directories(teensystep INTERFACE
+target_include_directories(pac-teensystep INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TeensyStep/src"
 )
 
@@ -41,6 +41,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(teensystep INTERFACE
+target_link_libraries(pac-teensystep INTERFACE
     arduino-compat
 )

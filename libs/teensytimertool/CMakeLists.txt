@@ -1,6 +1,6 @@
-add_library(teensytimertool INTERFACE)
+add_library(pac-teensytimertool INTERFACE)
 
-target_sources(teensytimertool INTERFACE
+target_sources(pac-teensytimertool INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TeensyTimerTool/src/baseTimer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TeensyTimerTool/src/Timer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TeensyTimerTool/src/config.cpp"
@@ -51,7 +51,7 @@ target_sources(teensytimertool INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TeensyTimerTool/examples/02_Advanced/UsingLambdas/pins.h"
 )
 
-target_include_directories(teensytimertool INTERFACE
+target_include_directories(pac-teensytimertool INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TeensyTimerTool/src"
 )
 
@@ -59,6 +59,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(teensytimertool INTERFACE
+target_link_libraries(pac-teensytimertool INTERFACE
     arduino-compat
 )

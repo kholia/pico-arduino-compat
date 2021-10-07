@@ -1,6 +1,6 @@
-add_library(tle94112 INTERFACE)
+add_library(pac-tle94112 INTERFACE)
 
-target_sources(tle94112 INTERFACE
+target_sources(pac-tle94112 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DC-Motor-Control-TLE94112EL/test/unit/test_tle94112.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DC-Motor-Control-TLE94112EL/test/unit/test_tle94112-motor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DC-Motor-Control-TLE94112EL/src/pal/gpio.cpp"
@@ -84,7 +84,7 @@ target_sources(tle94112 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DC-Motor-Control-TLE94112EL/src/corelib/tle94112.hpp"
 )
 
-target_include_directories(tle94112 INTERFACE
+target_include_directories(pac-tle94112 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/DC-Motor-Control-TLE94112EL/src"
 )
 
@@ -92,6 +92,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tle94112 INTERFACE
+target_link_libraries(pac-tle94112 INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(embedded-template-library-etl INTERFACE)
+add_library(pac-embedded-template-library-etl INTERFACE)
 
-target_sources(embedded-template-library-etl INTERFACE
+target_sources(pac-embedded-template-library-etl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/etl-arduino/src/Embedded_Template_Library.h"
   "${CMAKE_CURRENT_LIST_DIR}/etl-arduino/src/etl/multi_range.h"
   "${CMAKE_CURRENT_LIST_DIR}/etl-arduino/src/etl/gamma.h"
@@ -306,7 +306,7 @@ target_sources(embedded-template-library-etl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/etl-arduino/src/etl/deprecated/factory.h"
 )
 
-target_include_directories(embedded-template-library-etl INTERFACE
+target_include_directories(pac-embedded-template-library-etl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/etl-arduino/src"
 )
 
@@ -314,6 +314,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(embedded-template-library-etl INTERFACE
+target_link_libraries(pac-embedded-template-library-etl INTERFACE
     arduino-compat
 )

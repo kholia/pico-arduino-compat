@@ -1,6 +1,6 @@
-add_library(grafanaloki INTERFACE)
+add_library(pac-grafanaloki INTERFACE)
 
-target_sources(grafanaloki INTERFACE
+target_sources(pac-grafanaloki INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/loki-arduino/src/LokiStream.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/loki-arduino/src/LokiClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/loki-arduino/src/LokiStreams.cpp"
@@ -22,7 +22,7 @@ target_sources(grafanaloki INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/loki-arduino/examples/loki_01_local_http/config.h"
 )
 
-target_include_directories(grafanaloki INTERFACE
+target_include_directories(pac-grafanaloki INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/loki-arduino/src"
 )
 
@@ -30,6 +30,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(grafanaloki INTERFACE
+target_link_libraries(pac-grafanaloki INTERFACE
     arduino-compat
 )

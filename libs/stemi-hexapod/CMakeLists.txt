@@ -1,6 +1,6 @@
-add_library(stemi-hexapod INTERFACE)
+add_library(pac-stemi-hexapod INTERFACE)
 
-target_sources(stemi-hexapod INTERFACE
+target_sources(pac-stemi-hexapod INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/stemi-hexapod/src/Body.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/stemi-hexapod/src/Leg.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/stemi-hexapod/src/Grip.cpp"
@@ -41,7 +41,7 @@ target_sources(stemi-hexapod INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/stemi-hexapod/src/MatrixMath.h"
 )
 
-target_include_directories(stemi-hexapod INTERFACE
+target_include_directories(pac-stemi-hexapod INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/stemi-hexapod/src"
 )
 
@@ -49,6 +49,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(stemi-hexapod INTERFACE
+target_link_libraries(pac-stemi-hexapod INTERFACE
     arduino-compat
 )

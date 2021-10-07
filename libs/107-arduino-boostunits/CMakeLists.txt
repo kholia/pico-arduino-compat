@@ -1,6 +1,6 @@
-add_library(107-arduino-boostunits INTERFACE)
+add_library(pac-107-arduino-boostunits INTERFACE)
 
-target_sources(107-arduino-boostunits INTERFACE
+target_sources(pac-107-arduino-boostunits INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/107-Arduino-BoostUnits/src/boost/version.hpp"
   "${CMAKE_CURRENT_LIST_DIR}/107-Arduino-BoostUnits/src/boost/type_index.hpp"
   "${CMAKE_CURRENT_LIST_DIR}/107-Arduino-BoostUnits/src/boost/shared_ptr.hpp"
@@ -2584,7 +2584,7 @@ target_sources(107-arduino-boostunits INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/107-Arduino-BoostUnits/src/boost/predef/other/wordsize.h"
 )
 
-target_include_directories(107-arduino-boostunits INTERFACE
+target_include_directories(pac-107-arduino-boostunits INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/107-Arduino-BoostUnits/src"
 )
 
@@ -2592,6 +2592,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(107-arduino-boostunits INTERFACE
+target_link_libraries(pac-107-arduino-boostunits INTERFACE
     arduino-compat
 )

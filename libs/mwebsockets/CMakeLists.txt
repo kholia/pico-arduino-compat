@@ -1,6 +1,6 @@
-add_library(mwebsockets INTERFACE)
+add_library(pac-mwebsockets INTERFACE)
 
-target_sources(mwebsockets INTERFACE
+target_sources(pac-mwebsockets INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mWebSockets/src/WebSocket.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/mWebSockets/src/WebSocketClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/mWebSockets/src/WebSocketServer.cpp"
@@ -30,7 +30,7 @@ target_sources(mwebsockets INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mWebSockets/src/base64/Base64.h"
 )
 
-target_include_directories(mwebsockets INTERFACE
+target_include_directories(pac-mwebsockets INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/mWebSockets/src"
 )
 
@@ -38,6 +38,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mwebsockets INTERFACE
+target_link_libraries(pac-mwebsockets INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(tonepitch INTERFACE)
+add_library(pac-tonepitch INTERFACE)
 
-target_sources(tonepitch INTERFACE
+target_sources(pac-tonepitch INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-tone-pitch/src/ToneUndef.h"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-tone-pitch/src/Tone440.h"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-tone-pitch/src/Tone444.h"
@@ -15,7 +15,7 @@ target_sources(tonepitch INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-tone-pitch/src/Tone436.h"
 )
 
-target_include_directories(tonepitch INTERFACE
+target_include_directories(pac-tonepitch INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-tone-pitch/src"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tonepitch INTERFACE
+target_link_libraries(pac-tonepitch INTERFACE
     arduino-compat
 )

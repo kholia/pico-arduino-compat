@@ -1,6 +1,6 @@
-add_library(antaresloraid INTERFACE)
+add_library(pac-antaresloraid INTERFACE)
 
-target_sources(antaresloraid INTERFACE
+target_sources(pac-antaresloraid INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/lorawan-loraid/src/arduino-rfm/Commands.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/lorawan-loraid/src/arduino-rfm/Encrypt.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/lorawan-loraid/src/arduino-rfm/Conversions.cpp"
@@ -20,7 +20,7 @@ target_sources(antaresloraid INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/lorawan-loraid/src/arduino-rfm/Struct.h"
 )
 
-target_include_directories(antaresloraid INTERFACE
+target_include_directories(pac-antaresloraid INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/lorawan-loraid/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(antaresloraid INTERFACE
+target_link_libraries(pac-antaresloraid INTERFACE
     arduino-compat
 )

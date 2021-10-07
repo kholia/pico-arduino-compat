@@ -1,6 +1,6 @@
-add_library(pu2clr-si4735 INTERFACE)
+add_library(pac-pu2clr-si4735 INTERFACE)
 
-target_sources(pu2clr-si4735 INTERFACE
+target_sources(pac-pu2clr-si4735 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SI4735/SI4735.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SI4735/examples/SI47XX_12_MORSE_CODE_READOUT/AutoBPF.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SI4735/examples/SI47XX_12_MORSE_CODE_READOUT/Rotary.cpp"
@@ -299,7 +299,7 @@ target_sources(pu2clr-si4735 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SI4735/examples/SI47XX_07_STM32/STM32_02_SSB_SERIAL_MONITOR/patch_init.h"
 )
 
-target_include_directories(pu2clr-si4735 INTERFACE
+target_include_directories(pac-pu2clr-si4735 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SI4735"
 )
 
@@ -307,6 +307,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pu2clr-si4735 INTERFACE
+target_link_libraries(pac-pu2clr-si4735 INTERFACE
     arduino-compat
 )

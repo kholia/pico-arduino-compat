@@ -1,6 +1,6 @@
-add_library(finite-state-machine-arduino INTERFACE)
+add_library(pac-finite-state-machine-arduino INTERFACE)
 
-target_sources(finite-state-machine-arduino INTERFACE
+target_sources(pac-finite-state-machine-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Finite-State-Machine-Arduino/examples/car-demo/Walk.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Finite-State-Machine-Arduino/examples/car-demo/TenSeconds.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Finite-State-Machine-Arduino/examples/car-demo/main.cpp"
@@ -27,7 +27,7 @@ target_sources(finite-state-machine-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Finite-State-Machine-Arduino/examples/car-demo/Stop.h"
 )
 
-target_include_directories(finite-state-machine-arduino INTERFACE
+target_include_directories(pac-finite-state-machine-arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Finite-State-Machine-Arduino/src"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(finite-state-machine-arduino INTERFACE
+target_link_libraries(pac-finite-state-machine-arduino INTERFACE
     arduino-compat
 )

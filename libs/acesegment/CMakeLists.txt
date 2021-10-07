@@ -1,6 +1,6 @@
-add_library(acesegment INTERFACE)
+add_library(pac-acesegment INTERFACE)
 
-target_sources(acesegment INTERFACE
+target_sources(pac-acesegment INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceSegment/src/ace_segment/tm1637/Tm1637Module.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceSegment/src/ace_segment/max7219/Max7129Module.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceSegment/src/ace_segment/testing/TestableClockInterface.cpp"
@@ -62,7 +62,7 @@ target_sources(acesegment INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceSegment/archive/DimmablePattern.h"
 )
 
-target_include_directories(acesegment INTERFACE
+target_include_directories(pac-acesegment INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AceSegment/src"
 )
 
@@ -70,6 +70,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(acesegment INTERFACE
+target_link_libraries(pac-acesegment INTERFACE
     arduino-compat
 )

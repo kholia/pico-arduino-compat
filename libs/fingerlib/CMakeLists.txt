@@ -1,6 +1,6 @@
-add_library(fingerlib INTERFACE)
+add_library(pac-fingerlib INTERFACE)
 
-target_sources(fingerlib INTERFACE
+target_sources(pac-fingerlib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FingerLib/src/FingerLib.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FingerLib/src/pid/pid_controller.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FingerLib/src/timers/timer_and_delay.cpp"
@@ -16,7 +16,7 @@ target_sources(fingerlib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FingerLib/src/current_sense/samd_CurrentSense.h"
 )
 
-target_include_directories(fingerlib INTERFACE
+target_include_directories(pac-fingerlib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FingerLib/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(fingerlib INTERFACE
+target_link_libraries(pac-fingerlib INTERFACE
     arduino-compat
 )

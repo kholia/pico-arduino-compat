@@ -1,6 +1,6 @@
-add_library(easyuino INTERFACE)
+add_library(pac-easyuino INTERFACE)
 
-target_sources(easyuino INTERFACE
+target_sources(pac-easyuino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Easyuino/src/main/Device.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Easyuino/src/main/GSM/GSMServiceSecure.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Easyuino/src/main/GSM/SMS.cpp"
@@ -52,7 +52,7 @@ target_sources(easyuino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Easyuino/src/tests/DistanceMeterNonBlockTest.h"
 )
 
-target_include_directories(easyuino INTERFACE
+target_include_directories(pac-easyuino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Easyuino/src"
 )
 
@@ -60,6 +60,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(easyuino INTERFACE
+target_link_libraries(pac-easyuino INTERFACE
     arduino-compat
 )

@@ -1,11 +1,11 @@
-add_library(sparkfun-bno080-cortex-based-imu INTERFACE)
+add_library(pac-sparkfun-bno080-cortex-based-imu INTERFACE)
 
-target_sources(sparkfun-bno080-cortex-based-imu INTERFACE
+target_sources(pac-sparkfun-bno080-cortex-based-imu INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_BNO080_Arduino_Library/src/SparkFun_BNO080_Arduino_Library.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_BNO080_Arduino_Library/src/SparkFun_BNO080_Arduino_Library.h"
 )
 
-target_include_directories(sparkfun-bno080-cortex-based-imu INTERFACE
+target_include_directories(pac-sparkfun-bno080-cortex-based-imu INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SparkFun_BNO080_Arduino_Library/src"
 )
 
@@ -13,6 +13,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sparkfun-bno080-cortex-based-imu INTERFACE
+target_link_libraries(pac-sparkfun-bno080-cortex-based-imu INTERFACE
     arduino-compat
 )

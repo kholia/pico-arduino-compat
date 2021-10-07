@@ -1,6 +1,6 @@
-add_library(datavisualizer INTERFACE)
+add_library(pac-datavisualizer INTERFACE)
 
-target_sources(datavisualizer INTERFACE
+target_sources(pac-datavisualizer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DataVisualizer/src/DataVisualizerDashboardCheckBox.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DataVisualizer/src/DataVisualizerDashboardProgressBar.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DataVisualizer/src/DataVisualizerDashboardNumericInput.cpp"
@@ -60,7 +60,7 @@ target_sources(datavisualizer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DataVisualizer/src/DataVisualizerGraphAxisChannel.h"
 )
 
-target_include_directories(datavisualizer INTERFACE
+target_include_directories(pac-datavisualizer INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/DataVisualizer/src"
 )
 
@@ -68,6 +68,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(datavisualizer INTERFACE
+target_link_libraries(pac-datavisualizer INTERFACE
     arduino-compat
 )

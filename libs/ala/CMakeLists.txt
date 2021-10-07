@@ -1,6 +1,6 @@
-add_library(ala INTERFACE)
+add_library(pac-ala INTERFACE)
 
-target_sources(ala INTERFACE
+target_sources(pac-ala INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ALA/src/ExtNeoPixel.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ALA/src/ExtTlc5940.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ALA/src/AlaLed.cpp"
@@ -21,7 +21,7 @@ target_sources(ala INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ALA/src/pinouts/Teensy_xxU4.h"
 )
 
-target_include_directories(ala INTERFACE
+target_include_directories(pac-ala INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ALA/src"
 )
 
@@ -29,6 +29,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ala INTERFACE
+target_link_libraries(pac-ala INTERFACE
     arduino-compat
 )

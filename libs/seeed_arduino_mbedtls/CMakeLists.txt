@@ -1,6 +1,6 @@
-add_library(seeed_arduino_mbedtls INTERFACE)
+add_library(pac-seeed_arduino_mbedtls INTERFACE)
 
-target_sources(seeed_arduino_mbedtls INTERFACE
+target_sources(pac-seeed_arduino_mbedtls INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_mbedtls/mbedtls.c"
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_mbedtls/port/esp_hardware.c"
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_mbedtls/port/esp_bignum.c"
@@ -186,7 +186,7 @@ target_sources(seeed_arduino_mbedtls INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_mbedtls/src/mbedtls/error.h"
 )
 
-target_include_directories(seeed_arduino_mbedtls INTERFACE
+target_include_directories(pac-seeed_arduino_mbedtls INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_mbedtls/src"
 )
 
@@ -194,6 +194,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(seeed_arduino_mbedtls INTERFACE
+target_link_libraries(pac-seeed_arduino_mbedtls INTERFACE
     arduino-compat
 )

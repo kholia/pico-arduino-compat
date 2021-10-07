@@ -1,6 +1,6 @@
-add_library(efll INTERFACE)
+add_library(pac-efll INTERFACE)
 
-target_sources(efll INTERFACE
+target_sources(pac-efll INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/eFLL/FuzzyComposition.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/eFLL/FuzzySet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/eFLL/Fuzzy.cpp"
@@ -25,7 +25,7 @@ target_sources(efll INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/eFLL/FuzzyRule.h"
 )
 
-target_include_directories(efll INTERFACE
+target_include_directories(pac-efll INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/eFLL"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(efll INTERFACE
+target_link_libraries(pac-efll INTERFACE
     arduino-compat
 )

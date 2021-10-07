@@ -1,6 +1,6 @@
-add_library(grove-infrared-receiver-and-emitter INTERFACE)
+add_library(pac-grove-infrared-receiver-and-emitter INTERFACE)
 
-target_sources(grove-infrared-receiver-and-emitter INTERFACE
+target_sources(pac-grove-infrared-receiver-and-emitter INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IRSendRev/src/ir_Denon.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IRSendRev/src/ir_Panasonic.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IRSendRev/src/ir_Aiwa.cpp"
@@ -32,7 +32,7 @@ target_sources(grove-infrared-receiver-and-emitter INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IRSendRev/src/private/IRremoteBoardDefs.h"
 )
 
-target_include_directories(grove-infrared-receiver-and-emitter INTERFACE
+target_include_directories(pac-grove-infrared-receiver-and-emitter INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/IRSendRev/src"
 )
 
@@ -40,6 +40,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(grove-infrared-receiver-and-emitter INTERFACE
+target_link_libraries(pac-grove-infrared-receiver-and-emitter INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(wasm3 INTERFACE)
+add_library(pac-wasm3 INTERFACE)
 
-target_sources(wasm3 INTERFACE
+target_sources(pac-wasm3 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/wasm3-arduino/examples_pio/Wasm_Advanced/wasm_apps/cpp/app.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/wasm3-arduino/wasm_apps/cpp/app.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/wasm3-arduino/src/m3_compile.c"
@@ -48,7 +48,7 @@ target_sources(wasm3 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/wasm3-arduino/examples/Wasm_Dino_ESP32_TDisplay/dino.wasm.h"
 )
 
-target_include_directories(wasm3 INTERFACE
+target_include_directories(pac-wasm3 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/wasm3-arduino/src"
 )
 
@@ -56,6 +56,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wasm3 INTERFACE
+target_link_libraries(pac-wasm3 INTERFACE
     arduino-compat
 )

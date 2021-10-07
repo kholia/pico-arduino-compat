@@ -1,6 +1,6 @@
-add_library(flexiplot-arduino-library INTERFACE)
+add_library(pac-flexiplot-arduino-library INTERFACE)
 
-target_sources(flexiplot-arduino-library INTERFACE
+target_sources(pac-flexiplot-arduino-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FlexiPlot_Arduino/src/FlexiPieSeries.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FlexiPlot_Arduino/src/FlexiBarSeries.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FlexiPlot_Arduino/src/FlexiAbstractSeries.cpp"
@@ -24,7 +24,7 @@ target_sources(flexiplot-arduino-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FlexiPlot_Arduino/src/FlexiXYPlot.h"
 )
 
-target_include_directories(flexiplot-arduino-library INTERFACE
+target_include_directories(pac-flexiplot-arduino-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FlexiPlot_Arduino/src"
 )
 
@@ -32,6 +32,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(flexiplot-arduino-library INTERFACE
+target_link_libraries(pac-flexiplot-arduino-library INTERFACE
     arduino-compat
 )

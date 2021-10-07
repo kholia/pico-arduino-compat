@@ -1,6 +1,6 @@
-add_library(arduboy INTERFACE)
+add_library(pac-arduboy INTERFACE)
 
-target_sources(arduboy INTERFACE
+target_sources(pac-arduboy INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduboy/src/Arduboy.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduboy/src/core/core.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduboy/src/audio/audio.cpp"
@@ -13,7 +13,7 @@ target_sources(arduboy INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduboy/examples/ArduBreakout/breakout_bitmaps.h"
 )
 
-target_include_directories(arduboy INTERFACE
+target_include_directories(pac-arduboy INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduboy/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduboy INTERFACE
+target_link_libraries(pac-arduboy INTERFACE
     arduino-compat
 )

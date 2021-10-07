@@ -1,6 +1,6 @@
-add_library(jmotor INTERFACE)
+add_library(pac-jmotor INTERFACE)
 
-target_sources(jmotor INTERFACE
+target_sources(pac-jmotor INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/JMotor/src/JMotor.h"
   "${CMAKE_CURRENT_LIST_DIR}/JMotor/src/JTwoDTransform.h"
   "${CMAKE_CURRENT_LIST_DIR}/JMotor/src/JDrivetrain/JDrivetrainTwoSide.h"
@@ -56,7 +56,7 @@ target_sources(jmotor INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/JMotor/src/JMotorCompensator/JVoltageCompMeasure.h"
 )
 
-target_include_directories(jmotor INTERFACE
+target_include_directories(pac-jmotor INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/JMotor/src"
 )
 
@@ -64,6 +64,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(jmotor INTERFACE
+target_link_libraries(pac-jmotor INTERFACE
     arduino-compat
 )

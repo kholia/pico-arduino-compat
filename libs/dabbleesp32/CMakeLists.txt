@@ -1,6 +1,6 @@
-add_library(dabbleesp32 INTERFACE)
+add_library(pac-dabbleesp32 INTERFACE)
 
-target_sources(dabbleesp32 INTERFACE
+target_sources(pac-dabbleesp32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DabbleESP32/src/TerminalModule.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DabbleESP32/src/LedControlModule.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DabbleESP32/src/MusicModule.cpp"
@@ -45,7 +45,7 @@ target_sources(dabbleesp32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DabbleESP32/src/ModuleIncludes.h"
 )
 
-target_include_directories(dabbleesp32 INTERFACE
+target_include_directories(pac-dabbleesp32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/DabbleESP32/src"
 )
 
@@ -53,6 +53,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(dabbleesp32 INTERFACE
+target_link_libraries(pac-dabbleesp32 INTERFACE
     arduino-compat
 )

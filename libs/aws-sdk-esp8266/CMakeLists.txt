@@ -1,6 +1,6 @@
-add_library(aws-sdk-esp8266 INTERFACE)
+add_library(pac-aws-sdk-esp8266 INTERFACE)
 
-target_sources(aws-sdk-esp8266 INTERFACE
+target_sources(pac-aws-sdk-esp8266 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/aws-sdk-arduino-esp8266/src/ESPAWSImplementations.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/aws-sdk-arduino-esp8266/src/DeviceIndependentInterfaces.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/aws-sdk-arduino-esp8266/src/AmazonDynamoDBClient.cpp"
@@ -31,7 +31,7 @@ target_sources(aws-sdk-esp8266 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/aws-sdk-arduino-esp8266/src/ESPAWSImplementations.h"
 )
 
-target_include_directories(aws-sdk-esp8266 INTERFACE
+target_include_directories(pac-aws-sdk-esp8266 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/aws-sdk-arduino-esp8266/src"
 )
 
@@ -39,6 +39,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(aws-sdk-esp8266 INTERFACE
+target_link_libraries(pac-aws-sdk-esp8266 INTERFACE
     arduino-compat
 )

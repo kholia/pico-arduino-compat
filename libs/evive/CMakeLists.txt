@@ -1,6 +1,6 @@
-add_library(evive INTERFACE)
+add_library(pac-evive INTERFACE)
 
-target_sources(evive INTERFACE
+target_sources(pac-evive INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/evive-Library/src/Button.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/evive-Library/src/evive.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/evive-Library/src/TFT_ST7735.cpp"
@@ -131,7 +131,7 @@ target_sources(evive INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/evive-Library/examples/eviveFirmwareExtended/Motor.h"
 )
 
-target_include_directories(evive INTERFACE
+target_include_directories(pac-evive INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/evive-Library/src"
 )
 
@@ -139,11 +139,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(evive INTERFACE
+target_link_libraries(pac-evive INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

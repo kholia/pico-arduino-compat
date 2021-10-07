@@ -1,6 +1,6 @@
-add_library(legoino INTERFACE)
+add_library(pac-legoino INTERFACE)
 
-target_sources(legoino INTERFACE
+target_sources(pac-legoino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/legoino/src/Lpf2HubEmulation.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/legoino/src/Lpf2Hub.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/legoino/src/PowerFunctions.cpp"
@@ -14,7 +14,7 @@ target_sources(legoino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/legoino/src/Boost.h"
 )
 
-target_include_directories(legoino INTERFACE
+target_include_directories(pac-legoino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/legoino/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(legoino INTERFACE
+target_link_libraries(pac-legoino INTERFACE
     arduino-compat
 )

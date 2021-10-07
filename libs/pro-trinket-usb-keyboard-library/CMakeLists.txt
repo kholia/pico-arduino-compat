@@ -1,6 +1,6 @@
-add_library(pro-trinket-usb-keyboard-library INTERFACE)
+add_library(pac-pro-trinket-usb-keyboard-library INTERFACE)
 
-target_sources(pro-trinket-usb-keyboard-library INTERFACE
+target_sources(pac-pro-trinket-usb-keyboard-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Pro_Trinket_USB_Keyboard_Library/ProTrinketKeyboard.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Pro_Trinket_USB_Keyboard_Library/ProTrinketKeyboardC.c"
   "${CMAKE_CURRENT_LIST_DIR}/Pro_Trinket_USB_Keyboard_Library/usbdrv_includer.c"
@@ -15,7 +15,7 @@ target_sources(pro-trinket-usb-keyboard-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Pro_Trinket_USB_Keyboard_Library/usbdrv/usbportability.h"
 )
 
-target_include_directories(pro-trinket-usb-keyboard-library INTERFACE
+target_include_directories(pac-pro-trinket-usb-keyboard-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Pro_Trinket_USB_Keyboard_Library"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pro-trinket-usb-keyboard-library INTERFACE
+target_link_libraries(pac-pro-trinket-usb-keyboard-library INTERFACE
     arduino-compat
 )

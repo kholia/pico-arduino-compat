@@ -1,6 +1,6 @@
-add_library(dabble INTERFACE)
+add_library(pac-dabble INTERFACE)
 
-target_sources(dabble INTERFACE
+target_sources(pac-dabble INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Dabble/src/TerminalModule.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Dabble/src/LedControlModule.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Dabble/src/MusicModule.cpp"
@@ -51,7 +51,7 @@ target_sources(dabble INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Dabble/examples/02. Uno Nano Mega/Oscilloscope/OscilloscopeModule.h"
 )
 
-target_include_directories(dabble INTERFACE
+target_include_directories(pac-dabble INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Dabble/src"
 )
 
@@ -59,6 +59,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(dabble INTERFACE
+target_link_libraries(pac-dabble INTERFACE
     arduino-compat
 )

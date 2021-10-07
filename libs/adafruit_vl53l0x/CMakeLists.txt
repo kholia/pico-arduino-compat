@@ -1,6 +1,6 @@
-add_library(adafruit_vl53l0x INTERFACE)
+add_library(pac-adafruit_vl53l0x INTERFACE)
 
-target_sources(adafruit_vl53l0x INTERFACE
+target_sources(pac-adafruit_vl53l0x INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_VL53L0X/src/Adafruit_VL53L0X.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_VL53L0X/src/core/src/vl53l0x_api_strings.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_VL53L0X/src/core/src/vl53l0x_api_ranging.cpp"
@@ -25,7 +25,7 @@ target_sources(adafruit_vl53l0x INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_VL53L0X/src/vl53l0x_device.h"
 )
 
-target_include_directories(adafruit_vl53l0x INTERFACE
+target_include_directories(pac-adafruit_vl53l0x INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_VL53L0X/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(adafruit_vl53l0x INTERFACE
+target_link_libraries(pac-adafruit_vl53l0x INTERFACE
     arduino-compat
 )

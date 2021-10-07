@@ -1,6 +1,6 @@
-add_library(embui INTERFACE)
+add_library(pac-embui INTERFACE)
 
-target_sources(embui INTERFACE
+target_sources(pac-embui INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EmbUI/src/timeProcessor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EmbUI/src/gpio.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EmbUI/src/CustomTask.cpp"
@@ -43,7 +43,7 @@ target_sources(embui INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EmbUI/examples/02_sensors/src/main.h"
 )
 
-target_include_directories(embui INTERFACE
+target_include_directories(pac-embui INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EmbUI/src"
 )
 
@@ -51,6 +51,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(embui INTERFACE
+target_link_libraries(pac-embui INTERFACE
     arduino-compat
 )

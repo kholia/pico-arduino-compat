@@ -1,6 +1,6 @@
-add_library(trimwright INTERFACE)
+add_library(pac-trimwright INTERFACE)
 
-target_sources(trimwright INTERFACE
+target_sources(pac-trimwright INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-TrimWright/src/TrimWright.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-TrimWright/tests/hsmtest/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-TrimWright/tests/blink/main.cpp"
@@ -10,7 +10,7 @@ target_sources(trimwright INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-TrimWright/src/TrimWright.h"
 )
 
-target_include_directories(trimwright INTERFACE
+target_include_directories(pac-trimwright INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-TrimWright/src"
 )
 
@@ -18,6 +18,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(trimwright INTERFACE
+target_link_libraries(pac-trimwright INTERFACE
     arduino-compat
 )

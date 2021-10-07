@@ -1,6 +1,6 @@
-add_library(displaymenu INTERFACE)
+add_library(pac-displaymenu INTERFACE)
 
-target_sources(displaymenu INTERFACE
+target_sources(pac-displaymenu INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DisplayMenu/src/DisplayMenu.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DisplayMenu/src/DisplayPage.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DisplayMenu/src/DisplayPageList.cpp"
@@ -21,7 +21,7 @@ target_sources(displaymenu INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DisplayMenu/examples/EditValues/menusetup.h"
 )
 
-target_include_directories(displaymenu INTERFACE
+target_include_directories(pac-displaymenu INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/DisplayMenu/src"
 )
 
@@ -29,6 +29,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(displaymenu INTERFACE
+target_link_libraries(pac-displaymenu INTERFACE
     arduino-compat
 )

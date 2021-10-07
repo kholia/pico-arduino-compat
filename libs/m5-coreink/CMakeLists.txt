@@ -1,6 +1,6 @@
-add_library(m5-coreink INTERFACE)
+add_library(pac-m5-coreink INTERFACE)
 
-target_sources(m5-coreink INTERFACE
+target_sources(pac-m5-coreink INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5-CoreInk/src/M5CoreInk.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5-CoreInk/src/utility/Button.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5-CoreInk/src/utility/BM8563.cpp"
@@ -32,7 +32,7 @@ target_sources(m5-coreink INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5-CoreInk/examples/FactoryTest/icon.h"
 )
 
-target_include_directories(m5-coreink INTERFACE
+target_include_directories(pac-m5-coreink INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/M5-CoreInk/src"
 )
 
@@ -40,6 +40,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(m5-coreink INTERFACE
+target_link_libraries(pac-m5-coreink INTERFACE
     arduino-compat
 )

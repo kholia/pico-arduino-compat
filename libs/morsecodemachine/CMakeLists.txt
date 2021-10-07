@@ -1,6 +1,6 @@
-add_library(morsecodemachine INTERFACE)
+add_library(pac-morsecodemachine INTERFACE)
 
-target_sources(morsecodemachine INTERFACE
+target_sources(pac-morsecodemachine INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MorseCodeMachine/extras/test.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MorseCodeMachine/extras/testInteropCPP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MorseCodeMachine/src/arduino/convertMorseFromHebrew.cpp"
@@ -53,7 +53,7 @@ target_sources(morsecodemachine INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MorseCodeMachine/src/all/_isDiacritic.h"
 )
 
-target_include_directories(morsecodemachine INTERFACE
+target_include_directories(pac-morsecodemachine INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MorseCodeMachine/src"
 )
 
@@ -61,6 +61,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(morsecodemachine INTERFACE
+target_link_libraries(pac-morsecodemachine INTERFACE
     arduino-compat
 )

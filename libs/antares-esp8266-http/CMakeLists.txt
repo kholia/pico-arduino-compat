@@ -1,6 +1,6 @@
-add_library(antares-esp8266-http INTERFACE)
+add_library(pac-antares-esp8266-http INTERFACE)
 
-target_sources(antares-esp8266-http INTERFACE
+target_sources(pac-antares-esp8266-http INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/antares-esp8266-http/src/AntaresESP8266HTTP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/antares-esp8266-http/src/ArduinoJson.hpp"
   "${CMAKE_CURRENT_LIST_DIR}/antares-esp8266-http/src/ArduinoJson/JsonBufferBase.hpp"
@@ -85,7 +85,7 @@ target_sources(antares-esp8266-http INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/antares-esp8266-http/src/AntaresESP8266HTTP.h"
 )
 
-target_include_directories(antares-esp8266-http INTERFACE
+target_include_directories(pac-antares-esp8266-http INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/antares-esp8266-http/src"
 )
 
@@ -93,6 +93,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(antares-esp8266-http INTERFACE
+target_link_libraries(pac-antares-esp8266-http INTERFACE
     arduino-compat
 )

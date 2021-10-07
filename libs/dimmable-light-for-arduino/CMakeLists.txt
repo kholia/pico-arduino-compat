@@ -1,6 +1,6 @@
-add_library(dimmable-light-for-arduino INTERFACE)
+add_library(pac-dimmable-light-for-arduino INTERFACE)
 
-target_sources(dimmable-light-for-arduino INTERFACE
+target_sources(pac-dimmable-light-for-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Dimmable-Light-Arduino/src/thyristor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Dimmable-Light-Arduino/src/dimmable_light_manager.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Dimmable-Light-Arduino/src/hw_timer_avr.cpp"
@@ -22,7 +22,7 @@ target_sources(dimmable-light-for-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Dimmable-Light-Arduino/examples/6_8_lights_effects/effect.h"
 )
 
-target_include_directories(dimmable-light-for-arduino INTERFACE
+target_include_directories(pac-dimmable-light-for-arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Dimmable-Light-Arduino/src"
 )
 
@@ -30,6 +30,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(dimmable-light-for-arduino INTERFACE
+target_link_libraries(pac-dimmable-light-for-arduino INTERFACE
     arduino-compat
 )

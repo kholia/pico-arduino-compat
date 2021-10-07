@@ -1,6 +1,6 @@
-add_library(at42qt INTERFACE)
+add_library(pac-at42qt INTERFACE)
 
-target_sources(at42qt INTERFACE
+target_sources(pac-at42qt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AT42QT/src/AT42QT/AT42QT1060.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AT42QT/src/AT42QT/AT42QT1070.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AT42QT/src/AT42QT/AT42QT2160.cpp"
@@ -14,7 +14,7 @@ target_sources(at42qt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AT42QT/src/AT42QT/RegisterAddresses.h"
 )
 
-target_include_directories(at42qt INTERFACE
+target_include_directories(pac-at42qt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AT42QT/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(at42qt INTERFACE
+target_link_libraries(pac-at42qt INTERFACE
     arduino-compat
 )

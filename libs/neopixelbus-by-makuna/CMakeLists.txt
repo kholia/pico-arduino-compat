@@ -1,6 +1,6 @@
-add_library(neopixelbus-by-makuna INTERFACE)
+add_library(pac-neopixelbus-by-makuna INTERFACE)
 
-target_sources(neopixelbus-by-makuna INTERFACE
+target_sources(pac-neopixelbus-by-makuna INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NeoPixelBus/src/internal/SegmentDigit.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NeoPixelBus/src/internal/HsbColor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NeoPixelBus/src/internal/NeoEsp8266DmaMethod.cpp"
@@ -81,7 +81,7 @@ target_sources(neopixelbus-by-makuna INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NeoPixelBus/examples/bitmaps/NeoPixelBufferCylon/CylonGrbw.h"
 )
 
-target_include_directories(neopixelbus-by-makuna INTERFACE
+target_include_directories(pac-neopixelbus-by-makuna INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/NeoPixelBus/src"
 )
 
@@ -89,6 +89,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(neopixelbus-by-makuna INTERFACE
+target_link_libraries(pac-neopixelbus-by-makuna INTERFACE
     arduino-compat
 )

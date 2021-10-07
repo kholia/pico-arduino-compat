@@ -1,6 +1,6 @@
-add_library(phpoc INTERFACE)
+add_library(pac-phpoc INTERFACE)
 
-target_sources(phpoc INTERFACE
+target_sources(pac-phpoc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-Phpoc/src/IP6Address.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-Phpoc/src/SppcVsprintf.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-Phpoc/src/Sppc.cpp"
@@ -19,7 +19,7 @@ target_sources(phpoc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-Phpoc/src/Sppc.h"
 )
 
-target_include_directories(phpoc INTERFACE
+target_include_directories(pac-phpoc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-Phpoc/src"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(phpoc INTERFACE
+target_link_libraries(pac-phpoc INTERFACE
     arduino-compat
 )

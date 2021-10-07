@@ -1,6 +1,6 @@
-add_library(teensyvariableplayback INTERFACE)
+add_library(pac-teensyvariableplayback INTERFACE)
 
-target_sources(teensyvariableplayback INTERFACE
+target_sources(pac-teensyvariableplayback INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/teensy-variable-playback/extras/soundio/sd_play_all/sd_play_all.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/teensy-variable-playback/extras/soundio/save_raw/save_raw.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/teensy-variable-playback/extras/soundio/save_raw_sd/save_raw_sd.cpp"
@@ -52,7 +52,7 @@ target_sources(teensyvariableplayback INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/teensy-variable-playback/src/ResamplingArrayReader.h"
 )
 
-target_include_directories(teensyvariableplayback INTERFACE
+target_include_directories(pac-teensyvariableplayback INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/teensy-variable-playback/src"
 )
 
@@ -60,11 +60,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(teensyvariableplayback INTERFACE
+target_link_libraries(pac-teensyvariableplayback INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

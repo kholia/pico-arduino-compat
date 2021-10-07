@@ -1,6 +1,6 @@
-add_library(msgpacketizer INTERFACE)
+add_library(pac-msgpacketizer INTERFACE)
 
-target_sources(msgpacketizer INTERFACE
+target_sources(pac-msgpacketizer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MsgPacketizer/examples/arr_map/openFrameworks/src/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MsgPacketizer/examples/simple/openFrameworks/src/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MsgPacketizer/examples/nested_custom/openFrameworks/src/main.cpp"
@@ -79,7 +79,7 @@ target_sources(msgpacketizer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MsgPacketizer/MsgPacketizer/util/Packetizer/Packetizer/util/CRCx/CRCpp/CRCpp.h"
 )
 
-target_include_directories(msgpacketizer INTERFACE
+target_include_directories(pac-msgpacketizer INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MsgPacketizer"
 )
 
@@ -87,6 +87,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(msgpacketizer INTERFACE
+target_link_libraries(pac-msgpacketizer INTERFACE
     arduino-compat
 )

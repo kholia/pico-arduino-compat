@@ -1,6 +1,6 @@
-add_library(espilight INTERFACE)
+add_library(pac-espilight INTERFACE)
 
-target_sources(espilight INTERFACE
+target_sources(pac-espilight INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESPiLight/src/ESPiLight.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESPiLight/src/tools/aprintf.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESPiLight/src/pilight/libs/pilight/protocols/protocol.c"
@@ -13,7 +13,7 @@ target_sources(espilight INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESPiLight/src/pilight/libs/pilight/core/pilight.h"
 )
 
-target_include_directories(espilight INTERFACE
+target_include_directories(pac-espilight INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESPiLight/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(espilight INTERFACE
+target_link_libraries(pac-espilight INTERFACE
     arduino-compat
 )

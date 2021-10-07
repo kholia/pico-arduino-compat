@@ -1,6 +1,6 @@
-add_library(mini-grafx INTERFACE)
+add_library(pac-mini-grafx INTERFACE)
 
-target_sources(mini-grafx INTERFACE
+target_sources(pac-mini-grafx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/minigrafx/src/EPD_WaveShare.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/minigrafx/src/EPD_WaveShare_29T5.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/minigrafx/src/EPD_WaveShare_29.cpp"
@@ -39,7 +39,7 @@ target_sources(mini-grafx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/minigrafx/examples/SSD1331/SSD1331_SPI/image.h"
 )
 
-target_include_directories(mini-grafx INTERFACE
+target_include_directories(pac-mini-grafx INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/minigrafx/src"
 )
 
@@ -47,6 +47,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mini-grafx INTERFACE
+target_link_libraries(pac-mini-grafx INTERFACE
     arduino-compat
 )

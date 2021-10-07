@@ -1,6 +1,6 @@
-add_library(supladevice INTERFACE)
+add_library(pac-supladevice INTERFACE)
 
-target_sources(supladevice INTERFACE
+target_sources(pac-supladevice INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/supla-arduino/extras/test/UptimeTests/uptime_tests.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/supla-arduino/extras/test/ChannelElementTests/channel_element_tests.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/supla-arduino/extras/test/ElementTests/element_tests.cpp"
@@ -181,7 +181,7 @@ target_sources(supladevice INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/supla-arduino/src/supla/clock/clock.h"
 )
 
-target_include_directories(supladevice INTERFACE
+target_include_directories(pac-supladevice INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/supla-arduino/src"
 )
 
@@ -189,6 +189,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(supladevice INTERFACE
+target_link_libraries(pac-supladevice INTERFACE
     arduino-compat
 )

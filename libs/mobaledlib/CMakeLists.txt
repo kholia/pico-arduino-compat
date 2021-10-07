@@ -1,6 +1,6 @@
-add_library(mobaledlib INTERFACE)
+add_library(pac-mobaledlib INTERFACE)
 
-target_sources(mobaledlib INTERFACE
+target_sources(pac-mobaledlib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MobaLedLib/extras/LEDs_Autoprog/DCCInterface.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MobaLedLib/extras/LEDs_Autoprog/SSD1306UI.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MobaLedLib/extras/LEDs_Autoprog/UserInterface.cpp"
@@ -142,7 +142,7 @@ target_sources(mobaledlib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MobaLedLib/examples/80.Modules/01.ATTiny85_Servo/SoftwareSerial_H.h"
 )
 
-target_include_directories(mobaledlib INTERFACE
+target_include_directories(pac-mobaledlib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MobaLedLib/src"
 )
 
@@ -150,6 +150,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mobaledlib INTERFACE
+target_link_libraries(pac-mobaledlib INTERFACE
     arduino-compat
 )

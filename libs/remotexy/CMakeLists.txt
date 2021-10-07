@@ -1,6 +1,6 @@
-add_library(remotexy INTERFACE)
+add_library(pac-remotexy INTERFACE)
 
-target_sources(remotexy INTERFACE
+target_sources(pac-remotexy INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RemoteXY-Arduino-library/src/RemoteXYComm_AT.h"
   "${CMAKE_CURRENT_LIST_DIR}/RemoteXY-Arduino-library/src/RemoteXY.h"
   "${CMAKE_CURRENT_LIST_DIR}/RemoteXY-Arduino-library/src/RemoteXYStream_BLEPeripheral.h"
@@ -29,7 +29,7 @@ target_sources(remotexy INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RemoteXY-Arduino-library/src/RemoteXYApiData.h"
 )
 
-target_include_directories(remotexy INTERFACE
+target_include_directories(pac-remotexy INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RemoteXY-Arduino-library/src"
 )
 
@@ -37,6 +37,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(remotexy INTERFACE
+target_link_libraries(pac-remotexy INTERFACE
     arduino-compat
 )

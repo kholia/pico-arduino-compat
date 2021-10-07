@@ -1,6 +1,6 @@
-add_library(iq-module-communication INTERFACE)
+add_library(pac-iq-module-communication INTERFACE)
 
-target_sources(iq-module-communication INTERFACE
+target_sources(pac-iq-module-communication INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/iq-module-communication-arduino/src/generic_interface.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/iq-module-communication-arduino/src/client_communication.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/iq-module-communication-arduino/src/propeller_motor_control_client.hpp"
@@ -32,7 +32,7 @@ target_sources(iq-module-communication INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/iq-module-communication-arduino/src/communication_interface.h"
 )
 
-target_include_directories(iq-module-communication INTERFACE
+target_include_directories(pac-iq-module-communication INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/iq-module-communication-arduino/src"
 )
 
@@ -40,6 +40,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(iq-module-communication INTERFACE
+target_link_libraries(pac-iq-module-communication INTERFACE
     arduino-compat
 )

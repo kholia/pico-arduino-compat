@@ -1,6 +1,6 @@
-add_library(seeed-arduino-rpcwifi INTERFACE)
+add_library(pac-seeed-arduino-rpcwifi INTERFACE)
 
-target_sources(seeed-arduino-rpcwifi INTERFACE
+target_sources(pac-seeed-arduino-rpcwifi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_rpcWiFi/src/WiFi.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_rpcWiFi/src/WiFiAP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_rpcWiFi/src/WiFiUdp.cpp"
@@ -45,7 +45,7 @@ target_sources(seeed-arduino-rpcwifi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_rpcWiFi/src/detail/RequestHandlersImpl.h"
 )
 
-target_include_directories(seeed-arduino-rpcwifi INTERFACE
+target_include_directories(pac-seeed-arduino-rpcwifi INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_rpcWiFi/src"
 )
 
@@ -53,6 +53,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(seeed-arduino-rpcwifi INTERFACE
+target_link_libraries(pac-seeed-arduino-rpcwifi INTERFACE
     arduino-compat
 )

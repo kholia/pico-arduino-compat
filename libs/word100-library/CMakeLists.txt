@@ -1,6 +1,6 @@
-add_library(word100-library INTERFACE)
+add_library(pac-word100-library INTERFACE)
 
-target_sources(word100-library INTERFACE
+target_sources(pac-word100-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Word100/src/Word100Ham.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Word100/src/Word100BBT.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Word100/src/Word100LBT.cpp"
@@ -36,7 +36,7 @@ target_sources(word100-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Word100/examples/LBT_example_two_timings/license.h"
 )
 
-target_include_directories(word100-library INTERFACE
+target_include_directories(pac-word100-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Word100/src"
 )
 
@@ -44,6 +44,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(word100-library INTERFACE
+target_link_libraries(pac-word100-library INTERFACE
     arduino-compat
 )

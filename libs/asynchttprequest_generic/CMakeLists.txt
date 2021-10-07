@@ -1,6 +1,6 @@
-add_library(asynchttprequest_generic INTERFACE)
+add_library(pac-asynchttprequest_generic INTERFACE)
 
-target_sources(asynchttprequest_generic INTERFACE
+target_sources(pac-asynchttprequest_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AsyncHTTPRequest_Generic/src_cpp/AsyncHTTPRequest_Generic.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AsyncHTTPRequest_Generic/src_cpp/utility/xbuf.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AsyncHTTPRequest_Generic/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B112_ublox/variant.cpp"
@@ -125,7 +125,7 @@ target_sources(asynchttprequest_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AsyncHTTPRequest_Generic/esp32s2_WebServer_Patch/WebServer.h"
 )
 
-target_include_directories(asynchttprequest_generic INTERFACE
+target_include_directories(pac-asynchttprequest_generic INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AsyncHTTPRequest_Generic/src"
 )
 
@@ -133,6 +133,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(asynchttprequest_generic INTERFACE
+target_link_libraries(pac-asynchttprequest_generic INTERFACE
     arduino-compat
 )

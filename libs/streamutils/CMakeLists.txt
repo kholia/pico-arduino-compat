@@ -1,6 +1,6 @@
-add_library(streamutils INTERFACE)
+add_library(pac-streamutils INTERFACE)
 
-target_sources(streamutils INTERFACE
+target_sources(pac-streamutils INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoStreamUtils/extras/test/ReadBufferingStreamTest.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoStreamUtils/extras/test/ReadLoggingStreamTest.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoStreamUtils/extras/test/LoggingPrintTest.cpp"
@@ -137,7 +137,7 @@ target_sources(streamutils INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoStreamUtils/src/StreamUtils.h"
 )
 
-target_include_directories(streamutils INTERFACE
+target_include_directories(pac-streamutils INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoStreamUtils/src"
 )
 
@@ -145,6 +145,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(streamutils INTERFACE
+target_link_libraries(pac-streamutils INTERFACE
     arduino-compat
 )

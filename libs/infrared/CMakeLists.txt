@@ -1,6 +1,6 @@
-add_library(infrared INTERFACE)
+add_library(pac-infrared INTERFACE)
 
-target_sources(infrared INTERFACE
+target_sources(pac-infrared INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Infrared4Arduino/src/Board.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Infrared4Arduino/src/IrSequence.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Infrared4Arduino/src/IrSenderNonMod.cpp"
@@ -71,7 +71,7 @@ target_sources(infrared INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Infrared4Arduino/src/boards/Teensy3x.h"
 )
 
-target_include_directories(infrared INTERFACE
+target_include_directories(pac-infrared INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Infrared4Arduino/src"
 )
 
@@ -79,6 +79,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(infrared INTERFACE
+target_link_libraries(pac-infrared INTERFACE
     arduino-compat
 )

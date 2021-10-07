@@ -1,6 +1,6 @@
-add_library(mjgrove INTERFACE)
+add_library(pac-mjgrove INTERFACE)
 
-target_sources(mjgrove INTERFACE
+target_sources(pac-mjgrove INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MjGrove/src/HAL/HalI2CDevice.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MjGrove/src/HAL/Mbed/HalI2C.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MjGrove/src/HAL/Mbed/HalUART.cpp"
@@ -96,7 +96,7 @@ target_sources(mjgrove INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MjGrove/src/Extension/WioExtRTC.h"
 )
 
-target_include_directories(mjgrove INTERFACE
+target_include_directories(pac-mjgrove INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MjGrove/src"
 )
 
@@ -104,6 +104,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mjgrove INTERFACE
+target_link_libraries(pac-mjgrove INTERFACE
     arduino-compat
 )

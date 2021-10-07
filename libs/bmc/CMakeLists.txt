@@ -1,6 +1,6 @@
-add_library(bmc INTERFACE)
+add_library(pac-bmc INTERFACE)
 
-target_sources(bmc INTERFACE
+target_sources(pac-bmc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BMC/src/BMC.hardware.encoders.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BMC/src/BMC.hardware.pots.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BMC/src/BMC.sketchBytes.cpp"
@@ -118,7 +118,7 @@ target_sources(bmc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BMC/examples/pot-led/config.h"
 )
 
-target_include_directories(bmc INTERFACE
+target_include_directories(pac-bmc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/BMC/src"
 )
 
@@ -126,16 +126,16 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(bmc INTERFACE
+target_link_libraries(pac-bmc INTERFACE
     arduino-compat
-    adafruit-gfx-library
-    official-sd
+    pac-adafruit-gfx-library
+    pac-sd
 )

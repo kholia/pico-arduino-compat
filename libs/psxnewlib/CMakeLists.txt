@@ -1,6 +1,6 @@
-add_library(psxnewlib INTERFACE)
+add_library(pac-psxnewlib INTERFACE)
 
-target_sources(psxnewlib INTERFACE
+target_sources(pac-psxnewlib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PsxNewLib/src/PsxNewLib.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PsxNewLib/examples/GunconAbsMouse/AbsMouse.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PsxNewLib/src/PsxControllerHwSpi.h"
@@ -9,7 +9,7 @@ target_sources(psxnewlib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PsxNewLib/examples/GunconAbsMouse/AbsMouse.h"
 )
 
-target_include_directories(psxnewlib INTERFACE
+target_include_directories(pac-psxnewlib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PsxNewLib/src"
 )
 
@@ -17,6 +17,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(psxnewlib INTERFACE
+target_link_libraries(pac-psxnewlib INTERFACE
     arduino-compat
 )

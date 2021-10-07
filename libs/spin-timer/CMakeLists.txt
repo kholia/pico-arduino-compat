@@ -1,6 +1,6 @@
-add_library(spin-timer INTERFACE)
+add_library(pac-spin-timer INTERFACE)
 
-target_sources(spin-timer INTERFACE
+target_sources(pac-spin-timer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/spin-timer/SpinTimerContext.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/spin-timer/SpinTimer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/spin-timer/UptimeInfo.cpp"
@@ -17,7 +17,7 @@ target_sources(spin-timer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/spin-timer/tests/Mock_UptimeInfo.h"
 )
 
-target_include_directories(spin-timer INTERFACE
+target_include_directories(pac-spin-timer INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/spin-timer"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(spin-timer INTERFACE
+target_link_libraries(pac-spin-timer INTERFACE
     arduino-compat
 )

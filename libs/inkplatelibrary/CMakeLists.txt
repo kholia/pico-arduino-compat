@@ -1,6 +1,6 @@
-add_library(inkplatelibrary INTERFACE)
+add_library(pac-inkplatelibrary INTERFACE)
 
-target_sources(inkplatelibrary INTERFACE
+target_sources(pac-inkplatelibrary INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Inkplate-6-Arduino-library/src/Inkplate.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Inkplate-6-Arduino-library/src/include/System.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Inkplate-6-Arduino-library/src/include/Graphics.cpp"
@@ -2014,7 +2014,7 @@ target_sources(inkplatelibrary INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Inkplate-6-Arduino-library/examples/Inkplate10/Others/Inkplate_Factory_Programming_VCOM/image.h"
 )
 
-target_include_directories(inkplatelibrary INTERFACE
+target_include_directories(pac-inkplatelibrary INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Inkplate-6-Arduino-library/src"
 )
 
@@ -2022,11 +2022,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(inkplatelibrary INTERFACE
+target_link_libraries(pac-inkplatelibrary INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

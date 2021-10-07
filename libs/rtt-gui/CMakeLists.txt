@@ -1,6 +1,6 @@
-add_library(rtt-gui INTERFACE)
+add_library(pac-rtt-gui INTERFACE)
 
-target_sources(rtt-gui INTERFACE
+target_sources(pac-rtt-gui INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RTT-GUI/src/rttgui.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RTT-GUI/src/tjpgd/tjpgd.c"
   "${CMAKE_CURRENT_LIST_DIR}/RTT-GUI/src/lodepng/lodepng.c"
@@ -78,7 +78,7 @@ target_sources(rtt-gui INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RTT-GUI/src/lodepng/lodepng.h"
 )
 
-target_include_directories(rtt-gui INTERFACE
+target_include_directories(pac-rtt-gui INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RTT-GUI/src"
 )
 
@@ -86,6 +86,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(rtt-gui INTERFACE
+target_link_libraries(pac-rtt-gui INTERFACE
     arduino-compat
 )

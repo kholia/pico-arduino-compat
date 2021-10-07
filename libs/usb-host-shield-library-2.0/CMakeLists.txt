@@ -1,6 +1,6 @@
-add_library(usb-host-shield-library-2.0 INTERFACE)
+add_library(pac-usb-host-shield-library-2.0 INTERFACE)
 
-target_sources(usb-host-shield-library-2.0 INTERFACE
+target_sources(pac-usb-host-shield-library-2.0 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/USB_Host_Shield_2.0/hidcomposite.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/USB_Host_Shield_2.0/AMBX.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/USB_Host_Shield_2.0/PS3BT.cpp"
@@ -116,7 +116,7 @@ target_sources(usb-host-shield-library-2.0 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/USB_Host_Shield_2.0/examples/HID/le3dp/le3dp_rptparser.h"
 )
 
-target_include_directories(usb-host-shield-library-2.0 INTERFACE
+target_include_directories(pac-usb-host-shield-library-2.0 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/USB_Host_Shield_2.0"
 )
 
@@ -124,6 +124,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(usb-host-shield-library-2.0 INTERFACE
+target_link_libraries(pac-usb-host-shield-library-2.0 INTERFACE
     arduino-compat
 )

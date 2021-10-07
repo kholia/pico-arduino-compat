@@ -1,6 +1,6 @@
-add_library(talkie INTERFACE)
+add_library(pac-talkie INTERFACE)
 
-target_sources(talkie INTERFACE
+target_sources(pac-talkie INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Talkie/src/TalkieUlils.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Talkie/src/Vocab_Soundbites.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Talkie/src/Vocab_AstroBlaster.cpp"
@@ -28,7 +28,7 @@ target_sources(talkie INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Talkie/examples/USDistanceToVoice/HCSR04.h"
 )
 
-target_include_directories(talkie INTERFACE
+target_include_directories(pac-talkie INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Talkie/src"
 )
 
@@ -36,6 +36,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(talkie INTERFACE
+target_link_libraries(pac-talkie INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(arduinocloudthing INTERFACE)
+add_library(pac-arduinocloudthing INTERFACE)
 
-target_sources(arduinocloudthing INTERFACE
+target_sources(pac-arduinocloudthing INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoCloudThing/test/src/test_CloudLocation.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoCloudThing/test/src/test_encode.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoCloudThing/test/src/test_writeOnly.cpp"
@@ -65,7 +65,7 @@ target_sources(arduinocloudthing INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoCloudThing/src/types/automation/CloudContactSensor.h"
 )
 
-target_include_directories(arduinocloudthing INTERFACE
+target_include_directories(pac-arduinocloudthing INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoCloudThing/src"
 )
 
@@ -73,6 +73,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinocloudthing INTERFACE
+target_link_libraries(pac-arduinocloudthing INTERFACE
     arduino-compat
 )

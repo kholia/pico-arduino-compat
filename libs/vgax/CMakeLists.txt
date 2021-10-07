@@ -1,6 +1,6 @@
-add_library(vgax INTERFACE)
+add_library(pac-vgax INTERFACE)
 
-target_sources(vgax INTERFACE
+target_sources(pac-vgax INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/vgax/blit8.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/vgax/bitblit.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/vgax/blit.cpp"
@@ -11,7 +11,7 @@ target_sources(vgax INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/vgax/VGAX.h"
 )
 
-target_include_directories(vgax INTERFACE
+target_include_directories(pac-vgax INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/vgax"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(vgax INTERFACE
+target_link_libraries(pac-vgax INTERFACE
     arduino-compat
 )

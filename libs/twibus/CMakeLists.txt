@@ -1,6 +1,6 @@
-add_library(twibus INTERFACE)
+add_library(pac-twibus INTERFACE)
 
-target_sources(twibus INTERFACE
+target_sources(pac-twibus INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Nb_TwiBus/src/TwiBus.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Nb_TwiBus/examples/PlatformIO/timonel-twim-ss/src/timonel-twim-ss.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Nb_TwiBus/examples/PlatformIO/blink-twi-demo/blink-wires-ino-io/src/blink-wires-ino-io.cpp"
@@ -25,7 +25,7 @@ target_sources(twibus INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Nb_TwiBus/examples/PlatformIO/timonel-twim-ms/data/payloads/payload.h"
 )
 
-target_include_directories(twibus INTERFACE
+target_include_directories(pac-twibus INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Nb_TwiBus/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(twibus INTERFACE
+target_link_libraries(pac-twibus INTERFACE
     arduino-compat
 )

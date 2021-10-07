@@ -1,6 +1,6 @@
-add_library(nintendocontrollersstm32 INTERFACE)
+add_library(pac-nintendocontrollersstm32 INTERFACE)
 
-target_sources(nintendocontrollersstm32 INTERFACE
+target_sources(pac-nintendocontrollersstm32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GameControllersSTM32/src/genesis.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GameControllersSTM32/src/SegaController.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GameControllersSTM32/src/gameport.cpp"
@@ -12,7 +12,7 @@ target_sources(nintendocontrollersstm32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GameControllersSTM32/src/dwt.h"
 )
 
-target_include_directories(nintendocontrollersstm32 INTERFACE
+target_include_directories(pac-nintendocontrollersstm32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/GameControllersSTM32/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(nintendocontrollersstm32 INTERFACE
+target_link_libraries(pac-nintendocontrollersstm32 INTERFACE
     arduino-compat
 )

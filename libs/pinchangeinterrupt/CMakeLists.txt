@@ -1,6 +1,6 @@
-add_library(pinchangeinterrupt INTERFACE)
+add_library(pac-pinchangeinterrupt INTERFACE)
 
-target_sources(pinchangeinterrupt INTERFACE
+target_sources(pac-pinchangeinterrupt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PinChangeInterrupt/src/PinChangeInterrupt3.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PinChangeInterrupt/src/PinChangeInterrupt1.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PinChangeInterrupt/src/PinChangeInterrupt.cpp"
@@ -12,7 +12,7 @@ target_sources(pinchangeinterrupt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PinChangeInterrupt/src/PinChangeInterruptPins.h"
 )
 
-target_include_directories(pinchangeinterrupt INTERFACE
+target_include_directories(pac-pinchangeinterrupt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PinChangeInterrupt/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pinchangeinterrupt INTERFACE
+target_link_libraries(pac-pinchangeinterrupt INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(ajsp INTERFACE)
+add_library(pac-ajsp INTERFACE)
 
-target_sources(ajsp INTERFACE
+target_sources(pac-ajsp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AJSP/extra/PathListener.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AJSP/extra/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AJSP/extra/PathPrinter.cpp"
@@ -18,7 +18,7 @@ target_sources(ajsp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AJSP/extra/PathListener.h"
 )
 
-target_include_directories(ajsp INTERFACE
+target_include_directories(pac-ajsp INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AJSP/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ajsp INTERFACE
+target_link_libraries(pac-ajsp INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(applemidi INTERFACE)
+add_library(pac-applemidi INTERFACE)
 
-target_sources(applemidi INTERFACE
+target_sources(pac-applemidi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-AppleMidi-Library/test/NoteOn.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-AppleMidi-Library/src/AppleMIDI.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-AppleMidi-Library/src/rtpMIDI_Parser_MidiCommandSection.hpp"
@@ -28,7 +28,7 @@ target_sources(applemidi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-AppleMidi-Library/examples/ESP32_W5500_Callbacks/ETH_Helper.h"
 )
 
-target_include_directories(applemidi INTERFACE
+target_include_directories(pac-applemidi INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino-AppleMidi-Library/src"
 )
 
@@ -36,6 +36,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(applemidi INTERFACE
+target_link_libraries(pac-applemidi INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(blynkgsm_manager INTERFACE)
+add_library(pac-blynkgsm_manager INTERFACE)
 
-target_sources(blynkgsm_manager INTERFACE
+target_sources(pac-blynkgsm_manager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BlynkGSM_Manager/src/BlynkSimpleTinyGSM_M.h"
   "${CMAKE_CURRENT_LIST_DIR}/BlynkGSM_Manager/src/BlynkSimpleEsp8266_GSM_WFM.h"
   "${CMAKE_CURRENT_LIST_DIR}/BlynkGSM_Manager/src/BlynkSimpleEsp32_GSM_WFM.h"
@@ -37,7 +37,7 @@ target_sources(blynkgsm_manager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BlynkGSM_Manager/examples/TTGO_TCALL_MRD_GSM/Credentials.h"
 )
 
-target_include_directories(blynkgsm_manager INTERFACE
+target_include_directories(pac-blynkgsm_manager INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/BlynkGSM_Manager/src"
 )
 
@@ -45,6 +45,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(blynkgsm_manager INTERFACE
+target_link_libraries(pac-blynkgsm_manager INTERFACE
     arduino-compat
 )

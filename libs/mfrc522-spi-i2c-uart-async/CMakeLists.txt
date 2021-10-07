@@ -1,6 +1,6 @@
-add_library(mfrc522-spi-i2c-uart-async INTERFACE)
+add_library(pac-mfrc522-spi-i2c-uart-async INTERFACE)
 
-target_sources(mfrc522-spi-i2c-uart-async INTERFACE
+target_sources(pac-mfrc522-spi-i2c-uart-async INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/rfid/src/MFRC522_i2c.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/rfid/src/MFRC522Extended.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/rfid/src/MFRC522_spi.cpp"
@@ -11,7 +11,7 @@ target_sources(mfrc522-spi-i2c-uart-async INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/rfid/src/MFRC522.h"
 )
 
-target_include_directories(mfrc522-spi-i2c-uart-async INTERFACE
+target_include_directories(pac-mfrc522-spi-i2c-uart-async INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/rfid/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mfrc522-spi-i2c-uart-async INTERFACE
+target_link_libraries(pac-mfrc522-spi-i2c-uart-async INTERFACE
     arduino-compat
 )

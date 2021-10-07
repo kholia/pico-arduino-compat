@@ -1,6 +1,6 @@
-add_library(opendevice INTERFACE)
+add_library(pac-opendevice INTERFACE)
 
-target_sources(opendevice INTERFACE
+target_sources(pac-opendevice INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/opendevice-lib-arduino/src/MQTTClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/opendevice-lib-arduino/src/DeviceConnection.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/opendevice-lib-arduino/src/OpenDevice.cpp"
@@ -73,7 +73,7 @@ target_sources(opendevice INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/opendevice-lib-arduino/examples/Projects/AcessControl/KeysManager.h"
 )
 
-target_include_directories(opendevice INTERFACE
+target_include_directories(pac-opendevice INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/opendevice-lib-arduino/src"
 )
 
@@ -81,6 +81,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(opendevice INTERFACE
+target_link_libraries(pac-opendevice INTERFACE
     arduino-compat
 )

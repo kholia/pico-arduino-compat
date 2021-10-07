@@ -1,6 +1,6 @@
-add_library(littlefs_esp32 INTERFACE)
+add_library(pac-littlefs_esp32 INTERFACE)
 
-target_sources(littlefs_esp32 INTERFACE
+target_sources(pac-littlefs_esp32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LITTLEFS/src/LITTLEFS.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LITTLEFS/examples/LITTLEFS_PlatformIO/src/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LITTLEFS/src/lfs.c"
@@ -14,7 +14,7 @@ target_sources(littlefs_esp32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LITTLEFS/src/lfs.h"
 )
 
-target_include_directories(littlefs_esp32 INTERFACE
+target_include_directories(pac-littlefs_esp32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/LITTLEFS/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(littlefs_esp32 INTERFACE
+target_link_libraries(pac-littlefs_esp32 INTERFACE
     arduino-compat
 )

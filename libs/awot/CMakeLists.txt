@@ -1,6 +1,6 @@
-add_library(awot INTERFACE)
+add_library(pac-awot INTERFACE)
 
-target_sources(awot INTERFACE
+target_sources(pac-awot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/aWOT/test/route-params.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/aWOT/test/query-params.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/aWOT/test/stream.cpp"
@@ -21,7 +21,7 @@ target_sources(awot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/aWOT/examples/FileServer/MimeTypes.h"
 )
 
-target_include_directories(awot INTERFACE
+target_include_directories(pac-awot INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/aWOT/src"
 )
 
@@ -29,6 +29,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(awot INTERFACE
+target_link_libraries(pac-awot INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(artnet INTERFACE)
+add_library(pac-artnet INTERFACE)
 
-target_sources(artnet INTERFACE
+target_sources(pac-artnet INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArtNet/ArtnetEther.h"
   "${CMAKE_CURRENT_LIST_DIR}/ArtNet/Artnet.h"
   "${CMAKE_CURRENT_LIST_DIR}/ArtNet/ArtnetWiFi.h"
@@ -21,7 +21,7 @@ target_sources(artnet INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArtNet/Artnet/util/ArxContainer/ArxContainer/has_libstdcplusplus.h"
 )
 
-target_include_directories(artnet INTERFACE
+target_include_directories(pac-artnet INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArtNet"
 )
 
@@ -29,6 +29,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(artnet INTERFACE
+target_link_libraries(pac-artnet INTERFACE
     arduino-compat
 )

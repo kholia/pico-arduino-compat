@@ -1,6 +1,6 @@
-add_library(simpleserialshell INTERFACE)
+add_library(pac-simpleserialshell INTERFACE)
 
-target_sources(simpleserialshell INTERFACE
+target_sources(pac-simpleserialshell INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SimpleSerialShell/extras/tests/simpleSerialShellTest/shellTestCommands.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SimpleSerialShell/extras/tests/simpleSerialShellTest/SimMonitor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SimpleSerialShell/src/SimpleSerialShell.cpp"
@@ -16,7 +16,7 @@ target_sources(simpleserialshell INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SimpleSerialShell/examples/ArduinoTextInterface/MemoryUsageAVR.h"
 )
 
-target_include_directories(simpleserialshell INTERFACE
+target_include_directories(pac-simpleserialshell INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SimpleSerialShell/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(simpleserialshell INTERFACE
+target_link_libraries(pac-simpleserialshell INTERFACE
     arduino-compat
 )

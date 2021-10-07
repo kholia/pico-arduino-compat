@@ -1,6 +1,6 @@
-add_library(sinricpro_generic INTERFACE)
+add_library(pac-sinricpro_generic INTERFACE)
 
-target_sources(sinricpro_generic INTERFACE
+target_sources(pac-sinricpro_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SinricPro_Generic/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SinricPro_Generic/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SinricPro_Generic/LibraryPatches/UIPEthernet-2.0.9/UIPEthernet.cpp"
@@ -303,7 +303,7 @@ target_sources(sinricpro_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SinricPro_Generic/examples/ESP/Camera/select_pins.h"
 )
 
-target_include_directories(sinricpro_generic INTERFACE
+target_include_directories(pac-sinricpro_generic INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SinricPro_Generic/src"
 )
 
@@ -311,6 +311,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sinricpro_generic INTERFACE
+target_link_libraries(pac-sinricpro_generic INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(adafruit-ahrs INTERFACE)
+add_library(pac-adafruit-ahrs INTERFACE)
 
-target_sources(adafruit-ahrs INTERFACE
+target_sources(pac-adafruit-ahrs INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_AHRS/src/Adafruit_AHRS_NXPFusion.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_AHRS/src/Adafruit_AHRS_Mahony.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_AHRS/src/Adafruit_AHRS_Madgwick.cpp"
@@ -25,7 +25,7 @@ target_sources(adafruit-ahrs INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_AHRS/examples/ahrs_fusion_ble_nrf51/BluefruitConfig.h"
 )
 
-target_include_directories(adafruit-ahrs INTERFACE
+target_include_directories(pac-adafruit-ahrs INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_AHRS/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(adafruit-ahrs INTERFACE
+target_link_libraries(pac-adafruit-ahrs INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(homeding INTERFACE)
+add_library(pac-homeding INTERFACE)
 
-target_sources(homeding INTERFACE
+target_sources(pac-homeding INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/HomeDing/src/Board.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/HomeDing/src/tm1637.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/HomeDing/src/RTCStateElement.cpp"
@@ -161,7 +161,7 @@ target_sources(homeding INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/HomeDing/examples/Probe/INA226Element.h"
 )
 
-target_include_directories(homeding INTERFACE
+target_include_directories(pac-homeding INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/HomeDing/src"
 )
 
@@ -169,6 +169,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(homeding INTERFACE
+target_link_libraries(pac-homeding INTERFACE
     arduino-compat
 )

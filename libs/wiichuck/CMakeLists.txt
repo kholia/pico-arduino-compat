@@ -1,6 +1,6 @@
-add_library(wiichuck INTERFACE)
+add_library(pac-wiichuck INTERFACE)
 
-target_sources(wiichuck INTERFACE
+target_sources(pac-wiichuck INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiiChuck/src/Nunchuck.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiiChuck/src/Drums.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiiChuck/src/DJTable.cpp"
@@ -18,7 +18,7 @@ target_sources(wiichuck INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiiChuck/src/Classic.h"
 )
 
-target_include_directories(wiichuck INTERFACE
+target_include_directories(pac-wiichuck INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WiiChuck/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wiichuck INTERFACE
+target_link_libraries(pac-wiichuck INTERFACE
     arduino-compat
 )

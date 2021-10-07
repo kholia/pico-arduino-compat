@@ -1,6 +1,6 @@
-add_library(dfrobot-gdl INTERFACE)
+add_library(pac-dfrobot-gdl INTERFACE)
 
-target_sources(dfrobot-gdl INTERFACE
+target_sources(pac-dfrobot-gdl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DFRobot_GDL/src/DFRobot_GDL.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DFRobot_GDL/src/DFRobot_Picdecoder_SD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DFRobot_GDL/src/DFRobot_LCD.cpp"
@@ -120,7 +120,7 @@ target_sources(dfrobot-gdl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DFRobot_GDL/examples/ST7735_80x160/icon/Icon.h"
 )
 
-target_include_directories(dfrobot-gdl INTERFACE
+target_include_directories(pac-dfrobot-gdl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/DFRobot_GDL/src"
 )
 
@@ -128,16 +128,16 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(dfrobot-gdl INTERFACE
+target_link_libraries(pac-dfrobot-gdl INTERFACE
     arduino-compat
-    official-sd
-    adafruit-gfx-library
+    pac-sd
+    pac-adafruit-gfx-library
 )

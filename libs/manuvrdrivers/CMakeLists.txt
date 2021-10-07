@@ -1,6 +1,6 @@
-add_library(manuvrdrivers INTERFACE)
+add_library(pac-manuvrdrivers INTERFACE)
 
-target_sources(manuvrdrivers INTERFACE
+target_sources(pac-manuvrdrivers INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ManuvrDrivers/src/MCP4728/MCP4728.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ManuvrDrivers/src/SSD13xx/SSD1306.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ManuvrDrivers/src/SSD13xx/SSD1331.cpp"
@@ -79,7 +79,7 @@ target_sources(manuvrdrivers INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ManuvrDrivers/src/MCP356x/MCP356x.h"
 )
 
-target_include_directories(manuvrdrivers INTERFACE
+target_include_directories(pac-manuvrdrivers INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ManuvrDrivers/src"
 )
 
@@ -87,11 +87,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(manuvrdrivers INTERFACE
+target_link_libraries(pac-manuvrdrivers INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

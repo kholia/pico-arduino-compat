@@ -1,6 +1,6 @@
-add_library(smartcar-shield INTERFACE)
+add_library(pac-smartcar-shield INTERFACE)
 
-target_sources(smartcar-shield INTERFACE
+target_sources(pac-smartcar-shield INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/smartcar_shield/test/ut/SimpleCar_test.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/smartcar_shield/test/ut/BrushedMotor_test.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/smartcar_shield/test/ut/HeadingCar_test.cpp"
@@ -76,7 +76,7 @@ target_sources(smartcar-shield INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/smartcar_shield/src/Smartcar.h"
 )
 
-target_include_directories(smartcar-shield INTERFACE
+target_include_directories(pac-smartcar-shield INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/smartcar_shield/src"
 )
 
@@ -84,6 +84,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(smartcar-shield INTERFACE
+target_link_libraries(pac-smartcar-shield INTERFACE
     arduino-compat
 )

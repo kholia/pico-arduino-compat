@@ -1,6 +1,6 @@
-add_library(blynk_async_wm INTERFACE)
+add_library(pac-blynk_async_wm INTERFACE)
 
-target_sources(blynk_async_wm INTERFACE
+target_sources(pac-blynk_async_wm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_Async_WM/esp32c3_ESPAsyncWebServer_Patch/AsyncWebSocket.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_Async_WM/esp32s2_WebServer_Patch/WebServer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_Async_WM/src/BlynkSimpleEsp8266_SSL_Async_WM.h"
@@ -80,7 +80,7 @@ target_sources(blynk_async_wm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_Async_WM/esp32s2_WebServer_Patch/WebServer.h"
 )
 
-target_include_directories(blynk_async_wm INTERFACE
+target_include_directories(pac-blynk_async_wm INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Blynk_Async_WM/src"
 )
 
@@ -88,6 +88,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(blynk_async_wm INTERFACE
+target_link_libraries(pac-blynk_async_wm INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(taskmanagerio INTERFACE)
+add_library(pac-taskmanagerio INTERFACE)
 
-target_sources(taskmanagerio INTERFACE
+target_sources(pac-taskmanagerio INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TaskManagerIO/src/SimpleSpinLock.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TaskManagerIO/src/TmLongSchedule.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TaskManagerIO/src/TaskManagerIO.cpp"
@@ -27,7 +27,7 @@ target_sources(taskmanagerio INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TaskManagerIO/tests/taskMgrTests/test_utils.h"
 )
 
-target_include_directories(taskmanagerio INTERFACE
+target_include_directories(pac-taskmanagerio INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TaskManagerIO/src"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(taskmanagerio INTERFACE
+target_link_libraries(pac-taskmanagerio INTERFACE
     arduino-compat
 )

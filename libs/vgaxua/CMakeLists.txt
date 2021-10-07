@@ -1,6 +1,6 @@
-add_library(vgaxua INTERFACE)
+add_library(pac-vgaxua INTERFACE)
 
-target_sources(vgaxua INTERFACE
+target_sources(pac-vgaxua INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/vgaxua/bitblit.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/vgaxua/blit.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/vgaxua/VGAXUA.cpp"
@@ -9,7 +9,7 @@ target_sources(vgaxua INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/vgaxua/VGAXUAUtils.h"
 )
 
-target_include_directories(vgaxua INTERFACE
+target_include_directories(pac-vgaxua INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/vgaxua"
 )
 
@@ -17,6 +17,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(vgaxua INTERFACE
+target_link_libraries(pac-vgaxua INTERFACE
     arduino-compat
 )

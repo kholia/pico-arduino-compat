@@ -1,6 +1,6 @@
-add_library(filters INTERFACE)
+add_library(pac-filters INTERFACE)
 
-target_sources(filters INTERFACE
+target_sources(pac-filters INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Filters/Calculus.h"
   "${CMAKE_CURRENT_LIST_DIR}/Filters/Filters.h"
   "${CMAKE_CURRENT_LIST_DIR}/Filters/Filters/Helper.h"
@@ -14,7 +14,7 @@ target_sources(filters INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Filters/Filters/util/ArxTypeTraits/ArxTypeTraits/has_libstdcplusplus.h"
 )
 
-target_include_directories(filters INTERFACE
+target_include_directories(pac-filters INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Filters"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(filters INTERFACE
+target_link_libraries(pac-filters INTERFACE
     arduino-compat
 )

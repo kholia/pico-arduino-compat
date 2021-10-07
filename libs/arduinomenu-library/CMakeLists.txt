@@ -1,6 +1,6 @@
-add_library(arduinomenu-library INTERFACE)
+add_library(pac-arduinomenu-library INTERFACE)
 
-target_sources(arduinomenu-library INTERFACE
+target_sources(pac-arduinomenu-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMenu/src/menuBase.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMenu/src/nav.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMenu/src/menuIo.cpp"
@@ -75,7 +75,7 @@ target_sources(arduinomenu-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMenu/examples/adafruitGfx_eTFT/TFT_eSPI/ArduinoMenu_LilyGo_TTGO_T-display_demo/bmp.h"
 )
 
-target_include_directories(arduinomenu-library INTERFACE
+target_include_directories(pac-arduinomenu-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoMenu/src"
 )
 
@@ -83,21 +83,21 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-if (NOT TARGET official-liquid-crystal)
-    add_subdirectory(../../official-libs/liquid-crystal build_official-liquid-crystal)
+if (NOT TARGET pac-liquidcrystal)
+    add_subdirectory(../../libs/liquidcrystal build_pac-liquidcrystal)
 endif()
 
-target_link_libraries(arduinomenu-library INTERFACE
+target_link_libraries(pac-arduinomenu-library INTERFACE
     arduino-compat
-    official-sd
-    adafruit-gfx-library
-    official-liquid-crystal
+    pac-sd
+    pac-adafruit-gfx-library
+    pac-liquidcrystal
 )

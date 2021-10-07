@@ -1,6 +1,6 @@
-add_library(serialwombat INTERFACE)
+add_library(pac-serialwombat INTERFACE)
 
-target_sources(serialwombat INTERFACE
+target_sources(pac-serialwombat INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SerialWombatArdLib/src/SerialWombatPulseTimer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SerialWombatArdLib/src/SerialWombatQuadEnc.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SerialWombatArdLib/src/SerialWombatUART.cpp"
@@ -23,7 +23,7 @@ target_sources(serialwombat INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SerialWombatArdLib/src/SerialWombatUART.h"
 )
 
-target_include_directories(serialwombat INTERFACE
+target_include_directories(pac-serialwombat INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SerialWombatArdLib/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(serialwombat INTERFACE
+target_link_libraries(pac-serialwombat INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(tinysuite INTERFACE)
+add_library(pac-tinysuite INTERFACE)
 
-target_sources(tinysuite INTERFACE
+target_sources(pac-tinysuite INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TinySuite/src/TinyPinChangeB.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TinySuite/src/TinyUart.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TinySuite/src/TinyTimer1Compare.cpp"
@@ -37,7 +37,7 @@ target_sources(tinysuite INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TinySuite/src/TinyNmeaConst.h"
 )
 
-target_include_directories(tinysuite INTERFACE
+target_include_directories(pac-tinysuite INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TinySuite/src"
 )
 
@@ -45,6 +45,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tinysuite INTERFACE
+target_link_libraries(pac-tinysuite INTERFACE
     arduino-compat
 )

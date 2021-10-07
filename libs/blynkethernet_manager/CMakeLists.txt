@@ -1,6 +1,6 @@
-add_library(blynkethernet_manager INTERFACE)
+add_library(pac-blynkethernet_manager INTERFACE)
 
-target_sources(blynkethernet_manager INTERFACE
+target_sources(pac-blynkethernet_manager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BlynkEthernet_WM/LibraryPatches/Blynk-1.0.0/utility/BlynkDebug.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BlynkEthernet_WM/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BlynkEthernet_WM/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
@@ -228,7 +228,7 @@ target_sources(blynkethernet_manager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BlynkEthernet_WM/examples/EthernetENC_Blynk_Teensy/Credentials.h"
 )
 
-target_include_directories(blynkethernet_manager INTERFACE
+target_include_directories(pac-blynkethernet_manager INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/BlynkEthernet_WM/src"
 )
 
@@ -236,6 +236,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(blynkethernet_manager INTERFACE
+target_link_libraries(pac-blynkethernet_manager INTERFACE
     arduino-compat
 )

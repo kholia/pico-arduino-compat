@@ -1,6 +1,6 @@
-add_library(restfully INTERFACE)
+add_library(pac-restfully INTERFACE)
 
-target_sources(restfully INTERFACE
+target_sources(pac-restfully INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Restfully/src/Endpoints.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Restfully/src/binbag.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Restfully/src/Pool.cpp"
@@ -37,7 +37,7 @@ target_sources(restfully INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Restfully/tests/common/stress-tester.h"
 )
 
-target_include_directories(restfully INTERFACE
+target_include_directories(pac-restfully INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Restfully/src"
 )
 
@@ -45,6 +45,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(restfully INTERFACE
+target_link_libraries(pac-restfully INTERFACE
     arduino-compat
 )

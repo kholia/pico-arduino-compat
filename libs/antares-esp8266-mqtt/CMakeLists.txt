@@ -1,6 +1,6 @@
-add_library(antares-esp8266-mqtt INTERFACE)
+add_library(pac-antares-esp8266-mqtt INTERFACE)
 
-target_sources(antares-esp8266-mqtt INTERFACE
+target_sources(pac-antares-esp8266-mqtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/antares-esp8266-mqtt/src/AntaresESP8266MQTT.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/antares-esp8266-mqtt/src/PubSubClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/antares-esp8266-mqtt/src/ArduinoJson.hpp"
@@ -87,7 +87,7 @@ target_sources(antares-esp8266-mqtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/antares-esp8266-mqtt/src/AntaresESP8266MQTT.h"
 )
 
-target_include_directories(antares-esp8266-mqtt INTERFACE
+target_include_directories(pac-antares-esp8266-mqtt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/antares-esp8266-mqtt/src"
 )
 
@@ -95,6 +95,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(antares-esp8266-mqtt INTERFACE
+target_link_libraries(pac-antares-esp8266-mqtt INTERFACE
     arduino-compat
 )

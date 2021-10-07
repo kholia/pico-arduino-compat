@@ -1,6 +1,6 @@
-add_library(homecontrol-mqtt INTERFACE)
+add_library(pac-homecontrol-mqtt INTERFACE)
 
-target_sources(homecontrol-mqtt INTERFACE
+target_sources(pac-homecontrol-mqtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/homecontrol-mqtt/examples_rpi_pc/rpi/advanced_MultiOnOff_rpi/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/homecontrol-mqtt/examples_rpi_pc/rpi/advanced_MultiLevel_PWM_rpi/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/homecontrol-mqtt/examples_rpi_pc/pc/basic_OnOff_virtual/main.cpp"
@@ -51,7 +51,7 @@ target_sources(homecontrol-mqtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/homecontrol-mqtt/src/Endpoints/EndpointMotion.h"
 )
 
-target_include_directories(homecontrol-mqtt INTERFACE
+target_include_directories(pac-homecontrol-mqtt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/homecontrol-mqtt/src"
 )
 
@@ -59,6 +59,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(homecontrol-mqtt INTERFACE
+target_link_libraries(pac-homecontrol-mqtt INTERFACE
     arduino-compat
 )

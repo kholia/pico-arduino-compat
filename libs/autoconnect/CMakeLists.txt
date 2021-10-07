@@ -1,6 +1,6 @@
-add_library(autoconnect INTERFACE)
+add_library(pac-autoconnect INTERFACE)
 
-target_sources(autoconnect INTERFACE
+target_sources(pac-autoconnect INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AutoConnect/src/AutoConnectTicker.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AutoConnect/src/AutoConnectOTA.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AutoConnect/src/AutoConnect.cpp"
@@ -39,7 +39,7 @@ target_sources(autoconnect INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AutoConnect/examples/mqttRSSI_NA/param.h"
 )
 
-target_include_directories(autoconnect INTERFACE
+target_include_directories(pac-autoconnect INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AutoConnect/src"
 )
 
@@ -47,11 +47,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(autoconnect INTERFACE
+target_link_libraries(pac-autoconnect INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

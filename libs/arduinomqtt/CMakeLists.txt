@@ -1,6 +1,6 @@
-add_library(arduinomqtt INTERFACE)
+add_library(pac-arduinomqtt INTERFACE)
 
-target_sources(arduinomqtt INTERFACE
+target_sources(pac-arduinomqtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMqtt/examplesMain.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMqtt/extras/examples/x86_Connect.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMqtt/src/MQTTPacket/MQTTUnsubscribeClient.c"
@@ -23,7 +23,7 @@ target_sources(arduinomqtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMqtt/src/MQTTPacket/MQTTConnect.h"
 )
 
-target_include_directories(arduinomqtt INTERFACE
+target_include_directories(pac-arduinomqtt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoMqtt/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinomqtt INTERFACE
+target_link_libraries(pac-arduinomqtt INTERFACE
     arduino-compat
 )

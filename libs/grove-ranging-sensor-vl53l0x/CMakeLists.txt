@@ -1,6 +1,6 @@
-add_library(grove-ranging-sensor-vl53l0x INTERFACE)
+add_library(pac-grove-ranging-sensor-vl53l0x INTERFACE)
 
-target_sources(grove-ranging-sensor-vl53l0x INTERFACE
+target_sources(pac-grove-ranging-sensor-vl53l0x INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Grove-Ranging-sensor-VL53L0X/src/Seeed_vl53l0x.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Grove-Ranging-sensor-VL53L0X/src/core/src/vl53l0x_api_strings.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Grove-Ranging-sensor-VL53L0X/src/core/src/vl53l0x_api_ranging.cpp"
@@ -26,7 +26,7 @@ target_sources(grove-ranging-sensor-vl53l0x INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Grove-Ranging-sensor-VL53L0X/src/vl53l0x_device.h"
 )
 
-target_include_directories(grove-ranging-sensor-vl53l0x INTERFACE
+target_include_directories(pac-grove-ranging-sensor-vl53l0x INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Grove-Ranging-sensor-VL53L0X/src"
 )
 
@@ -34,6 +34,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(grove-ranging-sensor-vl53l0x INTERFACE
+target_link_libraries(pac-grove-ranging-sensor-vl53l0x INTERFACE
     arduino-compat
 )

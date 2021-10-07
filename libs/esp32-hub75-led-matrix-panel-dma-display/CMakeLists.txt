@@ -1,6 +1,6 @@
-add_library(esp32-hub75-led-matrix-panel-dma-display INTERFACE)
+add_library(pac-esp32-hub75-led-matrix-panel-dma-display INTERFACE)
 
-target_sources(esp32-hub75-led-matrix-panel-dma-display INTERFACE
+target_sources(pac-esp32-hub75-led-matrix-panel-dma-display INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-HUB75-MatrixPanel-I2S-DMA/ESP32-HUB75-MatrixPanel-leddrivers.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-HUB75-MatrixPanel-I2S-DMA/ESP32-HUB75-MatrixPanel-I2S-DMA.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-HUB75-MatrixPanel-I2S-DMA/examples/PIO_TestPatterns/src/main.cpp"
@@ -88,7 +88,7 @@ target_sources(esp32-hub75-led-matrix-panel-dma-display INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-HUB75-MatrixPanel-I2S-DMA/examples/BitmapIcons/Dhole_weather_icons32px.h"
 )
 
-target_include_directories(esp32-hub75-led-matrix-panel-dma-display INTERFACE
+target_include_directories(pac-esp32-hub75-led-matrix-panel-dma-display INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESP32-HUB75-MatrixPanel-I2S-DMA"
 )
 
@@ -96,11 +96,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(esp32-hub75-led-matrix-panel-dma-display INTERFACE
+target_link_libraries(pac-esp32-hub75-led-matrix-panel-dma-display INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

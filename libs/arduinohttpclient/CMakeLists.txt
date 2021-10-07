@@ -1,6 +1,6 @@
-add_library(arduinohttpclient INTERFACE)
+add_library(pac-arduinohttpclient INTERFACE)
 
-target_sources(arduinohttpclient INTERFACE
+target_sources(pac-arduinohttpclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoHttpClient/src/b64.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoHttpClient/src/URLEncoder.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoHttpClient/src/WebSocketClient.cpp"
@@ -24,7 +24,7 @@ target_sources(arduinohttpclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoHttpClient/examples/DweetPost/arduino_secrets.h"
 )
 
-target_include_directories(arduinohttpclient INTERFACE
+target_include_directories(pac-arduinohttpclient INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoHttpClient/src"
 )
 
@@ -32,6 +32,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinohttpclient INTERFACE
+target_link_libraries(pac-arduinohttpclient INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(midicontroller INTERFACE)
+add_library(pac-midicontroller INTERFACE)
 
-target_sources(midicontroller INTERFACE
+target_sources(pac-midicontroller INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MIDIcontroller/src/MIDIdrum.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MIDIcontroller/src/MIDIbutton.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MIDIcontroller/src/MIDIenc.cpp"
@@ -14,7 +14,7 @@ target_sources(midicontroller INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MIDIcontroller/src/MIDItouch.h"
 )
 
-target_include_directories(midicontroller INTERFACE
+target_include_directories(pac-midicontroller INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MIDIcontroller/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(midicontroller INTERFACE
+target_link_libraries(pac-midicontroller INTERFACE
     arduino-compat
 )

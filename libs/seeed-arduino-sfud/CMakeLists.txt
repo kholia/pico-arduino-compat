@@ -1,6 +1,6 @@
-add_library(seeed-arduino-sfud INTERFACE)
+add_library(pac-seeed-arduino-sfud INTERFACE)
 
-target_sources(seeed-arduino-sfud INTERFACE
+target_sources(pac-seeed-arduino-sfud INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_SFUD/src/Seeed_SFUD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_SFUD/src/Arduino_QSPI_Hal.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_SFUD/src/warpper_HAL.cpp"
@@ -16,7 +16,7 @@ target_sources(seeed-arduino-sfud INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_SFUD/src/sfud_cfg.h"
 )
 
-target_include_directories(seeed-arduino-sfud INTERFACE
+target_include_directories(pac-seeed-arduino-sfud INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_SFUD/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(seeed-arduino-sfud INTERFACE
+target_link_libraries(pac-seeed-arduino-sfud INTERFACE
     arduino-compat
 )

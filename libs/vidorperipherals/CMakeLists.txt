@@ -1,6 +1,6 @@
-add_library(vidorperipherals INTERFACE)
+add_library(pac-vidorperipherals INTERFACE)
 
-target_sources(vidorperipherals INTERFACE
+target_sources(pac-vidorperipherals INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/VidorPeripherals/src/VidorMailbox.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/VidorPeripherals/src/VidorUtils.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/VidorPeripherals/src/VidorI2C.cpp"
@@ -31,7 +31,7 @@ target_sources(vidorperipherals INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/VidorPeripherals/src/utility/libxsvf.h"
 )
 
-target_include_directories(vidorperipherals INTERFACE
+target_include_directories(pac-vidorperipherals INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/VidorPeripherals/src"
 )
 
@@ -39,6 +39,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(vidorperipherals INTERFACE
+target_link_libraries(pac-vidorperipherals INTERFACE
     arduino-compat
 )

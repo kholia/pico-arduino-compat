@@ -1,6 +1,6 @@
-add_library(mbino INTERFACE)
+add_library(pac-mbino INTERFACE)
 
-target_sources(mbino INTERFACE
+target_sources(pac-mbino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mbino/src/targets/TARGET_ARDUINO_ARCH_AVR/avr_gpio_irq_api.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/mbino/src/targets/TARGET_ARDUINO_ARCH_AVR/avr_main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/mbino/src/targets/TARGET_ARDUINO_ARCH_AVR/avr_overrides.cpp"
@@ -198,7 +198,7 @@ target_sources(mbino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mbino/examples/MultiFunctionShield/MultiFunctionShieldDisplay.h"
 )
 
-target_include_directories(mbino INTERFACE
+target_include_directories(pac-mbino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/mbino/src"
 )
 
@@ -206,6 +206,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mbino INTERFACE
+target_link_libraries(pac-mbino INTERFACE
     arduino-compat
 )

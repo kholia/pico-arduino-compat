@@ -1,6 +1,6 @@
-add_library(reactesp INTERFACE)
+add_library(pac-reactesp INTERFACE)
 
-target_sources(reactesp INTERFACE
+target_sources(pac-reactesp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ReactESP/src/ReactESP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ReactESP/examples/servo.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ReactESP/examples/torture_test/src/main.cpp"
@@ -8,7 +8,7 @@ target_sources(reactesp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ReactESP/src/ReactESP.h"
 )
 
-target_include_directories(reactesp INTERFACE
+target_include_directories(pac-reactesp INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ReactESP/src"
 )
 
@@ -16,6 +16,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(reactesp INTERFACE
+target_link_libraries(pac-reactesp INTERFACE
     arduino-compat
 )

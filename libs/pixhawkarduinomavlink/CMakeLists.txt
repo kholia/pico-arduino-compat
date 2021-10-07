@@ -1,6 +1,6 @@
-add_library(pixhawkarduinomavlink INTERFACE)
+add_library(pac-pixhawkarduinomavlink INTERFACE)
 
-target_sources(pixhawkarduinomavlink INTERFACE
+target_sources(pac-pixhawkarduinomavlink INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PixhawkArduinoMAVLink/PixhawkArduinoMAVLink.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PixhawkArduinoMAVLink/PixhawkArduinoMAVLink.h"
   "${CMAKE_CURRENT_LIST_DIR}/PixhawkArduinoMAVLink/src/mavlink_sha256.h"
@@ -254,7 +254,7 @@ target_sources(pixhawkarduinomavlink INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PixhawkArduinoMAVLink/src/icarous/mavlink_msg_icarous_kinematic_bands.h"
 )
 
-target_include_directories(pixhawkarduinomavlink INTERFACE
+target_include_directories(pac-pixhawkarduinomavlink INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PixhawkArduinoMAVLink/src"
 )
 
@@ -262,6 +262,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pixhawkarduinomavlink INTERFACE
+target_link_libraries(pac-pixhawkarduinomavlink INTERFACE
     arduino-compat
 )

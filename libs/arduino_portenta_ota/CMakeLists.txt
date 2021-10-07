@@ -1,6 +1,6 @@
-add_library(arduino_portenta_ota INTERFACE)
+add_library(pac-arduino_portenta_ota INTERFACE)
 
-target_sources(arduino_portenta_ota INTERFACE
+target_sources(pac-arduino_portenta_ota INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_Portenta_OTA/src/Arduino_Portenta_OTA_SD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_Portenta_OTA/src/Arduino_Portenta_OTA.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_Portenta_OTA/src/Arduino_Portenta_OTA_QSPI.cpp"
@@ -14,7 +14,7 @@ target_sources(arduino_portenta_ota INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_Portenta_OTA/examples/OTA_SD_Portenta/arduino_secrets.h"
 )
 
-target_include_directories(arduino_portenta_ota INTERFACE
+target_include_directories(pac-arduino_portenta_ota INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino_Portenta_OTA/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduino_portenta_ota INTERFACE
+target_link_libraries(pac-arduino_portenta_ota INTERFACE
     arduino-compat
 )

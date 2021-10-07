@@ -1,6 +1,6 @@
-add_library(liquidmenu INTERFACE)
+add_library(pac-liquidmenu INTERFACE)
 
-target_sources(liquidmenu INTERFACE
+target_sources(pac-liquidmenu INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LiquidMenu/src/LiquidMenu.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LiquidMenu/src/LiquidScreen.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LiquidMenu/src/LiquidLine.cpp"
@@ -17,7 +17,7 @@ target_sources(liquidmenu INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LiquidMenu/examples/C_functions_menu/Button.h"
 )
 
-target_include_directories(liquidmenu INTERFACE
+target_include_directories(pac-liquidmenu INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/LiquidMenu/src"
 )
 
@@ -25,11 +25,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-liquid-crystal)
-    add_subdirectory(../../official-libs/liquid-crystal build_official-liquid-crystal)
+if (NOT TARGET pac-liquidcrystal)
+    add_subdirectory(../../libs/liquidcrystal build_pac-liquidcrystal)
 endif()
 
-target_link_libraries(liquidmenu INTERFACE
+target_link_libraries(pac-liquidmenu INTERFACE
     arduino-compat
-    official-liquid-crystal
+    pac-liquidcrystal
 )

@@ -1,6 +1,6 @@
-add_library(glee2023 INTERFACE)
+add_library(pac-glee2023 INTERFACE)
 
-target_sources(glee2023 INTERFACE
+target_sources(pac-glee2023 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GLEE2023/src/CAP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GLEE2023/src/LunaSat.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GLEE2023/src/GLEE_Radio.cpp"
@@ -19,7 +19,7 @@ target_sources(glee2023 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GLEE2023/src/MPU6000.h"
 )
 
-target_include_directories(glee2023 INTERFACE
+target_include_directories(pac-glee2023 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/GLEE2023/src"
 )
 
@@ -27,11 +27,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-busio)
-    add_subdirectory(../../libs/adafruit-busio build_adafruit-busio)
+if (NOT TARGET pac-adafruit-busio)
+    add_subdirectory(../../libs/adafruit-busio build_pac-adafruit-busio)
 endif()
 
-target_link_libraries(glee2023 INTERFACE
+target_link_libraries(pac-glee2023 INTERFACE
     arduino-compat
-    adafruit-busio
+    pac-adafruit-busio
 )

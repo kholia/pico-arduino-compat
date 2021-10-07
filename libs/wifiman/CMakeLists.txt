@@ -1,6 +1,6 @@
-add_library(wifiman INTERFACE)
+add_library(pac-wifiman INTERFACE)
 
-target_sources(wifiman INTERFACE
+target_sources(pac-wifiman INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiMan/src/ESP8266OTA.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiMan/src/WiFiMan.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiMan/src/Boot.cpp"
@@ -17,7 +17,7 @@ target_sources(wifiman INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiMan/src/Boot.h"
 )
 
-target_include_directories(wifiman INTERFACE
+target_include_directories(pac-wifiman INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WiFiMan/src"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wifiman INTERFACE
+target_link_libraries(pac-wifiman INTERFACE
     arduino-compat
 )

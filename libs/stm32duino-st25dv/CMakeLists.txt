@@ -1,6 +1,6 @@
-add_library(stm32duino-st25dv INTERFACE)
+add_library(pac-stm32duino-st25dv INTERFACE)
 
-target_sources(stm32duino-st25dv INTERFACE
+target_sources(pac-stm32duino-st25dv INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ST25DV/src/ST25DVSensor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ST25DV/src/BSP/st25dv_nfctag.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ST25DV/src/libNDEF/lib_NDEF_Wifi.c"
@@ -37,7 +37,7 @@ target_sources(stm32duino-st25dv INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ST25DV/src/ST25DV/st25dv.h"
 )
 
-target_include_directories(stm32duino-st25dv INTERFACE
+target_include_directories(pac-stm32duino-st25dv INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ST25DV/src"
 )
 
@@ -45,6 +45,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(stm32duino-st25dv INTERFACE
+target_link_libraries(pac-stm32duino-st25dv INTERFACE
     arduino-compat
 )

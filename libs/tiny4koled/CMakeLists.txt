@@ -1,6 +1,6 @@
-add_library(tiny4koled INTERFACE)
+add_library(pac-tiny4koled INTERFACE)
 
-target_sources(tiny4koled INTERFACE
+target_sources(pac-tiny4koled INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Tiny4kOLED/src/Tiny4kOLED.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Tiny4kOLED/src/font8x16caps.h"
   "${CMAKE_CURRENT_LIST_DIR}/Tiny4kOLED/src/Tiny4kOLEDprintless.h"
@@ -26,7 +26,7 @@ target_sources(tiny4koled INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Tiny4kOLED/examples/BatteryMonitor/eeprom_contents.h"
 )
 
-target_include_directories(tiny4koled INTERFACE
+target_include_directories(pac-tiny4koled INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Tiny4kOLED/src"
 )
 
@@ -34,6 +34,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tiny4koled INTERFACE
+target_link_libraries(pac-tiny4koled INTERFACE
     arduino-compat
 )

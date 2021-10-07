@@ -1,6 +1,6 @@
-add_library(arduinoiotcloudbearssl INTERFACE)
+add_library(pac-arduinoiotcloudbearssl INTERFACE)
 
-target_sources(arduinoiotcloudbearssl INTERFACE
+target_sources(pac-arduinoiotcloudbearssl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoIoTCloudBearSSL/src/ArduinoIoTCloudBearSSL.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoIoTCloudBearSSL/src/BearSSLClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoIoTCloudBearSSL/src/utility/eccX08_sign_asn1.cpp"
@@ -251,7 +251,7 @@ target_sources(arduinoiotcloudbearssl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoIoTCloudBearSSL/src/utility/eccX08_asn1.h"
 )
 
-target_include_directories(arduinoiotcloudbearssl INTERFACE
+target_include_directories(pac-arduinoiotcloudbearssl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoIoTCloudBearSSL/src"
 )
 
@@ -259,6 +259,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinoiotcloudbearssl INTERFACE
+target_link_libraries(pac-arduinoiotcloudbearssl INTERFACE
     arduino-compat
 )

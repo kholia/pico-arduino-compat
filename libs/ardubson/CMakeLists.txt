@@ -1,6 +1,6 @@
-add_library(ardubson INTERFACE)
+add_library(pac-ardubson INTERFACE)
 
-target_sources(ardubson INTERFACE
+target_sources(pac-ardubson INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ardubson/src/ardubsonObjBuilder.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ardubson/src/ardubsonDocument.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ardubson/src/ardubsonObject.cpp"
@@ -18,7 +18,7 @@ target_sources(ardubson INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ardubson/src/ardubsonElement.h"
 )
 
-target_include_directories(ardubson INTERFACE
+target_include_directories(pac-ardubson INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ardubson/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ardubson INTERFACE
+target_link_libraries(pac-ardubson INTERFACE
     arduino-compat
 )

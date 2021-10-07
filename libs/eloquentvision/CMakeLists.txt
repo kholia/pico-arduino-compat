@@ -1,6 +1,6 @@
-add_library(eloquentvision INTERFACE)
+add_library(pac-eloquentvision INTERFACE)
 
-target_sources(eloquentvision INTERFACE
+target_sources(pac-eloquentvision INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EloquentVision/src/EloquentVision.h"
   "${CMAKE_CURRENT_LIST_DIR}/EloquentVision/src/ESP32CameraHTTPVideoStreamingServer.h"
   "${CMAKE_CURRENT_LIST_DIR}/EloquentVision/src/io/JpegWriter.h"
@@ -18,7 +18,7 @@ target_sources(eloquentvision INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EloquentVision/src/ImageProcessing/DownscaleStrategies/Cross.h"
 )
 
-target_include_directories(eloquentvision INTERFACE
+target_include_directories(pac-eloquentvision INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EloquentVision/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(eloquentvision INTERFACE
+target_link_libraries(pac-eloquentvision INTERFACE
     arduino-compat
 )

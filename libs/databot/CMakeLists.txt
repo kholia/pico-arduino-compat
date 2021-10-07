@@ -1,6 +1,6 @@
-add_library(databot INTERFACE)
+add_library(pac-databot INTERFACE)
 
-target_sources(databot INTERFACE
+target_sources(pac-databot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/databot_arduino/src/databot.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/databot_arduino/src/libs/Wire.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/databot_arduino/src/libs/FlexiTimer2.cpp"
@@ -157,7 +157,7 @@ target_sources(databot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/databot_arduino/src/libs/utility/twi.h"
 )
 
-target_include_directories(databot INTERFACE
+target_include_directories(pac-databot INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/databot_arduino/src"
 )
 
@@ -165,6 +165,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(databot INTERFACE
+target_link_libraries(pac-databot INTERFACE
     arduino-compat
 )

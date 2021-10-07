@@ -1,6 +1,6 @@
-add_library(fastled INTERFACE)
+add_library(pac-fastled INTERFACE)
 
-target_sources(fastled INTERFACE
+target_sources(pac-fastled INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FastLED/src/noise.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FastLED/src/colorutils.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FastLED/src/bitswap.cpp"
@@ -126,7 +126,7 @@ target_sources(fastled INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FastLED/src/platforms/apollo3/clockless_apollo3.h"
 )
 
-target_include_directories(fastled INTERFACE
+target_include_directories(pac-fastled INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FastLED/src"
 )
 
@@ -134,6 +134,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(fastled INTERFACE
+target_link_libraries(pac-fastled INTERFACE
     arduino-compat
 )

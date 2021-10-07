@@ -1,6 +1,6 @@
-add_library(signalcontrol INTERFACE)
+add_library(pac-signalcontrol INTERFACE)
 
-target_sources(signalcontrol INTERFACE
+target_sources(pac-signalcontrol INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SignalControl/test/testInvertInput.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SignalControl/test/sketchSignal3AspectWithDistanceTimer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SignalControl/test/signal.ino.cpp"
@@ -72,7 +72,7 @@ target_sources(signalcontrol INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SignalControl/src/Signal3Aspect.h"
 )
 
-target_include_directories(signalcontrol INTERFACE
+target_include_directories(pac-signalcontrol INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SignalControl/src"
 )
 
@@ -80,6 +80,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(signalcontrol INTERFACE
+target_link_libraries(pac-signalcontrol INTERFACE
     arduino-compat
 )

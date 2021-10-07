@@ -1,6 +1,6 @@
-add_library(cbus INTERFACE)
+add_library(pac-cbus INTERFACE)
 
-target_sources(cbus INTERFACE
+target_sources(pac-cbus INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CBUS/src/CBUSLongMessage.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/CBUS/src/CBUSParams.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/CBUS/src/CBUS.cpp"
@@ -9,7 +9,7 @@ target_sources(cbus INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CBUS/src/CBUSParams.h"
 )
 
-target_include_directories(cbus INTERFACE
+target_include_directories(pac-cbus INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/CBUS/src"
 )
 
@@ -17,6 +17,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(cbus INTERFACE
+target_link_libraries(pac-cbus INTERFACE
     arduino-compat
 )

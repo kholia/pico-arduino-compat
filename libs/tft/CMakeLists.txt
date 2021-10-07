@@ -1,6 +1,6 @@
-add_library(tft INTERFACE)
+add_library(pac-tft INTERFACE)
 
-target_sources(tft INTERFACE
+target_sources(pac-tft INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TFT/src/TFT.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TFT/src/utility/Adafruit_ST7735.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TFT/src/utility/Adafruit_GFX.cpp"
@@ -11,7 +11,7 @@ target_sources(tft INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TFT/src/utility/Adafruit_ST7735.h"
 )
 
-target_include_directories(tft INTERFACE
+target_include_directories(pac-tft INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TFT/src"
 )
 
@@ -19,11 +19,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(tft INTERFACE
+target_link_libraries(pac-tft INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

@@ -1,11 +1,11 @@
-add_library(liquidcrystal INTERFACE)
+add_library(pac-liquidcrystal INTERFACE)
 
-target_sources(liquidcrystal INTERFACE
+target_sources(pac-liquidcrystal INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LiquidCrystal/src/LiquidCrystal.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LiquidCrystal/src/LiquidCrystal.h"
 )
 
-target_include_directories(liquidcrystal INTERFACE
+target_include_directories(pac-liquidcrystal INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/LiquidCrystal/src"
 )
 
@@ -13,11 +13,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-liquid-crystal)
-    add_subdirectory(../../official-libs/liquid-crystal build_official-liquid-crystal)
-endif()
-
-target_link_libraries(liquidcrystal INTERFACE
+target_link_libraries(pac-liquidcrystal INTERFACE
     arduino-compat
-    official-liquid-crystal
 )

@@ -1,6 +1,6 @@
-add_library(adafruit-epd INTERFACE)
+add_library(pac-adafruit-epd INTERFACE)
 
-target_sources(adafruit-epd INTERFACE
+target_sources(pac-adafruit-epd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_EPD/unsupported/Adafruit_IL0371.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_EPD/unsupported/Adafruit_IL3897.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_EPD/unsupported/Adafruit_IL0376F.cpp"
@@ -68,7 +68,7 @@ target_sources(adafruit-epd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_EPD/src/drivers/Adafruit_SSD1675B.h"
 )
 
-target_include_directories(adafruit-epd INTERFACE
+target_include_directories(pac-adafruit-epd INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_EPD/src"
 )
 
@@ -76,16 +76,16 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-if (NOT TARGET adafruit-busio)
-    add_subdirectory(../../libs/adafruit-busio build_adafruit-busio)
+if (NOT TARGET pac-adafruit-busio)
+    add_subdirectory(../../libs/adafruit-busio build_pac-adafruit-busio)
 endif()
 
-target_link_libraries(adafruit-epd INTERFACE
+target_link_libraries(pac-adafruit-epd INTERFACE
     arduino-compat
-    adafruit-gfx-library
-    adafruit-busio
+    pac-adafruit-gfx-library
+    pac-adafruit-busio
 )

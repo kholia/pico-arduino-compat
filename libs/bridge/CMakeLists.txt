@@ -1,6 +1,6 @@
-add_library(bridge INTERFACE)
+add_library(pac-bridge INTERFACE)
 
-target_sources(bridge INTERFACE
+target_sources(pac-bridge INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Bridge/src/Mailbox.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Bridge/src/Console.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Bridge/src/Bridge.cpp"
@@ -25,7 +25,7 @@ target_sources(bridge INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Bridge/src/FileIO.h"
 )
 
-target_include_directories(bridge INTERFACE
+target_include_directories(pac-bridge INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Bridge/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(bridge INTERFACE
+target_link_libraries(pac-bridge INTERFACE
     arduino-compat
 )

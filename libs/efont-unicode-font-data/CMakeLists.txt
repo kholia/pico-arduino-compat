@@ -1,6 +1,6 @@
-add_library(efont-unicode-font-data INTERFACE)
+add_library(pac-efont-unicode-font-data INTERFACE)
 
-target_sources(efont-unicode-font-data INTERFACE
+target_sources(pac-efont-unicode-font-data INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/efont/examples/M5StickCPlus/efontWrapper/PlatformIO/src/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/efont/src/efontM5StickC.h"
   "${CMAKE_CURRENT_LIST_DIR}/efont/src/efontEnableAscii.h"
@@ -19,7 +19,7 @@ target_sources(efont-unicode-font-data INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/efont/src/efontEnableJa.h"
 )
 
-target_include_directories(efont-unicode-font-data INTERFACE
+target_include_directories(pac-efont-unicode-font-data INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/efont/src"
 )
 
@@ -27,11 +27,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(efont-unicode-font-data INTERFACE
+target_link_libraries(pac-efont-unicode-font-data INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

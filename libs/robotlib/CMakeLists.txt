@@ -1,6 +1,6 @@
-add_library(robotlib INTERFACE)
+add_library(pac-robotlib INTERFACE)
 
-target_sources(robotlib INTERFACE
+target_sources(pac-robotlib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RobotLib/arduino/Arduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RobotLib/src/BusInOut.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RobotLib/src/StepperMotor.cpp"
@@ -34,7 +34,7 @@ target_sources(robotlib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RobotLib/src/PIDController.h"
 )
 
-target_include_directories(robotlib INTERFACE
+target_include_directories(pac-robotlib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RobotLib/src"
 )
 
@@ -42,6 +42,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(robotlib INTERFACE
+target_link_libraries(pac-robotlib INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(usbmidi INTERFACE)
+add_library(pac-usbmidi INTERFACE)
 
-target_sources(usbmidi INTERFACE
+target_sources(pac-usbmidi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/USBMIDI/src/usbmidi_pluggableusb.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/USBMIDI/src/midi_serialization.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/USBMIDI/src/usbmidi_vusb.cpp"
@@ -54,7 +54,7 @@ target_sources(usbmidi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/USBMIDI/src/usbboard.h"
 )
 
-target_include_directories(usbmidi INTERFACE
+target_include_directories(pac-usbmidi INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/USBMIDI/src"
 )
 
@@ -62,6 +62,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(usbmidi INTERFACE
+target_link_libraries(pac-usbmidi INTERFACE
     arduino-compat
 )

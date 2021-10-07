@@ -1,6 +1,6 @@
-add_library(wifinina INTERFACE)
+add_library(pac-wifinina INTERFACE)
 
-target_sources(wifinina INTERFACE
+target_sources(pac-wifinina INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiNINA/src/WiFi.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiNINA/src/WiFiUdp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiNINA/src/WiFiClient.cpp"
@@ -45,7 +45,7 @@ target_sources(wifinina INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiNINA/examples/WiFiUdpSendReceiveString/arduino_secrets.h"
 )
 
-target_include_directories(wifinina INTERFACE
+target_include_directories(pac-wifinina INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WiFiNINA/src"
 )
 
@@ -53,6 +53,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wifinina INTERFACE
+target_link_libraries(pac-wifinina INTERFACE
     arduino-compat
 )

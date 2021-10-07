@@ -1,6 +1,6 @@
-add_library(wifiespat INTERFACE)
+add_library(pac-wifiespat INTERFACE)
 
-target_sources(wifiespat INTERFACE
+target_sources(pac-wifiespat INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiEspAT/src/WiFi.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiEspAT/src/WiFiUdp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiEspAT/src/WiFiClient.cpp"
@@ -27,7 +27,7 @@ target_sources(wifiespat INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiEspAT/examples/Advanced/TemporaryWiFiConnect/arduino_secrets.h"
 )
 
-target_include_directories(wifiespat INTERFACE
+target_include_directories(pac-wifiespat INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WiFiEspAT/src"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wifiespat INTERFACE
+target_link_libraries(pac-wifiespat INTERFACE
     arduino-compat
 )

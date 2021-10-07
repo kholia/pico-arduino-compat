@@ -1,6 +1,6 @@
-add_library(pxmatrix-christmas-icons INTERFACE)
+add_library(pac-pxmatrix-christmas-icons INTERFACE)
 
-target_sources(pxmatrix-christmas-icons INTERFACE
+target_sources(pac-pxmatrix-christmas-icons INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PxMatrixChristmasIcons/src/ChristmasIcons.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PxMatrixChristmasIcons/src/ChristmasIcons.h"
   "${CMAKE_CURRENT_LIST_DIR}/PxMatrixChristmasIcons/src/IncludeList.h"
@@ -50,7 +50,7 @@ target_sources(pxmatrix-christmas-icons INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PxMatrixChristmasIcons/src/icons/Present-3.h"
 )
 
-target_include_directories(pxmatrix-christmas-icons INTERFACE
+target_include_directories(pac-pxmatrix-christmas-icons INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PxMatrixChristmasIcons/src"
 )
 
@@ -58,6 +58,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pxmatrix-christmas-icons INTERFACE
+target_link_libraries(pac-pxmatrix-christmas-icons INTERFACE
     arduino-compat
 )

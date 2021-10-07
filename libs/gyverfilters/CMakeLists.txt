@@ -1,6 +1,6 @@
-add_library(gyverfilters INTERFACE)
+add_library(pac-gyverfilters INTERFACE)
 
-target_sources(gyverfilters INTERFACE
+target_sources(pac-gyverfilters INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GyverFilters/src/filters/runningAverage.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GyverFilters/src/GyverFilters.h"
   "${CMAKE_CURRENT_LIST_DIR}/GyverFilters/src/filters/FastFilter.h"
@@ -13,7 +13,7 @@ target_sources(gyverfilters INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GyverFilters/src/filters/linear.h"
 )
 
-target_include_directories(gyverfilters INTERFACE
+target_include_directories(pac-gyverfilters INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/GyverFilters/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(gyverfilters INTERFACE
+target_link_libraries(pac-gyverfilters INTERFACE
     arduino-compat
 )

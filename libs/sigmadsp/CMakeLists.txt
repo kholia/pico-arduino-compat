@@ -1,6 +1,6 @@
-add_library(sigmadsp INTERFACE)
+add_library(pac-sigmadsp INTERFACE)
 
-target_sources(sigmadsp INTERFACE
+target_sources(pac-sigmadsp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SigmaDSP/src/SigmaDSP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SigmaDSP/src/DSPEEPROM.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SigmaDSP/src/parameters.h"
@@ -72,7 +72,7 @@ target_sources(sigmadsp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SigmaDSP/examples/3_Second_order_EQ/SigmaStudio_project/Export/3_Second_order_EQ_IC_2_PARAM.h"
 )
 
-target_include_directories(sigmadsp INTERFACE
+target_include_directories(pac-sigmadsp INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SigmaDSP/src"
 )
 
@@ -80,6 +80,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sigmadsp INTERFACE
+target_link_libraries(pac-sigmadsp INTERFACE
     arduino-compat
 )

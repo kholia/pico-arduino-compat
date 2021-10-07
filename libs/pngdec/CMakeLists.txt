@@ -1,6 +1,6 @@
-add_library(pngdec INTERFACE)
+add_library(pac-pngdec INTERFACE)
 
-target_sources(pngdec INTERFACE
+target_sources(pac-pngdec INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PNGdec/linux/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PNGdec/src/PNGdec.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PNGdec/src/zutil.c"
@@ -27,7 +27,7 @@ target_sources(pngdec INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PNGdec/examples/png_benchmark/octocat_8bpp.h"
 )
 
-target_include_directories(pngdec INTERFACE
+target_include_directories(pac-pngdec INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PNGdec/src"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pngdec INTERFACE
+target_link_libraries(pac-pngdec INTERFACE
     arduino-compat
 )

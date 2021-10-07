@@ -1,6 +1,6 @@
-add_library(md_maxpanel INTERFACE)
+add_library(pac-md_maxpanel INTERFACE)
 
-target_sources(md_maxpanel INTERFACE
+target_sources(pac-md_maxpanel INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MD_MAXPanel/src/MD_MAXPanel_Font.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MD_MAXPanel/src/MD_MAXPanel.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MD_MAXPanel/src/MD_MAXPanel.h"
@@ -29,7 +29,7 @@ target_sources(md_maxpanel INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MD_MAXPanel/examples/MD_MAXPanel_Test/Font5x3.h"
 )
 
-target_include_directories(md_maxpanel INTERFACE
+target_include_directories(pac-md_maxpanel INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MD_MAXPanel/src"
 )
 
@@ -37,6 +37,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(md_maxpanel INTERFACE
+target_link_libraries(pac-md_maxpanel INTERFACE
     arduino-compat
 )

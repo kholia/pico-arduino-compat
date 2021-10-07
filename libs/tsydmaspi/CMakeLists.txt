@@ -1,6 +1,6 @@
-add_library(tsydmaspi INTERFACE)
+add_library(pac-tsydmaspi INTERFACE)
 
-target_sources(tsydmaspi INTERFACE
+target_sources(pac-tsydmaspi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TsyDMASPI/TsyDMASPI.h"
   "${CMAKE_CURRENT_LIST_DIR}/TsyDMASPI/TsyDMASPI/Constants.h"
   "${CMAKE_CURRENT_LIST_DIR}/TsyDMASPI/TsyDMASPI/MasterT40.h"
@@ -11,7 +11,7 @@ target_sources(tsydmaspi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TsyDMASPI/TsyDMASPI/util/TeensyDirtySTLErrorSolution/TeensyDirtySTLErrorSolution.h"
 )
 
-target_include_directories(tsydmaspi INTERFACE
+target_include_directories(pac-tsydmaspi INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TsyDMASPI"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tsydmaspi INTERFACE
+target_link_libraries(pac-tsydmaspi INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(pas-co2-sensor INTERFACE)
+add_library(pac-pas-co2-sensor INTERFACE)
 
-target_sources(pas-co2-sensor INTERFACE
+target_sources(pac-pas-co2-sensor INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-pas-co2-sensor/src/pas-co2-i2c.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-pas-co2-sensor/src/pas-co2-pwm-sw.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-pas-co2-sensor/src/pas-co2-test-bb-serial-api.cpp"
@@ -51,7 +51,7 @@ target_sources(pas-co2-sensor INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-pas-co2-sensor/src/pas-co2-pal-i2c-ino.hpp"
 )
 
-target_include_directories(pas-co2-sensor INTERFACE
+target_include_directories(pac-pas-co2-sensor INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-pas-co2-sensor/src"
 )
 
@@ -59,6 +59,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pas-co2-sensor INTERFACE
+target_link_libraries(pac-pas-co2-sensor INTERFACE
     arduino-compat
 )

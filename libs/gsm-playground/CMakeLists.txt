@@ -1,6 +1,6 @@
-add_library(gsm-playground INTERFACE)
+add_library(pac-gsm-playground INTERFACE)
 
-target_sources(gsm-playground INTERFACE
+target_sources(pac-gsm-playground INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/gsm-playground/src/AT.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/gsm-playground/src/GPS_GE863.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/gsm-playground/src/GSM_GPRS.cpp"
@@ -12,7 +12,7 @@ target_sources(gsm-playground INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/gsm-playground/src/GSM_GE863.h"
 )
 
-target_include_directories(gsm-playground INTERFACE
+target_include_directories(pac-gsm-playground INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/gsm-playground/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(gsm-playground INTERFACE
+target_link_libraries(pac-gsm-playground INTERFACE
     arduino-compat
 )

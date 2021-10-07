@@ -1,6 +1,6 @@
-add_library(allthingstalk-lorawan-sdk INTERFACE)
+add_library(pac-allthingstalk-lorawan-sdk INTERFACE)
 
-target_sources(allthingstalk-lorawan-sdk INTERFACE
+target_sources(pac-allthingstalk-lorawan-sdk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lorawan-sdk/src/ABPCredentials.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lorawan-sdk/src/BinaryPayload.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lorawan-sdk/src/GeoLocation.cpp"
@@ -49,7 +49,7 @@ target_sources(allthingstalk-lorawan-sdk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lorawan-sdk/examples/SDK Examples/BinaryPayloads/keys.h"
 )
 
-target_include_directories(allthingstalk-lorawan-sdk INTERFACE
+target_include_directories(pac-allthingstalk-lorawan-sdk INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-lorawan-sdk/src"
 )
 
@@ -57,6 +57,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(allthingstalk-lorawan-sdk INTERFACE
+target_link_libraries(pac-allthingstalk-lorawan-sdk INTERFACE
     arduino-compat
 )

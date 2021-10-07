@@ -1,6 +1,6 @@
-add_library(mcci-arduino-development-kit-adk INTERFACE)
+add_library(pac-mcci-arduino-development-kit-adk INTERFACE)
 
-target_sources(mcci-arduino-development-kit-adk INTERFACE
+target_sources(pac-mcci-arduino-development-kit-adk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Catena-mcciadk/src/lib/mcciadklib_buffertoulong.c"
   "${CMAKE_CURRENT_LIST_DIR}/Catena-mcciadk/src/lib/mcciadklib_multiszindex.c"
   "${CMAKE_CURRENT_LIST_DIR}/Catena-mcciadk/src/lib/mcciadklib_safecopystring.c"
@@ -12,7 +12,7 @@ target_sources(mcci-arduino-development-kit-adk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Catena-mcciadk/src/mcciadk_guid.h"
 )
 
-target_include_directories(mcci-arduino-development-kit-adk INTERFACE
+target_include_directories(pac-mcci-arduino-development-kit-adk INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Catena-mcciadk/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mcci-arduino-development-kit-adk INTERFACE
+target_link_libraries(pac-mcci-arduino-development-kit-adk INTERFACE
     arduino-compat
 )

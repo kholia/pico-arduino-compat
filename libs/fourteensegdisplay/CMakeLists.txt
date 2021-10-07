@@ -1,6 +1,6 @@
-add_library(fourteensegdisplay INTERFACE)
+add_library(pac-fourteensegdisplay INTERFACE)
 
-target_sources(fourteensegdisplay INTERFACE
+target_sources(pac-fourteensegdisplay INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FourteenSegDisplay/src/NineSegDisplay.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FourteenSegDisplay/src/SevenSegDisplay.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FourteenSegDisplay/src/SixteenSegDisplay.cpp"
@@ -15,7 +15,7 @@ target_sources(fourteensegdisplay INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FourteenSegDisplay/src/SevenSegDisplayFont.h"
 )
 
-target_include_directories(fourteensegdisplay INTERFACE
+target_include_directories(pac-fourteensegdisplay INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FourteenSegDisplay/src"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(fourteensegdisplay INTERFACE
+target_link_libraries(pac-fourteensegdisplay INTERFACE
     arduino-compat
 )

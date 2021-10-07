@@ -1,6 +1,6 @@
-add_library(uarmlibrary INTERFACE)
+add_library(pac-uarmlibrary INTERFACE)
 
-target_sources(uarmlibrary INTERFACE
+target_sources(pac-uarmlibrary INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/UArmForArduino/src/uArmLed.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/UArmForArduino/src/uArmRingBuffer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/UArmForArduino/src/uArmDebug.cpp"
@@ -34,7 +34,7 @@ target_sources(uarmlibrary INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/UArmForArduino/src/uArmPin.h"
 )
 
-target_include_directories(uarmlibrary INTERFACE
+target_include_directories(pac-uarmlibrary INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/UArmForArduino/src"
 )
 
@@ -42,6 +42,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(uarmlibrary INTERFACE
+target_link_libraries(pac-uarmlibrary INTERFACE
     arduino-compat
 )

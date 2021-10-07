@@ -1,6 +1,6 @@
-add_library(json-streaming-parser-2 INTERFACE)
+add_library(pac-json-streaming-parser-2 INTERFACE)
 
-target_sources(json-streaming-parser-2 INTERFACE
+target_sources(pac-json-streaming-parser-2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/json-streaming-parser2/ElementPath.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/json-streaming-parser2/ArduinoStreamParser.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/json-streaming-parser2/JsonHandler.cpp"
@@ -18,7 +18,7 @@ target_sources(json-streaming-parser-2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/json-streaming-parser2/examples/SimpleParser/SimpleHandler.h"
 )
 
-target_include_directories(json-streaming-parser-2 INTERFACE
+target_include_directories(pac-json-streaming-parser-2 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/json-streaming-parser2"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(json-streaming-parser-2 INTERFACE
+target_link_libraries(pac-json-streaming-parser-2 INTERFACE
     arduino-compat
 )

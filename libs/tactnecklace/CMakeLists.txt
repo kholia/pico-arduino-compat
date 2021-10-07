@@ -1,6 +1,6 @@
-add_library(tactnecklace INTERFACE)
+add_library(pac-tactnecklace INTERFACE)
 
-target_sources(tactnecklace INTERFACE
+target_sources(pac-tactnecklace INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Tactile-Necklace/AccelTact.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Tactile-Necklace/TactNecklace.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Tactile-Necklace/UltrasonicTact.cpp"
@@ -9,7 +9,7 @@ target_sources(tactnecklace INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Tactile-Necklace/TactNecklace.h"
 )
 
-target_include_directories(tactnecklace INTERFACE
+target_include_directories(pac-tactnecklace INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Tactile-Necklace"
 )
 
@@ -17,6 +17,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tactnecklace INTERFACE
+target_link_libraries(pac-tactnecklace INTERFACE
     arduino-compat
 )

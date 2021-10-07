@@ -1,6 +1,6 @@
-add_library(task-by-makuna INTERFACE)
+add_library(pac-task-by-makuna INTERFACE)
 
-target_sources(task-by-makuna INTERFACE
+target_sources(pac-task-by-makuna INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Task/src/TaskManager.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Task/src/MessageTask.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Task/src/TaskManager.h"
@@ -19,7 +19,7 @@ target_sources(task-by-makuna INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Task/examples/ButtonTask/ButtonTask.h"
 )
 
-target_include_directories(task-by-makuna INTERFACE
+target_include_directories(pac-task-by-makuna INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Task/src"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(task-by-makuna INTERFACE
+target_link_libraries(pac-task-by-makuna INTERFACE
     arduino-compat
 )

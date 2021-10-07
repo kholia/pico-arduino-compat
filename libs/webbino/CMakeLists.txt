@@ -1,6 +1,6 @@
-add_library(webbino INTERFACE)
+add_library(pac-webbino INTERFACE)
 
-target_sources(webbino INTERFACE
+target_sources(pac-webbino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Webbino/src/WebbinoInterfaces/WIZ5x00.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Webbino/src/WebbinoInterfaces/DigiFi.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Webbino/src/WebbinoInterfaces/AllWiFi.cpp"
@@ -39,7 +39,7 @@ target_sources(webbino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Webbino/examples/ReplacementTags/html.h"
 )
 
-target_include_directories(webbino INTERFACE
+target_include_directories(pac-webbino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Webbino/src"
 )
 
@@ -47,11 +47,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(webbino INTERFACE
+target_link_libraries(pac-webbino INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

@@ -1,6 +1,6 @@
-add_library(lv_examples INTERFACE)
+add_library(pac-lv_examples INTERFACE)
 
-target_sources(lv_examples INTERFACE
+target_sources(pac-lv_examples INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/lv_examples/src/lv_demo_widgets/lv_demo_widgets.c"
   "${CMAKE_CURRENT_LIST_DIR}/lv_examples/src/lv_demo_widgets/assets/img_clothes.c"
   "${CMAKE_CURRENT_LIST_DIR}/lv_examples/src/lv_demo_widgets/assets/img_demo_widgets_avatar.c"
@@ -81,7 +81,7 @@ target_sources(lv_examples INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/lv_examples/src/lv_demo_music/assets/spectrum_1.h"
 )
 
-target_include_directories(lv_examples INTERFACE
+target_include_directories(pac-lv_examples INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/lv_examples/src"
 )
 
@@ -89,6 +89,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(lv_examples INTERFACE
+target_link_libraries(pac-lv_examples INTERFACE
     arduino-compat
 )

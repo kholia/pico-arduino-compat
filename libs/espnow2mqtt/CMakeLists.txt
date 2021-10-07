@@ -1,6 +1,6 @@
-add_library(espnow2mqtt INTERFACE)
+add_library(pac-espnow2mqtt INTERFACE)
 
-target_sources(espnow2mqtt INTERFACE
+target_sources(pac-espnow2mqtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESPNow2Mqtt/test/test.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESPNow2Mqtt/examples/server/server.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESPNow2Mqtt/examples/client/pingBasicClient/client.cpp"
@@ -17,7 +17,7 @@ target_sources(espnow2mqtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESPNow2Mqtt/src/messages.pb.h"
 )
 
-target_include_directories(espnow2mqtt INTERFACE
+target_include_directories(pac-espnow2mqtt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESPNow2Mqtt/src"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(espnow2mqtt INTERFACE
+target_link_libraries(pac-espnow2mqtt INTERFACE
     arduino-compat
 )

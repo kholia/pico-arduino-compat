@@ -1,6 +1,6 @@
-add_library(arduinobearssl INTERFACE)
+add_library(pac-arduinobearssl INTERFACE)
 
-target_sources(arduinobearssl INTERFACE
+target_sources(pac-arduinobearssl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoBearSSL/src/ArduinoBearSSL.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoBearSSL/src/MD5.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoBearSSL/src/DES.cpp"
@@ -324,7 +324,7 @@ target_sources(arduinobearssl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoBearSSL/examples/MD5/ArduinoBearSSLConfig.h"
 )
 
-target_include_directories(arduinobearssl INTERFACE
+target_include_directories(pac-arduinobearssl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoBearSSL/src"
 )
 
@@ -332,6 +332,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinobearssl INTERFACE
+target_link_libraries(pac-arduinobearssl INTERFACE
     arduino-compat
 )

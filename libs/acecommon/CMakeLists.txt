@@ -1,6 +1,6 @@
-add_library(acecommon INTERFACE)
+add_library(pac-acecommon INTERFACE)
 
-target_sources(acecommon INTERFACE
+target_sources(pac-acecommon INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceCommon/src/pstrings/pstrings.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceCommon/src/fstrings/FCString.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceCommon/src/url_encoding/url_encoding.cpp"
@@ -32,7 +32,7 @@ target_sources(acecommon INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceCommon/examples/AutoBenchmark/Benchmark.h"
 )
 
-target_include_directories(acecommon INTERFACE
+target_include_directories(pac-acecommon INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AceCommon/src"
 )
 
@@ -40,6 +40,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(acecommon INTERFACE
+target_link_libraries(pac-acecommon INTERFACE
     arduino-compat
 )

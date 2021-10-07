@@ -1,6 +1,6 @@
-add_library(log4esp INTERFACE)
+add_library(pac-log4esp INTERFACE)
 
-target_sources(log4esp INTERFACE
+target_sources(pac-log4esp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/log4Esp/src/Logger.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/log4Esp/src/appender/SerialAppender.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/log4Esp/src/appender/Appender.cpp"
@@ -12,7 +12,7 @@ target_sources(log4esp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/log4Esp/src/appender/SerialAppender.h"
 )
 
-target_include_directories(log4esp INTERFACE
+target_include_directories(pac-log4esp INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/log4Esp/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(log4esp INTERFACE
+target_link_libraries(pac-log4esp INTERFACE
     arduino-compat
 )

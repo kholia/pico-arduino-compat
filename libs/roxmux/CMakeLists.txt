@@ -1,6 +1,6 @@
-add_library(roxmux INTERFACE)
+add_library(pac-roxmux INTERFACE)
 
-target_sources(roxmux INTERFACE
+target_sources(pac-roxmux INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RoxMux/src/RoxTimer.h"
   "${CMAKE_CURRENT_LIST_DIR}/RoxMux/src/RoxEncoder.h"
   "${CMAKE_CURRENT_LIST_DIR}/RoxMux/src/RoxDebug.h"
@@ -25,7 +25,7 @@ target_sources(roxmux INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RoxMux/src/RoxLogLifo.h"
 )
 
-target_include_directories(roxmux INTERFACE
+target_include_directories(pac-roxmux INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RoxMux/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(roxmux INTERFACE
+target_link_libraries(pac-roxmux INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(arduinosinspace INTERFACE)
+add_library(pac-arduinosinspace INTERFACE)
 
-target_sources(arduinosinspace INTERFACE
+target_sources(pac-arduinosinspace INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduinosinspace/src/ArduinosInSpace.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduinosinspace/src/AISRequest.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduinosinspace/src/AISManagedInput.cpp"
@@ -11,7 +11,7 @@ target_sources(arduinosinspace INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduinosinspace/src/ArduinosInSpace.h"
 )
 
-target_include_directories(arduinosinspace INTERFACE
+target_include_directories(pac-arduinosinspace INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduinosinspace/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinosinspace INTERFACE
+target_link_libraries(pac-arduinosinspace INTERFACE
     arduino-compat
 )

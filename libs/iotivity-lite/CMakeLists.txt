@@ -1,6 +1,6 @@
-add_library(iotivity-lite INTERFACE)
+add_library(pac-iotivity-lite INTERFACE)
 
-target_sources(iotivity-lite INTERFACE
+target_sources(pac-iotivity-lite INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IoTivity-Lite/security/unittest/tlstest.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IoTivity-Lite/port/openthread/ocInstance.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IoTivity-Lite/port/unittest/clocktest.cpp"
@@ -288,7 +288,7 @@ target_sources(iotivity-lite INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IoTivity-Lite/tests/itc/ri/include/RIHelper.h"
 )
 
-target_include_directories(iotivity-lite INTERFACE
+target_include_directories(pac-iotivity-lite INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/IoTivity-Lite"
 )
 
@@ -296,6 +296,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(iotivity-lite INTERFACE
+target_link_libraries(pac-iotivity-lite INTERFACE
     arduino-compat
 )

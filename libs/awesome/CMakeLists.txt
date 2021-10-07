@@ -1,6 +1,6 @@
-add_library(awesome INTERFACE)
+add_library(pac-awesome INTERFACE)
 
-target_sources(awesome INTERFACE
+target_sources(pac-awesome INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Awesome-Shield-Library/Awesome.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Awesome-Shield-Library/AS_Adafruit_NeoPixel.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Awesome-Shield-Library/AS_Suli.cpp"
@@ -13,7 +13,7 @@ target_sources(awesome INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Awesome-Shield-Library/AS_Suli.h"
 )
 
-target_include_directories(awesome INTERFACE
+target_include_directories(pac-awesome INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Awesome-Shield-Library"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(awesome INTERFACE
+target_link_libraries(pac-awesome INTERFACE
     arduino-compat
 )

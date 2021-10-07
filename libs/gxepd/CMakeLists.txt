@@ -1,6 +1,6 @@
-add_library(gxepd INTERFACE)
+add_library(pac-gxepd INTERFACE)
 
-target_sources(gxepd INTERFACE
+target_sources(pac-gxepd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GxEPD/src/GxFont_GFX.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GxEPD/src/GxEPD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GxEPD/src/GxGDEP015OC1/GxGDEP015OC1.cpp"
@@ -256,7 +256,7 @@ target_sources(gxepd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GxEPD/examples/GxEPD_Example/IMG_0001.h"
 )
 
-target_include_directories(gxepd INTERFACE
+target_include_directories(pac-gxepd INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/GxEPD/src"
 )
 
@@ -264,11 +264,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(gxepd INTERFACE
+target_link_libraries(pac-gxepd INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

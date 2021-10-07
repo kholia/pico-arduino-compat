@@ -1,6 +1,6 @@
-add_library(gobbitlinecommand INTERFACE)
+add_library(pac-gobbitlinecommand INTERFACE)
 
-target_sources(gobbitlinecommand INTERFACE
+target_sources(pac-gobbitlinecommand INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Gobbit_Line_Commander/src/GobbitLineCommand.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Gobbit_Line_Commander/src/Adafruit_Motor_Shield_V2_Library/Adafruit_MotorShield.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Gobbit_Line_Commander/src/Adafruit_Motor_Shield_V2_Library/utility/Adafruit_MS_PWMServoDriver.cpp"
@@ -22,7 +22,7 @@ target_sources(gobbitlinecommand INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Gobbit_Line_Commander/examples/ScoutBotics/Level_2/GLC_IRcontrol/Config.h"
 )
 
-target_include_directories(gobbitlinecommand INTERFACE
+target_include_directories(pac-gobbitlinecommand INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Gobbit_Line_Commander/src"
 )
 
@@ -30,6 +30,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(gobbitlinecommand INTERFACE
+target_link_libraries(pac-gobbitlinecommand INTERFACE
     arduino-compat
 )

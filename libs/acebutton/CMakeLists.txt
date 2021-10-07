@@ -1,6 +1,6 @@
-add_library(acebutton INTERFACE)
+add_library(pac-acebutton INTERFACE)
 
-target_sources(acebutton INTERFACE
+target_sources(pac-acebutton INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceButton/src/ace_button/ButtonConfig.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceButton/src/ace_button/LadderButtonConfig.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceButton/src/ace_button/AceButton.cpp"
@@ -27,7 +27,7 @@ target_sources(acebutton INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceButton/examples/AutoBenchmark/ProfilingButtonConfig.h"
 )
 
-target_include_directories(acebutton INTERFACE
+target_include_directories(pac-acebutton INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AceButton/src"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(acebutton INTERFACE
+target_link_libraries(pac-acebutton INTERFACE
     arduino-compat
 )

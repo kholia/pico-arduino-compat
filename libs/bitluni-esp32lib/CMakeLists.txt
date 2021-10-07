@@ -1,6 +1,6 @@
-add_library(bitluni-esp32lib INTERFACE)
+add_library(pac-bitluni-esp32lib INTERFACE)
 
-target_sources(bitluni-esp32lib INTERFACE
+target_sources(pac-bitluni-esp32lib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP32Lib/src/I2S/I2S.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP32Lib/src/Composite/Composite.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP32Lib/src/LED/SerialLED.cpp"
@@ -72,7 +72,7 @@ target_sources(bitluni-esp32lib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP32Lib/examples/LEDs/LEDWall3Camera/camera.h"
 )
 
-target_include_directories(bitluni-esp32lib INTERFACE
+target_include_directories(pac-bitluni-esp32lib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESP32Lib/src"
 )
 
@@ -80,11 +80,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(bitluni-esp32lib INTERFACE
+target_link_libraries(pac-bitluni-esp32lib INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

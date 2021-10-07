@@ -1,6 +1,6 @@
-add_library(adafruit-sleepydog-library INTERFACE)
+add_library(pac-adafruit-sleepydog-library INTERFACE)
 
-target_sources(adafruit-sleepydog-library INTERFACE
+target_sources(pac-adafruit-sleepydog-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_SleepyDog/Adafruit_SleepyDog.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_SleepyDog/utility/WatchdogKinetisK.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_SleepyDog/utility/WatchdogSAMD.cpp"
@@ -17,7 +17,7 @@ target_sources(adafruit-sleepydog-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_SleepyDog/utility/WatchdogNRF.h"
 )
 
-target_include_directories(adafruit-sleepydog-library INTERFACE
+target_include_directories(pac-adafruit-sleepydog-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_SleepyDog"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(adafruit-sleepydog-library INTERFACE
+target_link_libraries(pac-adafruit-sleepydog-library INTERFACE
     arduino-compat
 )

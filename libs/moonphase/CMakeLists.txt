@@ -1,6 +1,6 @@
-add_library(moonphase INTERFACE)
+add_library(pac-moonphase INTERFACE)
 
-target_sources(moonphase INTERFACE
+target_sources(pac-moonphase INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/moonPhase-esp32/moonPhase.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/moonPhase-esp32/examples/esp32/ILI9341/phases/phase_065.c"
   "${CMAKE_CURRENT_LIST_DIR}/moonPhase-esp32/examples/esp32/ILI9341/phases/phase_075.c"
@@ -31,7 +31,7 @@ target_sources(moonphase INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/moonPhase-esp32/moonPhase.h"
 )
 
-target_include_directories(moonphase INTERFACE
+target_include_directories(pac-moonphase INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/moonPhase-esp32"
 )
 
@@ -39,6 +39,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(moonphase INTERFACE
+target_link_libraries(pac-moonphase INTERFACE
     arduino-compat
 )

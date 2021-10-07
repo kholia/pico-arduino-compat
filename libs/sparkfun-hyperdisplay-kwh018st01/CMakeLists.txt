@@ -1,6 +1,6 @@
-add_library(sparkfun-hyperdisplay-kwh018st01 INTERFACE)
+add_library(pac-sparkfun-hyperdisplay-kwh018st01 INTERFACE)
 
-target_sources(sparkfun-hyperdisplay-kwh018st01 INTERFACE
+target_sources(pac-sparkfun-hyperdisplay-kwh018st01 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/HyperDisplay_KWH018ST01_4WSPI_ArduinoLibrary/src/HyperDisplay_KWH018ST01_4WSPI.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/HyperDisplay_KWH018ST01_4WSPI_ArduinoLibrary/examples/Example9_Fractals/BigNumber.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/HyperDisplay_KWH018ST01_4WSPI_ArduinoLibrary/examples/Example9_Fractals/number.c"
@@ -13,7 +13,7 @@ target_sources(sparkfun-hyperdisplay-kwh018st01 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/HyperDisplay_KWH018ST01_4WSPI_ArduinoLibrary/examples/Example9_Fractals/number.h"
 )
 
-target_include_directories(sparkfun-hyperdisplay-kwh018st01 INTERFACE
+target_include_directories(pac-sparkfun-hyperdisplay-kwh018st01 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/HyperDisplay_KWH018ST01_4WSPI_ArduinoLibrary/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sparkfun-hyperdisplay-kwh018st01 INTERFACE
+target_link_libraries(pac-sparkfun-hyperdisplay-kwh018st01 INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(arxrobot-library INTERFACE)
+add_library(pac-arxrobot-library INTERFACE)
 
-target_sources(arxrobot-library INTERFACE
+target_sources(pac-arxrobot-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArxRobot-Library/src/twi.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArxRobot-Library/src/servo3DoT.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArxRobot-Library/src/Watchdog.cpp"
@@ -22,7 +22,7 @@ target_sources(arxrobot-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArxRobot-Library/src/twi.h"
 )
 
-target_include_directories(arxrobot-library INTERFACE
+target_include_directories(pac-arxrobot-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArxRobot-Library/src"
 )
 
@@ -30,6 +30,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arxrobot-library INTERFACE
+target_link_libraries(pac-arxrobot-library INTERFACE
     arduino-compat
 )

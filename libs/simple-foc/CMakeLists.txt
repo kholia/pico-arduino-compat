@@ -1,6 +1,6 @@
-add_library(simple-foc INTERFACE)
+add_library(pac-simple-foc INTERFACE)
 
-target_sources(simple-foc INTERFACE
+target_sources(pac-simple-foc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-FOC/src/StepperMotor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-FOC/src/BLDCMotor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-FOC/src/sensors/MagneticSensorSPI.cpp"
@@ -86,7 +86,7 @@ target_sources(simple-foc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-FOC/examples/hardware_specific_examples/B_G431B_ESC1/build_opt.h"
 )
 
-target_include_directories(simple-foc INTERFACE
+target_include_directories(pac-simple-foc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino-FOC/src"
 )
 
@@ -94,6 +94,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(simple-foc INTERFACE
+target_link_libraries(pac-simple-foc INTERFACE
     arduino-compat
 )

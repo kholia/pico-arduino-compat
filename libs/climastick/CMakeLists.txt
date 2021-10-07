@@ -1,6 +1,6 @@
-add_library(climastick INTERFACE)
+add_library(pac-climastick INTERFACE)
 
-target_sources(climastick INTERFACE
+target_sources(pac-climastick INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ClimaStick/src/TSL2561.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ClimaStick/src/NTPClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ClimaStick/src/MPU6050.cpp"
@@ -23,7 +23,7 @@ target_sources(climastick INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ClimaStick/src/ClimaStick.h"
 )
 
-target_include_directories(climastick INTERFACE
+target_include_directories(pac-climastick INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ClimaStick/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(climastick INTERFACE
+target_link_libraries(pac-climastick INTERFACE
     arduino-compat
 )

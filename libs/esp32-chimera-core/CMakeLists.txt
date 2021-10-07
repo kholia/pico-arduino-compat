@@ -1,6 +1,6 @@
-add_library(esp32-chimera-core INTERFACE)
+add_library(pac-esp32-chimera-core INTERFACE)
 
-target_sources(esp32-chimera-core INTERFACE
+target_sources(pac-esp32-chimera-core INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-Chimera-Core/src/ESP32-Chimera-Core.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-Chimera-Core/src/M5Display.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-Chimera-Core/src/helpers/TouchButton.cpp"
@@ -82,7 +82,7 @@ target_sources(esp32-chimera-core INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-Chimera-Core/boards/variants/d-duino-32-xs/pins_arduino.h"
 )
 
-target_include_directories(esp32-chimera-core INTERFACE
+target_include_directories(pac-esp32-chimera-core INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESP32-Chimera-Core/src"
 )
 
@@ -90,11 +90,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(esp32-chimera-core INTERFACE
+target_link_libraries(pac-esp32-chimera-core INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

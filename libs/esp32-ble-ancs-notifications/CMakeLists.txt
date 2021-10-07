@@ -1,6 +1,6 @@
-add_library(esp32-ble-ancs-notifications INTERFACE)
+add_library(pac-esp32-ble-ancs-notifications INTERFACE)
 
-target_sources(esp32-ble-ancs-notifications INTERFACE
+target_sources(pac-esp32-ble-ancs-notifications INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-ANCS-Notifications/src/ble_security.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-ANCS-Notifications/src/esp32notifications.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-ANCS-Notifications/src/ancs_ble_client.cpp"
@@ -12,7 +12,7 @@ target_sources(esp32-ble-ancs-notifications INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-ANCS-Notifications/src/ble_notification.h"
 )
 
-target_include_directories(esp32-ble-ancs-notifications INTERFACE
+target_include_directories(pac-esp32-ble-ancs-notifications INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESP32-ANCS-Notifications/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(esp32-ble-ancs-notifications INTERFACE
+target_link_libraries(pac-esp32-ble-ancs-notifications INTERFACE
     arduino-compat
 )

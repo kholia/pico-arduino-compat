@@ -1,6 +1,6 @@
-add_library(mkrnb INTERFACE)
+add_library(pac-mkrnb INTERFACE)
 
-target_sources(mkrnb INTERFACE
+target_sources(pac-mkrnb INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MKRNB/src/NBSSLClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MKRNB/src/NB_SMS.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MKRNB/src/NBScanner.cpp"
@@ -36,7 +36,7 @@ target_sources(mkrnb INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MKRNB/examples/GPRSUdpNtpClient/arduino_secrets.h"
 )
 
-target_include_directories(mkrnb INTERFACE
+target_include_directories(pac-mkrnb INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MKRNB/src"
 )
 
@@ -44,6 +44,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mkrnb INTERFACE
+target_link_libraries(pac-mkrnb INTERFACE
     arduino-compat
 )

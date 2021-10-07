@@ -1,6 +1,6 @@
-add_library(aprs-decoder-lib INTERFACE)
+add_library(pac-aprs-decoder-lib INTERFACE)
 
-target_sources(aprs-decoder-lib INTERFACE
+target_sources(pac-aprs-decoder-lib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/APRS-Decoder-Lib/test/test_basic_msg/test_basic_msg.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/APRS-Decoder-Lib/test/test_compressed_msg/test_compressed_msg.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/APRS-Decoder-Lib/test/test_content/test_content.cpp"
@@ -12,7 +12,7 @@ target_sources(aprs-decoder-lib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/APRS-Decoder-Lib/src/APRSMessage.h"
 )
 
-target_include_directories(aprs-decoder-lib INTERFACE
+target_include_directories(pac-aprs-decoder-lib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/APRS-Decoder-Lib/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(aprs-decoder-lib INTERFACE
+target_link_libraries(pac-aprs-decoder-lib INTERFACE
     arduino-compat
 )

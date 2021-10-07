@@ -1,6 +1,6 @@
-add_library(lovyangfx INTERFACE)
+add_library(pac-lovyangfx INTERFACE)
 
-target_sources(lovyangfx INTERFACE
+target_sources(pac-lovyangfx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LovyanGFX/src/lgfx/v1/LGFX_Sprite.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LovyanGFX/src/lgfx/v1/lgfx_fonts.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LovyanGFX/src/lgfx/v1/lgfx_TTFfont.cpp"
@@ -295,7 +295,7 @@ target_sources(lovyangfx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LovyanGFX/examples/HowToUse/4_unicode_fonts/u8g2/profont.h"
 )
 
-target_include_directories(lovyangfx INTERFACE
+target_include_directories(pac-lovyangfx INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/LovyanGFX/src"
 )
 
@@ -303,6 +303,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(lovyangfx INTERFACE
+target_link_libraries(pac-lovyangfx INTERFACE
     arduino-compat
 )

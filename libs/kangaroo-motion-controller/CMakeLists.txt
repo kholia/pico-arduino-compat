@@ -1,6 +1,6 @@
-add_library(kangaroo-motion-controller INTERFACE)
+add_library(pac-kangaroo-motion-controller INTERFACE)
 
-target_sources(kangaroo-motion-controller INTERFACE
+target_sources(pac-kangaroo-motion-controller INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Kangaroo_Arduino_Library/KangarooChannel.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Kangaroo_Arduino_Library/KangarooCRC.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Kangaroo_Arduino_Library/KangarooSerial.cpp"
@@ -13,7 +13,7 @@ target_sources(kangaroo-motion-controller INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Kangaroo_Arduino_Library/Kangaroo.h"
 )
 
-target_include_directories(kangaroo-motion-controller INTERFACE
+target_include_directories(pac-kangaroo-motion-controller INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Kangaroo_Arduino_Library"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(kangaroo-motion-controller INTERFACE
+target_link_libraries(pac-kangaroo-motion-controller INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(servo INTERFACE)
+add_library(pac-servo INTERFACE)
 
-target_sources(servo INTERFACE
+target_sources(pac-servo INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Servo/src/avr/Servo.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Servo/src/stm32f4/Servo.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Servo/src/megaavr/Servo.cpp"
@@ -18,7 +18,7 @@ target_sources(servo INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Servo/src/samd/ServoTimers.h"
 )
 
-target_include_directories(servo INTERFACE
+target_include_directories(pac-servo INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Servo/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(servo INTERFACE
+target_link_libraries(pac-servo INTERFACE
     arduino-compat
 )

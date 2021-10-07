@@ -1,6 +1,6 @@
-add_library(m5epd INTERFACE)
+add_library(pac-m5epd INTERFACE)
 
-target_sources(m5epd INTERFACE
+target_sources(pac-m5epd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5EPD/src/M5EPD_Canvas.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5EPD/src/M5EPD_Driver.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5EPD/src/ffsupport.cpp"
@@ -268,7 +268,7 @@ target_sources(m5epd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5EPD/examples/Basics/M5EPD_TTF/binaryttf.h"
 )
 
-target_include_directories(m5epd INTERFACE
+target_include_directories(pac-m5epd INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/M5EPD/src"
 )
 
@@ -276,11 +276,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(m5epd INTERFACE
+target_link_libraries(pac-m5epd INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

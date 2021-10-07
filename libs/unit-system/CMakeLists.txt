@@ -1,6 +1,6 @@
-add_library(unit-system INTERFACE)
+add_library(pac-unit-system INTERFACE)
 
-target_sources(unit-system INTERFACE
+target_sources(pac-unit-system INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/unit-system-adruino/src/sources/momentum.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/unit-system-adruino/src/sources/base.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/unit-system-adruino/src/sources/luminous_intensity.cpp"
@@ -36,7 +36,7 @@ target_sources(unit-system INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/unit-system-adruino/src/acceleration.hpp"
 )
 
-target_include_directories(unit-system INTERFACE
+target_include_directories(pac-unit-system INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/unit-system-adruino/src"
 )
 
@@ -44,6 +44,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(unit-system INTERFACE
+target_link_libraries(pac-unit-system INTERFACE
     arduino-compat
 )

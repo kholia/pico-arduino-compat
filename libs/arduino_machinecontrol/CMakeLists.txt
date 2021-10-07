@@ -1,6 +1,6 @@
-add_library(arduino_machinecontrol INTERFACE)
+add_library(pac-arduino_machinecontrol INTERFACE)
 
-target_sources(arduino_machinecontrol INTERFACE
+target_sources(pac-arduino_machinecontrol INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_MachineControl/src/Objects.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_MachineControl/src/utility/MAX31865/MAX31865.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_MachineControl/src/utility/QEI/QEI.cpp"
@@ -20,7 +20,7 @@ target_sources(arduino_machinecontrol INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_MachineControl/examples/USB_host/TUSB_helpers.h"
 )
 
-target_include_directories(arduino_machinecontrol INTERFACE
+target_include_directories(pac-arduino_machinecontrol INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino_MachineControl/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduino_machinecontrol INTERFACE
+target_link_libraries(pac-arduino_machinecontrol INTERFACE
     arduino-compat
 )

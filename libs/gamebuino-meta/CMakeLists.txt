@@ -1,6 +1,6 @@
-add_library(gamebuino-meta INTERFACE)
+add_library(pac-gamebuino-meta INTERFACE)
 
-target_sources(gamebuino-meta INTERFACE
+target_sources(pac-gamebuino-meta INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Gamebuino-Meta/src/Gamebuino-Meta.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Gamebuino-Meta/src/utility/Graphics-SD/Graphics-SD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Gamebuino-Meta/src/utility/Graphics-SD/GMV.cpp"
@@ -193,7 +193,7 @@ target_sources(gamebuino-meta INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Gamebuino-Meta/examples/5.Tests/DisplayStatic/config-gamebuino.h"
 )
 
-target_include_directories(gamebuino-meta INTERFACE
+target_include_directories(pac-gamebuino-meta INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Gamebuino-Meta/src"
 )
 
@@ -201,6 +201,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(gamebuino-meta INTERFACE
+target_link_libraries(pac-gamebuino-meta INTERFACE
     arduino-compat
 )

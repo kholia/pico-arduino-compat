@@ -1,6 +1,6 @@
-add_library(sparkfun-lsm303c-6-dof-imu-breakout INTERFACE)
+add_library(pac-sparkfun-lsm303c-6-dof-imu-breakout INTERFACE)
 
-target_sources(sparkfun-lsm303c-6-dof-imu-breakout INTERFACE
+target_sources(pac-sparkfun-lsm303c-6-dof-imu-breakout INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_LSM303C_6_DOF_IMU_Breakout_Arduino_Library/src/SparkFunLSM303C.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_LSM303C_6_DOF_IMU_Breakout_Arduino_Library/src/DebugMacros.h"
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_LSM303C_6_DOF_IMU_Breakout_Arduino_Library/src/SparkFunIMU.h"
@@ -8,7 +8,7 @@ target_sources(sparkfun-lsm303c-6-dof-imu-breakout INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_LSM303C_6_DOF_IMU_Breakout_Arduino_Library/src/SparkFunLSM303C.h"
 )
 
-target_include_directories(sparkfun-lsm303c-6-dof-imu-breakout INTERFACE
+target_include_directories(pac-sparkfun-lsm303c-6-dof-imu-breakout INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SparkFun_LSM303C_6_DOF_IMU_Breakout_Arduino_Library/src"
 )
 
@@ -16,6 +16,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sparkfun-lsm303c-6-dof-imu-breakout INTERFACE
+target_link_libraries(pac-sparkfun-lsm303c-6-dof-imu-breakout INTERFACE
     arduino-compat
 )

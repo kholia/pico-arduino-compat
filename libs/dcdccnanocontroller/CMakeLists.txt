@@ -1,6 +1,6 @@
-add_library(dcdccnanocontroller INTERFACE)
+add_library(pac-dcdccnanocontroller INTERFACE)
 
-target_sources(dcdccnanocontroller INTERFACE
+target_sources(pac-dcdccnanocontroller INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DcDccNanoController/VStudio/InoProject.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DcDccNanoController/src/WindowLocoControl.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DcDccNanoController/src/WindowFunctions.cpp"
@@ -39,7 +39,7 @@ target_sources(dcdccnanocontroller INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DcDccNanoController/src/DCCpp/PacketRegister.h"
 )
 
-target_include_directories(dcdccnanocontroller INTERFACE
+target_include_directories(pac-dcdccnanocontroller INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/DcDccNanoController/src"
 )
 
@@ -47,6 +47,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(dcdccnanocontroller INTERFACE
+target_link_libraries(pac-dcdccnanocontroller INTERFACE
     arduino-compat
 )

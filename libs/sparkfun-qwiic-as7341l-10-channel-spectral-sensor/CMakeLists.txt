@@ -1,6 +1,6 @@
-add_library(sparkfun-qwiic-as7341l-10-channel-spectral-sensor INTERFACE)
+add_library(pac-sparkfun-qwiic-as7341l-10-channel-spectral-sensor INTERFACE)
 
-target_sources(sparkfun-qwiic-as7341l-10-channel-spectral-sensor INTERFACE
+target_sources(pac-sparkfun-qwiic-as7341l-10-channel-spectral-sensor INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_AS7341X_Arduino_Library/src/SparkFun_AS7341X_Arduino_Library.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_AS7341X_Arduino_Library/src/SparFun_AS7341X_IO.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_AS7341X_Arduino_Library/src/SparkFun_AS7341X_IO.h"
@@ -8,7 +8,7 @@ target_sources(sparkfun-qwiic-as7341l-10-channel-spectral-sensor INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_AS7341X_Arduino_Library/src/SparkFun_AS7341X_Constants.h"
 )
 
-target_include_directories(sparkfun-qwiic-as7341l-10-channel-spectral-sensor INTERFACE
+target_include_directories(pac-sparkfun-qwiic-as7341l-10-channel-spectral-sensor INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SparkFun_AS7341X_Arduino_Library/src"
 )
 
@@ -16,6 +16,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sparkfun-qwiic-as7341l-10-channel-spectral-sensor INTERFACE
+target_link_libraries(pac-sparkfun-qwiic-as7341l-10-channel-spectral-sensor INTERFACE
     arduino-compat
 )

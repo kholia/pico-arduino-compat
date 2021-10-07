@@ -1,6 +1,6 @@
-add_library(arduino-learning-board INTERFACE)
+add_library(pac-arduino-learning-board INTERFACE)
 
-target_sources(arduino-learning-board INTERFACE
+target_sources(pac-arduino-learning-board INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoLearningBoard-Lib/src/ALB_DHT11.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoLearningBoard-Lib/src/ALB_Servo.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoLearningBoard-Lib/src/ALB_LCD_I2C.cpp"
@@ -34,7 +34,7 @@ target_sources(arduino-learning-board INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoLearningBoard-Lib/src/ArduinoLearningBoard.h"
 )
 
-target_include_directories(arduino-learning-board INTERFACE
+target_include_directories(pac-arduino-learning-board INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoLearningBoard-Lib/src"
 )
 
@@ -42,6 +42,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduino-learning-board INTERFACE
+target_link_libraries(pac-arduino-learning-board INTERFACE
     arduino-compat
 )

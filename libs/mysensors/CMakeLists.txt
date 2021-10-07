@@ -1,6 +1,6 @@
-add_library(mysensors INTERFACE)
+add_library(pac-mysensors INTERFACE)
 
-target_sources(mysensors INTERFACE
+target_sources(pac-mysensors INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MySensors/examples_linux/mysgw.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MySensors/core/MyOTAFirmwareUpdate.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MySensors/core/MySigningAtsha204.cpp"
@@ -271,7 +271,7 @@ target_sources(mysensors INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MySensors/drivers/AltSoftSerial/config/AltSoftSerial_Timers.h"
 )
 
-target_include_directories(mysensors INTERFACE
+target_include_directories(pac-mysensors INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MySensors"
 )
 
@@ -279,6 +279,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mysensors INTERFACE
+target_link_libraries(pac-mysensors INTERFACE
     arduino-compat
 )

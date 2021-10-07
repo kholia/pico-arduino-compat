@@ -1,6 +1,6 @@
-add_library(bluefairy INTERFACE)
+add_library(pac-bluefairy INTERFACE)
 
-target_sources(bluefairy INTERFACE
+target_sources(pac-bluefairy INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BlueFairy/linux/Arduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BlueFairy/src/IO.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BlueFairy/src/Scheduler.cpp"
@@ -22,7 +22,7 @@ target_sources(bluefairy INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BlueFairy/examples/TubeClock/TubeDisplay.h"
 )
 
-target_include_directories(bluefairy INTERFACE
+target_include_directories(pac-bluefairy INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/BlueFairy/src"
 )
 
@@ -30,6 +30,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(bluefairy INTERFACE
+target_link_libraries(pac-bluefairy INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(smos INTERFACE)
+add_library(pac-smos INTERFACE)
 
-target_sources(smos INTERFACE
+target_sources(pac-smos INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SMoS-cpp/src/smosCommon.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SMoS-cpp/src/smosDecoder.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SMoS-cpp/src/smosEncoder.cpp"
@@ -11,7 +11,7 @@ target_sources(smos INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SMoS-cpp/examples/ArduinoDemo/smosServer.h"
 )
 
-target_include_directories(smos INTERFACE
+target_include_directories(pac-smos INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SMoS-cpp/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(smos INTERFACE
+target_link_libraries(pac-smos INTERFACE
     arduino-compat
 )

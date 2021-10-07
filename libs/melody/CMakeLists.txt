@@ -1,6 +1,6 @@
-add_library(melody INTERFACE)
+add_library(pac-melody INTERFACE)
 
-target_sources(melody INTERFACE
+target_sources(pac-melody INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Melody/src/Sequence.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Melody/src/ModifierIndex.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Melody/src/RealNote.cpp"
@@ -32,7 +32,7 @@ target_sources(melody INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Melody/src/ModifierRepetition.h"
 )
 
-target_include_directories(melody INTERFACE
+target_include_directories(pac-melody INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Melody/src"
 )
 
@@ -40,6 +40,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(melody INTERFACE
+target_link_libraries(pac-melody INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(usbhid INTERFACE)
+add_library(pac-usbhid INTERFACE)
 
-target_sources(usbhid INTERFACE
+target_sources(pac-usbhid INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/USBHID_stm32f1/USBMultiSerial.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/USBHID_stm32f1/Consumer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/USBHID_stm32f1/Mouse.cpp"
@@ -60,7 +60,7 @@ target_sources(usbhid INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/USBHID_stm32f1/examples/mass/image.h"
 )
 
-target_include_directories(usbhid INTERFACE
+target_include_directories(pac-usbhid INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/USBHID_stm32f1"
 )
 
@@ -68,6 +68,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(usbhid INTERFACE
+target_link_libraries(pac-usbhid INTERFACE
     arduino-compat
 )

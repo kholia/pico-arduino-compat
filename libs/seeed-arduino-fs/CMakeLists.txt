@@ -1,6 +1,6 @@
-add_library(seeed-arduino-fs INTERFACE)
+add_library(pac-seeed-arduino-fs INTERFACE)
 
-target_sources(seeed-arduino-fs INTERFACE
+target_sources(pac-seeed-arduino-fs INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_FS/src/Seeed_FS.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_FS/src/SDMMC/Seeed_SDMMC.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_FS/src/SDMMC/Seeed_SDMMC_Interface.cpp"
@@ -22,7 +22,7 @@ target_sources(seeed-arduino-fs INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_FS/src/fatfs/integer.h"
 )
 
-target_include_directories(seeed-arduino-fs INTERFACE
+target_include_directories(pac-seeed-arduino-fs INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_FS/src"
 )
 
@@ -30,6 +30,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(seeed-arduino-fs INTERFACE
+target_link_libraries(pac-seeed-arduino-fs INTERFACE
     arduino-compat
 )

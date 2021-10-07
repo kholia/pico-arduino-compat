@@ -1,11 +1,11 @@
-add_library(herkulexservo INTERFACE)
+add_library(pac-herkulexservo INTERFACE)
 
-target_sources(herkulexservo INTERFACE
+target_sources(pac-herkulexservo INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/HerkulexServo/HerkulexServo.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/HerkulexServo/HerkulexServo.h"
 )
 
-target_include_directories(herkulexservo INTERFACE
+target_include_directories(pac-herkulexservo INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/HerkulexServo"
 )
 
@@ -13,6 +13,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(herkulexservo INTERFACE
+target_link_libraries(pac-herkulexservo INTERFACE
     arduino-compat
 )

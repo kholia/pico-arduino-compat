@@ -1,6 +1,6 @@
-add_library(ethersia INTERFACE)
+add_library(pac-ethersia INTERFACE)
 
-target_sources(ethersia INTERFACE
+target_sources(pac-ethersia INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EtherSia/src/TFTPServer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EtherSia/src/PingClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EtherSia/src/MACAddress.cpp"
@@ -60,7 +60,7 @@ target_sources(ethersia INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EtherSia/tests/libarduino/Arduino.h"
 )
 
-target_include_directories(ethersia INTERFACE
+target_include_directories(pac-ethersia INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EtherSia/src"
 )
 
@@ -68,6 +68,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ethersia INTERFACE
+target_link_libraries(pac-ethersia INTERFACE
     arduino-compat
 )

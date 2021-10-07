@@ -1,6 +1,6 @@
-add_library(mcufriend_kbv INTERFACE)
+add_library(pac-mcufriend_kbv INTERFACE)
 
-target_sources(mcufriend_kbv INTERFACE
+target_sources(pac-mcufriend_kbv INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MCUFRIEND_kbv/MCUFRIEND_kbv.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MCUFRIEND_kbv/extras/unused/ADA_GFX_kbv.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MCUFRIEND_kbv/extras/unused/OPENSMART_kbv.cpp"
@@ -36,7 +36,7 @@ target_sources(mcufriend_kbv INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MCUFRIEND_kbv/utility/pin_shield_1.h"
 )
 
-target_include_directories(mcufriend_kbv INTERFACE
+target_include_directories(pac-mcufriend_kbv INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MCUFRIEND_kbv"
 )
 
@@ -44,11 +44,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(mcufriend_kbv INTERFACE
+target_link_libraries(pac-mcufriend_kbv INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

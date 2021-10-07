@@ -1,6 +1,6 @@
-add_library(bluedisplay INTERFACE)
+add_library(pac-bluedisplay INTERFACE)
 
-target_sources(bluedisplay INTERFACE
+target_sources(pac-bluedisplay INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-BlueDisplay/src/BlueDisplay.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-BlueDisplay/src/BlueSerial.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-BlueDisplay/src/BDButton.cpp"
@@ -35,7 +35,7 @@ target_sources(bluedisplay INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-BlueDisplay/examples/US_Distance/HCSR04.h"
 )
 
-target_include_directories(bluedisplay INTERFACE
+target_include_directories(pac-bluedisplay INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino-BlueDisplay/src"
 )
 
@@ -43,6 +43,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(bluedisplay INTERFACE
+target_link_libraries(pac-bluedisplay INTERFACE
     arduino-compat
 )

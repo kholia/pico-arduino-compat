@@ -1,6 +1,6 @@
-add_library(timerinterrupt INTERFACE)
+add_library(pac-timerinterrupt INTERFACE)
 
-target_sources(timerinterrupt INTERFACE
+target_sources(pac-timerinterrupt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TimerInterrupt/src_cpp/TimerInterrupt.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TimerInterrupt/src_cpp/ISR_Timer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TimerInterrupt/src_cpp/TimerInterrupt_Generic_Debug.h"
@@ -18,7 +18,7 @@ target_sources(timerinterrupt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TimerInterrupt/src_h/ISR_Timer-Impl.h"
 )
 
-target_include_directories(timerinterrupt INTERFACE
+target_include_directories(pac-timerinterrupt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TimerInterrupt/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(timerinterrupt INTERFACE
+target_link_libraries(pac-timerinterrupt INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(107-arduino-nmea-parser INTERFACE)
+add_library(pac-107-arduino-nmea-parser INTERFACE)
 
-target_sources(107-arduino-nmea-parser INTERFACE
+target_sources(pac-107-arduino-nmea-parser INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/107-Arduino-NMEA-Parser/extras/test/src/test_checksum.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/107-Arduino-NMEA-Parser/extras/test/src/test_Types.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/107-Arduino-NMEA-Parser/extras/test/src/test_rmc.cpp"
@@ -31,7 +31,7 @@ target_sources(107-arduino-nmea-parser INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/107-Arduino-NMEA-Parser/src/nmea/util/gga.h"
 )
 
-target_include_directories(107-arduino-nmea-parser INTERFACE
+target_include_directories(pac-107-arduino-nmea-parser INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/107-Arduino-NMEA-Parser/src"
 )
 
@@ -39,6 +39,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(107-arduino-nmea-parser INTERFACE
+target_link_libraries(pac-107-arduino-nmea-parser INTERFACE
     arduino-compat
 )

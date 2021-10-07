@@ -1,6 +1,6 @@
-add_library(dmd2 INTERFACE)
+add_library(pac-dmd2 INTERFACE)
 
-target_sources(dmd2 INTERFACE
+target_sources(pac-dmd2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DMD2/DMD2_TextBox.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DMD2/DMD2.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DMD2/DMDFrame.cpp"
@@ -15,7 +15,7 @@ target_sources(dmd2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DMD2/fonts/Droid_Sans_24.h"
 )
 
-target_include_directories(dmd2 INTERFACE
+target_include_directories(pac-dmd2 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/DMD2"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(dmd2 INTERFACE
+target_link_libraries(pac-dmd2 INTERFACE
     arduino-compat
 )

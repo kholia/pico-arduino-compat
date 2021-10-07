@@ -1,6 +1,6 @@
-add_library(firmatawithdevicefeature INTERFACE)
+add_library(pac-firmatawithdevicefeature INTERFACE)
 
-target_sources(firmatawithdevicefeature INTERFACE
+target_sources(pac-firmatawithdevicefeature INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FirmataWithDeviceFeature/src/FirmataExt.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FirmataWithDeviceFeature/src/DeviceFirmata.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FirmataWithDeviceFeature/src/ConfigurableFirmata.cpp"
@@ -50,7 +50,7 @@ target_sources(firmatawithdevicefeature INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FirmataWithDeviceFeature/src-features/utility/OneWire.h"
 )
 
-target_include_directories(firmatawithdevicefeature INTERFACE
+target_include_directories(pac-firmatawithdevicefeature INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FirmataWithDeviceFeature/src"
 )
 
@@ -58,6 +58,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(firmatawithdevicefeature INTERFACE
+target_link_libraries(pac-firmatawithdevicefeature INTERFACE
     arduino-compat
 )

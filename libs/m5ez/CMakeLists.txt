@@ -1,6 +1,6 @@
-add_library(m5ez INTERFACE)
+add_library(pac-m5ez INTERFACE)
 
-target_sources(m5ez INTERFACE
+target_sources(pac-m5ez INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5ez/src/M5ez.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5ez/src/M5ez.h"
   "${CMAKE_CURRENT_LIST_DIR}/M5ez/src/themes/dark.h"
@@ -11,7 +11,7 @@ target_sources(m5ez INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5ez/examples/ImagesSPIFFSorSD/images.h"
 )
 
-target_include_directories(m5ez INTERFACE
+target_include_directories(pac-m5ez INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/M5ez/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(m5ez INTERFACE
+target_link_libraries(pac-m5ez INTERFACE
     arduino-compat
 )

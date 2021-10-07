@@ -1,6 +1,6 @@
-add_library(wireguard-esp32 INTERFACE)
+add_library(pac-wireguard-esp32 INTERFACE)
 
-target_sources(wireguard-esp32 INTERFACE
+target_sources(pac-wireguard-esp32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WireGuard-ESP32-Arduino/src/WireGuard.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WireGuard-ESP32-Arduino/src/wireguard-platform.c"
   "${CMAKE_CURRENT_LIST_DIR}/WireGuard-ESP32-Arduino/src/wireguardif.c"
@@ -24,7 +24,7 @@ target_sources(wireguard-esp32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WireGuard-ESP32-Arduino/src/crypto/refc/chacha20.h"
 )
 
-target_include_directories(wireguard-esp32 INTERFACE
+target_include_directories(pac-wireguard-esp32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WireGuard-ESP32-Arduino/src"
 )
 
@@ -32,6 +32,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wireguard-esp32 INTERFACE
+target_link_libraries(pac-wireguard-esp32 INTERFACE
     arduino-compat
 )

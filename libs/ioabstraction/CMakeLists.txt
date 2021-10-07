@@ -1,6 +1,6 @@
-add_library(ioabstraction INTERFACE)
+add_library(pac-ioabstraction INTERFACE)
 
-target_sources(ioabstraction INTERFACE
+target_sources(pac-ioabstraction INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IoAbstraction/src/KeyboardManager.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IoAbstraction/src/EepromAbstractionWire.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IoAbstraction/src/SimpleCollections.cpp"
@@ -59,7 +59,7 @@ target_sources(ioabstraction INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IoAbstraction/src/mbed/MbedAnalogDevice.h"
 )
 
-target_include_directories(ioabstraction INTERFACE
+target_include_directories(pac-ioabstraction INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/IoAbstraction/src"
 )
 
@@ -67,6 +67,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ioabstraction INTERFACE
+target_link_libraries(pac-ioabstraction INTERFACE
     arduino-compat
 )

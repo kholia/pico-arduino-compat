@@ -1,6 +1,6 @@
-add_library(vitconcommon INTERFACE)
+add_library(pac-vitconcommon INTERFACE)
 
-target_sources(vitconcommon INTERFACE
+target_sources(pac-vitconcommon INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/VitconCommon/VitconCRC32.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/VitconCommon/VitconGP2Y0A21YK.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/VitconCommon/VitconSAA1064T.cpp"
@@ -13,7 +13,7 @@ target_sources(vitconcommon INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/VitconCommon/VitconCRC32.h"
 )
 
-target_include_directories(vitconcommon INTERFACE
+target_include_directories(pac-vitconcommon INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/VitconCommon"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(vitconcommon INTERFACE
+target_link_libraries(pac-vitconcommon INTERFACE
     arduino-compat
 )

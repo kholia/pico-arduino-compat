@@ -1,6 +1,6 @@
-add_library(watchy INTERFACE)
+add_library(pac-watchy INTERFACE)
 
-target_sources(watchy INTERFACE
+target_sources(pac-watchy INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Watchy/src/bma.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Watchy/src/BLE.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Watchy/src/Watchy.cpp"
@@ -37,7 +37,7 @@ target_sources(watchy INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Watchy/examples/WatchFaces/StarryHorizon/stars.h"
 )
 
-target_include_directories(watchy INTERFACE
+target_include_directories(pac-watchy INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Watchy/src"
 )
 
@@ -45,6 +45,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(watchy INTERFACE
+target_link_libraries(pac-watchy INTERFACE
     arduino-compat
 )

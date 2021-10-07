@@ -1,6 +1,6 @@
-add_library(arduinosensors INTERFACE)
+add_library(pac-arduinosensors INTERFACE)
 
-target_sources(arduinosensors INTERFACE
+target_sources(pac-arduinosensors INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoSensors/sensors/MPU/MPU9150.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoSensors/DigitalOut.h"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoSensors/ArduinoSensors.h"
@@ -27,7 +27,7 @@ target_sources(arduinosensors INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoSensors/interfaces/AngleInterface.h"
 )
 
-target_include_directories(arduinosensors INTERFACE
+target_include_directories(pac-arduinosensors INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoSensors"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinosensors INTERFACE
+target_link_libraries(pac-arduinosensors INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(rivers-engineering INTERFACE)
+add_library(pac-rivers-engineering INTERFACE)
 
-target_sources(rivers-engineering INTERFACE
+target_sources(pac-rivers-engineering INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RiversEngineering/src/RiversTime.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RiversEngineering/src/RiversMotor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RiversEngineering/src/RiversLCD.cpp"
@@ -39,7 +39,7 @@ target_sources(rivers-engineering INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RiversEngineering/src/RiversNotes.h"
 )
 
-target_include_directories(rivers-engineering INTERFACE
+target_include_directories(pac-rivers-engineering INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RiversEngineering/src"
 )
 
@@ -47,11 +47,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(rivers-engineering INTERFACE
+target_link_libraries(pac-rivers-engineering INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

@@ -1,6 +1,6 @@
-add_library(thingsml INTERFACE)
+add_library(pac-thingsml INTERFACE)
 
-target_sources(thingsml INTERFACE
+target_sources(pac-thingsml INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/thingsml-c-library/test/senml_http.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/thingsml-c-library/test/senml_firmware.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/thingsml-c-library/test/senml.cpp"
@@ -80,7 +80,7 @@ target_sources(thingsml INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/thingsml-c-library/src/senml/actuator/senml_int_actuator.h"
 )
 
-target_include_directories(thingsml INTERFACE
+target_include_directories(pac-thingsml INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/thingsml-c-library/src"
 )
 
@@ -88,6 +88,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(thingsml INTERFACE
+target_link_libraries(pac-thingsml INTERFACE
     arduino-compat
 )

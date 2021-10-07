@@ -1,6 +1,6 @@
-add_library(hid-project INTERFACE)
+add_library(pac-hid-project INTERFACE)
 
-target_sources(hid-project INTERFACE
+target_sources(pac-hid-project INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/HID/src/port/samd.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/HID/src/SingleReport/SingleConsumer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/HID/src/SingleReport/SingleSystem.cpp"
@@ -77,7 +77,7 @@ target_sources(hid-project INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/HID/src/MultiReport/ImprovedKeyboard.h"
 )
 
-target_include_directories(hid-project INTERFACE
+target_include_directories(pac-hid-project INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/HID/src"
 )
 
@@ -85,6 +85,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(hid-project INTERFACE
+target_link_libraries(pac-hid-project INTERFACE
     arduino-compat
 )

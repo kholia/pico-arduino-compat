@@ -1,6 +1,6 @@
-add_library(rfexplorer-3gp-iot INTERFACE)
+add_library(pac-rfexplorer-3gp-iot INTERFACE)
 
-target_sources(rfexplorer-3gp-iot INTERFACE
+target_sources(pac-rfexplorer-3gp-iot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RFExplorer_3GP_IoT_Arduino/src/RFESweepData.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RFExplorer_3GP_IoT_Arduino/src/RFExplorer_3GP_IoT.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RFExplorer_3GP_IoT_Arduino/src/RFEConfiguration.cpp"
@@ -16,7 +16,7 @@ target_sources(rfexplorer-3gp-iot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RFExplorer_3GP_IoT_Arduino/src/RFESweepData.h"
 )
 
-target_include_directories(rfexplorer-3gp-iot INTERFACE
+target_include_directories(pac-rfexplorer-3gp-iot INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RFExplorer_3GP_IoT_Arduino/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(rfexplorer-3gp-iot INTERFACE
+target_link_libraries(pac-rfexplorer-3gp-iot INTERFACE
     arduino-compat
 )

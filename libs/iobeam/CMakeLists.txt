@@ -1,6 +1,6 @@
-add_library(iobeam INTERFACE)
+add_library(pac-iobeam INTERFACE)
 
-target_sources(iobeam INTERFACE
+target_sources(pac-iobeam INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/iobeam-client-embedded/Iobeam.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/iobeam-client-embedded/src/arduino/Iobeam.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/iobeam-client-embedded/include/arduino/Iobeam.hpp"
@@ -22,7 +22,7 @@ target_sources(iobeam INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/iobeam-client-embedded/examples/cc3200/Temperature/tmp006drv.h"
 )
 
-target_include_directories(iobeam INTERFACE
+target_include_directories(pac-iobeam INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/iobeam-client-embedded/src"
 )
 
@@ -30,6 +30,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(iobeam INTERFACE
+target_link_libraries(pac-iobeam INTERFACE
     arduino-compat
 )

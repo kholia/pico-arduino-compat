@@ -1,6 +1,6 @@
-add_library(robot-control INTERFACE)
+add_library(pac-robot-control INTERFACE)
 
-target_sources(robot-control INTERFACE
+target_sources(pac-robot-control INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Robot_Control/src/lcd.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Robot_Control/src/RobotSdCard.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Robot_Control/src/EasyTransfer2.cpp"
@@ -46,7 +46,7 @@ target_sources(robot-control INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Robot_Control/examples/explore/R06_Wheel_Calibration/scripts_library.h"
 )
 
-target_include_directories(robot-control INTERFACE
+target_include_directories(pac-robot-control INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Robot_Control/src"
 )
 
@@ -54,11 +54,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(robot-control INTERFACE
+target_link_libraries(pac-robot-control INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

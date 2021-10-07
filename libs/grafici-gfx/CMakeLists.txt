@@ -1,6 +1,6 @@
-add_library(grafici-gfx INTERFACE)
+add_library(pac-grafici-gfx INTERFACE)
 
-target_sources(grafici-gfx INTERFACE
+target_sources(pac-grafici-gfx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Grafici-GFX/src/Grafici.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Grafici-GFX/src/Color_defs.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Grafici-GFX/src/DataSet.h"
@@ -35,7 +35,7 @@ target_sources(grafici-gfx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Grafici-GFX/src/Plotter/Heatmap.h"
 )
 
-target_include_directories(grafici-gfx INTERFACE
+target_include_directories(pac-grafici-gfx INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Grafici-GFX/src"
 )
 
@@ -43,11 +43,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(grafici-gfx INTERFACE
+target_link_libraries(pac-grafici-gfx INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

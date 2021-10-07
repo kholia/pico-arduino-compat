@@ -1,6 +1,6 @@
-add_library(stm32duino-spbtle-rf INTERFACE)
+add_library(pac-stm32duino-spbtle-rf INTERFACE)
 
-target_sources(stm32duino-spbtle-rf INTERFACE
+target_sources(pac-stm32duino-spbtle-rf INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SPBTLE-RF/src/sensor_service.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SPBTLE-RF/src/beacon_service.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SPBTLE-RF/src/SPBTLE_RF.cpp"
@@ -51,7 +51,7 @@ target_sources(stm32duino-spbtle-rf INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SPBTLE-RF/src/ble_clock.h"
 )
 
-target_include_directories(stm32duino-spbtle-rf INTERFACE
+target_include_directories(pac-stm32duino-spbtle-rf INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SPBTLE-RF/src"
 )
 
@@ -59,6 +59,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(stm32duino-spbtle-rf INTERFACE
+target_link_libraries(pac-stm32duino-spbtle-rf INTERFACE
     arduino-compat
 )

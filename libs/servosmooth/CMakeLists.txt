@@ -1,6 +1,6 @@
-add_library(servosmooth INTERFACE)
+add_library(pac-servosmooth INTERFACE)
 
-target_sources(servosmooth INTERFACE
+target_sources(pac-servosmooth INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ServoSmooth/src/Adafruit_PWMServoDriver.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ServoSmooth/src/smoothUtil.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ServoSmooth/src/ServoSmooth.cpp"
@@ -11,7 +11,7 @@ target_sources(servosmooth INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ServoSmooth/src/ServoDriverSmooth.h"
 )
 
-target_include_directories(servosmooth INTERFACE
+target_include_directories(pac-servosmooth INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ServoSmooth/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(servosmooth INTERFACE
+target_link_libraries(pac-servosmooth INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(esp8266-microgear INTERFACE)
+add_library(pac-esp8266-microgear INTERFACE)
 
-target_sources(esp8266-microgear INTERFACE
+target_sources(pac-esp8266-microgear INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/microgear-esp8266-arduino/AuthClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/microgear-esp8266-arduino/PubSubClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/microgear-esp8266-arduino/SHA1.cpp"
@@ -14,7 +14,7 @@ target_sources(esp8266-microgear INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/microgear-esp8266-arduino/debug.h"
 )
 
-target_include_directories(esp8266-microgear INTERFACE
+target_include_directories(pac-esp8266-microgear INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/microgear-esp8266-arduino"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(esp8266-microgear INTERFACE
+target_link_libraries(pac-esp8266-microgear INTERFACE
     arduino-compat
 )

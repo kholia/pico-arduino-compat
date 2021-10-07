@@ -1,6 +1,6 @@
-add_library(md_cubo INTERFACE)
+add_library(pac-md_cubo INTERFACE)
 
-target_sources(md_cubo INTERFACE
+target_sources(pac-md_cubo INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MD_Cubo/src/MD_Cubo_4x4_ICS595.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MD_Cubo/src/MD_Cubo.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MD_Cubo/src/MD_Cubo_4x4_STC.cpp"
@@ -26,7 +26,7 @@ target_sources(md_cubo INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MD_Cubo/examples/MD_Cubo_Text_Receding/MD_Cubo_Font.h"
 )
 
-target_include_directories(md_cubo INTERFACE
+target_include_directories(pac-md_cubo INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MD_Cubo/src"
 )
 
@@ -34,6 +34,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(md_cubo INTERFACE
+target_link_libraries(pac-md_cubo INTERFACE
     arduino-compat
 )

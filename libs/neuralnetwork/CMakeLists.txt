@@ -1,10 +1,10 @@
-add_library(neuralnetwork INTERFACE)
+add_library(pac-neuralnetwork INTERFACE)
 
-target_sources(neuralnetwork INTERFACE
+target_sources(pac-neuralnetwork INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NeuralNetworks/src/NeuralNetwork.h"
 )
 
-target_include_directories(neuralnetwork INTERFACE
+target_include_directories(pac-neuralnetwork INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/NeuralNetworks/src"
 )
 
@@ -12,6 +12,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(neuralnetwork INTERFACE
+target_link_libraries(pac-neuralnetwork INTERFACE
     arduino-compat
 )

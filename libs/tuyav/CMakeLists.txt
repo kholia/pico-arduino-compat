@@ -1,6 +1,6 @@
-add_library(tuyav INTERFACE)
+add_library(pac-tuyav INTERFACE)
 
-target_sources(tuyav INTERFACE
+target_sources(pac-tuyav INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Tuyav/src/analogOutput.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Tuyav/src/analogInput.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Tuyav/src/protocol.cpp"
@@ -29,7 +29,7 @@ target_sources(tuyav INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Tuyav/src/global.h"
 )
 
-target_include_directories(tuyav INTERFACE
+target_include_directories(pac-tuyav INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Tuyav/src"
 )
 
@@ -37,6 +37,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tuyav INTERFACE
+target_link_libraries(pac-tuyav INTERFACE
     arduino-compat
 )

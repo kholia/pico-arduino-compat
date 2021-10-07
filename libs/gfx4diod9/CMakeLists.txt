@@ -1,11 +1,11 @@
-add_library(gfx4diod9 INTERFACE)
+add_library(pac-gfx4diod9 INTERFACE)
 
-target_sources(gfx4diod9 INTERFACE
+target_sources(pac-gfx4diod9 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GFX4DIoD9/src/GFX4dIoD9.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GFX4DIoD9/src/GFX4dIoD9.h"
 )
 
-target_include_directories(gfx4diod9 INTERFACE
+target_include_directories(pac-gfx4diod9 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/GFX4DIoD9/src"
 )
 
@@ -13,11 +13,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(gfx4diod9 INTERFACE
+target_link_libraries(pac-gfx4diod9 INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

@@ -1,6 +1,6 @@
-add_library(temboo INTERFACE)
+add_library(pac-temboo INTERFACE)
 
-target_sources(temboo INTERFACE
+target_sources(pac-temboo INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Temboo/src/TembooMQTTEdgeDevice.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Temboo/src/TembooMonitoring.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Temboo/src/TembooSSL.cpp"
@@ -110,7 +110,7 @@ target_sources(temboo INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Temboo/examples/ArduinoYun/UploadToDropbox/TembooAccount.h"
 )
 
-target_include_directories(temboo INTERFACE
+target_include_directories(pac-temboo INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Temboo/src"
 )
 
@@ -118,6 +118,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(temboo INTERFACE
+target_link_libraries(pac-temboo INTERFACE
     arduino-compat
 )

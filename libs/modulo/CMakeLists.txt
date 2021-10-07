@@ -1,6 +1,6 @@
-add_library(modulo INTERFACE)
+add_library(pac-modulo INTERFACE)
 
-target_sources(modulo INTERFACE
+target_sources(pac-modulo INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/modulo-lib/src/KnobModulo.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/modulo-lib/src/IREncoding.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/modulo-lib/src/JoystickModulo.cpp"
@@ -30,7 +30,7 @@ target_sources(modulo INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/modulo-lib/src/ControllerModuloBackend.h"
 )
 
-target_include_directories(modulo INTERFACE
+target_include_directories(pac-modulo INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/modulo-lib/src"
 )
 
@@ -38,6 +38,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(modulo INTERFACE
+target_link_libraries(pac-modulo INTERFACE
     arduino-compat
 )

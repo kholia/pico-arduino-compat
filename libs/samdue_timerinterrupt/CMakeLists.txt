@@ -1,6 +1,6 @@
-add_library(samdue_timerinterrupt INTERFACE)
+add_library(pac-samdue_timerinterrupt INTERFACE)
 
-target_sources(samdue_timerinterrupt INTERFACE
+target_sources(pac-samdue_timerinterrupt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SAMDUE_TimerInterrupt/src_cpp/SAMDUE_ISR_Timer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SAMDUE_TimerInterrupt/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SAMDUE_TimerInterrupt/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
@@ -40,7 +40,7 @@ target_sources(samdue_timerinterrupt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SAMDUE_TimerInterrupt/src_h/SAMDUE_ISR_Timer-Impl.h"
 )
 
-target_include_directories(samdue_timerinterrupt INTERFACE
+target_include_directories(pac-samdue_timerinterrupt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SAMDUE_TimerInterrupt/src"
 )
 
@@ -48,6 +48,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(samdue_timerinterrupt INTERFACE
+target_link_libraries(pac-samdue_timerinterrupt INTERFACE
     arduino-compat
 )

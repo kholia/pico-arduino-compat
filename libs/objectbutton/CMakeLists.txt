@@ -1,6 +1,6 @@
-add_library(objectbutton INTERFACE)
+add_library(pac-objectbutton INTERFACE)
 
-target_sources(objectbutton INTERFACE
+target_sources(pac-objectbutton INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ObjectButton/test/action_click.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ObjectButton/test/millis_counter_overflow.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ObjectButton/test/analog_button_action_pressed.cpp"
@@ -25,7 +25,7 @@ target_sources(objectbutton INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ObjectButton/src/analog/AnalogButton.h"
 )
 
-target_include_directories(objectbutton INTERFACE
+target_include_directories(pac-objectbutton INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ObjectButton/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(objectbutton INTERFACE
+target_link_libraries(pac-objectbutton INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(umt INTERFACE)
+add_library(pac-umt INTERFACE)
 
-target_sources(umt INTERFACE
+target_sources(pac-umt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/uMT/src/uMTtimersQueueMgmnt.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/uMT/src/uMTreschedule.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/uMT/src/uMTevents.cpp"
@@ -97,7 +97,7 @@ target_sources(umt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/uMT/examples/Test30_InterruptLatency/Test_Config.h"
 )
 
-target_include_directories(umt INTERFACE
+target_include_directories(pac-umt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/uMT/src"
 )
 
@@ -105,6 +105,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(umt INTERFACE
+target_link_libraries(pac-umt INTERFACE
     arduino-compat
 )

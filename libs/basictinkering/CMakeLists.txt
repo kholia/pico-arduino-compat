@@ -1,6 +1,6 @@
-add_library(basictinkering INTERFACE)
+add_library(pac-basictinkering INTERFACE)
 
-target_sources(basictinkering INTERFACE
+target_sources(pac-basictinkering INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BasicTinkering/src/BtButton.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BasicTinkering/src/BtLED.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BasicTinkering/src/BtSevenSegmentDisplay.cpp"
@@ -11,7 +11,7 @@ target_sources(basictinkering INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BasicTinkering/src/BtPotentiometer.h"
 )
 
-target_include_directories(basictinkering INTERFACE
+target_include_directories(pac-basictinkering INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/BasicTinkering/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(basictinkering INTERFACE
+target_link_libraries(pac-basictinkering INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(spimemory INTERFACE)
+add_library(pac-spimemory INTERFACE)
 
-target_sources(spimemory INTERFACE
+target_sources(pac-spimemory INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SPIMemory/extras/DMASAMD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SPIMemory/src/diagnostics.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SPIMemory/src/SPIFlash.cpp"
@@ -19,7 +19,7 @@ target_sources(spimemory INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SPIMemory/src/SPIFlash.h"
 )
 
-target_include_directories(spimemory INTERFACE
+target_include_directories(pac-spimemory INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SPIMemory/src"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(spimemory INTERFACE
+target_link_libraries(pac-spimemory INTERFACE
     arduino-compat
 )

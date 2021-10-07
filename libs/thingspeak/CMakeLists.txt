@@ -1,6 +1,6 @@
-add_library(thingspeak INTERFACE)
+add_library(pac-thingspeak INTERFACE)
 
-target_sources(thingspeak INTERFACE
+target_sources(pac-thingspeak INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/thingspeak-arduino/src/ThingSpeak.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/thingspeak-arduino/src/ThingSpeak.h"
   "${CMAKE_CURRENT_LIST_DIR}/thingspeak-arduino/examples/ESP32/ReadFieldSecure/secrets.h"
@@ -59,7 +59,7 @@ target_sources(thingspeak INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/thingspeak-arduino/examples/ArduinoMKR1000/WriteMultipleFields/secrets.h"
 )
 
-target_include_directories(thingspeak INTERFACE
+target_include_directories(pac-thingspeak INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/thingspeak-arduino/src"
 )
 
@@ -67,6 +67,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(thingspeak INTERFACE
+target_link_libraries(pac-thingspeak INTERFACE
     arduino-compat
 )

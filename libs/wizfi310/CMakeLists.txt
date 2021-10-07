@@ -1,6 +1,6 @@
-add_library(wizfi310 INTERFACE)
+add_library(pac-wizfi310 INTERFACE)
 
-target_sources(wizfi310 INTERFACE
+target_sources(pac-wizfi310 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WizFi310_arduino_library/src/WizFi310Client.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WizFi310_arduino_library/src/WizFi310.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WizFi310_arduino_library/src/WizFi310Server.cpp"
@@ -21,7 +21,7 @@ target_sources(wizfi310 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WizFi310_arduino_library/src/utility/backup/WizFi310RingBuffer.h"
 )
 
-target_include_directories(wizfi310 INTERFACE
+target_include_directories(pac-wizfi310 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WizFi310_arduino_library/src"
 )
 
@@ -29,6 +29,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wizfi310 INTERFACE
+target_link_libraries(pac-wizfi310 INTERFACE
     arduino-compat
 )

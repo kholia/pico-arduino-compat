@@ -1,6 +1,6 @@
-add_library(reactivearduino INTERFACE)
+add_library(pac-reactivearduino INTERFACE)
 
-target_sources(reactivearduino INTERFACE
+target_sources(pac-reactivearduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-ReactiveArduino/src/ReactiveArduinoLib.h"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-ReactiveArduino/src/ReactiveArduinoBases.h"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-ReactiveArduino/src/ReactiveArduinoCore.h"
@@ -118,7 +118,7 @@ target_sources(reactivearduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-ReactiveArduino/src/Transformations/TransformationLimit.h"
 )
 
-target_include_directories(reactivearduino INTERFACE
+target_include_directories(pac-reactivearduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino-ReactiveArduino/src"
 )
 
@@ -126,6 +126,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(reactivearduino INTERFACE
+target_link_libraries(pac-reactivearduino INTERFACE
     arduino-compat
 )

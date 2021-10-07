@@ -1,6 +1,6 @@
-add_library(mrm-lid1 INTERFACE)
+add_library(pac-mrm-lid1 INTERFACE)
 
-target_sources(mrm-lid1 INTERFACE
+target_sources(pac-mrm-lid1 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mrm-lid1/src/vl53l0x_api_strings.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/mrm-lid1/src/vl53l0x_i2c_comms.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/mrm-lid1/src/vl53l0x_api_ranging.cpp"
@@ -25,7 +25,7 @@ target_sources(mrm-lid1 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mrm-lid1/src/vl53l0x_device.h"
 )
 
-target_include_directories(mrm-lid1 INTERFACE
+target_include_directories(pac-mrm-lid1 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/mrm-lid1/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mrm-lid1 INTERFACE
+target_link_libraries(pac-mrm-lid1 INTERFACE
     arduino-compat
 )

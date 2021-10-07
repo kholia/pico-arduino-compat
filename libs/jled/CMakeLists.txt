@@ -1,6 +1,6 @@
-add_library(jled INTERFACE)
+add_library(pac-jled INTERFACE)
 
-target_sources(jled INTERFACE
+target_sources(pac-jled INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/jled/test/test_arduino_hal.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/jled/test/test_esp32_mock.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/jled/test/test_mbed_hal.cpp"
@@ -35,7 +35,7 @@ target_sources(jled INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/jled/examples/morse/bitset.h"
 )
 
-target_include_directories(jled INTERFACE
+target_include_directories(pac-jled INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/jled/src"
 )
 
@@ -43,6 +43,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(jled INTERFACE
+target_link_libraries(pac-jled INTERFACE
     arduino-compat
 )

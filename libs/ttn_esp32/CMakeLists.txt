@@ -1,6 +1,6 @@
-add_library(ttn_esp32 INTERFACE)
+add_library(pac-ttn_esp32 INTERFACE)
 
-target_sources(ttn_esp32 INTERFACE
+target_sources(pac-ttn_esp32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TheThingsNetwork_esp32/src/TTN_CayenneLPP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TheThingsNetwork_esp32/src/TTN_BLE_esp32.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TheThingsNetwork_esp32/src/TTN_esp32.cpp"
@@ -86,7 +86,7 @@ target_sources(ttn_esp32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TheThingsNetwork_esp32/src/lmic/lmic/lmic_bandplan_in866.h"
 )
 
-target_include_directories(ttn_esp32 INTERFACE
+target_include_directories(pac-ttn_esp32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TheThingsNetwork_esp32/src"
 )
 
@@ -94,6 +94,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ttn_esp32 INTERFACE
+target_link_libraries(pac-ttn_esp32 INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(irremote INTERFACE)
+add_library(pac-irremote INTERFACE)
 
-target_sources(irremote INTERFACE
+target_sources(pac-irremote INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-IRremote/src/ir_Denon.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-IRremote/src/ir_Lego.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-IRremote/src/ir_NEC.cpp"
@@ -51,7 +51,7 @@ target_sources(irremote INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-IRremote/examples/SimpleReceiver/PinDefinitionsAndMore.h"
 )
 
-target_include_directories(irremote INTERFACE
+target_include_directories(pac-irremote INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino-IRremote/src"
 )
 
@@ -59,6 +59,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(irremote INTERFACE
+target_link_libraries(pac-irremote INTERFACE
     arduino-compat
 )

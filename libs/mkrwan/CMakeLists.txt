@@ -1,6 +1,6 @@
-add_library(mkrwan INTERFACE)
+add_library(pac-mkrwan INTERFACE)
 
-target_sources(mkrwan INTERFACE
+target_sources(pac-mkrwan INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MKRWAN/examples/MKRWANFWUpdate_standalone/stm32.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MKRWAN/examples/MKRWANFWUpdate_standalone/serial_arduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MKRWAN/examples/MKRWANFWUpdate_standalone/dev_table.c"
@@ -13,7 +13,7 @@ target_sources(mkrwan INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MKRWAN/examples/MKRWANFWUpdate_standalone/fw.h"
 )
 
-target_include_directories(mkrwan INTERFACE
+target_include_directories(pac-mkrwan INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MKRWAN/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mkrwan INTERFACE
+target_link_libraries(pac-mkrwan INTERFACE
     arduino-compat
 )

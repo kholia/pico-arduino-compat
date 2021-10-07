@@ -1,6 +1,6 @@
-add_library(espectro32 INTERFACE)
+add_library(pac-espectro32 INTERFACE)
 
-target_sources(espectro32 INTERFACE
+target_sources(pac-espectro32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESPectro32/lib/Network/WiFiManager.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESPectro32/lib/Adafruit_IS31FL3731/Adafruit_IS31FL3731.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESPectro32/lib/Commons/AppSetting.cpp"
@@ -104,7 +104,7 @@ target_sources(espectro32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESPectro32/src/ESPectro32_RGBLED_Animation.h"
 )
 
-target_include_directories(espectro32 INTERFACE
+target_include_directories(pac-espectro32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESPectro32/src"
 )
 
@@ -112,16 +112,16 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(espectro32 INTERFACE
+target_link_libraries(pac-espectro32 INTERFACE
     arduino-compat
-    adafruit-gfx-library
-    official-sd
+    pac-adafruit-gfx-library
+    pac-sd
 )

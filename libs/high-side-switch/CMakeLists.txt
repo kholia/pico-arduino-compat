@@ -1,6 +1,6 @@
-add_library(high-side-switch INTERFACE)
+add_library(pac-high-side-switch INTERFACE)
 
-target_sources(high-side-switch INTERFACE
+target_sources(pac-high-side-switch INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/high-side-switch/test/test_library.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/high-side-switch/test/test_high-side-switch.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/high-side-switch/src/hss-board-arduino.cpp"
@@ -31,7 +31,7 @@ target_sources(high-side-switch INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/high-side-switch/test/fakes/fff.h"
 )
 
-target_include_directories(high-side-switch INTERFACE
+target_include_directories(pac-high-side-switch INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/high-side-switch/src"
 )
 
@@ -39,6 +39,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(high-side-switch INTERFACE
+target_link_libraries(pac-high-side-switch INTERFACE
     arduino-compat
 )

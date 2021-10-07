@@ -1,6 +1,6 @@
-add_library(mirobot INTERFACE)
+add_library(pac-mirobot INTERFACE)
 
-target_sources(mirobot INTERFACE
+target_sources(pac-mirobot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mirobot-arduino/src/Mirobot.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/mirobot-arduino/src/lib/Base64.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/mirobot-arduino/src/lib/ShiftStepper.cpp"
@@ -19,7 +19,7 @@ target_sources(mirobot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mirobot-arduino/examples/firmware-v3/web.h"
 )
 
-target_include_directories(mirobot INTERFACE
+target_include_directories(pac-mirobot INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/mirobot-arduino/src"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mirobot INTERFACE
+target_link_libraries(pac-mirobot INTERFACE
     arduino-compat
 )

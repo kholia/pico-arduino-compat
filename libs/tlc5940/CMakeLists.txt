@@ -1,6 +1,6 @@
-add_library(tlc5940 INTERFACE)
+add_library(pac-tlc5940 INTERFACE)
 
-target_sources(tlc5940 INTERFACE
+target_sources(pac-tlc5940 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Tlc5940/Tlc5940.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Tlc5940/tlc_fades.h"
   "${CMAKE_CURRENT_LIST_DIR}/Tlc5940/Tlc5940.h"
@@ -21,7 +21,7 @@ target_sources(tlc5940 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Tlc5940/examples/BasicAnimations/ani_arduino.h"
 )
 
-target_include_directories(tlc5940 INTERFACE
+target_include_directories(pac-tlc5940 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Tlc5940"
 )
 
@@ -29,6 +29,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tlc5940 INTERFACE
+target_link_libraries(pac-tlc5940 INTERFACE
     arduino-compat
 )

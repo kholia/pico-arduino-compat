@@ -1,6 +1,6 @@
-add_library(ad_sensors INTERFACE)
+add_library(pac-ad_sensors INTERFACE)
 
-target_sources(ad_sensors INTERFACE
+target_sources(pac-ad_sensors INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AD_Sensors/src/AverageSensor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AD_Sensors/src/DigitalSensor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AD_Sensors/src/ConstrainSensor.cpp"
@@ -16,7 +16,7 @@ target_sources(ad_sensors INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AD_Sensors/src/MapSensor.h"
 )
 
-target_include_directories(ad_sensors INTERFACE
+target_include_directories(pac-ad_sensors INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AD_Sensors/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ad_sensors INTERFACE
+target_link_libraries(pac-ad_sensors INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(ssd1306ascii INTERFACE)
+add_library(pac-ssd1306ascii INTERFACE)
 
-target_sources(ssd1306ascii INTERFACE
+target_sources(pac-ssd1306ascii INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SSD1306Ascii/src/SSD1306Ascii.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SSD1306Ascii/doc/MainPage/SSD1306mainpage.h"
   "${CMAKE_CURRENT_LIST_DIR}/SSD1306Ascii/src/SSD1306AsciiAvrI2c.h"
@@ -60,7 +60,7 @@ target_sources(ssd1306ascii INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SSD1306Ascii/src/utility/DigitalOutput.h"
 )
 
-target_include_directories(ssd1306ascii INTERFACE
+target_include_directories(pac-ssd1306ascii INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SSD1306Ascii/src"
 )
 
@@ -68,6 +68,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ssd1306ascii INTERFACE
+target_link_libraries(pac-ssd1306ascii INTERFACE
     arduino-compat
 )

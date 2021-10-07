@@ -1,6 +1,6 @@
-add_library(dbg-trace INTERFACE)
+add_library(pac-dbg-trace INTERFACE)
 
-target_sources(dbg-trace INTERFACE
+target_sources(pac-dbg-trace INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/dbg-trace/DbgTraceContext.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/dbg-trace/DbgPrintFile.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/dbg-trace/DbgTracePort.cpp"
@@ -15,7 +15,7 @@ target_sources(dbg-trace INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/dbg-trace/DbgTraceContext.h"
 )
 
-target_include_directories(dbg-trace INTERFACE
+target_include_directories(pac-dbg-trace INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/dbg-trace"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(dbg-trace INTERFACE
+target_link_libraries(pac-dbg-trace INTERFACE
     arduino-compat
 )

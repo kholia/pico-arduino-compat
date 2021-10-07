@@ -1,6 +1,6 @@
-add_library(pjon INTERFACE)
+add_library(pac-pjon INTERFACE)
 
-target_sources(pjon INTERFACE
+target_sources(pac-pjon INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PJON/src/interfaces/WINX86/Serial/Serial.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PJON/examples/ZEPHYR/local/DualUDP/PingPong/Receiver/src/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PJON/examples/ZEPHYR/local/DualUDP/PingPong/Transmitter/src/main.cpp"
@@ -98,7 +98,7 @@ target_sources(pjon INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PJON/src/interfaces/ARDUINO/PJON_IO.h"
 )
 
-target_include_directories(pjon INTERFACE
+target_include_directories(pac-pjon INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PJON/src"
 )
 
@@ -106,6 +106,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pjon INTERFACE
+target_link_libraries(pac-pjon INTERFACE
     arduino-compat
 )

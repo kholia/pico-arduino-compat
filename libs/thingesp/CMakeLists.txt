@@ -1,6 +1,6 @@
-add_library(thingesp INTERFACE)
+add_library(pac-thingesp INTERFACE)
 
-target_sources(thingesp INTERFACE
+target_sources(pac-thingesp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ThingESP-Arduino-Library/src/ThingESPClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ThingESP-Arduino-Library/src/thingesp/Logger.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ThingESP-Arduino-Library/src/thingesp/RateLimiter.cpp"
@@ -144,7 +144,7 @@ target_sources(thingesp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ThingESP-Arduino-Library/src/PubSubClient/PubSubClient.h"
 )
 
-target_include_directories(thingesp INTERFACE
+target_include_directories(pac-thingesp INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ThingESP-Arduino-Library/src"
 )
 
@@ -152,6 +152,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(thingesp INTERFACE
+target_link_libraries(pac-thingesp INTERFACE
     arduino-compat
 )

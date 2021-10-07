@@ -1,6 +1,6 @@
-add_library(arduinomotorcarrier INTERFACE)
+add_library(pac-arduinomotorcarrier INTERFACE)
 
-target_sources(arduinomotorcarrier INTERFACE
+target_sources(pac-arduinomotorcarrier INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMotorCarrier/extras/D11-Firmware/DCMotor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMotorCarrier/extras/D11-Firmware/Events.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMotorCarrier/extras/D11-Firmware/ServoMotor.cpp"
@@ -66,7 +66,7 @@ target_sources(arduinomotorcarrier INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMotorCarrier/examples/Flasher/fw_mkr.h"
 )
 
-target_include_directories(arduinomotorcarrier INTERFACE
+target_include_directories(pac-arduinomotorcarrier INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoMotorCarrier/src"
 )
 
@@ -74,6 +74,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinomotorcarrier INTERFACE
+target_link_libraries(pac-arduinomotorcarrier INTERFACE
     arduino-compat
 )

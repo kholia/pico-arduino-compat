@@ -1,6 +1,6 @@
-add_library(serialui INTERFACE)
+add_library(pac-serialui INTERFACE)
 
-target_sources(serialui INTERFACE
+target_sources(pac-serialui INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SerialUI/src/ItemTrackedView.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SerialUI/src/SubGroup.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SerialUI/src/DeSerializerJson.cpp"
@@ -166,7 +166,7 @@ target_sources(serialui INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SerialUI/examples/BasicAuth/BasicAuthSettings.h"
 )
 
-target_include_directories(serialui INTERFACE
+target_include_directories(pac-serialui INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SerialUI/src"
 )
 
@@ -174,6 +174,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(serialui INTERFACE
+target_link_libraries(pac-serialui INTERFACE
     arduino-compat
 )

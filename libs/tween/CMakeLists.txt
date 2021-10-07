@@ -1,6 +1,6 @@
-add_library(tween INTERFACE)
+add_library(pac-tween INTERFACE)
 
-target_sources(tween INTERFACE
+target_sources(pac-tween INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Tween/Tween.h"
   "${CMAKE_CURRENT_LIST_DIR}/Tween/Tween/Transition.h"
   "${CMAKE_CURRENT_LIST_DIR}/Tween/Tween/Types.h"
@@ -55,7 +55,7 @@ target_sources(tween INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Tween/Tween/util/ArxSmartPtr/ArxSmartPtr/detail/has_libstdcplusplus.h"
 )
 
-target_include_directories(tween INTERFACE
+target_include_directories(pac-tween INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Tween"
 )
 
@@ -63,6 +63,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tween INTERFACE
+target_link_libraries(pac-tween INTERFACE
     arduino-compat
 )

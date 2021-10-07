@@ -1,6 +1,6 @@
-add_library(uipethernet INTERFACE)
+add_library(pac-uipethernet INTERFACE)
 
-target_sources(uipethernet INTERFACE
+target_sources(pac-uipethernet INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/UIPEthernet/UIPClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/UIPEthernet/UIPServer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/UIPEthernet/Dhcp.cpp"
@@ -49,7 +49,7 @@ target_sources(uipethernet INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/UIPEthernet/mbed/Server.h"
 )
 
-target_include_directories(uipethernet INTERFACE
+target_include_directories(pac-uipethernet INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/UIPEthernet"
 )
 
@@ -57,6 +57,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(uipethernet INTERFACE
+target_link_libraries(pac-uipethernet INTERFACE
     arduino-compat
 )

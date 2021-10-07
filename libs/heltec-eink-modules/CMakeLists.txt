@@ -1,6 +1,6 @@
-add_library(heltec-eink-modules INTERFACE)
+add_library(pac-heltec-eink-modules INTERFACE)
 
-target_sources(heltec-eink-modules INTERFACE
+target_sources(pac-heltec-eink-modules INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/heltec-eink-modules/src/Displays/Heltec_290_V2/hardware.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/heltec-eink-modules/src/Displays/Heltec_290_V2/paging.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/heltec-eink-modules/src/Displays/Heltec_290_V2/graphical.cpp"
@@ -91,7 +91,7 @@ target_sources(heltec-eink-modules INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/heltec-eink-modules/examples/sprites/ball.h"
 )
 
-target_include_directories(heltec-eink-modules INTERFACE
+target_include_directories(pac-heltec-eink-modules INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/heltec-eink-modules/src"
 )
 
@@ -99,6 +99,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(heltec-eink-modules INTERFACE
+target_link_libraries(pac-heltec-eink-modules INTERFACE
     arduino-compat
 )

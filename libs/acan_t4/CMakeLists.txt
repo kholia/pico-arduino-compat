@@ -1,6 +1,6 @@
-add_library(acan_t4 INTERFACE)
+add_library(pac-acan_t4 INTERFACE)
 
-target_sources(acan_t4 INTERFACE
+target_sources(pac-acan_t4 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/acan-t4/src/ACAN_T4.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/acan-t4/src/ACAN_T4FD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/acan-t4/src/ACAN_T4_T4FD_rootCANClock.cpp"
@@ -15,7 +15,7 @@ target_sources(acan_t4 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/acan-t4/src/CANMessage.h"
 )
 
-target_include_directories(acan_t4 INTERFACE
+target_include_directories(pac-acan_t4 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/acan-t4/src"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(acan_t4 INTERFACE
+target_link_libraries(pac-acan_t4 INTERFACE
     arduino-compat
 )

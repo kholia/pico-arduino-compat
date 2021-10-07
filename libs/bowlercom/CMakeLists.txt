@@ -1,6 +1,6 @@
-add_library(bowlercom INTERFACE)
+add_library(pac-bowlercom INTERFACE)
 
-target_sources(bowlercom INTERFACE
+target_sources(pac-bowlercom INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BowlerCom/src/PinFunctions.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BowlerCom/src/EEPROM.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BowlerCom/src/BowlerCom.cpp"
@@ -57,7 +57,7 @@ target_sources(bowlercom INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BowlerCom/src/Platform/include/arch/Arduino/BowlerConfig.h"
 )
 
-target_include_directories(bowlercom INTERFACE
+target_include_directories(pac-bowlercom INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/BowlerCom/src"
 )
 
@@ -65,6 +65,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(bowlercom INTERFACE
+target_link_libraries(pac-bowlercom INTERFACE
     arduino-compat
 )

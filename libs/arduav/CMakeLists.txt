@@ -1,6 +1,6 @@
-add_library(arduav INTERFACE)
+add_library(pac-arduav INTERFACE)
 
-target_sources(arduav INTERFACE
+target_sources(pac-arduav INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArdUAV/src/Shared_Tools.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArdUAV/src/GS_Tools.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArdUAV/src/IFC_Tools.cpp"
@@ -18,7 +18,7 @@ target_sources(arduav INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArdUAV/src/ArdUAV_imumaths.h"
 )
 
-target_include_directories(arduav INTERFACE
+target_include_directories(pac-arduav INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArdUAV/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduav INTERFACE
+target_link_libraries(pac-arduav INTERFACE
     arduino-compat
 )

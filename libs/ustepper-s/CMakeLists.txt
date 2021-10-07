@@ -1,6 +1,6 @@
-add_library(ustepper-s INTERFACE)
+add_library(pac-ustepper-s INTERFACE)
 
-target_sources(ustepper-s INTERFACE
+target_sources(pac-ustepper-s INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/uStepperS/Examples/GYROBalance/TinyMPU6050.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/uStepperS/Examples/SWiFiGUI/gcode.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/uStepperS/src/uStepperServo.cpp"
@@ -16,7 +16,7 @@ target_sources(ustepper-s INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/uStepperS/src/uStepperEncoder.h"
 )
 
-target_include_directories(ustepper-s INTERFACE
+target_include_directories(pac-ustepper-s INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/uStepperS/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ustepper-s INTERFACE
+target_link_libraries(pac-ustepper-s INTERFACE
     arduino-compat
 )

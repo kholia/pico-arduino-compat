@@ -1,6 +1,6 @@
-add_library(liveobjectssdk INTERFACE)
+add_library(pac-liveobjectssdk INTERFACE)
 
-target_sources(liveobjectssdk INTERFACE
+target_sources(pac-liveobjectssdk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LiveObjects_SDK_for_Arduino/src/Adafruit_MQTT.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LiveObjects_SDK_for_Arduino/src/LiveObjectsMKR.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LiveObjects_SDK_for_Arduino/src/LiveObjectsBase.cpp"
@@ -31,7 +31,7 @@ target_sources(liveobjectssdk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LiveObjects_SDK_for_Arduino/examples/3_Parameter_with_callback/arduino_secrets.h"
 )
 
-target_include_directories(liveobjectssdk INTERFACE
+target_include_directories(pac-liveobjectssdk INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/LiveObjects_SDK_for_Arduino/src"
 )
 
@@ -39,6 +39,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(liveobjectssdk INTERFACE
+target_link_libraries(pac-liveobjectssdk INTERFACE
     arduino-compat
 )

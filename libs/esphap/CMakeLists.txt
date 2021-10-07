@@ -1,6 +1,6 @@
-add_library(esphap INTERFACE)
+add_library(pac-esphap INTERFACE)
 
-target_sources(esphap INTERFACE
+target_sources(pac-esphap INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESPHap/mdnsA8266.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESPHap/arduino_homekit_server.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESPHap/homekitintegrationcpp.cpp"
@@ -174,7 +174,7 @@ target_sources(esphap INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESPHap/examples/ESPHAPCamera/EMailSenderKey.h"
 )
 
-target_include_directories(esphap INTERFACE
+target_include_directories(pac-esphap INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESPHap"
 )
 
@@ -182,11 +182,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(esphap INTERFACE
+target_link_libraries(pac-esphap INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

@@ -1,6 +1,6 @@
-add_library(jm_wire INTERFACE)
+add_library(pac-jm_wire INTERFACE)
 
-target_sources(jm_wire INTERFACE
+target_sources(pac-jm_wire INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/jm_Wire/src/jm_Wire.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/jm_Wire/examples/jm_LiquidCrystal_I2C_demo/LCD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/jm_Wire/examples/jm_LiquidCrystal_I2C_demo/jm_LiquidCrystal_I2C.cpp"
@@ -15,7 +15,7 @@ target_sources(jm_wire INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/jm_Wire/examples/jm_LiquidCrystal_I2C_demo/LiquidCrystal_I2C.h"
 )
 
-target_include_directories(jm_wire INTERFACE
+target_include_directories(pac-jm_wire INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/jm_Wire/src"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(jm_wire INTERFACE
+target_link_libraries(pac-jm_wire INTERFACE
     arduino-compat
 )

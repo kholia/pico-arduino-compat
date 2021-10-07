@@ -1,6 +1,6 @@
-add_library(osc INTERFACE)
+add_library(pac-osc INTERFACE)
 
-target_sources(osc INTERFACE
+target_sources(pac-osc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OSC/OSCMessage.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OSC/OSCBundle.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OSC/OSCBoards.cpp"
@@ -21,7 +21,7 @@ target_sources(osc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OSC/test/OSCBundle_test/TestPrint.h"
 )
 
-target_include_directories(osc INTERFACE
+target_include_directories(pac-osc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/OSC"
 )
 
@@ -29,6 +29,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(osc INTERFACE
+target_link_libraries(pac-osc INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(esp32-lite-pack-library INTERFACE)
+add_library(pac-esp32-lite-pack-library INTERFACE)
 
-target_sources(esp32-lite-pack-library INTERFACE
+target_sources(pac-esp32-lite-pack-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP32LitePack/src/M5LiteSound.h"
   "${CMAKE_CURRENT_LIST_DIR}/ESP32LitePack/src/M5LiteEx.h"
   "${CMAKE_CURRENT_LIST_DIR}/ESP32LitePack/src/M5LiteIMU.h"
@@ -23,7 +23,7 @@ target_sources(esp32-lite-pack-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP32LitePack/src/M5LiteMPU6886.h"
 )
 
-target_include_directories(esp32-lite-pack-library INTERFACE
+target_include_directories(pac-esp32-lite-pack-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESP32LitePack/src"
 )
 
@@ -31,11 +31,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(esp32-lite-pack-library INTERFACE
+target_link_libraries(pac-esp32-lite-pack-library INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

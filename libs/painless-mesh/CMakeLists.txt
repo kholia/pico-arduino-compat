@@ -1,6 +1,6 @@
-add_library(painless-mesh INTERFACE)
+add_library(pac-painless-mesh INTERFACE)
 
-target_sources(painless-mesh INTERFACE
+target_sources(pac-painless-mesh INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/painlessMesh/test/catch/catch_logger.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/painlessMesh/test/catch/catch_layout.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/painlessMesh/test/catch/catch_router.cpp"
@@ -48,7 +48,7 @@ target_sources(painless-mesh INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/painlessMesh/examples/namedMesh/namedMesh.h"
 )
 
-target_include_directories(painless-mesh INTERFACE
+target_include_directories(pac-painless-mesh INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/painlessMesh/src"
 )
 
@@ -56,6 +56,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(painless-mesh INTERFACE
+target_link_libraries(pac-painless-mesh INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(ardosc INTERFACE)
+add_library(pac-ardosc INTERFACE)
 
-target_sources(ardosc INTERFACE
+target_sources(pac-ardosc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArdOSC/src/OSCMessage.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArdOSC/src/OSCServer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArdOSC/src/OSCArg.cpp"
@@ -19,7 +19,7 @@ target_sources(ardosc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArdOSC/src/OSCCommon/OSCClient.h"
 )
 
-target_include_directories(ardosc INTERFACE
+target_include_directories(pac-ardosc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArdOSC/src"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ardosc INTERFACE
+target_link_libraries(pac-ardosc INTERFACE
     arduino-compat
 )

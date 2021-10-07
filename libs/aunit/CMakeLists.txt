@@ -1,6 +1,6 @@
-add_library(aunit INTERFACE)
+add_library(pac-aunit INTERFACE)
 
-target_sources(aunit INTERFACE
+target_sources(pac-aunit INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AUnit/src/aunit/TestOnce.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AUnit/src/aunit/FCString.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AUnit/src/aunit/Compare.cpp"
@@ -39,7 +39,7 @@ target_sources(aunit INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AUnit/tests/AUnitMetaTest/AUnitMetaTest.h"
 )
 
-target_include_directories(aunit INTERFACE
+target_include_directories(pac-aunit INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AUnit/src"
 )
 
@@ -47,6 +47,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(aunit INTERFACE
+target_link_libraries(pac-aunit INTERFACE
     arduino-compat
 )

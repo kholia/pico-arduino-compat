@@ -1,6 +1,6 @@
-add_library(arduinographics INTERFACE)
+add_library(pac-arduinographics INTERFACE)
 
-target_sources(arduinographics INTERFACE
+target_sources(pac-arduinographics INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoGraphics/src/ArduinoGraphics.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoGraphics/src/Image.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoGraphics/src/Font_4x6.c"
@@ -10,7 +10,7 @@ target_sources(arduinographics INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoGraphics/src/ArduinoGraphics.h"
 )
 
-target_include_directories(arduinographics INTERFACE
+target_include_directories(pac-arduinographics INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoGraphics/src"
 )
 
@@ -18,6 +18,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinographics INTERFACE
+target_link_libraries(pac-arduinographics INTERFACE
     arduino-compat
 )

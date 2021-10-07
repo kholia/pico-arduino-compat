@@ -1,6 +1,6 @@
-add_library(sid6581 INTERFACE)
+add_library(pac-sid6581 INTERFACE)
 
-target_sources(sid6581 INTERFACE
+target_sources(pac-sid6581 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SID6581/src/SID6581.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SID6581/src/modules/MOS/MOS_CPU_Controls.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SID6581/src/modules/Player/SID_Player.cpp"
@@ -18,7 +18,7 @@ target_sources(sid6581 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SID6581/src/modules/HVSC/SID_HVSC_Indexer.h"
 )
 
-target_include_directories(sid6581 INTERFACE
+target_include_directories(pac-sid6581 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SID6581/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sid6581 INTERFACE
+target_link_libraries(pac-sid6581 INTERFACE
     arduino-compat
 )

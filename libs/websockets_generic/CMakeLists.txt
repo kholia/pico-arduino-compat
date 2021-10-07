@@ -1,6 +1,6 @@
-add_library(websockets_generic INTERFACE)
+add_library(pac-websockets_generic INTERFACE)
 
-target_sources(websockets_generic INTERFACE
+target_sources(pac-websockets_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WebSockets_Generic/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WebSockets_Generic/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WebSockets_Generic/LibraryPatches/UIPEthernet-2.0.9/UIPEthernet.cpp"
@@ -154,7 +154,7 @@ target_sources(websockets_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WebSockets_Generic/examples/W5500/SAMD_Blynk_W5500_Alexa/Credentials.h"
 )
 
-target_include_directories(websockets_generic INTERFACE
+target_include_directories(pac-websockets_generic INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WebSockets_Generic/src"
 )
 
@@ -162,6 +162,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(websockets_generic INTERFACE
+target_link_libraries(pac-websockets_generic INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(stm32_isr_servo INTERFACE)
+add_library(pac-stm32_isr_servo INTERFACE)
 
-target_sources(stm32_isr_servo INTERFACE
+target_sources(pac-stm32_isr_servo INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/STM32_ISR_Servo/src/STM32_ISR_Servo.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/STM32_ISR_Servo/Packages_Patches/STM32/hardware/stm32/1.9.0/variants/NUCLEO_L053R8/variant.h"
   "${CMAKE_CURRENT_LIST_DIR}/STM32_ISR_Servo/Packages_Patches/STM32/hardware/stm32/1.9.0/variants/NUCLEO_F767ZI/variant.h"
@@ -19,7 +19,7 @@ target_sources(stm32_isr_servo INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/STM32_ISR_Servo/src/STM32_ISR_Servo_Debug.h"
 )
 
-target_include_directories(stm32_isr_servo INTERFACE
+target_include_directories(pac-stm32_isr_servo INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/STM32_ISR_Servo/src"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(stm32_isr_servo INTERFACE
+target_link_libraries(pac-stm32_isr_servo INTERFACE
     arduino-compat
 )

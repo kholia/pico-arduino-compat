@@ -1,6 +1,6 @@
-add_library(simpletaskmanager INTERFACE)
+add_library(pac-simpletaskmanager INTERFACE)
 
-target_sources(simpletaskmanager INTERFACE
+target_sources(pac-simpletaskmanager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SimpleTaskManager/src/SimpleTaskManager.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SimpleTaskManager/src/Task.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SimpleTaskManager/examples/TaskCache/CacheDataTask.cpp"
@@ -26,7 +26,7 @@ target_sources(simpletaskmanager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SimpleTaskManager/examples/MultipleTasks/SerialLoopTask.h"
 )
 
-target_include_directories(simpletaskmanager INTERFACE
+target_include_directories(pac-simpletaskmanager INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SimpleTaskManager/src"
 )
 
@@ -34,6 +34,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(simpletaskmanager INTERFACE
+target_link_libraries(pac-simpletaskmanager INTERFACE
     arduino-compat
 )

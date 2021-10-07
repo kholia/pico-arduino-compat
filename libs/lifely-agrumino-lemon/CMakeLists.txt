@@ -1,6 +1,6 @@
-add_library(lifely-agrumino-lemon INTERFACE)
+add_library(pac-lifely-agrumino-lemon INTERFACE)
 
-target_sources(lifely-agrumino-lemon INTERFACE
+target_sources(pac-lifely-agrumino-lemon INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/agruminoLemon-libraries/Agrumino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/agruminoLemon-libraries/libraries/MCP9800/MCP9800.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/agruminoLemon-libraries/libraries/PCA9536/PCA9536.cpp"
@@ -21,7 +21,7 @@ target_sources(lifely-agrumino-lemon INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/agruminoLemon-libraries/examples/Diagnostics/AgruminoLemonTesting/logo.h"
 )
 
-target_include_directories(lifely-agrumino-lemon INTERFACE
+target_include_directories(pac-lifely-agrumino-lemon INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/agruminoLemon-libraries"
 )
 
@@ -29,6 +29,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(lifely-agrumino-lemon INTERFACE
+target_link_libraries(pac-lifely-agrumino-lemon INTERFACE
     arduino-compat
 )

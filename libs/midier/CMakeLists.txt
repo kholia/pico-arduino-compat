@@ -1,6 +1,6 @@
-add_library(midier INTERFACE)
+add_library(pac-midier INTERFACE)
 
-target_sources(midier INTERFACE
+target_sources(pac-midier INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Midier/src/midi/midi.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Midier/src/layer/layer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Midier/src/rhythm/rhythm.cpp"
@@ -33,7 +33,7 @@ target_sources(midier INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Midier/src/mode/mode.h"
 )
 
-target_include_directories(midier INTERFACE
+target_include_directories(pac-midier INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Midier/src"
 )
 
@@ -41,6 +41,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(midier INTERFACE
+target_link_libraries(pac-midier INTERFACE
     arduino-compat
 )

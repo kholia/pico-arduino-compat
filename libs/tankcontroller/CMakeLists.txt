@@ -1,6 +1,6 @@
-add_library(tankcontroller INTERFACE)
+add_library(pac-tankcontroller INTERFACE)
 
-target_sources(tankcontroller INTERFACE
+target_sources(pac-tankcontroller INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TankController/GUI/libTC.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TankController/test/MenuTest.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TankController/test/EnablePIDTest.cpp"
@@ -137,7 +137,7 @@ target_sources(tankcontroller INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TankController/src/UIState/NumberCollectorState.h"
 )
 
-target_include_directories(tankcontroller INTERFACE
+target_include_directories(pac-tankcontroller INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TankController/src"
 )
 
@@ -145,11 +145,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-liquid-crystal)
-    add_subdirectory(../../official-libs/liquid-crystal build_official-liquid-crystal)
+if (NOT TARGET pac-liquidcrystal)
+    add_subdirectory(../../libs/liquidcrystal build_pac-liquidcrystal)
 endif()
 
-target_link_libraries(tankcontroller INTERFACE
+target_link_libraries(pac-tankcontroller INTERFACE
     arduino-compat
-    official-liquid-crystal
+    pac-liquidcrystal
 )

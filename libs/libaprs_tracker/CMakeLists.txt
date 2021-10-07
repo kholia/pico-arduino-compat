@@ -1,6 +1,6 @@
-add_library(libaprs_tracker INTERFACE)
+add_library(pac-libaprs_tracker INTERFACE)
 
-target_sources(libaprs_tracker INTERFACE
+target_sources(pac-libaprs_tracker INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LibAPRS_Tracker/src/AX25.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LibAPRS_Tracker/src/LibAPRS_Tracker.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LibAPRS_Tracker/src/AFSK.cpp"
@@ -15,7 +15,7 @@ target_sources(libaprs_tracker INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LibAPRS_Tracker/src/HDLC.h"
 )
 
-target_include_directories(libaprs_tracker INTERFACE
+target_include_directories(pac-libaprs_tracker INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/LibAPRS_Tracker/src"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(libaprs_tracker INTERFACE
+target_link_libraries(pac-libaprs_tracker INTERFACE
     arduino-compat
 )

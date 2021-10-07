@@ -1,6 +1,6 @@
-add_library(bootstrapper INTERFACE)
+add_library(pac-bootstrapper INTERFACE)
 
-target_sources(bootstrapper INTERFACE
+target_sources(pac-bootstrapper INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino_bootstrapper/src/BootstrapManager.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino_bootstrapper/src/WifiManager.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino_bootstrapper/src/Helpers.cpp"
@@ -18,7 +18,7 @@ target_sources(bootstrapper INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino_bootstrapper/examples/ChangeName.h"
 )
 
-target_include_directories(bootstrapper INTERFACE
+target_include_directories(pac-bootstrapper INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino_bootstrapper/src"
 )
 
@@ -26,11 +26,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(bootstrapper INTERFACE
+target_link_libraries(pac-bootstrapper INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

@@ -1,6 +1,6 @@
-add_library(aeslib INTERFACE)
+add_library(pac-aeslib INTERFACE)
 
-target_sources(aeslib INTERFACE
+target_sources(pac-aeslib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/thinx-aes-lib/test/020-TestCase.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/thinx-aes-lib/src/AES.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/thinx-aes-lib/src/AESLib.cpp"
@@ -36,7 +36,7 @@ target_sources(aeslib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/thinx-aes-lib/examples/platformio/aes-test/lib/AESLib/src/AES.h"
 )
 
-target_include_directories(aeslib INTERFACE
+target_include_directories(pac-aeslib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/thinx-aes-lib/src"
 )
 
@@ -44,6 +44,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(aeslib INTERFACE
+target_link_libraries(pac-aeslib INTERFACE
     arduino-compat
 )

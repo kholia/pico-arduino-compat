@@ -1,6 +1,6 @@
-add_library(asyncudp_stm32 INTERFACE)
+add_library(pac-asyncudp_stm32 INTERFACE)
 
-target_sources(asyncudp_stm32 INTERFACE
+target_sources(pac-asyncudp_stm32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AsyncUDP_STM32/Packages_Patches/STM32/hardware/stm32/1.9.0/variants/NUCLEO_L053R8/variant.h"
   "${CMAKE_CURRENT_LIST_DIR}/AsyncUDP_STM32/Packages_Patches/STM32/hardware/stm32/1.9.0/variants/NUCLEO_F767ZI/variant.h"
   "${CMAKE_CURRENT_LIST_DIR}/AsyncUDP_STM32/Packages_Patches/STM32/hardware/stm32/1.9.0/system/STM32F7xx/stm32f7xx_hal_conf_default.h"
@@ -27,7 +27,7 @@ target_sources(asyncudp_stm32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AsyncUDP_STM32/examples/AsyncUDPClient_LAN8720/hal_conf_extra.h"
 )
 
-target_include_directories(asyncudp_stm32 INTERFACE
+target_include_directories(pac-asyncudp_stm32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AsyncUDP_STM32/src"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(asyncudp_stm32 INTERFACE
+target_link_libraries(pac-asyncudp_stm32 INTERFACE
     arduino-compat
 )

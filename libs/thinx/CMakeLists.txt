@@ -1,6 +1,6 @@
-add_library(thinx INTERFACE)
+add_library(pac-thinx INTERFACE)
 
-target_sources(thinx INTERFACE
+target_sources(pac-thinx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/thinx-lib-esp8266-arduinoc/lib/WiFiManager/WiFiManager.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/thinx-lib-esp8266-arduinoc/lib/ArduinoJSON/third-party/catch/catch.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/thinx-lib-esp8266-arduinoc/lib/ArduinoJSON/test/JsonVariant/copy.cpp"
@@ -186,7 +186,7 @@ target_sources(thinx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/thinx-lib-esp8266-arduinoc/src/sha256.h"
 )
 
-target_include_directories(thinx INTERFACE
+target_include_directories(pac-thinx INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/thinx-lib-esp8266-arduinoc/src"
 )
 
@@ -194,6 +194,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(thinx INTERFACE
+target_link_libraries(pac-thinx INTERFACE
     arduino-compat
 )

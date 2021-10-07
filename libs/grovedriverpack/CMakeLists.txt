@@ -1,6 +1,6 @@
-add_library(grovedriverpack INTERFACE)
+add_library(pac-grovedriverpack INTERFACE)
 
-target_sources(grovedriverpack INTERFACE
+target_sources(pac-grovedriverpack INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GroveDriverPack/src/HAL/HalI2CDevice.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GroveDriverPack/src/HAL/Mbed/HalI2C.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GroveDriverPack/src/HAL/Mbed/HalUART.cpp"
@@ -108,7 +108,7 @@ target_sources(grovedriverpack INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GroveDriverPack/src/Extension/WioExtRTC.h"
 )
 
-target_include_directories(grovedriverpack INTERFACE
+target_include_directories(pac-grovedriverpack INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/GroveDriverPack/src"
 )
 
@@ -116,6 +116,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(grovedriverpack INTERFACE
+target_link_libraries(pac-grovedriverpack INTERFACE
     arduino-compat
 )

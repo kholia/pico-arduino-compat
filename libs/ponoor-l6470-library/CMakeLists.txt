@@ -1,6 +1,6 @@
-add_library(ponoor-l6470-library INTERFACE)
+add_library(pac-ponoor-l6470-library INTERFACE)
 
-target_sources(ponoor-l6470-library INTERFACE
+target_sources(pac-ponoor-l6470-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Ponoor_L6470_Library/src/Ponoor_L6470Commands.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Ponoor_L6470_Library/src/Ponoor_L6470Config.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Ponoor_L6470_Library/src/Ponoor_L6470Library.cpp"
@@ -11,7 +11,7 @@ target_sources(ponoor-l6470-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Ponoor_L6470_Library/examples/SparkFunLibraryTest/SparkFunnotes.h"
 )
 
-target_include_directories(ponoor-l6470-library INTERFACE
+target_include_directories(pac-ponoor-l6470-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Ponoor_L6470_Library/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ponoor-l6470-library INTERFACE
+target_link_libraries(pac-ponoor-l6470-library INTERFACE
     arduino-compat
 )

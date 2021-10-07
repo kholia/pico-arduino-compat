@@ -1,6 +1,6 @@
-add_library(esp8266-weather-station INTERFACE)
+add_library(pac-esp8266-weather-station INTERFACE)
 
-target_sources(esp8266-weather-station INTERFACE
+target_sources(pac-esp8266-weather-station INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/esp8266-weather-station/src/MetOfficeClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/esp8266-weather-station/src/AerisObservations.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/esp8266-weather-station/src/WorldClockClient.cpp"
@@ -38,7 +38,7 @@ target_sources(esp8266-weather-station INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/esp8266-weather-station/examples/WorldClockDemo/icons.h"
 )
 
-target_include_directories(esp8266-weather-station INTERFACE
+target_include_directories(pac-esp8266-weather-station INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/esp8266-weather-station/src"
 )
 
@@ -46,6 +46,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(esp8266-weather-station INTERFACE
+target_link_libraries(pac-esp8266-weather-station INTERFACE
     arduino-compat
 )

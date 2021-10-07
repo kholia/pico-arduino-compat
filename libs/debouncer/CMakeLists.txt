@@ -1,6 +1,6 @@
-add_library(debouncer INTERFACE)
+add_library(pac-debouncer INTERFACE)
 
-target_sources(debouncer INTERFACE
+target_sources(pac-debouncer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Debouncer/Debouncer.h"
   "${CMAKE_CURRENT_LIST_DIR}/Debouncer/Debouncer/DebouncerImpl.h"
   "${CMAKE_CURRENT_LIST_DIR}/Debouncer/Debouncer/util/ArxTypeTraits/ArxTypeTraits.h"
@@ -19,7 +19,7 @@ target_sources(debouncer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Debouncer/Debouncer/util/ArxContainer/ArxContainer/has_libstdcplusplus.h"
 )
 
-target_include_directories(debouncer INTERFACE
+target_include_directories(pac-debouncer INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Debouncer"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(debouncer INTERFACE
+target_link_libraries(pac-debouncer INTERFACE
     arduino-compat
 )

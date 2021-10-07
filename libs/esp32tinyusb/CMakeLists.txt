@@ -1,6 +1,6 @@
-add_library(esp32tinyusb INTERFACE)
+add_library(pac-esp32tinyusb INTERFACE)
 
-target_sources(esp32tinyusb INTERFACE
+target_sources(pac-esp32tinyusb INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EspTinyUSB/src/usb_descriptors.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EspTinyUSB/src/esptinyusb.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EspTinyUSB/src/device/midi/midiusb.cpp"
@@ -51,7 +51,7 @@ target_sources(esp32tinyusb INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EspTinyUSB/examples/host/remote_pendrive/index_html.h"
 )
 
-target_include_directories(esp32tinyusb INTERFACE
+target_include_directories(pac-esp32tinyusb INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EspTinyUSB/src"
 )
 
@@ -59,11 +59,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(esp32tinyusb INTERFACE
+target_link_libraries(pac-esp32tinyusb INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

@@ -1,6 +1,6 @@
-add_library(tmc2130stepper INTERFACE)
+add_library(pac-tmc2130stepper INTERFACE)
 
-target_sources(tmc2130stepper INTERFACE
+target_sources(pac-tmc2130stepper INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TMC2130Stepper/src/source/TMC2130Stepper_GCONF.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TMC2130Stepper/src/source/TMC2130Stepper_CHOPCONF.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TMC2130Stepper/src/source/SW_SPI.cpp"
@@ -16,7 +16,7 @@ target_sources(tmc2130stepper INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TMC2130Stepper/src/source/TMC2130Stepper_MACROS.h"
 )
 
-target_include_directories(tmc2130stepper INTERFACE
+target_include_directories(pac-tmc2130stepper INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TMC2130Stepper/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tmc2130stepper INTERFACE
+target_link_libraries(pac-tmc2130stepper INTERFACE
     arduino-compat
 )

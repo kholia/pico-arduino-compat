@@ -1,6 +1,6 @@
-add_library(m5stack-sd-updater INTERFACE)
+add_library(pac-m5stack-sd-updater INTERFACE)
 
-target_sources(m5stack-sd-updater INTERFACE
+target_sources(pac-m5stack-sd-updater INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5Stack-SD-Updater/src/M5StackUpdater.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5Stack-SD-Updater/examples/M5Stack-SD-Menu/SAM.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5Stack-SD-Updater/src/M5StackUpdater.h"
@@ -26,7 +26,7 @@ target_sources(m5stack-sd-updater INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5Stack-SD-Updater/examples/LGFX-SDLoader-Snippet/M5Stack_Buttons.h"
 )
 
-target_include_directories(m5stack-sd-updater INTERFACE
+target_include_directories(pac-m5stack-sd-updater INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/M5Stack-SD-Updater/src"
 )
 
@@ -34,11 +34,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(m5stack-sd-updater INTERFACE
+target_link_libraries(pac-m5stack-sd-updater INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

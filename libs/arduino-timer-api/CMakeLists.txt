@@ -1,6 +1,6 @@
-add_library(arduino-timer-api INTERFACE)
+add_library(pac-arduino-timer-api INTERFACE)
 
-target_sources(arduino-timer-api INTERFACE
+target_sources(pac-arduino-timer-api INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-timer-api/src/avr/timer_setup.c"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-timer-api/src/avr/timer_freq.c"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-timer-api/src/pic32/timer_setup.c"
@@ -11,7 +11,7 @@ target_sources(arduino-timer-api INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-timer-api/src/timer-api.h"
 )
 
-target_include_directories(arduino-timer-api INTERFACE
+target_include_directories(pac-arduino-timer-api INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-timer-api/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduino-timer-api INTERFACE
+target_link_libraries(pac-arduino-timer-api INTERFACE
     arduino-compat
 )

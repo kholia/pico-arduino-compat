@@ -1,6 +1,6 @@
-add_library(vscp INTERFACE)
+add_library(pac-vscp INTERFACE)
 
-target_sources(vscp INTERFACE
+target_sources(pac-vscp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/vscp-arduino/src/VSCP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/vscp-arduino/src/framework/user/vscp_portable.c"
   "${CMAKE_CURRENT_LIST_DIR}/vscp-arduino/src/framework/user/vscp_tp_adapter.c"
@@ -119,7 +119,7 @@ target_sources(vscp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/vscp-arduino/src/framework/core/vscp_class_l1_l2.h"
 )
 
-target_include_directories(vscp INTERFACE
+target_include_directories(pac-vscp INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/vscp-arduino/src"
 )
 
@@ -127,6 +127,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(vscp INTERFACE
+target_link_libraries(pac-vscp INTERFACE
     arduino-compat
 )

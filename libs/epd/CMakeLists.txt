@@ -1,6 +1,6 @@
-add_library(epd INTERFACE)
+add_library(pac-epd INTERFACE)
 
-target_sources(epd INTERFACE
+target_sources(pac-epd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EPD/src/EPDPaint.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EPD/src/EPD1in54B.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EPD/src/EPDIF.cpp"
@@ -25,7 +25,7 @@ target_sources(epd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EPD/examples/EPD1in54CShowImage/imagedata.h"
 )
 
-target_include_directories(epd INTERFACE
+target_include_directories(pac-epd INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EPD/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(epd INTERFACE
+target_link_libraries(pac-epd INTERFACE
     arduino-compat
 )

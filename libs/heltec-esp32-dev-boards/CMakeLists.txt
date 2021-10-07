@@ -1,6 +1,6 @@
-add_library(heltec-esp32-dev-boards INTERFACE)
+add_library(pac-heltec-esp32-dev-boards INTERFACE)
 
-target_sources(heltec-esp32-dev-boards INTERFACE
+target_sources(pac-heltec-esp32-dev-boards INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Heltec_ESP32/src/BMP180.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Heltec_ESP32/src/heltec.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Heltec_ESP32/src/lora/LoRa.cpp"
@@ -23,7 +23,7 @@ target_sources(heltec-esp32-dev-boards INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Heltec_ESP32/examples/LoRa/OLED_LoRa_Receiver/images.h"
 )
 
-target_include_directories(heltec-esp32-dev-boards INTERFACE
+target_include_directories(pac-heltec-esp32-dev-boards INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Heltec_ESP32/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(heltec-esp32-dev-boards INTERFACE
+target_link_libraries(pac-heltec-esp32-dev-boards INTERFACE
     arduino-compat
 )

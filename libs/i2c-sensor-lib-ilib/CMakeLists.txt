@@ -1,6 +1,6 @@
-add_library(i2c-sensor-lib-ilib INTERFACE)
+add_library(pac-i2c-sensor-lib-ilib INTERFACE)
 
-target_sources(i2c-sensor-lib-ilib INTERFACE
+target_sources(pac-i2c-sensor-lib-ilib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/iLib/src/i2c.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/iLib/src/i2c_MPL3115A2.h"
   "${CMAKE_CURRENT_LIST_DIR}/iLib/src/i2c_SI7021.h"
@@ -27,7 +27,7 @@ target_sources(i2c-sensor-lib-ilib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/iLib/src/atmel_hdlc.h"
 )
 
-target_include_directories(i2c-sensor-lib-ilib INTERFACE
+target_include_directories(pac-i2c-sensor-lib-ilib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/iLib/src"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(i2c-sensor-lib-ilib INTERFACE
+target_link_libraries(pac-i2c-sensor-lib-ilib INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(gadgetron-libraries INTERFACE)
+add_library(pac-gadgetron-libraries INTERFACE)
 
-target_sources(gadgetron-libraries INTERFACE
+target_sources(pac-gadgetron-libraries INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/gadgetron-software-libraries/utility/DistanceSensor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/gadgetron-software-libraries/utility/ServoMotor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/gadgetron-software-libraries/utility/LEDArray.cpp"
@@ -32,7 +32,7 @@ target_sources(gadgetron-libraries INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/gadgetron-software-libraries/utility/Motor.h"
 )
 
-target_include_directories(gadgetron-libraries INTERFACE
+target_include_directories(pac-gadgetron-libraries INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/gadgetron-software-libraries"
 )
 
@@ -40,11 +40,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(gadgetron-libraries INTERFACE
+target_link_libraries(pac-gadgetron-libraries INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

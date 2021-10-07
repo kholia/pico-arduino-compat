@@ -1,6 +1,6 @@
-add_library(optigatruste INTERFACE)
+add_library(pac-optigatruste INTERFACE)
 
-target_sources(optigatruste INTERFACE
+target_sources(pac-optigatruste INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OPTIGA-Trust-E-Security-Controller/src/OPTIGATrustE.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OPTIGA-Trust-E-Security-Controller/src/util/WireConnector/WireConnector.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OPTIGA-Trust-E-Security-Controller/src/util/ifx_i2c/ifx_i2c_data_link_layer.c"
@@ -16,7 +16,7 @@ target_sources(optigatruste INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OPTIGA-Trust-E-Security-Controller/src/util/WireConnector/WireConnector.h"
 )
 
-target_include_directories(optigatruste INTERFACE
+target_include_directories(pac-optigatruste INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/OPTIGA-Trust-E-Security-Controller/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(optigatruste INTERFACE
+target_link_libraries(pac-optigatruste INTERFACE
     arduino-compat
 )

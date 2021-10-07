@@ -1,6 +1,6 @@
-add_library(adafruit-nrf8001 INTERFACE)
+add_library(pac-adafruit-nrf8001 INTERFACE)
 
-target_sources(adafruit-nrf8001 INTERFACE
+target_sources(pac-adafruit-nrf8001 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_nRF8001/Adafruit_BLE_UART.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_nRF8001/examples/nrf8001_controller/packetParser.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_nRF8001/utility/acilib.cpp"
@@ -26,7 +26,7 @@ target_sources(adafruit-nrf8001 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_nRF8001/utility/hal/hal_aci_tl.h"
 )
 
-target_include_directories(adafruit-nrf8001 INTERFACE
+target_include_directories(pac-adafruit-nrf8001 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_nRF8001"
 )
 
@@ -34,6 +34,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(adafruit-nrf8001 INTERFACE
+target_link_libraries(pac-adafruit-nrf8001 INTERFACE
     arduino-compat
 )

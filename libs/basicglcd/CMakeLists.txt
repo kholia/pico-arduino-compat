@@ -1,12 +1,12 @@
-add_library(basicglcd INTERFACE)
+add_library(pac-basicglcd INTERFACE)
 
-target_sources(basicglcd INTERFACE
+target_sources(pac-basicglcd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GLCD_QY_12864BG/src/basicGLCD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GLCD_QY_12864BG/src/charList.h"
   "${CMAKE_CURRENT_LIST_DIR}/GLCD_QY_12864BG/src/basicGLCD.h"
 )
 
-target_include_directories(basicglcd INTERFACE
+target_include_directories(pac-basicglcd INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/GLCD_QY_12864BG/src"
 )
 
@@ -14,6 +14,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(basicglcd INTERFACE
+target_link_libraries(pac-basicglcd INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(antplus-arduino INTERFACE)
+add_library(pac-antplus-arduino INTERFACE)
 
-target_sources(antplus-arduino INTERFACE
+target_sources(pac-antplus-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/antplus-arduino/test/heart-rate-display/Test_HeartRateDisplayDefaultDataPage.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/antplus-arduino/test/basedatapage/Test_BaseDataPageMsg.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/antplus-arduino/test/basedatapage/Test_BaseDataPage.cpp"
@@ -241,7 +241,7 @@ target_sources(antplus-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/antplus-arduino/src/BaseClasses/ANTPLUS_BaseProfile.h"
 )
 
-target_include_directories(antplus-arduino INTERFACE
+target_include_directories(pac-antplus-arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/antplus-arduino/src"
 )
 
@@ -249,6 +249,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(antplus-arduino INTERFACE
+target_link_libraries(pac-antplus-arduino INTERFACE
     arduino-compat
 )

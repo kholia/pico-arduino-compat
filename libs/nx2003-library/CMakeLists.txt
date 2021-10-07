@@ -1,6 +1,6 @@
-add_library(nx2003-library INTERFACE)
+add_library(pac-nx2003-library INTERFACE)
 
-target_sources(nx2003-library INTERFACE
+target_sources(pac-nx2003-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/nx2003/src/NX2003SPI.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/nx2003/src/NX2003Thermistor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/nx2003/src/NX2003BTN.cpp"
@@ -14,7 +14,7 @@ target_sources(nx2003-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/nx2003/src/NX2003BTN.h"
 )
 
-target_include_directories(nx2003-library INTERFACE
+target_include_directories(pac-nx2003-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/nx2003/src"
 )
 
@@ -22,11 +22,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(nx2003-library INTERFACE
+target_link_libraries(pac-nx2003-library INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

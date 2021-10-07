@@ -1,6 +1,6 @@
-add_library(dynamixel2arduino INTERFACE)
+add_library(pac-dynamixel2arduino INTERFACE)
 
-target_sources(dynamixel2arduino INTERFACE
+target_sources(pac-dynamixel2arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Dynamixel2Arduino/src/actuator.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Dynamixel2Arduino/src/Dynamixel2Arduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Dynamixel2Arduino/src/utility/master.cpp"
@@ -16,7 +16,7 @@ target_sources(dynamixel2arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Dynamixel2Arduino/src/utility/slave.h"
 )
 
-target_include_directories(dynamixel2arduino INTERFACE
+target_include_directories(pac-dynamixel2arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Dynamixel2Arduino/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(dynamixel2arduino INTERFACE
+target_link_libraries(pac-dynamixel2arduino INTERFACE
     arduino-compat
 )

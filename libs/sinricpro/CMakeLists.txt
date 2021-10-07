@@ -1,6 +1,6 @@
-add_library(sinricpro INTERFACE)
+add_library(pac-sinricpro INTERFACE)
 
-target_sources(sinricpro INTERFACE
+target_sources(pac-sinricpro INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/esp8266-esp32-sdk/doc-examples/callbacks.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/esp8266-esp32-sdk/src/SinricProSignature.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/esp8266-esp32-sdk/SinricPro.h"
@@ -68,7 +68,7 @@ target_sources(sinricpro INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/esp8266-esp32-sdk/examples/Camera/select_pins.h"
 )
 
-target_include_directories(sinricpro INTERFACE
+target_include_directories(pac-sinricpro INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/esp8266-esp32-sdk/src"
 )
 
@@ -76,6 +76,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sinricpro INTERFACE
+target_link_libraries(pac-sinricpro INTERFACE
     arduino-compat
 )

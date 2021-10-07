@@ -1,6 +1,6 @@
-add_library(esp8266-mqtt-mesh INTERFACE)
+add_library(pac-esp8266-mqtt-mesh INTERFACE)
 
-target_sources(esp8266-mqtt-mesh INTERFACE
+target_sources(pac-esp8266-mqtt-mesh INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP8266MQTTMesh/src/ESP8266MQTTMesh.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP8266MQTTMesh/src/Base64.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP8266MQTTMesh/examples/ESP8266MeshIRRemote/lib/IRremoteESP8266/IRremoteESP8266.cpp"
@@ -15,7 +15,7 @@ target_sources(esp8266-mqtt-mesh INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP8266MQTTMesh/examples/ESP8266MeshHelloWorld/src/ssl_cert.h"
 )
 
-target_include_directories(esp8266-mqtt-mesh INTERFACE
+target_include_directories(pac-esp8266-mqtt-mesh INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESP8266MQTTMesh/src"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(esp8266-mqtt-mesh INTERFACE
+target_link_libraries(pac-esp8266-mqtt-mesh INTERFACE
     arduino-compat
 )

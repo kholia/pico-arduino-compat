@@ -1,6 +1,6 @@
-add_library(frequencydetector INTERFACE)
+add_library(pac-frequencydetector INTERFACE)
 
-target_sources(frequencydetector INTERFACE
+target_sources(pac-frequencydetector INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-FrequencyDetector/src/MillisUtils.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-FrequencyDetector/src/FrequencyDetector.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-FrequencyDetector/examples/WhistleSwitch/ShowInfo.cpp"
@@ -17,7 +17,7 @@ target_sources(frequencydetector INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-FrequencyDetector/examples/SimpleFrequencyDetector/AVRUtils.h"
 )
 
-target_include_directories(frequencydetector INTERFACE
+target_include_directories(pac-frequencydetector INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino-FrequencyDetector/src"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(frequencydetector INTERFACE
+target_link_libraries(pac-frequencydetector INTERFACE
     arduino-compat
 )

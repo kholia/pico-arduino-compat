@@ -1,6 +1,6 @@
-add_library(sparkfun-hyperdisplay INTERFACE)
+add_library(pac-sparkfun-hyperdisplay INTERFACE)
 
-target_sources(sparkfun-hyperdisplay INTERFACE
+target_sources(pac-sparkfun-hyperdisplay INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_HyperDisplay/src/hyperdisplay.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_HyperDisplay/examples/Example1_simpleBareNecessities/bareNecessities.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_HyperDisplay/examples/Example3_FontHandling/fontDriver.cpp"
@@ -15,7 +15,7 @@ target_sources(sparkfun-hyperdisplay INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_HyperDisplay/templates/hyperdisplay_custom_conf.h"
 )
 
-target_include_directories(sparkfun-hyperdisplay INTERFACE
+target_include_directories(pac-sparkfun-hyperdisplay INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SparkFun_HyperDisplay/src"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sparkfun-hyperdisplay INTERFACE
+target_link_libraries(pac-sparkfun-hyperdisplay INTERFACE
     arduino-compat
 )

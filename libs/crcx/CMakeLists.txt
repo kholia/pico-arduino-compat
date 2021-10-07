@@ -1,6 +1,6 @@
-add_library(crcx INTERFACE)
+add_library(pac-crcx INTERFACE)
 
-target_sources(crcx INTERFACE
+target_sources(pac-crcx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CRCx/examples/cpp/continuous.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/CRCx/examples/cpp/one_time.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/CRCx/CRCx.h"
@@ -12,7 +12,7 @@ target_sources(crcx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CRCx/libs/CRCpp/CRC.h"
 )
 
-target_include_directories(crcx INTERFACE
+target_include_directories(pac-crcx INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/CRCx"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(crcx INTERFACE
+target_link_libraries(pac-crcx INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(nrf52_isr_servo INTERFACE)
+add_library(pac-nrf52_isr_servo INTERFACE)
 
-target_sources(nrf52_isr_servo INTERFACE
+target_sources(pac-nrf52_isr_servo INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NRF52_ISR_Servo/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B112_ublox/variant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NRF52_ISR_Servo/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B302_ublox/variant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NRF52_ISR_Servo/Packages_Patches/adafruit/hardware/nrf52/0.20.5/variants/NINA_B112_ublox/variant.cpp"
@@ -69,7 +69,7 @@ target_sources(nrf52_isr_servo INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NRF52_ISR_Servo/src/NRF52_ISR_Servo.h"
 )
 
-target_include_directories(nrf52_isr_servo INTERFACE
+target_include_directories(pac-nrf52_isr_servo INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/NRF52_ISR_Servo/src"
 )
 
@@ -77,6 +77,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(nrf52_isr_servo INTERFACE
+target_link_libraries(pac-nrf52_isr_servo INTERFACE
     arduino-compat
 )

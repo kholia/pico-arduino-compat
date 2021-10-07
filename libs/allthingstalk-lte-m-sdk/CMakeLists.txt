@@ -1,6 +1,6 @@
-add_library(allthingstalk-lte-m-sdk INTERFACE)
+add_library(pac-allthingstalk-lte-m-sdk INTERFACE)
 
-target_sources(allthingstalk-lte-m-sdk INTERFACE
+target_sources(pac-allthingstalk-lte-m-sdk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-ltem-sdk/src/Sodaq_R4X.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-ltem-sdk/src/AllThingsTalk_LTEM.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-ltem-sdk/src/Sodaq_MQTT.cpp"
@@ -189,7 +189,7 @@ target_sources(allthingstalk-lte-m-sdk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-ltem-sdk/examples/SDK Examples/CounterJson/keys.h"
 )
 
-target_include_directories(allthingstalk-lte-m-sdk INTERFACE
+target_include_directories(pac-allthingstalk-lte-m-sdk INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-ltem-sdk/src"
 )
 
@@ -197,6 +197,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(allthingstalk-lte-m-sdk INTERFACE
+target_link_libraries(pac-allthingstalk-lte-m-sdk INTERFACE
     arduino-compat
 )

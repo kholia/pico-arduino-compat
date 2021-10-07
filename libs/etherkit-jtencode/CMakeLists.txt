@@ -1,6 +1,6 @@
-add_library(etherkit-jtencode INTERFACE)
+add_library(pac-etherkit-jtencode INTERFACE)
 
-target_sources(etherkit-jtencode INTERFACE
+target_sources(pac-etherkit-jtencode INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/JTEncode/src/encode_rs_int.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/JTEncode/src/init_rs_int.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/JTEncode/src/JTEncode.cpp"
@@ -16,7 +16,7 @@ target_sources(etherkit-jtencode INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/JTEncode/src/init_rs.h"
 )
 
-target_include_directories(etherkit-jtencode INTERFACE
+target_include_directories(pac-etherkit-jtencode INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/JTEncode/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(etherkit-jtencode INTERFACE
+target_link_libraries(pac-etherkit-jtencode INTERFACE
     arduino-compat
 )

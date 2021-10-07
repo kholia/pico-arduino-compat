@@ -1,6 +1,6 @@
-add_library(asciimassage INTERFACE)
+add_library(pac-asciimassage INTERFACE)
 
-target_sources(asciimassage INTERFACE
+target_sources(pac-asciimassage INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AsciiMassage/src/AsciiMassagePacker.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AsciiMassage/src/AsciiMassageParser.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AsciiMassage/extras/test/outdated/udpTest/EzEsp8266.h"
@@ -13,7 +13,7 @@ target_sources(asciimassage INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AsciiMassage/examples/AsciiMassage_websocket_server/esp8266AP.h"
 )
 
-target_include_directories(asciimassage INTERFACE
+target_include_directories(pac-asciimassage INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AsciiMassage/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(asciimassage INTERFACE
+target_link_libraries(pac-asciimassage INTERFACE
     arduino-compat
 )

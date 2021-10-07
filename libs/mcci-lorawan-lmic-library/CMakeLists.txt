@@ -1,6 +1,6 @@
-add_library(mcci-lorawan-lmic-library INTERFACE)
+add_library(pac-mcci-lorawan-lmic-library INTERFACE)
 
-target_sources(mcci-lorawan-lmic-library INTERFACE
+target_sources(pac-mcci-lorawan-lmic-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lmic/src/hal/getpinmap_thisboard.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lmic/src/hal/hal.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lmic/src/hal/getpinmap_disco_l072cs_lrwan1.cpp"
@@ -72,7 +72,7 @@ target_sources(mcci-lorawan-lmic-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lmic/src/lmic/lmic_bandplan_in866.h"
 )
 
-target_include_directories(mcci-lorawan-lmic-library INTERFACE
+target_include_directories(pac-mcci-lorawan-lmic-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-lmic/src"
 )
 
@@ -80,6 +80,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mcci-lorawan-lmic-library INTERFACE
+target_link_libraries(pac-mcci-lorawan-lmic-library INTERFACE
     arduino-compat
 )

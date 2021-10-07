@@ -1,6 +1,6 @@
-add_library(tgp-lcd-keypad INTERFACE)
+add_library(pac-tgp-lcd-keypad INTERFACE)
 
-target_sources(tgp-lcd-keypad INTERFACE
+target_sources(pac-tgp-lcd-keypad INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TGP_LCD_Keypad/EcranLCD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TGP_LCD_Keypad/LCDKeypad.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TGP_LCD_Keypad/Calibration.cpp"
@@ -11,7 +11,7 @@ target_sources(tgp-lcd-keypad INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TGP_LCD_Keypad/Calibration.h"
 )
 
-target_include_directories(tgp-lcd-keypad INTERFACE
+target_include_directories(pac-tgp-lcd-keypad INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TGP_LCD_Keypad"
 )
 
@@ -19,11 +19,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-liquid-crystal)
-    add_subdirectory(../../official-libs/liquid-crystal build_official-liquid-crystal)
+if (NOT TARGET pac-liquidcrystal)
+    add_subdirectory(../../libs/liquidcrystal build_pac-liquidcrystal)
 endif()
 
-target_link_libraries(tgp-lcd-keypad INTERFACE
+target_link_libraries(pac-tgp-lcd-keypad INTERFACE
     arduino-compat
-    official-liquid-crystal
+    pac-liquidcrystal
 )

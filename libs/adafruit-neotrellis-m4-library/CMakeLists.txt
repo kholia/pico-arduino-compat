@@ -1,6 +1,6 @@
-add_library(adafruit-neotrellis-m4-library INTERFACE)
+add_library(pac-adafruit-neotrellis-m4-library INTERFACE)
 
-target_sources(adafruit-neotrellis-m4-library INTERFACE
+target_sources(pac-adafruit-neotrellis-m4-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_NeoTrellisM4/Adafruit_NeoTrellisM4.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_NeoTrellisM4/examples/trellis_flash_sampler/AudioSampleKick.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_NeoTrellisM4/examples/trellis_flash_sampler/AudioSampleCashregister.cpp"
@@ -53,7 +53,7 @@ target_sources(adafruit-neotrellis-m4-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_NeoTrellisM4/examples/sixteen_step_sequencer/AudioSampleCp02.h"
 )
 
-target_include_directories(adafruit-neotrellis-m4-library INTERFACE
+target_include_directories(pac-adafruit-neotrellis-m4-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_NeoTrellisM4"
 )
 
@@ -61,6 +61,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(adafruit-neotrellis-m4-library INTERFACE
+target_link_libraries(pac-adafruit-neotrellis-m4-library INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(wifispi INTERFACE)
+add_library(pac-wifispi INTERFACE)
 
-target_sources(wifispi INTERFACE
+target_sources(pac-wifispi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiSpi/src/WiFiSpiServer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiSpi/src/WiFiSpi.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiSpi/src/WiFiSpiClient.cpp"
@@ -25,7 +25,7 @@ target_sources(wifispi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiSpi/src/utility/wifispi_drv.h"
 )
 
-target_include_directories(wifispi INTERFACE
+target_include_directories(pac-wifispi INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WiFiSpi/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wifispi INTERFACE
+target_link_libraries(pac-wifispi INTERFACE
     arduino-compat
 )

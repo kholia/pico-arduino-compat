@@ -1,6 +1,6 @@
-add_library(axisjoystick INTERFACE)
+add_library(pac-axisjoystick INTERFACE)
 
-target_sources(axisjoystick INTERFACE
+target_sources(pac-axisjoystick INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AxisJoystick/src/XYReplacerJoystick.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AxisJoystick/src/YInverterJoystick.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AxisJoystick/src/DelegateJoystick.cpp"
@@ -14,7 +14,7 @@ target_sources(axisjoystick INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AxisJoystick/src/YInverterJoystick.h"
 )
 
-target_include_directories(axisjoystick INTERFACE
+target_include_directories(pac-axisjoystick INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AxisJoystick/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(axisjoystick INTERFACE
+target_link_libraries(pac-axisjoystick INTERFACE
     arduino-compat
 )

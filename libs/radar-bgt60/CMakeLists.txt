@@ -1,6 +1,6 @@
-add_library(radar-bgt60 INTERFACE)
+add_library(pac-radar-bgt60 INTERFACE)
 
-target_sources(radar-bgt60 INTERFACE
+target_sources(pac-radar-bgt60 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-radar-bgt60/src/bgt60-pal-gpio-ino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-radar-bgt60/src/bgt60.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-radar-bgt60/src/bgt60-pal-timer-ino.cpp"
@@ -23,7 +23,7 @@ target_sources(radar-bgt60 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-radar-bgt60/examples/trackDirState/timer.h"
 )
 
-target_include_directories(radar-bgt60 INTERFACE
+target_include_directories(pac-radar-bgt60 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-radar-bgt60/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(radar-bgt60 INTERFACE
+target_link_libraries(pac-radar-bgt60 INTERFACE
     arduino-compat
 )

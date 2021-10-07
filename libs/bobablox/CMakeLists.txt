@@ -1,6 +1,6 @@
-add_library(bobablox INTERFACE)
+add_library(pac-bobablox INTERFACE)
 
-target_sources(bobablox INTERFACE
+target_sources(pac-bobablox INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BobaBlox/src/utility/Button.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BobaBlox/src/utility/LED.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BobaBlox/src/utility/Knob.cpp"
@@ -14,7 +14,7 @@ target_sources(bobablox INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BobaBlox/src/utility/Knob.h"
 )
 
-target_include_directories(bobablox INTERFACE
+target_include_directories(pac-bobablox INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/BobaBlox/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(bobablox INTERFACE
+target_link_libraries(pac-bobablox INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(approximate INTERFACE)
+add_library(pac-approximate INTERFACE)
 
-target_sources(approximate INTERFACE
+target_sources(pac-approximate INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Approximate/src/Approximate.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Approximate/src/Approximate/Network.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Approximate/src/Approximate/Channel.cpp"
@@ -20,7 +20,7 @@ target_sources(approximate INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Approximate/src/Approximate/Channel.h"
 )
 
-target_include_directories(approximate INTERFACE
+target_include_directories(pac-approximate INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Approximate/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(approximate INTERFACE
+target_link_libraries(pac-approximate INTERFACE
     arduino-compat
 )

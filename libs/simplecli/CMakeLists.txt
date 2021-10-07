@@ -1,6 +1,6 @@
-add_library(simplecli INTERFACE)
+add_library(pac-simplecli INTERFACE)
 
-target_sources(simplecli INTERFACE
+target_sources(pac-simplecli INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SimpleCLI/src/Command.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SimpleCLI/src/SimpleCLI.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SimpleCLI/src/Argument.cpp"
@@ -26,7 +26,7 @@ target_sources(simplecli INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SimpleCLI/src/c/parser_types.h"
 )
 
-target_include_directories(simplecli INTERFACE
+target_include_directories(pac-simplecli INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SimpleCLI/src"
 )
 
@@ -34,6 +34,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(simplecli INTERFACE
+target_link_libraries(pac-simplecli INTERFACE
     arduino-compat
 )

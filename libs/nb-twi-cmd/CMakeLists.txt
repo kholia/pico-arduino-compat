@@ -1,6 +1,6 @@
-add_library(nb-twi-cmd INTERFACE)
+add_library(pac-nb-twi-cmd INTERFACE)
 
-target_sources(nb-twi-cmd INTERFACE
+target_sources(pac-nb-twi-cmd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/nb-twi-cmd/examples/PlatformIO/timonel-twim-ss/src/timonel-twim-ss.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/nb-twi-cmd/examples/PlatformIO/blink-twi-demo/blink-wires-ino-io/src/blink-wires-ino-io.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/nb-twi-cmd/examples/PlatformIO/blink-twi-demo/blink-twim-ino-io/src/blink-twim-ino-io.cpp"
@@ -23,7 +23,7 @@ target_sources(nb-twi-cmd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/nb-twi-cmd/examples/PlatformIO/timonel-twim-ms/data/payloads/payload.h"
 )
 
-target_include_directories(nb-twi-cmd INTERFACE
+target_include_directories(pac-nb-twi-cmd INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/nb-twi-cmd/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(nb-twi-cmd INTERFACE
+target_link_libraries(pac-nb-twi-cmd INTERFACE
     arduino-compat
 )

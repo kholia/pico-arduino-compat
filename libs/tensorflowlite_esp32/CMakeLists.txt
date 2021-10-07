@@ -1,6 +1,6 @@
-add_library(tensorflowlite_esp32 INTERFACE)
+add_library(pac-tensorflowlite_esp32 INTERFACE)
 
-target_sources(tensorflowlite_esp32 INTERFACE
+target_sources(pac-tensorflowlite_esp32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_TensorFlowLite_ESP32/src/tensorflow/lite/experimental/micro/micro_utils.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_TensorFlowLite_ESP32/src/tensorflow/lite/experimental/micro/test_helpers.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_TensorFlowLite_ESP32/src/tensorflow/lite/experimental/micro/debug_log_numbers.cpp"
@@ -364,7 +364,7 @@ target_sources(tensorflowlite_esp32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_TensorFlowLite_ESP32/examples/micro_speech/feature_provider.h"
 )
 
-target_include_directories(tensorflowlite_esp32 INTERFACE
+target_include_directories(pac-tensorflowlite_esp32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino_TensorFlowLite_ESP32/src"
 )
 
@@ -372,6 +372,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tensorflowlite_esp32 INTERFACE
+target_link_libraries(pac-tensorflowlite_esp32 INTERFACE
     arduino-compat
 )

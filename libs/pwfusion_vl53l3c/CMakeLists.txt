@@ -1,6 +1,6 @@
-add_library(pwfusion_vl53l3c INTERFACE)
+add_library(pac-pwfusion_vl53l3c INTERFACE)
 
-target_sources(pwfusion_vl53l3c INTERFACE
+target_sources(pac-pwfusion_vl53l3c INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PWFusion_VL53L3C/src/PWFusion_VL53L3C.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PWFusion_VL53L3C/src/vl53lx_platform.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PWFusion_VL53L3C/src/vl53lx_core.c"
@@ -78,7 +78,7 @@ target_sources(pwfusion_vl53l3c INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PWFusion_VL53L3C/src/vl53lx_hist_algos_gen3.h"
 )
 
-target_include_directories(pwfusion_vl53l3c INTERFACE
+target_include_directories(pac-pwfusion_vl53l3c INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PWFusion_VL53L3C/src"
 )
 
@@ -86,6 +86,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pwfusion_vl53l3c INTERFACE
+target_link_libraries(pac-pwfusion_vl53l3c INTERFACE
     arduino-compat
 )

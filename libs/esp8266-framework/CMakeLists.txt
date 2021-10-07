@@ -1,6 +1,6 @@
-add_library(esp8266-framework INTERFACE)
+add_library(pac-esp8266-framework INTERFACE)
 
-target_sources(esp8266-framework INTERFACE
+target_sources(pac-esp8266-framework INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/esp8266-framework/src/EwingsEspStack.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/esp8266-framework/src/helpers/WiFiClientHelper.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/esp8266-framework/src/helpers/ExceptionsNotifier.cpp"
@@ -247,7 +247,7 @@ target_sources(esp8266-framework INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/esp8266-framework/examples/DeviceIotExample/DeviceIotSensor.h"
 )
 
-target_include_directories(esp8266-framework INTERFACE
+target_include_directories(pac-esp8266-framework INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/esp8266-framework/src"
 )
 
@@ -255,6 +255,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(esp8266-framework INTERFACE
+target_link_libraries(pac-esp8266-framework INTERFACE
     arduino-compat
 )

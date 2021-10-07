@@ -1,6 +1,6 @@
-add_library(bcl INTERFACE)
+add_library(pac-bcl INTERFACE)
 
-target_sources(bcl INTERFACE
+target_sources(pac-bcl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/bcl/extras/nayuki/EcdsaOpCount.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/bcl/test/CurvePointTest.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/bcl/test/Uint256Test.cpp"
@@ -44,7 +44,7 @@ target_sources(bcl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/bcl/test/embedded/gtest/gtest.h"
 )
 
-target_include_directories(bcl INTERFACE
+target_include_directories(pac-bcl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/bcl/src"
 )
 
@@ -52,6 +52,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(bcl INTERFACE
+target_link_libraries(pac-bcl INTERFACE
     arduino-compat
 )

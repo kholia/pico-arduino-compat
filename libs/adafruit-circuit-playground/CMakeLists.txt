@@ -1,6 +1,6 @@
-add_library(adafruit-circuit-playground INTERFACE)
+add_library(pac-adafruit-circuit-playground INTERFACE)
 
-target_sources(adafruit-circuit-playground INTERFACE
+target_sources(pac-adafruit-circuit-playground INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_CircuitPlayground/Adafruit_CircuitPlayground.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_CircuitPlayground/utility/IRLibSAMD21.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_CircuitPlayground/utility/Adafruit_CPlay_Speaker.cpp"
@@ -67,7 +67,7 @@ target_sources(adafruit-circuit-playground INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_CircuitPlayground/utility/Adafruit_ZeroPDM.h"
 )
 
-target_include_directories(adafruit-circuit-playground INTERFACE
+target_include_directories(pac-adafruit-circuit-playground INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_CircuitPlayground"
 )
 
@@ -75,6 +75,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(adafruit-circuit-playground INTERFACE
+target_link_libraries(pac-adafruit-circuit-playground INTERFACE
     arduino-compat
 )

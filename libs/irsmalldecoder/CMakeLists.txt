@@ -1,6 +1,6 @@
-add_library(irsmalldecoder INTERFACE)
+add_library(pac-irsmalldecoder INTERFACE)
 
-target_sources(irsmalldecoder INTERFACE
+target_sources(pac-irsmalldecoder INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IRsmallDecoder/src/IRsmallDProtocolStructs.h"
   "${CMAKE_CURRENT_LIST_DIR}/IRsmallDecoder/src/IRsmallD_RC5.h"
   "${CMAKE_CURRENT_LIST_DIR}/IRsmallDecoder/src/IRsmallD_SAMSUNG32.h"
@@ -13,7 +13,7 @@ target_sources(irsmalldecoder INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IRsmallDecoder/src/IRsmallDProtocolCheck.h"
 )
 
-target_include_directories(irsmalldecoder INTERFACE
+target_include_directories(pac-irsmalldecoder INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/IRsmallDecoder/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(irsmalldecoder INTERFACE
+target_link_libraries(pac-irsmalldecoder INTERFACE
     arduino-compat
 )

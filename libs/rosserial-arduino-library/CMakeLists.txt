@@ -1,6 +1,6 @@
-add_library(rosserial-arduino-library INTERFACE)
+add_library(pac-rosserial-arduino-library INTERFACE)
 
-target_sources(rosserial-arduino-library INTERFACE
+target_sources(pac-rosserial-arduino-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/rosserial_arduino_lib/src/duration.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/rosserial_arduino_lib/src/time.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/rosserial_arduino_lib/src/Esp8266Hardware.h"
@@ -372,7 +372,7 @@ target_sources(rosserial-arduino-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/rosserial_arduino_lib/examples/BlinkM/BlinkM_funcs.h"
 )
 
-target_include_directories(rosserial-arduino-library INTERFACE
+target_include_directories(pac-rosserial-arduino-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/rosserial_arduino_lib/src"
 )
 
@@ -380,6 +380,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(rosserial-arduino-library INTERFACE
+target_link_libraries(pac-rosserial-arduino-library INTERFACE
     arduino-compat
 )

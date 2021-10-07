@@ -1,6 +1,6 @@
-add_library(mp3player INTERFACE)
+add_library(pac-mp3player INTERFACE)
 
-target_sources(mp3player INTERFACE
+target_sources(pac-mp3player INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Cytron_MP3Shield/extras/SdFat/SdFatUtil.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Cytron_MP3Shield/extras/SdFat/SdFatBase.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Cytron_MP3Shield/extras/SdFat/SdSpiSAM3X.cpp"
@@ -55,7 +55,7 @@ target_sources(mp3player INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Cytron_MP3Shield/src/MP3Player.h"
 )
 
-target_include_directories(mp3player INTERFACE
+target_include_directories(pac-mp3player INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Cytron_MP3Shield/src"
 )
 
@@ -63,6 +63,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mp3player INTERFACE
+target_link_libraries(pac-mp3player INTERFACE
     arduino-compat
 )

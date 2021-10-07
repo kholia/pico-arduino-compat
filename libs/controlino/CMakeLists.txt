@@ -1,6 +1,6 @@
-add_library(controlino INTERFACE)
+add_library(pac-controlino INTERFACE)
 
-target_sources(controlino INTERFACE
+target_sources(pac-controlino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Controlino/src/button/button.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Controlino/src/control/control.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Controlino/src/multiplexer/multiplexer.cpp"
@@ -20,7 +20,7 @@ target_sources(controlino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Controlino/src/potentiometer/potentiometer.h"
 )
 
-target_include_directories(controlino INTERFACE
+target_include_directories(pac-controlino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Controlino/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(controlino INTERFACE
+target_link_libraries(pac-controlino INTERFACE
     arduino-compat
 )

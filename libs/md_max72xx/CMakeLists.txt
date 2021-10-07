@@ -1,6 +1,6 @@
-add_library(md_max72xx INTERFACE)
+add_library(pac-md_max72xx INTERFACE)
 
-target_sources(md_max72xx INTERFACE
+target_sources(pac-md_max72xx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MD_MAX72XX/src/MD_MAX72xx_font.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MD_MAX72XX/src/MD_MAX72xx_buf.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MD_MAX72XX/src/MD_MAX72xx.cpp"
@@ -20,7 +20,7 @@ target_sources(md_max72xx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MD_MAX72XX/examples/MD_MAX72xx_SimpleSlots/FontSymbols.h"
 )
 
-target_include_directories(md_max72xx INTERFACE
+target_include_directories(pac-md_max72xx INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MD_MAX72XX/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(md_max72xx INTERFACE
+target_link_libraries(pac-md_max72xx INTERFACE
     arduino-compat
 )

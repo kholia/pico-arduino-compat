@@ -1,6 +1,6 @@
-add_library(azure-rtos-threadx INTERFACE)
+add_library(pac-azure-rtos-threadx INTERFACE)
 
-target_sources(azure-rtos-threadx INTERFACE
+target_sources(pac-azure-rtos-threadx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AzureRTOS-ThreadX-For-Arduino/src/tx_semaphore_ceiling_put.c"
   "${CMAKE_CURRENT_LIST_DIR}/AzureRTOS-ThreadX-For-Arduino/src/txe_thread_terminate.c"
   "${CMAKE_CURRENT_LIST_DIR}/AzureRTOS-ThreadX-For-Arduino/src/tx_thread_timeout.c"
@@ -204,7 +204,7 @@ target_sources(azure-rtos-threadx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AzureRTOS-ThreadX-For-Arduino/src/tx_semaphore.h"
 )
 
-target_include_directories(azure-rtos-threadx INTERFACE
+target_include_directories(pac-azure-rtos-threadx INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AzureRTOS-ThreadX-For-Arduino/src"
 )
 
@@ -212,6 +212,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(azure-rtos-threadx INTERFACE
+target_link_libraries(pac-azure-rtos-threadx INTERFACE
     arduino-compat
 )

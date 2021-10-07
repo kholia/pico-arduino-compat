@@ -1,6 +1,6 @@
-add_library(firebase-esp32-client INTERFACE)
+add_library(pac-firebase-esp32-client INTERFACE)
 
-target_sources(firebase-esp32-client INTERFACE
+target_sources(pac-firebase-esp32-client INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Firebase-ESP32/src/Firebase.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Firebase-ESP32/src/rtdb/QueryFilter.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Firebase-ESP32/src/rtdb/QueueInfo.cpp"
@@ -42,7 +42,7 @@ target_sources(firebase-esp32-client INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Firebase-ESP32/src/signer/Signer.h"
 )
 
-target_include_directories(firebase-esp32-client INTERFACE
+target_include_directories(pac-firebase-esp32-client INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Firebase-ESP32/src"
 )
 
@@ -50,11 +50,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(firebase-esp32-client INTERFACE
+target_link_libraries(pac-firebase-esp32-client INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

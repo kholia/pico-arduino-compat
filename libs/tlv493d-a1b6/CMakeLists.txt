@@ -1,6 +1,6 @@
-add_library(tlv493d-a1b6 INTERFACE)
+add_library(pac-tlv493d-a1b6 INTERFACE)
 
-target_sources(tlv493d-a1b6 INTERFACE
+target_sources(pac-tlv493d-a1b6 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TLV493D-A1B6-3DMagnetic-Sensor/src/Tlv493d.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TLV493D-A1B6-3DMagnetic-Sensor/src/util/RegMask.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TLV493D-A1B6-3DMagnetic-Sensor/src/util/BusInterface.cpp"
@@ -11,7 +11,7 @@ target_sources(tlv493d-a1b6 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TLV493D-A1B6-3DMagnetic-Sensor/src/util/RegMask.h"
 )
 
-target_include_directories(tlv493d-a1b6 INTERFACE
+target_include_directories(pac-tlv493d-a1b6 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TLV493D-A1B6-3DMagnetic-Sensor/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tlv493d-a1b6 INTERFACE
+target_link_libraries(pac-tlv493d-a1b6 INTERFACE
     arduino-compat
 )

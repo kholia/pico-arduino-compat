@@ -1,6 +1,6 @@
-add_library(almavioslitmqtt INTERFACE)
+add_library(pac-almavioslitmqtt INTERFACE)
 
-target_sources(almavioslitmqtt INTERFACE
+target_sources(pac-almavioslitmqtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/almavios-lit-mqtt/src/AlmaviosLitMqttApi.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/almavios-lit-mqtt/src/packages/providers/azure/Azure.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/almavios-lit-mqtt/src/vendor/NTPClient/NTPClient.cpp"
@@ -25,7 +25,7 @@ target_sources(almavioslitmqtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/almavios-lit-mqtt/examples/publish_csv/certs.h"
 )
 
-target_include_directories(almavioslitmqtt INTERFACE
+target_include_directories(pac-almavioslitmqtt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/almavios-lit-mqtt/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(almavioslitmqtt INTERFACE
+target_link_libraries(pac-almavioslitmqtt INTERFACE
     arduino-compat
 )

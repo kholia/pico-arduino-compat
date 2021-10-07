@@ -1,6 +1,6 @@
-add_library(ethernet_manager_stm32 INTERFACE)
+add_library(pac-ethernet_manager_stm32 INTERFACE)
 
-target_sources(ethernet_manager_stm32 INTERFACE
+target_sources(pac-ethernet_manager_stm32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Ethernet_Manager_STM32/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Ethernet_Manager_STM32/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Ethernet_Manager_STM32/LibraryPatches/UIPEthernet-2.0.9/UIPEthernet.cpp"
@@ -71,7 +71,7 @@ target_sources(ethernet_manager_stm32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Ethernet_Manager_STM32/examples/Ethernet_STM32/Credentials.h"
 )
 
-target_include_directories(ethernet_manager_stm32 INTERFACE
+target_include_directories(pac-ethernet_manager_stm32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Ethernet_Manager_STM32/src"
 )
 
@@ -79,6 +79,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ethernet_manager_stm32 INTERFACE
+target_link_libraries(pac-ethernet_manager_stm32 INTERFACE
     arduino-compat
 )

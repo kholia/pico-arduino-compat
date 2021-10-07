@@ -1,6 +1,6 @@
-add_library(fishydiydevices INTERFACE)
+add_library(pac-fishydiydevices INTERFACE)
 
-target_sources(fishydiydevices INTERFACE
+target_sources(pac-fishydiydevices INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/fishyDIYdevices/src/fishyDevices.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/fishyDIYdevices/extras/FD-TEMPLATE.h"
   "${CMAKE_CURRENT_LIST_DIR}/fishyDIYdevices/src/fishyDevices.h"
@@ -10,7 +10,7 @@ target_sources(fishydiydevices INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/fishyDIYdevices/examples/SimpleSwitch/FD-Simple-Switch/FD-Simple-Switch.h"
 )
 
-target_include_directories(fishydiydevices INTERFACE
+target_include_directories(pac-fishydiydevices INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/fishyDIYdevices/src"
 )
 
@@ -18,6 +18,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(fishydiydevices INTERFACE
+target_link_libraries(pac-fishydiydevices INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(blues-wireless-notecard INTERFACE)
+add_library(pac-blues-wireless-notecard INTERFACE)
 
-target_sources(blues-wireless-notecard INTERFACE
+target_sources(pac-blues-wireless-notecard INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/note-arduino/test/Notecard.test.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/note-arduino/test/NoteSerial_Arduino.test.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/note-arduino/test/NoteLog_Arduino.test.cpp"
@@ -47,7 +47,7 @@ target_sources(blues-wireless-notecard INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/note-arduino/src/note-c/n_lib.h"
 )
 
-target_include_directories(blues-wireless-notecard INTERFACE
+target_include_directories(pac-blues-wireless-notecard INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/note-arduino/src"
 )
 
@@ -55,6 +55,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(blues-wireless-notecard INTERFACE
+target_link_libraries(pac-blues-wireless-notecard INTERFACE
     arduino-compat
 )

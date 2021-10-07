@@ -1,6 +1,6 @@
-add_library(rf24ethernet INTERFACE)
+add_library(pac-rf24ethernet INTERFACE)
 
-target_sources(rf24ethernet INTERFACE
+target_sources(pac-rf24ethernet INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RF24Ethernet/RF24Server.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RF24Ethernet/RF24Ethernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RF24Ethernet/Dns.cpp"
@@ -51,7 +51,7 @@ target_sources(rf24ethernet INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RF24Ethernet/utility/psock.h"
 )
 
-target_include_directories(rf24ethernet INTERFACE
+target_include_directories(pac-rf24ethernet INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RF24Ethernet"
 )
 
@@ -59,6 +59,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(rf24ethernet INTERFACE
+target_link_libraries(pac-rf24ethernet INTERFACE
     arduino-compat
 )

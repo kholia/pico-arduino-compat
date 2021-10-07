@@ -1,6 +1,6 @@
-add_library(coopthreads INTERFACE)
+add_library(pac-coopthreads INTERFACE)
 
-target_sources(coopthreads INTERFACE
+target_sources(pac-coopthreads INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CoopThreads/src/platform/arduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/CoopThreads/extras/test/st01_enter_exit.c"
   "${CMAKE_CURRENT_LIST_DIR}/CoopThreads/extras/test/t04_yield_after.c"
@@ -19,7 +19,7 @@ target_sources(coopthreads INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CoopThreads/src/coop_config.h"
 )
 
-target_include_directories(coopthreads INTERFACE
+target_include_directories(pac-coopthreads INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/CoopThreads/src"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(coopthreads INTERFACE
+target_link_libraries(pac-coopthreads INTERFACE
     arduino-compat
 )

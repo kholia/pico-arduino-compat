@@ -1,6 +1,6 @@
-add_library(acesorting INTERFACE)
+add_library(pac-acesorting INTERFACE)
 
-target_sources(acesorting INTERFACE
+target_sources(pac-acesorting INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceSorting/examples/AutoBenchmark/Benchmark.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceSorting/examples/WorstCaseBenchmark/Benchmark.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceSorting/src/AceSorting.h"
@@ -15,7 +15,7 @@ target_sources(acesorting INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceSorting/examples/WorstCaseBenchmark/Benchmark.h"
 )
 
-target_include_directories(acesorting INTERFACE
+target_include_directories(pac-acesorting INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AceSorting/src"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(acesorting INTERFACE
+target_link_libraries(pac-acesorting INTERFACE
     arduino-compat
 )

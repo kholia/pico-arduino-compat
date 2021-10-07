@@ -1,6 +1,6 @@
-add_library(wolfssl INTERFACE)
+add_library(pac-wolfssl INTERFACE)
 
-target_sources(wolfssl INTERFACE
+target_sources(pac-wolfssl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_wolfssl/src/src/sniffer.c"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_wolfssl/src/src/ssl.c"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_wolfssl/src/src/bio.c"
@@ -304,7 +304,7 @@ target_sources(wolfssl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_wolfssl/src/wolfcrypt/benchmark/benchmark.h"
 )
 
-target_include_directories(wolfssl INTERFACE
+target_include_directories(pac-wolfssl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino_wolfssl/src"
 )
 
@@ -312,6 +312,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wolfssl INTERFACE
+target_link_libraries(pac-wolfssl INTERFACE
     arduino-compat
 )

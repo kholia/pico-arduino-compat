@@ -1,6 +1,6 @@
-add_library(konnekting-device-library INTERFACE)
+add_library(pac-konnekting-device-library INTERFACE)
 
-target_sources(konnekting-device-library INTERFACE
+target_sources(pac-konnekting-device-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/KonnektingDeviceLibrary/src/KnxComObject.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/KonnektingDeviceLibrary/src/DebugUtil.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/KonnektingDeviceLibrary/src/KonnektingDevice.cpp"
@@ -23,7 +23,7 @@ target_sources(konnekting-device-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/KonnektingDeviceLibrary/examples/DemoSketch_without_pins/EEPROM_24AA256.h"
 )
 
-target_include_directories(konnekting-device-library INTERFACE
+target_include_directories(pac-konnekting-device-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/KonnektingDeviceLibrary/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(konnekting-device-library INTERFACE
+target_link_libraries(pac-konnekting-device-library INTERFACE
     arduino-compat
 )

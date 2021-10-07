@@ -1,6 +1,6 @@
-add_library(esp_at_wm_lite INTERFACE)
+add_library(pac-esp_at_wm_lite INTERFACE)
 
-target_sources(esp_at_wm_lite INTERFACE
+target_sources(pac-esp_at_wm_lite INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP_AT_WM_Lite/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B112_ublox/variant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP_AT_WM_Lite/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B302_ublox/variant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP_AT_WM_Lite/Packages_Patches/adafruit/hardware/nrf52/0.20.5/variants/NINA_B112_ublox/variant.cpp"
@@ -118,7 +118,7 @@ target_sources(esp_at_wm_lite INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP_AT_WM_Lite/examples/nRF52_ESP8266Shield/Credentials.h"
 )
 
-target_include_directories(esp_at_wm_lite INTERFACE
+target_include_directories(pac-esp_at_wm_lite INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESP_AT_WM_Lite/src"
 )
 
@@ -126,6 +126,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(esp_at_wm_lite INTERFACE
+target_link_libraries(pac-esp_at_wm_lite INTERFACE
     arduino-compat
 )

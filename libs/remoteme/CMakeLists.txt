@@ -1,6 +1,6 @@
-add_library(remoteme INTERFACE)
+add_library(pac-remoteme INTERFACE)
 
-target_sources(remoteme INTERFACE
+target_sources(pac-remoteme INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RemoteMeArduinoLibrary/src/Variables.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RemoteMeArduinoLibrary/src/RemoteMe.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RemoteMeArduinoLibrary/src/RemoteMeSocketConnector.cpp"
@@ -13,7 +13,7 @@ target_sources(remoteme INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RemoteMeArduinoLibrary/src/Variables.h"
 )
 
-target_include_directories(remoteme INTERFACE
+target_include_directories(pac-remoteme INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RemoteMeArduinoLibrary/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(remoteme INTERFACE
+target_link_libraries(pac-remoteme INTERFACE
     arduino-compat
 )

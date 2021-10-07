@@ -1,6 +1,6 @@
-add_library(coogleiot INTERFACE)
+add_library(pac-coogleiot INTERFACE)
 
-target_sources(coogleiot INTERFACE
+target_sources(pac-coogleiot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CoogleIOT/src/CoogleIOTWebserver.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/CoogleIOT/src/CoogleEEPROM.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/CoogleIOT/src/CoogleIOT.cpp"
@@ -24,7 +24,7 @@ target_sources(coogleiot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CoogleIOT/examples/GarageDoorOpener/GarageDoor-Opener.h"
 )
 
-target_include_directories(coogleiot INTERFACE
+target_include_directories(pac-coogleiot INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/CoogleIOT/src"
 )
 
@@ -32,6 +32,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(coogleiot INTERFACE
+target_link_libraries(pac-coogleiot INTERFACE
     arduino-compat
 )

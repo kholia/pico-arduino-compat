@@ -1,6 +1,6 @@
-add_library(arduinoosc INTERFACE)
+add_library(pac-arduinoosc INTERFACE)
 
-target_sources(arduinoosc INTERFACE
+target_sources(pac-arduinoosc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoOSC/examples/openFrameworks/src/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoOSC/ArduinoOSCWiFi.h"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoOSC/ArduinoOSC.h"
@@ -56,7 +56,7 @@ target_sources(arduinoosc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoOSC/ArduinoOSC/util/ArxSmartPtr/ArxSmartPtr/detail/has_libstdcplusplus.h"
 )
 
-target_include_directories(arduinoosc INTERFACE
+target_include_directories(pac-arduinoosc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoOSC"
 )
 
@@ -64,6 +64,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinoosc INTERFACE
+target_link_libraries(pac-arduinoosc INTERFACE
     arduino-compat
 )

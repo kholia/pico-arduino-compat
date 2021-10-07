@@ -1,6 +1,6 @@
-add_library(is31fl3733 INTERFACE)
+add_library(pac-is31fl3733 INTERFACE)
 
-target_sources(is31fl3733 INTERFACE
+target_sources(pac-is31fl3733 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/is31fl3733/is31fl3733.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/is31fl3733/Arduino_is31fl3733.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/is31fl3733/is31fl3733_abm.cpp"
@@ -9,7 +9,7 @@ target_sources(is31fl3733 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/is31fl3733/is31fl3733.h"
 )
 
-target_include_directories(is31fl3733 INTERFACE
+target_include_directories(pac-is31fl3733 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/is31fl3733"
 )
 
@@ -17,6 +17,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(is31fl3733 INTERFACE
+target_link_libraries(pac-is31fl3733 INTERFACE
     arduino-compat
 )

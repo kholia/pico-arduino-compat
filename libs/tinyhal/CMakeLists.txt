@@ -1,6 +1,6 @@
-add_library(tinyhal INTERFACE)
+add_library(pac-tinyhal INTERFACE)
 
-target_sources(tinyhal INTERFACE
+target_sources(pac-tinyhal INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/tinyhal/unittest/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/tinyhal/unittest/hal_tests.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/tinyhal/buildsys/unittest/simple_lib/src/source.c"
@@ -25,7 +25,7 @@ target_sources(tinyhal INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/tinyhal/src/hal/win32/win32_serial.h"
 )
 
-target_include_directories(tinyhal INTERFACE
+target_include_directories(pac-tinyhal INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/tinyhal/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tinyhal INTERFACE
+target_link_libraries(pac-tinyhal INTERFACE
     arduino-compat
 )

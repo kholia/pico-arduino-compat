@@ -1,6 +1,6 @@
-add_library(thinx32 INTERFACE)
+add_library(pac-thinx32 INTERFACE)
 
-target_sources(thinx32 INTERFACE
+target_sources(pac-thinx32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/thinx-firmware-esp32/lib/ArduinoJson/extras/scripts/wandbox/JsonParserExample.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/thinx-firmware-esp32/lib/ArduinoJson/extras/scripts/wandbox/MsgPackParserExample.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/thinx-firmware-esp32/lib/ArduinoJson/extras/scripts/wandbox/JsonGeneratorExample.cpp"
@@ -305,7 +305,7 @@ target_sources(thinx32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/thinx-firmware-esp32/src/sha256.h"
 )
 
-target_include_directories(thinx32 INTERFACE
+target_include_directories(pac-thinx32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/thinx-firmware-esp32/src"
 )
 
@@ -313,6 +313,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(thinx32 INTERFACE
+target_link_libraries(pac-thinx32 INTERFACE
     arduino-compat
 )

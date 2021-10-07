@@ -1,6 +1,6 @@
-add_library(sensirion-core INTERFACE)
+add_library(pac-sensirion-core INTERFACE)
 
-target_sources(sensirion-core INTERFACE
+target_sources(pac-sensirion-core INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-core/src/SensirionI2CCommunication.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-core/src/SensirionShdlcTxFrame.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-core/src/SensirionShdlcCommunication.cpp"
@@ -19,7 +19,7 @@ target_sources(sensirion-core INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-core/src/SensirionCore.h"
 )
 
-target_include_directories(sensirion-core INTERFACE
+target_include_directories(pac-sensirion-core INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-core/src"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sensirion-core INTERFACE
+target_link_libraries(pac-sensirion-core INTERFACE
     arduino-compat
 )

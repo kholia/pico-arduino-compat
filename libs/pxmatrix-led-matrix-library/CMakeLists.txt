@@ -1,6 +1,6 @@
-add_library(pxmatrix-led-matrix-library INTERFACE)
+add_library(pac-pxmatrix-led-matrix-library INTERFACE)
 
-target_sources(pxmatrix-led-matrix-library INTERFACE
+target_sources(pac-pxmatrix-led-matrix-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PxMatrix/PxMatrix.h"
   "${CMAKE_CURRENT_LIST_DIR}/PxMatrix/examples/Aurora_Demo/Playlist.h"
   "${CMAKE_CURRENT_LIST_DIR}/PxMatrix/examples/Aurora_Demo/PatternPendulumWave.h"
@@ -41,7 +41,7 @@ target_sources(pxmatrix-led-matrix-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PxMatrix/examples/black_lives/anim_data.h"
 )
 
-target_include_directories(pxmatrix-led-matrix-library INTERFACE
+target_include_directories(pac-pxmatrix-led-matrix-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PxMatrix"
 )
 
@@ -49,11 +49,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(pxmatrix-led-matrix-library INTERFACE
+target_link_libraries(pac-pxmatrix-led-matrix-library INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

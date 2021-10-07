@@ -1,6 +1,6 @@
-add_library(tft_espi INTERFACE)
+add_library(pac-tft_espi INTERFACE)
 
-target_sources(tft_espi INTERFACE
+target_sources(pac-tft_espi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TFT_eSPI/TFT_eSPI.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TFT_eSPI/Extensions/Button.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TFT_eSPI/Extensions/Smooth_font.cpp"
@@ -275,7 +275,7 @@ target_sources(tft_espi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TFT_eSPI/User_Setups/Setup17_ePaper.h"
 )
 
-target_include_directories(tft_espi INTERFACE
+target_include_directories(pac-tft_espi INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TFT_eSPI"
 )
 
@@ -283,6 +283,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tft_espi INTERFACE
+target_link_libraries(pac-tft_espi INTERFACE
     arduino-compat
 )

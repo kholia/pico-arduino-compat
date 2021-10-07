@@ -1,6 +1,6 @@
-add_library(engineer-regulator INTERFACE)
+add_library(pac-engineer-regulator INTERFACE)
 
-target_sources(engineer-regulator INTERFACE
+target_sources(pac-engineer-regulator INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Engineer_Regulator/src/Engineer_Regulator.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Engineer_Regulator/src/Engineer_RegulatorEEPROM.h"
   "${CMAKE_CURRENT_LIST_DIR}/Engineer_Regulator/src/Engineer_RegulatorEEPROM_ESP.h"
@@ -60,7 +60,7 @@ target_sources(engineer-regulator INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Engineer_Regulator/examples/Regulator_Base/Variables.h"
 )
 
-target_include_directories(engineer-regulator INTERFACE
+target_include_directories(pac-engineer-regulator INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Engineer_Regulator/src"
 )
 
@@ -68,6 +68,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(engineer-regulator INTERFACE
+target_link_libraries(pac-engineer-regulator INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(fifteenstep INTERFACE)
+add_library(pac-fifteenstep INTERFACE)
 
-target_sources(fifteenstep INTERFACE
+target_sources(pac-fifteenstep INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FifteenStep/FifteenStep.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FifteenStep/FifteenStep.h"
   "${CMAKE_CURRENT_LIST_DIR}/FifteenStep/examples/neotrellism4/helpers/button.h"
@@ -19,7 +19,7 @@ target_sources(fifteenstep INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FifteenStep/examples/ble_untz/config/ui.h"
 )
 
-target_include_directories(fifteenstep INTERFACE
+target_include_directories(pac-fifteenstep INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FifteenStep"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(fifteenstep INTERFACE
+target_link_libraries(pac-fifteenstep INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(teensydmx INTERFACE)
+add_library(pac-teensydmx INTERFACE)
 
-target_sources(teensydmx INTERFACE
+target_sources(pac-teensydmx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TeensyDMX/src/TeensyDMX.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TeensyDMX/src/LPUARTSendHandler.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TeensyDMX/src/UARTSendHandler.cpp"
@@ -27,7 +27,7 @@ target_sources(teensydmx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TeensyDMX/examples/USBProWidget/ReceiveHandler.h"
 )
 
-target_include_directories(teensydmx INTERFACE
+target_include_directories(pac-teensydmx INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TeensyDMX/src"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(teensydmx INTERFACE
+target_link_libraries(pac-teensydmx INTERFACE
     arduino-compat
 )

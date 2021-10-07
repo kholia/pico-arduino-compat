@@ -1,6 +1,6 @@
-add_library(stm32duino-x-nucleo-ika01a1 INTERFACE)
+add_library(pac-stm32duino-x-nucleo-ika01a1 INTERFACE)
 
-target_sources(stm32duino-x-nucleo-ika01a1 INTERFACE
+target_sources(pac-stm32duino-x-nucleo-ika01a1 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/X-NUCLEO-IKA01A1/src/TSU104.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/X-NUCLEO-IKA01A1/src/TSV734.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/X-NUCLEO-IKA01A1/src/TSZ124.cpp"
@@ -25,7 +25,7 @@ target_sources(stm32duino-x-nucleo-ika01a1 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/X-NUCLEO-IKA01A1/src/windcomp_def.h"
 )
 
-target_include_directories(stm32duino-x-nucleo-ika01a1 INTERFACE
+target_include_directories(pac-stm32duino-x-nucleo-ika01a1 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/X-NUCLEO-IKA01A1/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(stm32duino-x-nucleo-ika01a1 INTERFACE
+target_link_libraries(pac-stm32duino-x-nucleo-ika01a1 INTERFACE
     arduino-compat
 )

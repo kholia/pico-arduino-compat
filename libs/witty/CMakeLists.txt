@@ -1,6 +1,6 @@
-add_library(witty INTERFACE)
+add_library(pac-witty INTERFACE)
 
-target_sources(witty INTERFACE
+target_sources(pac-witty INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Witty/src/Glis.h"
   "${CMAKE_CURRENT_LIST_DIR}/Witty/src/Telec.h"
   "${CMAKE_CURRENT_LIST_DIR}/Witty/src/Witty.h"
@@ -13,7 +13,7 @@ target_sources(witty INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Witty/src/Gy521.h"
 )
 
-target_include_directories(witty INTERFACE
+target_include_directories(pac-witty INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Witty/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(witty INTERFACE
+target_link_libraries(pac-witty INTERFACE
     arduino-compat
 )

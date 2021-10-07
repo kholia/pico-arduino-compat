@@ -1,6 +1,6 @@
-add_library(bleperipheral INTERFACE)
+add_library(pac-bleperipheral INTERFACE)
 
-target_sources(bleperipheral INTERFACE
+target_sources(pac-bleperipheral INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-BLEPeripheral/src/BLEConstantCharacteristic.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-BLEPeripheral/src/BLERemoteService.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-BLEPeripheral/src/BLEHIDPeripheral.cpp"
@@ -103,7 +103,7 @@ target_sources(bleperipheral INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-BLEPeripheral/examples/serial/BLESerial.h"
 )
 
-target_include_directories(bleperipheral INTERFACE
+target_include_directories(pac-bleperipheral INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-BLEPeripheral/src"
 )
 
@@ -111,6 +111,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(bleperipheral INTERFACE
+target_link_libraries(pac-bleperipheral INTERFACE
     arduino-compat
 )

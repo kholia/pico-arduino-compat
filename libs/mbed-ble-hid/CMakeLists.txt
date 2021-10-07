@@ -1,6 +1,6 @@
-add_library(mbed-ble-hid INTERFACE)
+add_library(pac-mbed-ble-hid INTERFACE)
 
-target_sources(mbed-ble-hid INTERFACE
+target_sources(pac-mbed-ble-hid INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mbed-ble-hid/src/Mbed_BLE_HID.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/mbed-ble-hid/src/services/HIDGamepadService.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/mbed-ble-hid/src/services/HIDKeyboardService.cpp"
@@ -16,7 +16,7 @@ target_sources(mbed-ble-hid INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mbed-ble-hid/examples/ble_mouse/AnalogJoystick.h"
 )
 
-target_include_directories(mbed-ble-hid INTERFACE
+target_include_directories(pac-mbed-ble-hid INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/mbed-ble-hid/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mbed-ble-hid INTERFACE
+target_link_libraries(pac-mbed-ble-hid INTERFACE
     arduino-compat
 )

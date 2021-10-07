@@ -1,6 +1,6 @@
-add_library(basecamp INTERFACE)
+add_library(pac-basecamp INTERFACE)
 
-target_sources(basecamp INTERFACE
+target_sources(pac-basecamp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Basecamp/WifiControl.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Basecamp/Basecamp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Basecamp/mqttGuard.cpp"
@@ -20,7 +20,7 @@ target_sources(basecamp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Basecamp/Basecamp.hpp"
 )
 
-target_include_directories(basecamp INTERFACE
+target_include_directories(pac-basecamp INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Basecamp"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(basecamp INTERFACE
+target_link_libraries(pac-basecamp INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(arduinomqttclient INTERFACE)
+add_library(pac-arduinomqttclient INTERFACE)
 
-target_sources(arduinomqttclient INTERFACE
+target_sources(pac-arduinomqttclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMqttClient/src/MqttClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMqttClient/src/MqttClient.h"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMqttClient/src/ArduinoMqttClient.h"
@@ -12,7 +12,7 @@ target_sources(arduinomqttclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoMqttClient/examples/WiFiSimpleSender/arduino_secrets.h"
 )
 
-target_include_directories(arduinomqttclient INTERFACE
+target_include_directories(pac-arduinomqttclient INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoMqttClient/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinomqttclient INTERFACE
+target_link_libraries(pac-arduinomqttclient INTERFACE
     arduino-compat
 )

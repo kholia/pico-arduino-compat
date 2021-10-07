@@ -1,6 +1,6 @@
-add_library(muwerk-ustd-library INTERFACE)
+add_library(pac-muwerk-ustd-library INTERFACE)
 
-target_sources(muwerk-ustd-library INTERFACE
+target_sources(pac-muwerk-ustd-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ustd/Examples/rp2040/src/ustd_rp2040.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ustd/Examples/platformio/src/u2.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ustd/Examples/platformio/src/ustd-test.cpp"
@@ -17,7 +17,7 @@ target_sources(muwerk-ustd-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ustd/array.h"
 )
 
-target_include_directories(muwerk-ustd-library INTERFACE
+target_include_directories(pac-muwerk-ustd-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ustd"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(muwerk-ustd-library INTERFACE
+target_link_libraries(pac-muwerk-ustd-library INTERFACE
     arduino-compat
 )

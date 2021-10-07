@@ -1,6 +1,6 @@
-add_library(acetime INTERFACE)
+add_library(pac-acetime INTERFACE)
 
-target_sources(acetime INTERFACE
+target_sources(pac-acetime INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceTime/src/ace_time/LocalDateTime.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceTime/src/ace_time/LocalTime.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceTime/src/ace_time/LocalDate.cpp"
@@ -103,7 +103,7 @@ target_sources(acetime INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceTime/tests/ExtendedZoneProcessorTransitionTest/EuropeLisbon.h"
 )
 
-target_include_directories(acetime INTERFACE
+target_include_directories(pac-acetime INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AceTime/src"
 )
 
@@ -111,6 +111,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(acetime INTERFACE
+target_link_libraries(pac-acetime INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(smarteverything-nfc-nt3h1101 INTERFACE)
+add_library(pac-smarteverything-nfc-nt3h1101 INTERFACE)
 
-target_sources(smarteverything-nfc-nt3h1101 INTERFACE
+target_sources(pac-smarteverything-nfc-nt3h1101 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/sme-nt3h1x01-library/src/nfc/SmeNfc.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/sme-nt3h1x01-library/src/nfc/NT3H1101.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/sme-nt3h1x01-library/src/nfc/ndef/ndef.cpp"
@@ -17,7 +17,7 @@ target_sources(smarteverything-nfc-nt3h1101 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/sme-nt3h1x01-library/src/nfc/ndef/rtd/rtdUri.h"
 )
 
-target_include_directories(smarteverything-nfc-nt3h1101 INTERFACE
+target_include_directories(pac-smarteverything-nfc-nt3h1101 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/sme-nt3h1x01-library/src"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(smarteverything-nfc-nt3h1101 INTERFACE
+target_link_libraries(pac-smarteverything-nfc-nt3h1101 INTERFACE
     arduino-compat
 )

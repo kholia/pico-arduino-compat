@@ -1,6 +1,6 @@
-add_library(omesphelpers INTERFACE)
+add_library(pac-omesphelpers INTERFACE)
 
-target_sources(omesphelpers INTERFACE
+target_sources(pac-omesphelpers INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OmEspHelpers/src/OmBlinker.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OmEspHelpers/src/OmUtil.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OmEspHelpers/src/OmEeprom.cpp"
@@ -30,7 +30,7 @@ target_sources(omesphelpers INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OmEspHelpers/examples/WebServerSketch1/jpgImage.h"
 )
 
-target_include_directories(omesphelpers INTERFACE
+target_include_directories(pac-omesphelpers INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/OmEspHelpers/src"
 )
 
@@ -38,6 +38,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(omesphelpers INTERFACE
+target_link_libraries(pac-omesphelpers INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(freertos INTERFACE)
+add_library(pac-freertos INTERFACE)
 
-target_sources(freertos INTERFACE
+target_sources(pac-freertos INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_FreeRTOS_Library/src/variantHooks.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_FreeRTOS_Library/src/event_groups.c"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_FreeRTOS_Library/src/heap_3.c"
@@ -30,7 +30,7 @@ target_sources(freertos INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_FreeRTOS_Library/examples/GoldilocksAnalogueTestSuite/GA_Header.h"
 )
 
-target_include_directories(freertos INTERFACE
+target_include_directories(pac-freertos INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino_FreeRTOS_Library/src"
 )
 
@@ -38,6 +38,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(freertos INTERFACE
+target_link_libraries(pac-freertos INTERFACE
     arduino-compat
 )

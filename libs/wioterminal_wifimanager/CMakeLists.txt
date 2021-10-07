@@ -1,6 +1,6 @@
-add_library(wioterminal_wifimanager INTERFACE)
+add_library(pac-wioterminal_wifimanager INTERFACE)
 
-target_sources(wioterminal_wifimanager INTERFACE
+target_sources(pac-wioterminal_wifimanager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WIOTerminal_WiFiManager/src_cpp/WIOTerminal_WiFiManager.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WIOTerminal_WiFiManager/src_cpp/WIOTerminal_WiFiManager_Debug.h"
   "${CMAKE_CURRENT_LIST_DIR}/WIOTerminal_WiFiManager/src_cpp/WIOTerminal_WiFiManager.h"
@@ -16,7 +16,7 @@ target_sources(wioterminal_wifimanager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WIOTerminal_WiFiManager/src_h/WIOTerminal_WiFiManager.h"
 )
 
-target_include_directories(wioterminal_wifimanager INTERFACE
+target_include_directories(pac-wioterminal_wifimanager INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WIOTerminal_WiFiManager/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wioterminal_wifimanager INTERFACE
+target_link_libraries(pac-wioterminal_wifimanager INTERFACE
     arduino-compat
 )

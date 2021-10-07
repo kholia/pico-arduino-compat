@@ -1,6 +1,6 @@
-add_library(heatpumpir INTERFACE)
+add_library(pac-heatpumpir INTERFACE)
 
-target_sources(heatpumpir INTERFACE
+target_sources(pac-heatpumpir INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-heatpumpir/DaikinHeatpumpARC480A14IR.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-heatpumpir/IVTHeatpumpIR.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-heatpumpir/IRSenderBitBang.cpp"
@@ -78,7 +78,7 @@ target_sources(heatpumpir INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-heatpumpir/FuegoHeatpumpIR.h"
 )
 
-target_include_directories(heatpumpir INTERFACE
+target_include_directories(pac-heatpumpir INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-heatpumpir"
 )
 
@@ -86,6 +86,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(heatpumpir INTERFACE
+target_link_libraries(pac-heatpumpir INTERFACE
     arduino-compat
 )

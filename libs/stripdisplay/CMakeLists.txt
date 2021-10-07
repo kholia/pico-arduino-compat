@@ -1,6 +1,6 @@
-add_library(stripdisplay INTERFACE)
+add_library(pac-stripdisplay INTERFACE)
 
-target_sources(stripdisplay INTERFACE
+target_sources(pac-stripdisplay INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/StripDisplay/StripDisplay.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/StripDisplay/qdbmp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/StripDisplay/XBMFont.cpp"
@@ -16,7 +16,7 @@ target_sources(stripdisplay INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/StripDisplay/examples/SpaceInvaders/space_invader_07.h"
 )
 
-target_include_directories(stripdisplay INTERFACE
+target_include_directories(pac-stripdisplay INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/StripDisplay"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(stripdisplay INTERFACE
+target_link_libraries(pac-stripdisplay INTERFACE
     arduino-compat
 )

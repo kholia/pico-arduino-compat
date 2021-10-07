@@ -1,6 +1,6 @@
-add_library(aistarter INTERFACE)
+add_library(pac-aistarter INTERFACE)
 
-target_sources(aistarter INTERFACE
+target_sources(pac-aistarter INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AIStarter/src/MMC5883L.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AIStarter/src/SmartBot.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AIStarter/src/E2PROM.cpp"
@@ -24,7 +24,7 @@ target_sources(aistarter INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AIStarter/src/HC-SR04.h"
 )
 
-target_include_directories(aistarter INTERFACE
+target_include_directories(pac-aistarter INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AIStarter/src"
 )
 
@@ -32,6 +32,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(aistarter INTERFACE
+target_link_libraries(pac-aistarter INTERFACE
     arduino-compat
 )

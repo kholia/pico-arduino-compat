@@ -1,6 +1,6 @@
-add_library(vivicoreserial INTERFACE)
+add_library(pac-vivicoreserial INTERFACE)
 
-target_sources(vivicoreserial INTERFACE
+target_sources(pac-vivicoreserial INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/VivicoreSerial/VivicoreSerialDataCode.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/VivicoreSerial/VivicoreSerial.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/VivicoreSerial/VivicoreSerialDataCode.h"
@@ -11,7 +11,7 @@ target_sources(vivicoreserial INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/VivicoreSerial/examples/09_message_board/31FL3731regs.h"
 )
 
-target_include_directories(vivicoreserial INTERFACE
+target_include_directories(pac-vivicoreserial INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/VivicoreSerial"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(vivicoreserial INTERFACE
+target_link_libraries(pac-vivicoreserial INTERFACE
     arduino-compat
 )

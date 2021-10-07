@@ -1,6 +1,6 @@
-add_library(iotivity-lite_arduino-porting INTERFACE)
+add_library(pac-iotivity-lite_arduino-porting INTERFACE)
 
-target_sources(iotivity-lite_arduino-porting INTERFACE
+target_sources(pac-iotivity-lite_arduino-porting INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IoTivity-Lite_arduino-porting/src/w5100socket.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IoTivity-Lite_arduino-porting/src/log.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IoTivity-Lite_arduino-porting/src/random.cpp"
@@ -16,7 +16,7 @@ target_sources(iotivity-lite_arduino-porting INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IoTivity-Lite_arduino-porting/src/w5100socket.h"
 )
 
-target_include_directories(iotivity-lite_arduino-porting INTERFACE
+target_include_directories(pac-iotivity-lite_arduino-porting INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/IoTivity-Lite_arduino-porting/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(iotivity-lite_arduino-porting INTERFACE
+target_link_libraries(pac-iotivity-lite_arduino-porting INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(espbootstrap INTERFACE)
+add_library(pac-espbootstrap INTERFACE)
 
-target_sources(espbootstrap INTERFACE
+target_sources(pac-espbootstrap INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EspBootstrap/src/EspBootstrapMap.h"
   "${CMAKE_CURRENT_LIST_DIR}/EspBootstrap/src/ParametersEEPROM.h"
   "${CMAKE_CURRENT_LIST_DIR}/EspBootstrap/src/JsonConfigHttp.h"
@@ -15,7 +15,7 @@ target_sources(espbootstrap INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EspBootstrap/src/EspBootstrapBase.h"
 )
 
-target_include_directories(espbootstrap INTERFACE
+target_include_directories(pac-espbootstrap INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EspBootstrap/src"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(espbootstrap INTERFACE
+target_link_libraries(pac-espbootstrap INTERFACE
     arduino-compat
 )

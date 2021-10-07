@@ -1,6 +1,6 @@
-add_library(blinker INTERFACE)
+add_library(pac-blinker INTERFACE)
 
-target_sources(blinker INTERFACE
+target_sources(pac-blinker INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/blinker-library/src/Functions/BlinkerUpdater.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/blinker-library/src/modules/WebSockets/WebSockets.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/blinker-library/src/modules/WebSockets/SocketIOclient.cpp"
@@ -280,7 +280,7 @@ target_sources(blinker INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/blinker-library/examples/Blinker_ESP32_CAM/ESP32_CAM_SERVER.h"
 )
 
-target_include_directories(blinker INTERFACE
+target_include_directories(pac-blinker INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/blinker-library/src"
 )
 
@@ -288,6 +288,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(blinker INTERFACE
+target_link_libraries(pac-blinker INTERFACE
     arduino-compat
 )

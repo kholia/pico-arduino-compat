@@ -1,11 +1,11 @@
-add_library(emotibit-si7013 INTERFACE)
+add_library(pac-emotibit-si7013 INTERFACE)
 
-target_sources(emotibit-si7013 INTERFACE
+target_sources(pac-emotibit-si7013 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EmotiBit_FW_Si7013/EmotiBit_Si7013.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EmotiBit_FW_Si7013/EmotiBit_Si7013.h"
 )
 
-target_include_directories(emotibit-si7013 INTERFACE
+target_include_directories(pac-emotibit-si7013 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EmotiBit_FW_Si7013"
 )
 
@@ -13,6 +13,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(emotibit-si7013 INTERFACE
+target_link_libraries(pac-emotibit-si7013 INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(swap INTERFACE)
+add_library(pac-swap INTERFACE)
 
-target_sources(swap INTERFACE
+target_sources(pac-swap INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/swap/swquery.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/swap/swpacket.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/swap/register.cpp"
@@ -72,7 +72,7 @@ target_sources(swap INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/swap/examples/template/product.h"
 )
 
-target_include_directories(swap INTERFACE
+target_include_directories(pac-swap INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/swap"
 )
 
@@ -80,6 +80,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(swap INTERFACE
+target_link_libraries(pac-swap INTERFACE
     arduino-compat
 )

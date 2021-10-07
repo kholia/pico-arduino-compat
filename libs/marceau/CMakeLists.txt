@@ -1,6 +1,6 @@
-add_library(marceau INTERFACE)
+add_library(pac-marceau INTERFACE)
 
-target_sources(marceau INTERFACE
+target_sources(pac-marceau INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Marceau/src/lib/MarceauWeb.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Marceau/src/lib/MarceauWifi.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Marceau/src/lib/MarceauWebSocket.cpp"
@@ -147,7 +147,7 @@ target_sources(marceau INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Marceau/examples/SimpleDemoWifi/web.h"
 )
 
-target_include_directories(marceau INTERFACE
+target_include_directories(pac-marceau INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Marceau/src"
 )
 
@@ -155,6 +155,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(marceau INTERFACE
+target_link_libraries(pac-marceau INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(loconet INTERFACE)
+add_library(pac-loconet INTERFACE)
 
-target_sources(loconet INTERFACE
+target_sources(pac-loconet INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LocoNet/LocoNet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LocoNet/utility/ln_sw_uart.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LocoNet/utility/ln_buf.cpp"
@@ -15,7 +15,7 @@ target_sources(loconet INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LocoNet/utility/ln_sw_uart.h"
 )
 
-target_include_directories(loconet INTERFACE
+target_include_directories(pac-loconet INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/LocoNet"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(loconet INTERFACE
+target_link_libraries(pac-loconet INTERFACE
     arduino-compat
 )

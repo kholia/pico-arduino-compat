@@ -1,6 +1,6 @@
-add_library(liquid-handling-robotics INTERFACE)
+add_library(pac-liquid-handling-robotics INTERFACE)
 
-target_sources(liquid-handling-robotics INTERFACE
+target_sources(pac-liquid-handling-robotics INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/liquid-handling-robotics/src/LiquidHandlingRobotics.h"
   "${CMAKE_CURRENT_LIST_DIR}/liquid-handling-robotics/src/StandardLiquidHandlingRobot.h"
   "${CMAKE_CURRENT_LIST_DIR}/liquid-handling-robotics/src/Protocol/Placeholder.h"
@@ -12,7 +12,7 @@ target_sources(liquid-handling-robotics INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/liquid-handling-robotics/src/Messaging/ASCIIIO.h"
 )
 
-target_include_directories(liquid-handling-robotics INTERFACE
+target_include_directories(pac-liquid-handling-robotics INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/liquid-handling-robotics/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(liquid-handling-robotics INTERFACE
+target_link_libraries(pac-liquid-handling-robotics INTERFACE
     arduino-compat
 )

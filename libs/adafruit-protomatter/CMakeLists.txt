@@ -1,6 +1,6 @@
-add_library(adafruit-protomatter INTERFACE)
+add_library(pac-adafruit-protomatter INTERFACE)
 
-target_sources(adafruit-protomatter INTERFACE
+target_sources(pac-adafruit-protomatter INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_Protomatter/src/Adafruit_Protomatter.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_Protomatter/src/core.c"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_Protomatter/src/Adafruit_Protomatter.h"
@@ -16,7 +16,7 @@ target_sources(adafruit-protomatter INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_Protomatter/src/arch/esp32.h"
 )
 
-target_include_directories(adafruit-protomatter INTERFACE
+target_include_directories(pac-adafruit-protomatter INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_Protomatter/src"
 )
 
@@ -24,11 +24,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(adafruit-protomatter INTERFACE
+target_link_libraries(pac-adafruit-protomatter INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

@@ -1,6 +1,6 @@
-add_library(fatfs INTERFACE)
+add_library(pac-fatfs INTERFACE)
 
-target_sources(fatfs INTERFACE
+target_sources(pac-fatfs INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FatFs/src/ff_gen_drv.c"
   "${CMAKE_CURRENT_LIST_DIR}/FatFs/src/diskio.c"
   "${CMAKE_CURRENT_LIST_DIR}/FatFs/src/ff.c"
@@ -20,7 +20,7 @@ target_sources(fatfs INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FatFs/src/drivers/sd_diskio.h"
 )
 
-target_include_directories(fatfs INTERFACE
+target_include_directories(pac-fatfs INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FatFs/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(fatfs INTERFACE
+target_link_libraries(pac-fatfs INTERFACE
     arduino-compat
 )

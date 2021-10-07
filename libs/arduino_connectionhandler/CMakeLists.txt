@@ -1,6 +1,6 @@
-add_library(arduino_connectionhandler INTERFACE)
+add_library(pac-arduino_connectionhandler INTERFACE)
 
-target_sources(arduino_connectionhandler INTERFACE
+target_sources(pac-arduino_connectionhandler INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_ConnectionHandler/src/Arduino_GSMConnectionHandler.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_ConnectionHandler/src/Arduino_NBConnectionHandler.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_ConnectionHandler/src/Arduino_WiFiConnectionHandler.cpp"
@@ -14,7 +14,7 @@ target_sources(arduino_connectionhandler INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_ConnectionHandler/examples/ConnectionHandlerDemo/arduino_secrets.h"
 )
 
-target_include_directories(arduino_connectionhandler INTERFACE
+target_include_directories(pac-arduino_connectionhandler INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino_ConnectionHandler/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduino_connectionhandler INTERFACE
+target_link_libraries(pac-arduino_connectionhandler INTERFACE
     arduino-compat
 )

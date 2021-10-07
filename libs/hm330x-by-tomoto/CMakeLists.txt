@@ -1,6 +1,6 @@
-add_library(hm330x-by-tomoto INTERFACE)
+add_library(pac-hm330x-by-tomoto INTERFACE)
 
-target_sources(hm330x-by-tomoto INTERFACE
+target_sources(pac-hm330x-by-tomoto INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_Tomoto_HM330X/src/Tomoto_HM330X.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_Tomoto_HM330X/examples/M5Stack/AirQualityMeter/AirQualityIndex.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_Tomoto_HM330X/examples/M5Stack/AirQualityMeter/M5Atom_Display.cpp"
@@ -17,7 +17,7 @@ target_sources(hm330x-by-tomoto INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_Tomoto_HM330X/examples/M5Stack/AirQualityMeter/Platform.h"
 )
 
-target_include_directories(hm330x-by-tomoto INTERFACE
+target_include_directories(pac-hm330x-by-tomoto INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino_Tomoto_HM330X/src"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(hm330x-by-tomoto INTERFACE
+target_link_libraries(pac-hm330x-by-tomoto INTERFACE
     arduino-compat
 )

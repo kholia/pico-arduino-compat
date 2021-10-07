@@ -1,6 +1,6 @@
-add_library(debuglog INTERFACE)
+add_library(pac-debuglog INTERFACE)
 
-target_sources(debuglog INTERFACE
+target_sources(pac-debuglog INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Debug/examples/cpp/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Debug/DebugLogRestoreState.h"
   "${CMAKE_CURRENT_LIST_DIR}/Debug/DebugLogDisable.h"
@@ -25,7 +25,7 @@ target_sources(debuglog INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Debug/DebugLog/util/ArxContainer/ArxContainer/has_libstdcplusplus.h"
 )
 
-target_include_directories(debuglog INTERFACE
+target_include_directories(pac-debuglog INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Debug"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(debuglog INTERFACE
+target_link_libraries(pac-debuglog INTERFACE
     arduino-compat
 )

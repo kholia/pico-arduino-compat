@@ -1,6 +1,6 @@
-add_library(exodecore INTERFACE)
+add_library(pac-exodecore INTERFACE)
 
-target_sources(exodecore INTERFACE
+target_sources(pac-exodecore INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ExodeCore/src/Exode.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ExodeCore/src/InstructionSet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ExodeCore/src/utility/ExodeThread.cpp"
@@ -16,7 +16,7 @@ target_sources(exodecore INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ExodeCore/src/utility/ExodeThread.h"
 )
 
-target_include_directories(exodecore INTERFACE
+target_include_directories(pac-exodecore INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ExodeCore/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(exodecore INTERFACE
+target_link_libraries(pac-exodecore INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(mqttpubsubclient INTERFACE)
+add_library(pac-mqttpubsubclient INTERFACE)
 
-target_sources(mqttpubsubclient INTERFACE
+target_sources(pac-mqttpubsubclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MQTTPubSubClient/src/MQTTPubSubClient/lwmqtt/helpers.c"
   "${CMAKE_CURRENT_LIST_DIR}/MQTTPubSubClient/src/MQTTPubSubClient/lwmqtt/string.c"
   "${CMAKE_CURRENT_LIST_DIR}/MQTTPubSubClient/src/MQTTPubSubClient/lwmqtt/packet.c"
@@ -24,7 +24,7 @@ target_sources(mqttpubsubclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MQTTPubSubClient/src/MQTTPubSubClient/lwmqtt/lwmqtt.h"
 )
 
-target_include_directories(mqttpubsubclient INTERFACE
+target_include_directories(pac-mqttpubsubclient INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MQTTPubSubClient/src"
 )
 
@@ -32,6 +32,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mqttpubsubclient INTERFACE
+target_link_libraries(pac-mqttpubsubclient INTERFACE
     arduino-compat
 )

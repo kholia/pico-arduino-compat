@@ -1,6 +1,6 @@
-add_library(wiring-timer INTERFACE)
+add_library(pac-wiring-timer INTERFACE)
 
-target_sources(wiring-timer INTERFACE
+target_sources(pac-wiring-timer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/wiring-timer/Timer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/wiring-timer/TimerContext.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/wiring-timer/UptimeInfo.cpp"
@@ -11,7 +11,7 @@ target_sources(wiring-timer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/wiring-timer/Examples/UptimeInfoAdapter/STM32Cube/STM32UptimeInfoAdapter.h"
 )
 
-target_include_directories(wiring-timer INTERFACE
+target_include_directories(pac-wiring-timer INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/wiring-timer"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wiring-timer INTERFACE
+target_link_libraries(pac-wiring-timer INTERFACE
     arduino-compat
 )

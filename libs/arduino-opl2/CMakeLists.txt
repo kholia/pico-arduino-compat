@@ -1,6 +1,6 @@
-add_library(arduino-opl2 INTERFACE)
+add_library(pac-arduino-opl2 INTERFACE)
 
-target_sources(arduino-opl2 INTERFACE
+target_sources(pac-arduino-opl2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoOPL2/examples_pi/frequency_sweep/sweep.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoOPL2/examples_pi/OPL3Duo/DemoTune/DemoTune.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoOPL2/examples_pi/OPL3Duo/DemoTune/TuneParser.cpp"
@@ -38,7 +38,7 @@ target_sources(arduino-opl2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoOPL2/examples/OPL2AudioBoard/Teensy/TeensyMidi/usb_names.h"
 )
 
-target_include_directories(arduino-opl2 INTERFACE
+target_include_directories(pac-arduino-opl2 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoOPL2/src"
 )
 
@@ -46,6 +46,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduino-opl2 INTERFACE
+target_link_libraries(pac-arduino-opl2 INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(animatedgif INTERFACE)
+add_library(pac-animatedgif INTERFACE)
 
-target_sources(animatedgif INTERFACE
+target_sources(pac-animatedgif INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AnimatedGIF/src/AnimatedGIF.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AnimatedGIF/linux/main.c"
   "${CMAKE_CURRENT_LIST_DIR}/AnimatedGIF/src/AnimatedGIF.h"
@@ -23,7 +23,7 @@ target_sources(animatedgif INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AnimatedGIF/test_images/pattern.h"
 )
 
-target_include_directories(animatedgif INTERFACE
+target_include_directories(pac-animatedgif INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AnimatedGIF/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(animatedgif INTERFACE
+target_link_libraries(pac-animatedgif INTERFACE
     arduino-compat
 )

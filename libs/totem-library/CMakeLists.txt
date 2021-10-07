@@ -1,6 +1,6 @@
-add_library(totem-library INTERFACE)
+add_library(pac-totem-library INTERFACE)
 
-target_sources(totem-library INTERFACE
+target_sources(pac-totem-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TotemArduino/src/Totem.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TotemArduino/src/interfaces/ble/TotemCANService.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TotemArduino/src/Totem.h"
@@ -26,7 +26,7 @@ target_sources(totem-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TotemArduino/src/api/TotemRobot.h"
 )
 
-target_include_directories(totem-library INTERFACE
+target_include_directories(pac-totem-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TotemArduino/src"
 )
 
@@ -34,6 +34,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(totem-library INTERFACE
+target_link_libraries(pac-totem-library INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(firebase-arduino-client-library-for-esp8266-and-esp32 INTERFACE)
+add_library(pac-firebase-arduino-client-library-for-esp8266-and-esp32 INTERFACE)
 
-target_sources(firebase-arduino-client-library-for-esp8266-and-esp32 INTERFACE
+target_sources(pac-firebase-arduino-client-library-for-esp8266-and-esp32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Firebase-ESP-Client/src/Firebase.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Firebase-ESP-Client/src/rtdb/QueryFilter.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Firebase-ESP-Client/src/rtdb/QueueInfo.cpp"
@@ -140,7 +140,7 @@ target_sources(firebase-arduino-client-library-for-esp8266-and-esp32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Firebase-ESP-Client/examples/CloudFunctions/CreateFunction/DeployAutoZipFunction/AutoZip.h"
 )
 
-target_include_directories(firebase-arduino-client-library-for-esp8266-and-esp32 INTERFACE
+target_include_directories(pac-firebase-arduino-client-library-for-esp8266-and-esp32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Firebase-ESP-Client/src"
 )
 
@@ -148,11 +148,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(firebase-arduino-client-library-for-esp8266-and-esp32 INTERFACE
+target_link_libraries(pac-firebase-arduino-client-library-for-esp8266-and-esp32 INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

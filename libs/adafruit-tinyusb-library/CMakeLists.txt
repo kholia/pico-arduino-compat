@@ -1,6 +1,6 @@
-add_library(adafruit-tinyusb-library INTERFACE)
+add_library(pac-adafruit-tinyusb-library INTERFACE)
 
-target_sources(adafruit-tinyusb-library INTERFACE
+target_sources(pac-adafruit-tinyusb-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_TinyUSB_Arduino/src/arduino/Adafruit_TinyUSB_API.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_TinyUSB_Arduino/src/arduino/Adafruit_USBD_Device.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_TinyUSB_Arduino/src/arduino/Adafruit_USBD_CDC.cpp"
@@ -95,7 +95,7 @@ target_sources(adafruit-tinyusb-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_TinyUSB_Arduino/examples/MassStorage/msc_ramdisk/ramdisk.h"
 )
 
-target_include_directories(adafruit-tinyusb-library INTERFACE
+target_include_directories(pac-adafruit-tinyusb-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_TinyUSB_Arduino/src"
 )
 
@@ -103,6 +103,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(adafruit-tinyusb-library INTERFACE
+target_link_libraries(pac-adafruit-tinyusb-library INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(tee-uc20-shield INTERFACE)
+add_library(pac-tee-uc20-shield INTERFACE)
 
-target_sources(tee-uc20-shield INTERFACE
+target_sources(pac-tee-uc20-shield INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TEE_UC20_Shield/firebase.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TEE_UC20_Shield/ftp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TEE_UC20_Shield/sms.cpp"
@@ -36,7 +36,7 @@ target_sources(tee-uc20-shield INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TEE_UC20_Shield/sms.h"
 )
 
-target_include_directories(tee-uc20-shield INTERFACE
+target_include_directories(pac-tee-uc20-shield INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TEE_UC20_Shield"
 )
 
@@ -44,6 +44,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tee-uc20-shield INTERFACE
+target_link_libraries(pac-tee-uc20-shield INTERFACE
     arduino-compat
 )

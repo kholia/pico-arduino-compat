@@ -1,6 +1,6 @@
-add_library(ceclient INTERFACE)
+add_library(pac-ceclient INTERFACE)
 
-target_sources(ceclient INTERFACE
+target_sources(pac-ceclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoLib_CEClient/src/CEClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoLib_CEClient/src/CEC/Common.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoLib_CEClient/src/CEC/CEC.cpp"
@@ -15,7 +15,7 @@ target_sources(ceclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoLib_CEClient/src/CEC/CEC.h"
 )
 
-target_include_directories(ceclient INTERFACE
+target_include_directories(pac-ceclient INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoLib_CEClient/src"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ceclient INTERFACE
+target_link_libraries(pac-ceclient INTERFACE
     arduino-compat
 )

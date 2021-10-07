@@ -1,6 +1,6 @@
-add_library(rt-thread INTERFACE)
+add_library(pac-rt-thread INTERFACE)
 
-target_sources(rt-thread INTERFACE
+target_sources(pac-rt-thread INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_RT-Thread/src/rtt.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_RT-Thread/src/components/arduino/drv_spisd.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_RT-Thread/src/components/arduino/drv_spi.cpp"
@@ -182,7 +182,7 @@ target_sources(rt-thread INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_RT-Thread/src/bsp/LonganNano/drv_tick.h"
 )
 
-target_include_directories(rt-thread INTERFACE
+target_include_directories(pac-rt-thread INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino_RT-Thread/src"
 )
 
@@ -190,6 +190,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(rt-thread INTERFACE
+target_link_libraries(pac-rt-thread INTERFACE
     arduino-compat
 )

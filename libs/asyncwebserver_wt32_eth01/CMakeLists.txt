@@ -1,6 +1,6 @@
-add_library(asyncwebserver_wt32_eth01 INTERFACE)
+add_library(pac-asyncwebserver_wt32_eth01 INTERFACE)
 
-target_sources(asyncwebserver_wt32_eth01 INTERFACE
+target_sources(pac-asyncwebserver_wt32_eth01 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AsyncWebServer_WT32_ETH01/src/AsyncWebServer_WT32_ETH01.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AsyncWebServer_WT32_ETH01/src/AsyncEventSource.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AsyncWebServer_WT32_ETH01/src/WebRequest.cpp"
@@ -23,7 +23,7 @@ target_sources(asyncwebserver_wt32_eth01 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AsyncWebServer_WT32_ETH01/src/WT32_ETH01_SPIFFSEditor.h"
 )
 
-target_include_directories(asyncwebserver_wt32_eth01 INTERFACE
+target_include_directories(pac-asyncwebserver_wt32_eth01 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AsyncWebServer_WT32_ETH01/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(asyncwebserver_wt32_eth01 INTERFACE
+target_link_libraries(pac-asyncwebserver_wt32_eth01 INTERFACE
     arduino-compat
 )

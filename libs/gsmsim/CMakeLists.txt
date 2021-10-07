@@ -1,6 +1,6 @@
-add_library(gsmsim INTERFACE)
+add_library(pac-gsmsim INTERFACE)
 
-target_sources(gsmsim INTERFACE
+target_sources(pac-gsmsim INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GSMSim/src/GSMSim.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GSMSim/src/GSMSimUSSD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GSMSim/src/GSMSimGPRS.cpp"
@@ -23,7 +23,7 @@ target_sources(gsmsim INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GSMSim/src/GSMSimTime.h"
 )
 
-target_include_directories(gsmsim INTERFACE
+target_include_directories(pac-gsmsim INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/GSMSim/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(gsmsim INTERFACE
+target_link_libraries(pac-gsmsim INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(ukesf-sixth-formers INTERFACE)
+add_library(pac-ukesf-sixth-formers INTERFACE)
 
-target_sources(ukesf-sixth-formers INTERFACE
+target_sources(pac-ukesf-sixth-formers INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ukesf-sixth-formers/src/Accelerometer/LIS3DHTR.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ukesf-sixth-formers/src/Accelerometer/Accelerometer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ukesf-sixth-formers/src/WeatherStation/WeatherStation.cpp"
@@ -41,7 +41,7 @@ target_sources(ukesf-sixth-formers INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ukesf-sixth-formers/src/ThermometerHygrometer/DHT.h"
 )
 
-target_include_directories(ukesf-sixth-formers INTERFACE
+target_include_directories(pac-ukesf-sixth-formers INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ukesf-sixth-formers/src"
 )
 
@@ -49,6 +49,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ukesf-sixth-formers INTERFACE
+target_link_libraries(pac-ukesf-sixth-formers INTERFACE
     arduino-compat
 )

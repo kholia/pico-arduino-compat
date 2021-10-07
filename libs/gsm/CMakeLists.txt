@@ -1,6 +1,6 @@
-add_library(gsm INTERFACE)
+add_library(pac-gsm INTERFACE)
 
-target_sources(gsm INTERFACE
+target_sources(pac-gsm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GSM/src/GSM3ShieldV1ModemVerification.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GSM/src/GSM3MobileVoiceProvider.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GSM/src/GSM3ShieldV1AccessProvider.cpp"
@@ -71,7 +71,7 @@ target_sources(gsm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GSM/src/GSM3MobileMockupProvider.h"
 )
 
-target_include_directories(gsm INTERFACE
+target_include_directories(pac-gsm INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/GSM/src"
 )
 
@@ -79,6 +79,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(gsm INTERFACE
+target_link_libraries(pac-gsm INTERFACE
     arduino-compat
 )

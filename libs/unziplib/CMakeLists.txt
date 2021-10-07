@@ -1,6 +1,6 @@
-add_library(unziplib INTERFACE)
+add_library(pac-unziplib INTERFACE)
 
-target_sources(unziplib INTERFACE
+target_sources(pac-unziplib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/unzipLIB/src/unzipLIB.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/unzipLIB/Linux/main.c"
   "${CMAKE_CURRENT_LIST_DIR}/unzipLIB/src/zutil.c"
@@ -26,7 +26,7 @@ target_sources(unziplib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/unzipLIB/examples/lcd_example/bmp_icons.h"
 )
 
-target_include_directories(unziplib INTERFACE
+target_include_directories(pac-unziplib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/unzipLIB/src"
 )
 
@@ -34,6 +34,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(unziplib INTERFACE
+target_link_libraries(pac-unziplib INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(ethernetindustruino INTERFACE)
+add_library(pac-ethernetindustruino INTERFACE)
 
-target_sources(ethernetindustruino INTERFACE
+target_sources(pac-ethernetindustruino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EthernetIndustruino/src/EthernetClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EthernetIndustruino/src/EthernetUdp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EthernetIndustruino/src/EthernetIndustruino.cpp"
@@ -26,7 +26,7 @@ target_sources(ethernetindustruino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EthernetIndustruino/src/utility/socket.h"
 )
 
-target_include_directories(ethernetindustruino INTERFACE
+target_include_directories(pac-ethernetindustruino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EthernetIndustruino/src"
 )
 
@@ -34,6 +34,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ethernetindustruino INTERFACE
+target_link_libraries(pac-ethernetindustruino INTERFACE
     arduino-compat
 )

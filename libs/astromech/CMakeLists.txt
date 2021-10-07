@@ -1,6 +1,6 @@
-add_library(astromech INTERFACE)
+add_library(pac-astromech INTERFACE)
 
-target_sources(astromech INTERFACE
+target_sources(pac-astromech INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AstroMech/dev/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AstroMech/src/Decoder.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AstroMech/src/arduinoFFT.cpp"
@@ -13,7 +13,7 @@ target_sources(astromech INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AstroMech/src/AstroMech.h"
 )
 
-target_include_directories(astromech INTERFACE
+target_include_directories(pac-astromech INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AstroMech/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(astromech INTERFACE
+target_link_libraries(pac-astromech INTERFACE
     arduino-compat
 )

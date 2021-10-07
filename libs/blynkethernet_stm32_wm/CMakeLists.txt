@@ -1,6 +1,6 @@
-add_library(blynkethernet_stm32_wm INTERFACE)
+add_library(pac-blynkethernet_stm32_wm INTERFACE)
 
-target_sources(blynkethernet_stm32_wm INTERFACE
+target_sources(pac-blynkethernet_stm32_wm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BlynkEthernet_STM32_WM/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BlynkEthernet_STM32_WM/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BlynkEthernet_STM32_WM/LibraryPatches/UIPEthernet-2.0.9/UIPEthernet.cpp"
@@ -105,7 +105,7 @@ target_sources(blynkethernet_stm32_wm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BlynkEthernet_STM32_WM/examples/AM2315_W5100/Credentials.h"
 )
 
-target_include_directories(blynkethernet_stm32_wm INTERFACE
+target_include_directories(pac-blynkethernet_stm32_wm INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/BlynkEthernet_STM32_WM/src"
 )
 
@@ -113,6 +113,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(blynkethernet_stm32_wm INTERFACE
+target_link_libraries(pac-blynkethernet_stm32_wm INTERFACE
     arduino-compat
 )

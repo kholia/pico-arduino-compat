@@ -1,6 +1,6 @@
-add_library(firmata INTERFACE)
+add_library(pac-firmata INTERFACE)
 
-target_sources(firmata INTERFACE
+target_sources(pac-firmata INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino/Firmata.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino/FirmataParser.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino/FirmataMarshaller.cpp"
@@ -31,7 +31,7 @@ target_sources(firmata INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino/utility/BLEStream.h"
 )
 
-target_include_directories(firmata INTERFACE
+target_include_directories(pac-firmata INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino"
 )
 
@@ -39,6 +39,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(firmata INTERFACE
+target_link_libraries(pac-firmata INTERFACE
     arduino-compat
 )

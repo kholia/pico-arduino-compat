@@ -1,6 +1,6 @@
-add_library(unclerus INTERFACE)
+add_library(pac-unclerus INTERFACE)
 
-target_sources(unclerus INTERFACE
+target_sources(pac-unclerus INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/UncleRus-drivers/src/lib8tion.c"
   "${CMAKE_CURRENT_LIST_DIR}/UncleRus-drivers/src/bme680.c"
   "${CMAKE_CURRENT_LIST_DIR}/UncleRus-drivers/src/ads111x.c"
@@ -218,7 +218,7 @@ target_sources(unclerus INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/UncleRus-drivers/examples/led_effects/main/effects/rainbow.h"
 )
 
-target_include_directories(unclerus INTERFACE
+target_include_directories(pac-unclerus INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/UncleRus-drivers/src"
 )
 
@@ -226,6 +226,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(unclerus INTERFACE
+target_link_libraries(pac-unclerus INTERFACE
     arduino-compat
 )

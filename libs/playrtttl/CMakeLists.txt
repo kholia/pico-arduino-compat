@@ -1,6 +1,6 @@
-add_library(playrtttl INTERFACE)
+add_library(pac-playrtttl INTERFACE)
 
-target_sources(playrtttl INTERFACE
+target_sources(pac-playrtttl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PlayRtttl/src/PlayRtttl.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PlayRtttl/examples/ReactionTimeTestGame/TimerOne.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PlayRtttl/examples/ReactionTimeTestGame/MultiFuncShield.cpp"
@@ -19,7 +19,7 @@ target_sources(playrtttl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PlayRtttl/examples/PlayChristmasMelodyUSDistance/HCSR04.h"
 )
 
-target_include_directories(playrtttl INTERFACE
+target_include_directories(pac-playrtttl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PlayRtttl/src"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(playrtttl INTERFACE
+target_link_libraries(pac-playrtttl INTERFACE
     arduino-compat
 )

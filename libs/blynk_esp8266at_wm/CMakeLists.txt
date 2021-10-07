@@ -1,6 +1,6 @@
-add_library(blynk_esp8266at_wm INTERFACE)
+add_library(pac-blynk_esp8266at_wm INTERFACE)
 
-target_sources(blynk_esp8266at_wm INTERFACE
+target_sources(pac-blynk_esp8266at_wm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_Esp8266AT_WM/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B112_ublox/variant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_Esp8266AT_WM/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B302_ublox/variant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_Esp8266AT_WM/Packages_Patches/adafruit/hardware/nrf52/0.20.5/variants/NINA_B112_ublox/variant.cpp"
@@ -126,7 +126,7 @@ target_sources(blynk_esp8266at_wm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_Esp8266AT_WM/examples/nRF52_ESP8266Shield/Credentials.h"
 )
 
-target_include_directories(blynk_esp8266at_wm INTERFACE
+target_include_directories(pac-blynk_esp8266at_wm INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Blynk_Esp8266AT_WM/src"
 )
 
@@ -134,6 +134,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(blynk_esp8266at_wm INTERFACE
+target_link_libraries(pac-blynk_esp8266at_wm INTERFACE
     arduino-compat
 )

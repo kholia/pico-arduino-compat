@@ -1,6 +1,6 @@
-add_library(virtmem INTERFACE)
+add_library(pac-virtmem INTERFACE)
 
-target_sources(virtmem INTERFACE
+target_sources(pac-virtmem INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/virtmem-arlibman/src/base_alloc.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/virtmem-arlibman/src/utils.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/virtmem-arlibman/src/internal/vptr_utils.hpp"
@@ -22,7 +22,7 @@ target_sources(virtmem INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/virtmem-arlibman/examples/benchmark/benchmark.h"
 )
 
-target_include_directories(virtmem INTERFACE
+target_include_directories(pac-virtmem INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/virtmem-arlibman/src"
 )
 
@@ -30,6 +30,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(virtmem INTERFACE
+target_link_libraries(pac-virtmem INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(matrix-mini-library INTERFACE)
+add_library(pac-matrix-mini-library INTERFACE)
 
-target_sources(matrix-mini-library INTERFACE
+target_sources(pac-matrix-mini-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MatrixMini/src/MiniBTN.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MatrixMini/src/MiniDIG.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MatrixMini/src/MatrixMini.cpp"
@@ -37,7 +37,7 @@ target_sources(matrix-mini-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MatrixMini/src/I2C/HT/HTCompass.h"
 )
 
-target_include_directories(matrix-mini-library INTERFACE
+target_include_directories(pac-matrix-mini-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MatrixMini/src"
 )
 
@@ -45,6 +45,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(matrix-mini-library INTERFACE
+target_link_libraries(pac-matrix-mini-library INTERFACE
     arduino-compat
 )

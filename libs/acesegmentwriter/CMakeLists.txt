@@ -1,6 +1,6 @@
-add_library(acesegmentwriter INTERFACE)
+add_library(pac-acesegmentwriter INTERFACE)
 
-target_sources(acesegmentwriter INTERFACE
+target_sources(pac-acesegmentwriter INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceSegmentWriter/src/ace_segment_writer/CharWriter.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceSegmentWriter/src/ace_segment_writer/NumberWriter.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceSegmentWriter/src/AceSegmentWriter.h"
@@ -14,7 +14,7 @@ target_sources(acesegmentwriter INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceSegmentWriter/src/ace_segment_writer/TemperatureWriter.h"
 )
 
-target_include_directories(acesegmentwriter INTERFACE
+target_include_directories(pac-acesegmentwriter INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AceSegmentWriter/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(acesegmentwriter INTERFACE
+target_link_libraries(pac-acesegmentwriter INTERFACE
     arduino-compat
 )

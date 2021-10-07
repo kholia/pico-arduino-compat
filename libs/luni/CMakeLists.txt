@@ -1,6 +1,6 @@
-add_library(luni INTERFACE)
+add_library(pac-luni INTERFACE)
 
-target_sources(luni INTERFACE
+target_sources(pac-luni INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Luni/src-drivers/Silicon/Port.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Luni/src-drivers/Silicon/I2CPort.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Luni/src-drivers/DDMeta/DDMeta.cpp"
@@ -34,7 +34,7 @@ target_sources(luni INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Luni/examples/FirmataDDHello/SelectedDeviceDrivers.h"
 )
 
-target_include_directories(luni INTERFACE
+target_include_directories(pac-luni INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Luni/src"
 )
 
@@ -42,6 +42,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(luni INTERFACE
+target_link_libraries(pac-luni INTERFACE
     arduino-compat
 )

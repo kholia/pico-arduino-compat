@@ -1,6 +1,6 @@
-add_library(vidorgraphics INTERFACE)
+add_library(pac-vidorgraphics INTERFACE)
 
-target_sources(vidorgraphics INTERFACE
+target_sources(pac-vidorgraphics INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/VidorGraphics/src/VidorMailbox.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/VidorGraphics/src/VidorUtils.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/VidorGraphics/src/VidorI2C.cpp"
@@ -35,7 +35,7 @@ target_sources(vidorgraphics INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/VidorGraphics/src/utility/libxsvf.h"
 )
 
-target_include_directories(vidorgraphics INTERFACE
+target_include_directories(pac-vidorgraphics INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/VidorGraphics/src"
 )
 
@@ -43,6 +43,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(vidorgraphics INTERFACE
+target_link_libraries(pac-vidorgraphics INTERFACE
     arduino-compat
 )

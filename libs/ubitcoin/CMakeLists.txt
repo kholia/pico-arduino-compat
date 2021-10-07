@@ -1,6 +1,6 @@
-add_library(ubitcoin INTERFACE)
+add_library(pac-ubitcoin INTERFACE)
 
-target_sources(ubitcoin INTERFACE
+target_sources(pac-ubitcoin INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/uBitcoin/src/Bitcoin.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/uBitcoin/src/Hash.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/uBitcoin/src/PSBT.cpp"
@@ -57,7 +57,7 @@ target_sources(ubitcoin INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/uBitcoin/src/utility/trezor/ripemd160.h"
 )
 
-target_include_directories(ubitcoin INTERFACE
+target_include_directories(pac-ubitcoin INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/uBitcoin/src"
 )
 
@@ -65,6 +65,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ubitcoin INTERFACE
+target_link_libraries(pac-ubitcoin INTERFACE
     arduino-compat
 )

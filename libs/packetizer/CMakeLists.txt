@@ -1,6 +1,6 @@
-add_library(packetizer INTERFACE)
+add_library(pac-packetizer INTERFACE)
 
-target_sources(packetizer INTERFACE
+target_sources(pac-packetizer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Packetizer/examples/send_receive_other_apps/openFrameworks/send_receive_index/src/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Packetizer/examples/send_receive_other_apps/openFrameworks/send_receive/src/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Packetizer/Packetizer.h"
@@ -37,7 +37,7 @@ target_sources(packetizer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Packetizer/Packetizer/util/CRCx/CRCpp/CRCpp.h"
 )
 
-target_include_directories(packetizer INTERFACE
+target_include_directories(pac-packetizer INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Packetizer"
 )
 
@@ -45,6 +45,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(packetizer INTERFACE
+target_link_libraries(pac-packetizer INTERFACE
     arduino-compat
 )

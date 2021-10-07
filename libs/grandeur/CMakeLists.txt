@@ -1,6 +1,6 @@
-add_library(grandeur INTERFACE)
+add_library(pac-grandeur INTERFACE)
 
-target_sources(grandeur INTERFACE
+target_sources(pac-grandeur INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-sdk/src/Data.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-sdk/src/Datastore.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-sdk/src/Callback.cpp"
@@ -41,7 +41,7 @@ target_sources(grandeur INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-sdk/src/EventEmitter/EventEmitter.h"
 )
 
-target_include_directories(grandeur INTERFACE
+target_include_directories(pac-grandeur INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-sdk/src"
 )
 
@@ -49,6 +49,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(grandeur INTERFACE
+target_link_libraries(pac-grandeur INTERFACE
     arduino-compat
 )

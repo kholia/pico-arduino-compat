@@ -1,6 +1,6 @@
-add_library(mobatools INTERFACE)
+add_library(pac-mobatools INTERFACE)
 
-target_sources(mobatools INTERFACE
+target_sources(pac-mobatools INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MobaTools/src/avr/MoToAVR.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MobaTools/src/esp32/MoToESP32.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MobaTools/src/utilities/MoToPwmESP.cpp"
@@ -44,7 +44,7 @@ target_sources(mobatools INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MobaTools/examples/_Stepper/TestStepRampCom/debugdefs.h"
 )
 
-target_include_directories(mobatools INTERFACE
+target_include_directories(pac-mobatools INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MobaTools/src"
 )
 
@@ -52,6 +52,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mobatools INTERFACE
+target_link_libraries(pac-mobatools INTERFACE
     arduino-compat
 )

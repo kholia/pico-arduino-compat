@@ -1,6 +1,6 @@
-add_library(softtimer INTERFACE)
+add_library(pac-softtimer INTERFACE)
 
-target_sources(softtimer INTERFACE
+target_sources(pac-softtimer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-softtimer/src/DelayRun.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-softtimer/src/SoftTimer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-softtimer/src/FrequencyTask.cpp"
@@ -27,7 +27,7 @@ target_sources(softtimer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-softtimer/src/SoftPwmTask.h"
 )
 
-target_include_directories(softtimer INTERFACE
+target_include_directories(pac-softtimer INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-softtimer/src"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(softtimer INTERFACE
+target_link_libraries(pac-softtimer INTERFACE
     arduino-compat
 )

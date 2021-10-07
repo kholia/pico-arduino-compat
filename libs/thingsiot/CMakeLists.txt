@@ -1,6 +1,6 @@
-add_library(thingsiot INTERFACE)
+add_library(pac-thingsiot INTERFACE)
 
-target_sources(thingsiot INTERFACE
+target_sources(pac-thingsiot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Things-IoT-Arduino-Library/src/PubSubClient/PubSubClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Things-IoT-Arduino-Library/src/ArduinoJson.hpp"
   "${CMAKE_CURRENT_LIST_DIR}/Things-IoT-Arduino-Library/src/ArduinoJson/version.hpp"
@@ -142,7 +142,7 @@ target_sources(thingsiot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Things-IoT-Arduino-Library/src/PubSubClient/PubSubClient.h"
 )
 
-target_include_directories(thingsiot INTERFACE
+target_include_directories(pac-thingsiot INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Things-IoT-Arduino-Library/src"
 )
 
@@ -150,6 +150,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(thingsiot INTERFACE
+target_link_libraries(pac-thingsiot INTERFACE
     arduino-compat
 )

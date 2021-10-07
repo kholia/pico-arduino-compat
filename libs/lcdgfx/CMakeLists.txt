@@ -1,6 +1,6 @@
-add_library(lcdgfx INTERFACE)
+add_library(pac-lcdgfx INTERFACE)
 
-target_sources(lcdgfx INTERFACE
+target_sources(pac-lcdgfx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/lcdgfx/unittest/ssd1331_tests.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/lcdgfx/unittest/ssd1306_tests.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/lcdgfx/unittest/main.cpp"
@@ -230,7 +230,7 @@ target_sources(lcdgfx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/lcdgfx/examples/gui/menu_demo/buttons.h"
 )
 
-target_include_directories(lcdgfx INTERFACE
+target_include_directories(pac-lcdgfx INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/lcdgfx/src"
 )
 
@@ -238,11 +238,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(lcdgfx INTERFACE
+target_link_libraries(pac-lcdgfx INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

@@ -1,6 +1,6 @@
-add_library(esp32timerinterrupt INTERFACE)
+add_library(pac-esp32timerinterrupt INTERFACE)
 
-target_sources(esp32timerinterrupt INTERFACE
+target_sources(pac-esp32timerinterrupt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP32TimerInterrupt/src_cpp/ESP32_ISR_Timer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP32TimerInterrupt/src_cpp/ESP32_S2_TimerInterrupt.h"
   "${CMAKE_CURRENT_LIST_DIR}/ESP32TimerInterrupt/src_cpp/ESP32_ISR_Timer.h"
@@ -21,7 +21,7 @@ target_sources(esp32timerinterrupt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP32TimerInterrupt/src_h/ESP32TimerInterrupt.h"
 )
 
-target_include_directories(esp32timerinterrupt INTERFACE
+target_include_directories(pac-esp32timerinterrupt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESP32TimerInterrupt/src"
 )
 
@@ -29,6 +29,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(esp32timerinterrupt INTERFACE
+target_link_libraries(pac-esp32timerinterrupt INTERFACE
     arduino-compat
 )

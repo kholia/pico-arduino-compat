@@ -1,6 +1,6 @@
-add_library(m5gfx INTERFACE)
+add_library(pac-m5gfx INTERFACE)
 
-target_sources(m5gfx INTERFACE
+target_sources(pac-m5gfx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5GFX/src/M5GFX.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5GFX/src/lgfx/v1/LGFX_Sprite.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5GFX/src/lgfx/v1/lgfx_fonts.cpp"
@@ -215,7 +215,7 @@ target_sources(m5gfx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5GFX/src/lgfx/utility/miniz.h"
 )
 
-target_include_directories(m5gfx INTERFACE
+target_include_directories(pac-m5gfx INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/M5GFX/src"
 )
 
@@ -223,11 +223,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(m5gfx INTERFACE
+target_link_libraries(pac-m5gfx INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

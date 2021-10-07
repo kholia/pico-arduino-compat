@@ -1,6 +1,6 @@
-add_library(mupplet-display INTERFACE)
+add_library(pac-mupplet-display INTERFACE)
 
-target_sources(mupplet-display INTERFACE
+target_sources(pac-mupplet-display INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mupplet-display/src/display_digits_max72xx.h"
   "${CMAKE_CURRENT_LIST_DIR}/mupplet-display/src/display_matrix_max72xx.h"
   "${CMAKE_CURRENT_LIST_DIR}/mupplet-display/src/mupplet_display.h"
@@ -13,7 +13,7 @@ target_sources(mupplet-display INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mupplet-display/src/hardware/st7735_matrix.h"
 )
 
-target_include_directories(mupplet-display INTERFACE
+target_include_directories(pac-mupplet-display INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/mupplet-display/src"
 )
 
@@ -21,11 +21,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(mupplet-display INTERFACE
+target_link_libraries(pac-mupplet-display INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

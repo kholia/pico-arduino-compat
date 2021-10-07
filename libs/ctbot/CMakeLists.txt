@@ -1,6 +1,6 @@
-add_library(ctbot INTERFACE)
+add_library(pac-ctbot INTERFACE)
 
-target_sources(ctbot INTERFACE
+target_sources(pac-ctbot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CTBot/src/CTBot.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/CTBot/src/CTBotInlineKeyboard.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/CTBot/src/CTBotReplyKeyboard.cpp"
@@ -19,7 +19,7 @@ target_sources(ctbot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CTBot/src/CTBotDataStructures.h"
 )
 
-target_include_directories(ctbot INTERFACE
+target_include_directories(pac-ctbot INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/CTBot/src"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ctbot INTERFACE
+target_link_libraries(pac-ctbot INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(oroca-edubot INTERFACE)
+add_library(pac-oroca-edubot INTERFACE)
 
-target_sources(oroca-edubot INTERFACE
+target_sources(pac-oroca-edubot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OROCA-EduBot-Library/src/EduBot.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OROCA-EduBot-Library/src/driver/driver.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OROCA-EduBot-Library/src/driver/imu/imu.cpp"
@@ -637,7 +637,7 @@ target_sources(oroca-edubot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OROCA-EduBot-Library/examples/Audio/EduBot_Radio/src/controls/include/controls.h"
 )
 
-target_include_directories(oroca-edubot INTERFACE
+target_include_directories(pac-oroca-edubot INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/OROCA-EduBot-Library/src"
 )
 
@@ -645,11 +645,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(oroca-edubot INTERFACE
+target_link_libraries(pac-oroca-edubot INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

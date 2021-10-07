@@ -1,6 +1,6 @@
-add_library(stm32duino-s2-lp INTERFACE)
+add_library(pac-stm32duino-s2-lp INTERFACE)
 
-target_sources(stm32duino-s2-lp INTERFACE
+target_sources(pac-stm32duino-s2-lp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/S2-LP/src/S2LP_Timer_ex.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/S2-LP/src/S2LP_Gpio.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/S2-LP/src/S2LP_Commands.cpp"
@@ -35,7 +35,7 @@ target_sources(stm32duino-s2-lp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/S2-LP/src/S2LP.h"
 )
 
-target_include_directories(stm32duino-s2-lp INTERFACE
+target_include_directories(pac-stm32duino-s2-lp INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/S2-LP/src"
 )
 
@@ -43,6 +43,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(stm32duino-s2-lp INTERFACE
+target_link_libraries(pac-stm32duino-s2-lp INTERFACE
     arduino-compat
 )

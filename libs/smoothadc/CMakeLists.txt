@@ -1,11 +1,11 @@
-add_library(smoothadc INTERFACE)
+add_library(pac-smoothadc INTERFACE)
 
-target_sources(smoothadc INTERFACE
+target_sources(pac-smoothadc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SmoothADC/src/SmoothADC.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SmoothADC/src/SmoothADC.h"
 )
 
-target_include_directories(smoothadc INTERFACE
+target_include_directories(pac-smoothadc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SmoothADC/src"
 )
 
@@ -13,6 +13,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(smoothadc INTERFACE
+target_link_libraries(pac-smoothadc INTERFACE
     arduino-compat
 )

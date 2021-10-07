@@ -1,6 +1,6 @@
-add_library(timerinterrupt_generic INTERFACE)
+add_library(pac-timerinterrupt_generic INTERFACE)
 
-target_sources(timerinterrupt_generic INTERFACE
+target_sources(pac-timerinterrupt_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TimerInterrupt_Generic/src_cpp/ISR_Timer_Generic.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TimerInterrupt_Generic/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TimerInterrupt_Generic/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
@@ -179,7 +179,7 @@ target_sources(timerinterrupt_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TimerInterrupt_Generic/src_h/MBED_RP2040_TimerInterrupt_Generic.h"
 )
 
-target_include_directories(timerinterrupt_generic INTERFACE
+target_include_directories(pac-timerinterrupt_generic INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TimerInterrupt_Generic/src"
 )
 
@@ -187,6 +187,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(timerinterrupt_generic INTERFACE
+target_link_libraries(pac-timerinterrupt_generic INTERFACE
     arduino-compat
 )

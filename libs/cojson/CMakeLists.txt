@@ -1,6 +1,6 @@
-add_library(cojson INTERFACE)
+add_library(pac-cojson INTERFACE)
 
-target_sources(cojson INTERFACE
+target_sources(pac-cojson INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/cojson.lib/src/cojson_libdep.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/cojson.lib/src/cojson.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/cojson.lib/src/platforms/avr/chartypetable_progmem.cpp"
@@ -25,7 +25,7 @@ target_sources(cojson INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/cojson.lib/src/platforms/avr/configuration.h"
 )
 
-target_include_directories(cojson INTERFACE
+target_include_directories(pac-cojson INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/cojson.lib/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(cojson INTERFACE
+target_link_libraries(pac-cojson INTERFACE
     arduino-compat
 )

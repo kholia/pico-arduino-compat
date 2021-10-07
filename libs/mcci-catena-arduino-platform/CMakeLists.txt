@@ -1,6 +1,6 @@
-add_library(mcci-catena-arduino-platform INTERFACE)
+add_library(pac-mcci-catena-arduino-platform INTERFACE)
 
-target_sources(mcci-catena-arduino-platform INTERFACE
+target_sources(pac-mcci-catena-arduino-platform INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Catena-Arduino-Platform/src/lib/Catena_Totalizer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Catena-Arduino-Platform/src/lib/CatenaBase_NetSave.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Catena-Arduino-Platform/src/lib/Catena_BootloaderApi.cpp"
@@ -168,7 +168,7 @@ target_sources(mcci-catena-arduino-platform INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Catena-Arduino-Platform/src/Catena4617.h"
 )
 
-target_include_directories(mcci-catena-arduino-platform INTERFACE
+target_include_directories(pac-mcci-catena-arduino-platform INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Catena-Arduino-Platform/src"
 )
 
@@ -176,6 +176,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mcci-catena-arduino-platform INTERFACE
+target_link_libraries(pac-mcci-catena-arduino-platform INTERFACE
     arduino-compat
 )

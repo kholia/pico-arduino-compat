@@ -1,6 +1,6 @@
-add_library(esp32_https_server INTERFACE)
+add_library(pac-esp32_https_server INTERFACE)
 
-target_sources(esp32_https_server INTERFACE
+target_sources(pac-esp32_https_server INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/esp32_https_server/extras/legacy/https_server.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/esp32_https_server/src/ResourceResolver.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/esp32_https_server/src/HTTPConnection.cpp"
@@ -58,7 +58,7 @@ target_sources(esp32_https_server INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/esp32_https_server/examples/Static-Page/favicon.h"
 )
 
-target_include_directories(esp32_https_server INTERFACE
+target_include_directories(pac-esp32_https_server INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/esp32_https_server/src"
 )
 
@@ -66,6 +66,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(esp32_https_server INTERFACE
+target_link_libraries(pac-esp32_https_server INTERFACE
     arduino-compat
 )

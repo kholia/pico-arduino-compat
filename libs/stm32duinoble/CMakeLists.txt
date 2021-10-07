@@ -1,6 +1,6 @@
-add_library(stm32duinoble INTERFACE)
+add_library(pac-stm32duinoble INTERFACE)
 
-target_sources(stm32duinoble INTERFACE
+target_sources(pac-stm32duinoble INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/STM32duinoBLE/extras/test/src/Arduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/STM32duinoBLE/extras/test/src/test_main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/STM32duinoBLE/extras/test/src/test_discovered_device/test_discovered_device.cpp"
@@ -97,7 +97,7 @@ target_sources(stm32duinoble INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/STM32duinoBLE/src/utility/STM32Cube_FW/mbox_def.h"
 )
 
-target_include_directories(stm32duinoble INTERFACE
+target_include_directories(pac-stm32duinoble INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/STM32duinoBLE/src"
 )
 
@@ -105,6 +105,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(stm32duinoble INTERFACE
+target_link_libraries(pac-stm32duinoble INTERFACE
     arduino-compat
 )

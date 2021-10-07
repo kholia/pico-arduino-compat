@@ -1,6 +1,6 @@
-add_library(asynctelegram2 INTERFACE)
+add_library(pac-asynctelegram2 INTERFACE)
 
-target_sources(asynctelegram2 INTERFACE
+target_sources(pac-asynctelegram2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AsyncTelegram2/src/InlineKeyboard.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AsyncTelegram2/src/ReplyKeyboard.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AsyncTelegram2/src/AsyncTelegram2.cpp"
@@ -17,7 +17,7 @@ target_sources(asynctelegram2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AsyncTelegram2/examples/advanced/multipleTimers/scheduler.h"
 )
 
-target_include_directories(asynctelegram2 INTERFACE
+target_include_directories(pac-asynctelegram2 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AsyncTelegram2/src"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(asynctelegram2 INTERFACE
+target_link_libraries(pac-asynctelegram2 INTERFACE
     arduino-compat
 )

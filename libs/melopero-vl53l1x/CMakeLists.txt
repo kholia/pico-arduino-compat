@@ -1,6 +1,6 @@
-add_library(melopero-vl53l1x INTERFACE)
+add_library(pac-melopero-vl53l1x INTERFACE)
 
-target_sources(melopero-vl53l1x INTERFACE
+target_sources(pac-melopero-vl53l1x INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Melopero_VL53L1X_Arduino_Library/src/Melopero_VL53L1X.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Melopero_VL53L1X_Arduino_Library/src/api/vl53l1_platform.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Melopero_VL53L1X_Arduino_Library/src/api/vl53l1_api_core.cpp"
@@ -47,7 +47,7 @@ target_sources(melopero-vl53l1x INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Melopero_VL53L1X_Arduino_Library/src/api/vl53l1_register_map.h"
 )
 
-target_include_directories(melopero-vl53l1x INTERFACE
+target_include_directories(pac-melopero-vl53l1x INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Melopero_VL53L1X_Arduino_Library/src"
 )
 
@@ -55,6 +55,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(melopero-vl53l1x INTERFACE
+target_link_libraries(pac-melopero-vl53l1x INTERFACE
     arduino-compat
 )

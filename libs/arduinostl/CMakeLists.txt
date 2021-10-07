@@ -1,6 +1,6 @@
-add_library(arduinostl INTERFACE)
+add_library(pac-arduinostl INTERFACE)
 
-target_sources(arduinostl INTERFACE
+target_sources(pac-arduinostl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoSTL/extras/uClibc++-OriginalFiles/tests/vectortest.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoSTL/extras/uClibc++-OriginalFiles/tests/testframework.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoSTL/extras/uClibc++-OriginalFiles/tests/excepttest.cpp"
@@ -108,7 +108,7 @@ target_sources(arduinostl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoSTL/src/unwind-cxx.h"
 )
 
-target_include_directories(arduinostl INTERFACE
+target_include_directories(pac-arduinostl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoSTL/src"
 )
 
@@ -116,6 +116,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinostl INTERFACE
+target_link_libraries(pac-arduinostl INTERFACE
     arduino-compat
 )

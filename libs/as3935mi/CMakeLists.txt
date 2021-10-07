@@ -1,6 +1,6 @@
-add_library(as3935mi INTERFACE)
+add_library(pac-as3935mi INTERFACE)
 
-target_sources(as3935mi INTERFACE
+target_sources(pac-as3935mi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/as3935mi/src/AS3935TwoWire.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/as3935mi/src/AS3935SPIClass.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/as3935mi/src/AS3935MI.cpp"
@@ -13,7 +13,7 @@ target_sources(as3935mi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/as3935mi/src/AS3935SPIClass.h"
 )
 
-target_include_directories(as3935mi INTERFACE
+target_include_directories(pac-as3935mi INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/as3935mi/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(as3935mi INTERFACE
+target_link_libraries(pac-as3935mi INTERFACE
     arduino-compat
 )

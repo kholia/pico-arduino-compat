@@ -1,6 +1,6 @@
-add_library(agirs INTERFACE)
+add_library(pac-agirs INTERFACE)
 
-target_sources(agirs INTERFACE
+target_sources(pac-agirs INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AGirs/src/GirsLib/GirsUtils.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AGirs/src/GirsLib/LedLcdManager.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AGirs/src/GirsLib/LiquidCrystal_I2C_bm.cpp"
@@ -37,7 +37,7 @@ target_sources(agirs INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AGirs/examples/Girs/GirsLite.config.h"
 )
 
-target_include_directories(agirs INTERFACE
+target_include_directories(pac-agirs INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AGirs/src"
 )
 
@@ -45,6 +45,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(agirs INTERFACE
+target_link_libraries(pac-agirs INTERFACE
     arduino-compat
 )

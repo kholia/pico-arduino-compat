@@ -1,6 +1,6 @@
-add_library(mdns_generic INTERFACE)
+add_library(pac-mdns_generic INTERFACE)
 
-target_sources(mdns_generic INTERFACE
+target_sources(pac-mdns_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MDNS_Generic/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MDNS_Generic/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MDNS_Generic/LibraryPatches/UIPEthernet-2.0.9/UIPEthernet.cpp"
@@ -147,7 +147,7 @@ target_sources(mdns_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MDNS_Generic/examples/WiFi/WiFiRegisteringServices/arduino_secrets.h"
 )
 
-target_include_directories(mdns_generic INTERFACE
+target_include_directories(pac-mdns_generic INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MDNS_Generic/src"
 )
 
@@ -155,6 +155,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mdns_generic INTERFACE
+target_link_libraries(pac-mdns_generic INTERFACE
     arduino-compat
 )

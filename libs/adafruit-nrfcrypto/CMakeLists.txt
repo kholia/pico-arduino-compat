@@ -1,6 +1,6 @@
-add_library(adafruit-nrfcrypto INTERFACE)
+add_library(pac-adafruit-nrfcrypto INTERFACE)
 
-target_sources(adafruit-nrfcrypto INTERFACE
+target_sources(pac-adafruit-nrfcrypto INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_nRFCrypto/src/nRFCrypto_Hash.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_nRFCrypto/src/Adafruit_nRFCrypto.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_nRFCrypto/src/nRFCrypto_Random.cpp"
@@ -98,7 +98,7 @@ target_sources(adafruit-nrfcrypto INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_nRFCrypto/src/nrf_cc310/include/ssi_pal_list.h"
 )
 
-target_include_directories(adafruit-nrfcrypto INTERFACE
+target_include_directories(pac-adafruit-nrfcrypto INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_nRFCrypto/src"
 )
 
@@ -106,6 +106,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(adafruit-nrfcrypto INTERFACE
+target_link_libraries(pac-adafruit-nrfcrypto INTERFACE
     arduino-compat
 )

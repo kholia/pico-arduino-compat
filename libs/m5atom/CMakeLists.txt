@@ -1,6 +1,6 @@
-add_library(m5atom INTERFACE)
+add_library(pac-m5atom INTERFACE)
 
-target_sources(m5atom INTERFACE
+target_sources(pac-m5atom INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5Atom/src/M5Atom.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5Atom/src/utility/Button.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5Atom/src/utility/LED_DisPlay.cpp"
@@ -63,7 +63,7 @@ target_sources(m5atom INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5Atom/examples/Advanced/WIFI/WiFiSetting/detail/RequestHandlersImpl.h"
 )
 
-target_include_directories(m5atom INTERFACE
+target_include_directories(pac-m5atom INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/M5Atom/src"
 )
 
@@ -71,6 +71,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(m5atom INTERFACE
+target_link_libraries(pac-m5atom INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(eloquentarduino INTERFACE)
+add_library(pac-eloquentarduino INTERFACE)
 
-target_sources(eloquentarduino INTERFACE
+target_sources(pac-eloquentarduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EloquentArduino/src/EloquentArduino.h"
   "${CMAKE_CURRENT_LIST_DIR}/EloquentArduino/src/io/InputStream/ArrayInputStream.h"
   "${CMAKE_CURRENT_LIST_DIR}/EloquentArduino/src/io/InputStream/Round.h"
@@ -80,7 +80,7 @@ target_sources(eloquentarduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EloquentArduino/examples/MicromlGestureIdentificationExample/imu_9250.h"
 )
 
-target_include_directories(eloquentarduino INTERFACE
+target_include_directories(pac-eloquentarduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EloquentArduino/src"
 )
 
@@ -88,6 +88,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(eloquentarduino INTERFACE
+target_link_libraries(pac-eloquentarduino INTERFACE
     arduino-compat
 )

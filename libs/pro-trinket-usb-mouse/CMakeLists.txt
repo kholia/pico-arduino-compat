@@ -1,6 +1,6 @@
-add_library(pro-trinket-usb-mouse INTERFACE)
+add_library(pac-pro-trinket-usb-mouse INTERFACE)
 
-target_sources(pro-trinket-usb-mouse INTERFACE
+target_sources(pac-pro-trinket-usb-mouse INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Pro_Trinket_USB_Mouse/ProTrinketMouse.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Pro_Trinket_USB_Mouse/ProTrinketMouseC.c"
   "${CMAKE_CURRENT_LIST_DIR}/Pro_Trinket_USB_Mouse/usbdrv_includer.c"
@@ -15,7 +15,7 @@ target_sources(pro-trinket-usb-mouse INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Pro_Trinket_USB_Mouse/usbdrv/usbportability.h"
 )
 
-target_include_directories(pro-trinket-usb-mouse INTERFACE
+target_include_directories(pac-pro-trinket-usb-mouse INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Pro_Trinket_USB_Mouse"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pro-trinket-usb-mouse INTERFACE
+target_link_libraries(pac-pro-trinket-usb-mouse INTERFACE
     arduino-compat
 )

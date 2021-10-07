@@ -1,6 +1,6 @@
-add_library(adafruit-dap-library INTERFACE)
+add_library(pac-adafruit-dap-library INTERFACE)
 
-target_sources(adafruit-dap-library INTERFACE
+target_sources(pac-adafruit-dap-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_DAP/dap.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_DAP/Adafruit_DAP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_DAP/Adafruit_DAP_STM32.cpp"
@@ -30,7 +30,7 @@ target_sources(adafruit-dap-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_DAP/examples/samd51/samx5_flash_from_header/samd51_uf2.h"
 )
 
-target_include_directories(adafruit-dap-library INTERFACE
+target_include_directories(pac-adafruit-dap-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_DAP"
 )
 
@@ -38,6 +38,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(adafruit-dap-library INTERFACE
+target_link_libraries(pac-adafruit-dap-library INTERFACE
     arduino-compat
 )

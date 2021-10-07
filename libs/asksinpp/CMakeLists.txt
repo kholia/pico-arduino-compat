@@ -1,6 +1,6 @@
-add_library(asksinpp INTERFACE)
+add_library(pac-asksinpp INTERFACE)
 
-target_sources(asksinpp INTERFACE
+target_sources(pac-asksinpp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AskSinPP/aes_keyschedule.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AskSinPP/aes_dec.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AskSinPP/HMID.cpp"
@@ -101,7 +101,7 @@ target_sources(asksinpp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AskSinPP/actors/Motor.h"
 )
 
-target_include_directories(asksinpp INTERFACE
+target_include_directories(pac-asksinpp INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AskSinPP"
 )
 
@@ -109,6 +109,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(asksinpp INTERFACE
+target_link_libraries(pac-asksinpp INTERFACE
     arduino-compat
 )

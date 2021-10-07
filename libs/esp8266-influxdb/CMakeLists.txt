@@ -1,6 +1,6 @@
-add_library(esp8266-influxdb INTERFACE)
+add_library(pac-esp8266-influxdb INTERFACE)
 
-target_sources(esp8266-influxdb INTERFACE
+target_sources(pac-esp8266-influxdb INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/InfluxDB-Client-for-Arduino/test/TestSupport.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/InfluxDB-Client-for-Arduino/test/Test.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/InfluxDB-Client-for-Arduino/test/TestBase.cpp"
@@ -41,7 +41,7 @@ target_sources(esp8266-influxdb INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/InfluxDB-Client-for-Arduino/src/query/FluxTypes.h"
 )
 
-target_include_directories(esp8266-influxdb INTERFACE
+target_include_directories(pac-esp8266-influxdb INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/InfluxDB-Client-for-Arduino/src"
 )
 
@@ -49,6 +49,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(esp8266-influxdb INTERFACE
+target_link_libraries(pac-esp8266-influxdb INTERFACE
     arduino-compat
 )

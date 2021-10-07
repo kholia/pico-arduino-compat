@@ -1,6 +1,6 @@
-add_library(mdnsresolver INTERFACE)
+add_library(pac-mdnsresolver INTERFACE)
 
-target_sources(mdnsresolver INTERFACE
+target_sources(pac-mdnsresolver INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mDNSResolver/mocks/WiFiUdp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/mDNSResolver/mocks/Arduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/mDNSResolver/mocks/IPAddress.cpp"
@@ -27,7 +27,7 @@ target_sources(mdnsresolver INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mDNSResolver/src/mDNSResolver.h"
 )
 
-target_include_directories(mdnsresolver INTERFACE
+target_include_directories(pac-mdnsresolver INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/mDNSResolver/src"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mdnsresolver INTERFACE
+target_link_libraries(pac-mdnsresolver INTERFACE
     arduino-compat
 )

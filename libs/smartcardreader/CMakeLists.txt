@@ -1,6 +1,6 @@
-add_library(smartcardreader INTERFACE)
+add_library(pac-smartcardreader INTERFACE)
 
-target_sources(smartcardreader INTERFACE
+target_sources(pac-smartcardreader INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Parallax-Smart-Card-Reader-Library-for-Arduino/src/IS23SC4442.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Parallax-Smart-Card-Reader-Library-for-Arduino/src/SmartCardReader.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Parallax-Smart-Card-Reader-Library-for-Arduino/src/IS24C02A.cpp"
@@ -11,7 +11,7 @@ target_sources(smartcardreader INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Parallax-Smart-Card-Reader-Library-for-Arduino/src/IS24C16A.h"
 )
 
-target_include_directories(smartcardreader INTERFACE
+target_include_directories(pac-smartcardreader INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Parallax-Smart-Card-Reader-Library-for-Arduino/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(smartcardreader INTERFACE
+target_link_libraries(pac-smartcardreader INTERFACE
     arduino-compat
 )

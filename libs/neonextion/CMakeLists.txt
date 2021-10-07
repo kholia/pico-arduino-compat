@@ -1,6 +1,6 @@
-add_library(neonextion INTERFACE)
+add_library(pac-neonextion INTERFACE)
 
-target_sources(neonextion INTERFACE
+target_sources(pac-neonextion INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NeoNextion/NextionPage.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NeoNextion/INextionFontStyleable.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NeoNextion/NextionSlidingText.cpp"
@@ -43,7 +43,7 @@ target_sources(neonextion INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NeoNextion/NextionTimer.h"
 )
 
-target_include_directories(neonextion INTERFACE
+target_include_directories(pac-neonextion INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/NeoNextion"
 )
 
@@ -51,6 +51,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(neonextion INTERFACE
+target_link_libraries(pac-neonextion INTERFACE
     arduino-compat
 )

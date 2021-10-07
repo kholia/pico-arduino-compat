@@ -1,6 +1,6 @@
-add_library(asyncwebserver_stm32 INTERFACE)
+add_library(pac-asyncwebserver_stm32 INTERFACE)
 
-target_sources(asyncwebserver_stm32 INTERFACE
+target_sources(pac-asyncwebserver_stm32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AsyncWebServer_STM32/src/AsyncWebHandlers_STM32.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AsyncWebServer_STM32/src/AsyncWebRequest_STM32.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AsyncWebServer_STM32/src/AsyncWebSocket_STM32.cpp"
@@ -67,7 +67,7 @@ target_sources(asyncwebserver_stm32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AsyncWebServer_STM32/examples/MQTT_ThingStream/defines.h"
 )
 
-target_include_directories(asyncwebserver_stm32 INTERFACE
+target_include_directories(pac-asyncwebserver_stm32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AsyncWebServer_STM32/src"
 )
 
@@ -75,6 +75,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(asyncwebserver_stm32 INTERFACE
+target_link_libraries(pac-asyncwebserver_stm32 INTERFACE
     arduino-compat
 )

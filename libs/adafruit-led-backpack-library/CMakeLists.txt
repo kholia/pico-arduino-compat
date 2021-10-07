@@ -1,11 +1,11 @@
-add_library(adafruit-led-backpack-library INTERFACE)
+add_library(pac-adafruit-led-backpack-library INTERFACE)
 
-target_sources(adafruit-led-backpack-library INTERFACE
+target_sources(pac-adafruit-led-backpack-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_LED_Backpack/Adafruit_LEDBackpack.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_LED_Backpack/Adafruit_LEDBackpack.h"
 )
 
-target_include_directories(adafruit-led-backpack-library INTERFACE
+target_include_directories(pac-adafruit-led-backpack-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_LED_Backpack"
 )
 
@@ -13,16 +13,16 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-if (NOT TARGET adafruit-busio)
-    add_subdirectory(../../libs/adafruit-busio build_adafruit-busio)
+if (NOT TARGET pac-adafruit-busio)
+    add_subdirectory(../../libs/adafruit-busio build_pac-adafruit-busio)
 endif()
 
-target_link_libraries(adafruit-led-backpack-library INTERFACE
+target_link_libraries(pac-adafruit-led-backpack-library INTERFACE
     arduino-compat
-    adafruit-gfx-library
-    adafruit-busio
+    pac-adafruit-gfx-library
+    pac-adafruit-busio
 )

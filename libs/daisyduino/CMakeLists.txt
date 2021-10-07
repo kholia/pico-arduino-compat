@@ -1,6 +1,6 @@
-add_library(daisyduino INTERFACE)
+add_library(pac-daisyduino INTERFACE)
 
-target_sources(daisyduino INTERFACE
+target_sources(pac-daisyduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DaisyDuino/src/DaisyDuino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DaisyDuino/src/AudioClass.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DaisyDuino/src/utility/sai.cpp"
@@ -169,7 +169,7 @@ target_sources(daisyduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DaisyDuino/src/utility/DaisySP/modules/fractal_noise.h"
 )
 
-target_include_directories(daisyduino INTERFACE
+target_include_directories(pac-daisyduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/DaisyDuino/src"
 )
 
@@ -177,6 +177,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(daisyduino INTERFACE
+target_link_libraries(pac-daisyduino INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(romi32u4 INTERFACE)
+add_library(pac-romi32u4 INTERFACE)
 
-target_sources(romi32u4 INTERFACE
+target_sources(pac-romi32u4 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/romi-32u4-arduino-library/Pushbutton.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/romi-32u4-arduino-library/Romi32U4Motors.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/romi-32u4-arduino-library/Romi32U4Encoders.cpp"
@@ -23,7 +23,7 @@ target_sources(romi32u4 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/romi-32u4-arduino-library/examples/RemoteControl/RemoteDecoder.h"
 )
 
-target_include_directories(romi32u4 INTERFACE
+target_include_directories(pac-romi32u4 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/romi-32u4-arduino-library"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(romi32u4 INTERFACE
+target_link_libraries(pac-romi32u4 INTERFACE
     arduino-compat
 )

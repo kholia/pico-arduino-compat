@@ -1,6 +1,6 @@
-add_library(ucglib INTERFACE)
+add_library(pac-ucglib INTERFACE)
 
-target_sources(ucglib INTERFACE
+target_sources(pac-ucglib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Ucglib_Arduino/src/Ucglib.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Ucglib_Arduino/src/clib/ucg_dev_oled_128x128_ilsoft.c"
   "${CMAKE_CURRENT_LIST_DIR}/Ucglib_Arduino/src/clib/ucg_vector_font_data.c"
@@ -50,7 +50,7 @@ target_sources(ucglib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Ucglib_Arduino/src/clib/ucg.h"
 )
 
-target_include_directories(ucglib INTERFACE
+target_include_directories(pac-ucglib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Ucglib_Arduino/src"
 )
 
@@ -58,6 +58,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ucglib INTERFACE
+target_link_libraries(pac-ucglib INTERFACE
     arduino-compat
 )

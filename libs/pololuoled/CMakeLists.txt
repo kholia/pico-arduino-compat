@@ -1,6 +1,6 @@
-add_library(pololuoled INTERFACE)
+add_library(pac-pololuoled INTERFACE)
 
-target_sources(pololuoled INTERFACE
+target_sources(pac-pololuoled INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/pololu-oled-arduino/src/font.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/pololu-oled-arduino/examples/CustomFont/font.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/pololu-oled-arduino/src/PololuSH1106Main.h"
@@ -10,7 +10,7 @@ target_sources(pololuoled INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/pololu-oled-arduino/examples/CustomFont/font.h"
 )
 
-target_include_directories(pololuoled INTERFACE
+target_include_directories(pac-pololuoled INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/pololu-oled-arduino/src"
 )
 
@@ -18,6 +18,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pololuoled INTERFACE
+target_link_libraries(pac-pololuoled INTERFACE
     arduino-compat
 )

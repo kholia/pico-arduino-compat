@@ -1,6 +1,6 @@
-add_library(cayennemqtt INTERFACE)
+add_library(pac-cayennemqtt INTERFACE)
 
-target_sources(cayennemqtt INTERFACE
+target_sources(pac-cayennemqtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Cayenne-MQTT-Arduino/src/CayenneHandlers.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Cayenne-MQTT-Arduino/src/Platform/Arduino/MQTTArduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Cayenne-MQTT-Arduino/src/CayenneMQTTClient/CayenneMQTTClient.c"
@@ -57,7 +57,7 @@ target_sources(cayennemqtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Cayenne-MQTT-Arduino/src/Platform/Arduino/MQTTArduino.h"
 )
 
-target_include_directories(cayennemqtt INTERFACE
+target_include_directories(pac-cayennemqtt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Cayenne-MQTT-Arduino/src"
 )
 
@@ -65,6 +65,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(cayennemqtt INTERFACE
+target_link_libraries(pac-cayennemqtt INTERFACE
     arduino-compat
 )

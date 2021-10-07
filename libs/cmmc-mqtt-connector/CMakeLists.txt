@@ -1,6 +1,6 @@
-add_library(cmmc-mqtt-connector INTERFACE)
+add_library(pac-cmmc-mqtt-connector INTERFACE)
 
-target_sources(cmmc-mqtt-connector INTERFACE
+target_sources(pac-cmmc-mqtt-connector INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MQTT-Connector/src/MQTT.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MQTT-Connector/src/PubSubClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MQTT-Connector/src/MqttConnector.cpp"
@@ -105,7 +105,7 @@ target_sources(cmmc-mqtt-connector INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MQTT-Connector/examples/basic_mqtt/init_mqtt.h"
 )
 
-target_include_directories(cmmc-mqtt-connector INTERFACE
+target_include_directories(pac-cmmc-mqtt-connector INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MQTT-Connector/src"
 )
 
@@ -113,6 +113,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(cmmc-mqtt-connector INTERFACE
+target_link_libraries(pac-cmmc-mqtt-connector INTERFACE
     arduino-compat
 )

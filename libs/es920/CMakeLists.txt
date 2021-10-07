@@ -1,6 +1,6 @@
-add_library(es920 INTERFACE)
+add_library(pac-es920 INTERFACE)
 
-target_sources(es920 INTERFACE
+target_sources(pac-es920 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ES920/examples/openFrameworks/ascii/src/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ES920/examples/openFrameworks/ascii/src/ofApp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ES920/examples/openFrameworks/binary/src/main.cpp"
@@ -84,7 +84,7 @@ target_sources(es920 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ES920/ES920/Parser/BinaryParser.h"
 )
 
-target_include_directories(es920 INTERFACE
+target_include_directories(pac-es920 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ES920"
 )
 
@@ -92,6 +92,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(es920 INTERFACE
+target_link_libraries(pac-es920 INTERFACE
     arduino-compat
 )

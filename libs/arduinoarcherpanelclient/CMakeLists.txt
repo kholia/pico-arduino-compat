@@ -1,6 +1,6 @@
-add_library(arduinoarcherpanelclient INTERFACE)
+add_library(pac-arduinoarcherpanelclient INTERFACE)
 
-target_sources(arduinoarcherpanelclient INTERFACE
+target_sources(pac-arduinoarcherpanelclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoArcherPanelClient/src/ElementClickEvent.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoArcherPanelClient/src/SetVariableCommand.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoArcherPanelClient/src/AuthenticateCommand.cpp"
@@ -22,7 +22,7 @@ target_sources(arduinoarcherpanelclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoArcherPanelClient/src/PanelEvent.h"
 )
 
-target_include_directories(arduinoarcherpanelclient INTERFACE
+target_include_directories(pac-arduinoarcherpanelclient INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoArcherPanelClient/src"
 )
 
@@ -30,6 +30,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinoarcherpanelclient INTERFACE
+target_link_libraries(pac-arduinoarcherpanelclient INTERFACE
     arduino-compat
 )

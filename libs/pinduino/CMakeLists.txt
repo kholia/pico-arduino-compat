@@ -1,6 +1,6 @@
-add_library(pinduino INTERFACE)
+add_library(pac-pinduino INTERFACE)
 
-target_sources(pinduino INTERFACE
+target_sources(pac-pinduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/pinduino/src/pinduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/pinduino/src/pinduinoPins.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/pinduino/src/AddressableStrip.cpp"
@@ -17,7 +17,7 @@ target_sources(pinduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/pinduino/src/DataPort.h"
 )
 
-target_include_directories(pinduino INTERFACE
+target_include_directories(pac-pinduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/pinduino/src"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pinduino INTERFACE
+target_link_libraries(pac-pinduino INTERFACE
     arduino-compat
 )

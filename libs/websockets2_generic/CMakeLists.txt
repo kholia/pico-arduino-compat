@@ -1,6 +1,6 @@
-add_library(websockets2_generic INTERFACE)
+add_library(pac-websockets2_generic INTERFACE)
 
-target_sources(websockets2_generic INTERFACE
+target_sources(pac-websockets2_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WebSockets2_Generic/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WebSockets2_Generic/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WebSockets2_Generic/LibraryPatches/UIPEthernet-2.0.9/UIPEthernet.cpp"
@@ -374,7 +374,7 @@ target_sources(websockets2_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WebSockets2_Generic/esp32s2_WebServer_Patch/WebServer.h"
 )
 
-target_include_directories(websockets2_generic INTERFACE
+target_include_directories(pac-websockets2_generic INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WebSockets2_Generic/src"
 )
 
@@ -382,6 +382,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(websockets2_generic INTERFACE
+target_link_libraries(pac-websockets2_generic INTERFACE
     arduino-compat
 )

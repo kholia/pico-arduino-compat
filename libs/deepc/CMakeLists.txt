@@ -1,6 +1,6 @@
-add_library(deepc INTERFACE)
+add_library(pac-deepc INTERFACE)
 
-target_sources(deepc INTERFACE
+target_sources(pac-deepc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino/examples/asl_model.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino/src/deepC.h"
   "${CMAKE_CURRENT_LIST_DIR}/arduino/src/Eigen.h"
@@ -437,7 +437,7 @@ target_sources(deepc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino/src/core/iterator.h"
 )
 
-target_include_directories(deepc INTERFACE
+target_include_directories(pac-deepc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino/src"
 )
 
@@ -445,6 +445,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(deepc INTERFACE
+target_link_libraries(pac-deepc INTERFACE
     arduino-compat
 )

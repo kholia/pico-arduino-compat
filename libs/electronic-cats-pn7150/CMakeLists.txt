@@ -1,6 +1,6 @@
-add_library(electronic-cats-pn7150 INTERFACE)
+add_library(pac-electronic-cats-pn7150 INTERFACE)
 
-target_sources(electronic-cats-pn7150 INTERFACE
+target_sources(pac-electronic-cats-pn7150 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ElectronicCats-PN7150/src/P2P_NDEF.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ElectronicCats-PN7150/src/Electroniccats_PN7150.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ElectronicCats-PN7150/src/T4T_NDEF_emu.cpp"
@@ -25,7 +25,7 @@ target_sources(electronic-cats-pn7150 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ElectronicCats-PN7150/src/ndef_helper.h"
 )
 
-target_include_directories(electronic-cats-pn7150 INTERFACE
+target_include_directories(pac-electronic-cats-pn7150 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ElectronicCats-PN7150/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(electronic-cats-pn7150 INTERFACE
+target_link_libraries(pac-electronic-cats-pn7150 INTERFACE
     arduino-compat
 )

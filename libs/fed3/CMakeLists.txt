@@ -1,11 +1,11 @@
-add_library(fed3 INTERFACE)
+add_library(pac-fed3 INTERFACE)
 
-target_sources(fed3 INTERFACE
+target_sources(pac-fed3 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FED3_library/src/FED3.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FED3_library/src/FED3.h"
 )
 
-target_include_directories(fed3 INTERFACE
+target_include_directories(pac-fed3 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FED3_library/src"
 )
 
@@ -13,16 +13,16 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-if (NOT TARGET adafruit-busio)
-    add_subdirectory(../../libs/adafruit-busio build_adafruit-busio)
+if (NOT TARGET pac-adafruit-busio)
+    add_subdirectory(../../libs/adafruit-busio build_pac-adafruit-busio)
 endif()
 
-target_link_libraries(fed3 INTERFACE
+target_link_libraries(pac-fed3 INTERFACE
     arduino-compat
-    adafruit-gfx-library
-    adafruit-busio
+    pac-adafruit-gfx-library
+    pac-adafruit-busio
 )

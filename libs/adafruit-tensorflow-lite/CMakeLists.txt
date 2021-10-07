@@ -1,6 +1,6 @@
-add_library(adafruit-tensorflow-lite INTERFACE)
+add_library(pac-adafruit-tensorflow-lite INTERFACE)
 
-target_sources(adafruit-tensorflow-lite INTERFACE
+target_sources(pac-adafruit-tensorflow-lite INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_TFLite/Adafruit_TFLite.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_TFLite/examples/micro_speech_arcada/recognize_commands.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_TFLite/examples/micro_speech_arcada/arduino_audio_provider.cpp"
@@ -57,7 +57,7 @@ target_sources(adafruit-tensorflow-lite INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_TFLite/examples/hello_world_arcada/sine_model_data.h"
 )
 
-target_include_directories(adafruit-tensorflow-lite INTERFACE
+target_include_directories(pac-adafruit-tensorflow-lite INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_TFLite"
 )
 
@@ -65,6 +65,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(adafruit-tensorflow-lite INTERFACE
+target_link_libraries(pac-adafruit-tensorflow-lite INTERFACE
     arduino-compat
 )

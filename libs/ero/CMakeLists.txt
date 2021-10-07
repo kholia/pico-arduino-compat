@@ -1,6 +1,6 @@
-add_library(ero INTERFACE)
+add_library(pac-ero INTERFACE)
 
-target_sources(ero INTERFACE
+target_sources(pac-ero INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ERO/src/EROCore.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ERO/src/EROBLE.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ERO/src/MOTOR.cpp"
@@ -14,7 +14,7 @@ target_sources(ero INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ERO/src/PinEro.h"
 )
 
-target_include_directories(ero INTERFACE
+target_include_directories(pac-ero INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ERO/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ero INTERFACE
+target_link_libraries(pac-ero INTERFACE
     arduino-compat
 )

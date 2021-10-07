@@ -1,6 +1,6 @@
-add_library(midi-device-controller INTERFACE)
+add_library(pac-midi-device-controller INTERFACE)
 
-target_sources(midi-device-controller INTERFACE
+target_sources(pac-midi-device-controller INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MIDI_Device_Controller/src/MIDI_Devices/MIDI_Digital_IO.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MIDI_Device_Controller/src/MIDI_Devices/MIDI_SN74HC595N.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MIDI_Device_Controller/src/MIDI_Devices/byteNoteRegister.cpp"
@@ -51,7 +51,7 @@ target_sources(midi-device-controller INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MIDI_Device_Controller/examples/3Buzzers_HairlessMIDI/src/MIDI_Serial/MIDI_Enums.h"
 )
 
-target_include_directories(midi-device-controller INTERFACE
+target_include_directories(pac-midi-device-controller INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MIDI_Device_Controller/src"
 )
 
@@ -59,6 +59,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(midi-device-controller INTERFACE
+target_link_libraries(pac-midi-device-controller INTERFACE
     arduino-compat
 )

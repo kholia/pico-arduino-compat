@@ -1,6 +1,6 @@
-add_library(webthing-arduino INTERFACE)
+add_library(pac-webthing-arduino INTERFACE)
 
-target_sources(webthing-arduino INTERFACE
+target_sources(pac-webthing-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/webthing-arduino/examples/PlatformIO/TextDisplay/src/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/webthing-arduino/examples/PlatformIO/RGBLamp/src/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/webthing-arduino/examples/PlatformIO/LEDLamp/src/main.cpp"
@@ -15,7 +15,7 @@ target_sources(webthing-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/webthing-arduino/WiFi101WebThingAdapter.h"
 )
 
-target_include_directories(webthing-arduino INTERFACE
+target_include_directories(pac-webthing-arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/webthing-arduino"
 )
 
@@ -23,11 +23,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(webthing-arduino INTERFACE
+target_link_libraries(pac-webthing-arduino INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

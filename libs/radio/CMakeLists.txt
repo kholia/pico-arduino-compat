@@ -1,6 +1,6 @@
-add_library(radio INTERFACE)
+add_library(pac-radio INTERFACE)
 
-target_sources(radio INTERFACE
+target_sources(pac-radio INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Radio/src/SI4703.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Radio/src/RDA5807M.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Radio/src/RDSParser.cpp"
@@ -20,7 +20,7 @@ target_sources(radio INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Radio/examples/WebRadio/StringBuffer.h"
 )
 
-target_include_directories(radio INTERFACE
+target_include_directories(pac-radio INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Radio/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(radio INTERFACE
+target_link_libraries(pac-radio INTERFACE
     arduino-compat
 )

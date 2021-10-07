@@ -1,6 +1,6 @@
-add_library(fabgl INTERFACE)
+add_library(pac-fabgl INTERFACE)
 
-target_sources(fabgl INTERFACE
+target_sources(pac-fabgl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FabGL/src/codepages.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FabGL/src/terminal.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FabGL/src/fabutils.cpp"
@@ -247,7 +247,7 @@ target_sources(fabgl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FabGL/examples/ST7789_TFT/240x240/DoubleBuffer/spritestest.h"
 )
 
-target_include_directories(fabgl INTERFACE
+target_include_directories(pac-fabgl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FabGL/src"
 )
 
@@ -255,6 +255,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(fabgl INTERFACE
+target_link_libraries(pac-fabgl INTERFACE
     arduino-compat
 )

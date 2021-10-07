@@ -1,6 +1,6 @@
-add_library(muwerk-scheduler-library INTERFACE)
+add_library(pac-muwerk-scheduler-library INTERFACE)
 
-target_sources(muwerk-scheduler-library INTERFACE
+target_sources(pac-muwerk-scheduler-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/muwerk/Examples/rp2040/src/rp2040.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/muwerk/Examples/minimal/src/mu_minimal.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/muwerk/Examples/console/src/mu_console.cpp"
@@ -17,7 +17,7 @@ target_sources(muwerk-scheduler-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/muwerk/console.h"
 )
 
-target_include_directories(muwerk-scheduler-library INTERFACE
+target_include_directories(pac-muwerk-scheduler-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/muwerk"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(muwerk-scheduler-library INTERFACE
+target_link_libraries(pac-muwerk-scheduler-library INTERFACE
     arduino-compat
 )

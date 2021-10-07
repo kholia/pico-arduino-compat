@@ -1,6 +1,6 @@
-add_library(gtt INTERFACE)
+add_library(pac-gtt INTERFACE)
 
-target_sources(gtt INTERFACE
+target_sources(pac-gtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MatrixOrbitalGTTClientLibrary/src/gtt_ext_types.c"
   "${CMAKE_CURRENT_LIST_DIR}/MatrixOrbitalGTTClientLibrary/src/gtt_events.c"
   "${CMAKE_CURRENT_LIST_DIR}/MatrixOrbitalGTTClientLibrary/src/gtt_protocol.c"
@@ -18,7 +18,7 @@ target_sources(gtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MatrixOrbitalGTTClientLibrary/src/gtt_protocol.h"
 )
 
-target_include_directories(gtt INTERFACE
+target_include_directories(pac-gtt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MatrixOrbitalGTTClientLibrary/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(gtt INTERFACE
+target_link_libraries(pac-gtt INTERFACE
     arduino-compat
 )

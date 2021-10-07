@@ -1,6 +1,6 @@
-add_library(smallprojects INTERFACE)
+add_library(pac-smallprojects INTERFACE)
 
-target_sources(smallprojects INTERFACE
+target_sources(pac-smallprojects INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SmallProjects/SmartFarm_DeepSleep/SmartFarm_DeepSleep.h"
   "${CMAKE_CURRENT_LIST_DIR}/SmallProjects/STM32_LAN8720/HttpBasicAuth_LAN8720/hal_conf_extra.h"
   "${CMAKE_CURRENT_LIST_DIR}/SmallProjects/STM32_LAN8720/HttpBasicAuth_LAN8720/defines.h"
@@ -57,7 +57,7 @@ target_sources(smallprojects INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SmallProjects/src/SmallProjects.h"
 )
 
-target_include_directories(smallprojects INTERFACE
+target_include_directories(pac-smallprojects INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SmallProjects/src"
 )
 
@@ -65,6 +65,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(smallprojects INTERFACE
+target_link_libraries(pac-smallprojects INTERFACE
     arduino-compat
 )

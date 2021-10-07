@@ -1,6 +1,6 @@
-add_library(dio2 INTERFACE)
+add_library(pac-dio2 INTERFACE)
 
-target_sources(dio2 INTERFACE
+target_sources(pac-dio2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DIO2/VStudio/DIO2.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DIO2/VStudio/DIO2.hpp"
   "${CMAKE_CURRENT_LIST_DIR}/DIO2/src/digital2.c"
@@ -14,7 +14,7 @@ target_sources(dio2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DIO2/src/DIO2.h"
 )
 
-target_include_directories(dio2 INTERFACE
+target_include_directories(pac-dio2 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/DIO2/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(dio2 INTERFACE
+target_link_libraries(pac-dio2 INTERFACE
     arduino-compat
 )

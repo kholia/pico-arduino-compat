@@ -1,6 +1,6 @@
-add_library(accessories INTERFACE)
+add_library(pac-accessories INTERFACE)
 
-target_sources(accessories INTERFACE
+target_sources(pac-accessories INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Accessories/VStudio/PCA9505_9506.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Accessories/VStudio/ShiftRegister74HC595.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Accessories/VStudio/pch.cpp"
@@ -73,7 +73,7 @@ target_sources(accessories INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Accessories/src/PortExpander74HC595.h"
 )
 
-target_include_directories(accessories INTERFACE
+target_include_directories(pac-accessories INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Accessories/src"
 )
 
@@ -81,6 +81,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(accessories INTERFACE
+target_link_libraries(pac-accessories INTERFACE
     arduino-compat
 )

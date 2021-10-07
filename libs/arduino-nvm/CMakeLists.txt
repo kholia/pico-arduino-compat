@@ -1,6 +1,6 @@
-add_library(arduino-nvm INTERFACE)
+add_library(pac-arduino-nvm INTERFACE)
 
-target_sources(arduino-nvm INTERFACE
+target_sources(pac-arduino-nvm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-NVM/src/Flash.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-NVM/src/VirtualPage.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-NVM/src/NVRAM.cpp"
@@ -11,7 +11,7 @@ target_sources(arduino-nvm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-NVM/src/VirtualPage.h"
 )
 
-target_include_directories(arduino-nvm INTERFACE
+target_include_directories(pac-arduino-nvm INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-NVM/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduino-nvm INTERFACE
+target_link_libraries(pac-arduino-nvm INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(seeeduino-gprs INTERFACE)
+add_library(pac-seeeduino-gprs INTERFACE)
 
-target_sources(seeeduino-gprs INTERFACE
+target_sources(pac-seeeduino-gprs INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeeduino_GPRS/gprs.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Seeeduino_GPRS/bluetooth.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Seeeduino_GPRS/fm.cpp"
@@ -11,7 +11,7 @@ target_sources(seeeduino-gprs INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeeduino_GPRS/bluetooth.h"
 )
 
-target_include_directories(seeeduino-gprs INTERFACE
+target_include_directories(pac-seeeduino-gprs INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Seeeduino_GPRS"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(seeeduino-gprs INTERFACE
+target_link_libraries(pac-seeeduino-gprs INTERFACE
     arduino-compat
 )

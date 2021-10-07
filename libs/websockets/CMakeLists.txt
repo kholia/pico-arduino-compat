@@ -1,6 +1,6 @@
-add_library(websockets INTERFACE)
+add_library(pac-websockets INTERFACE)
 
-target_sources(websockets INTERFACE
+target_sources(pac-websockets INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduinoWebSockets/src/WebSockets.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduinoWebSockets/src/SocketIOclient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduinoWebSockets/src/WebSocketsClient.cpp"
@@ -20,7 +20,7 @@ target_sources(websockets INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduinoWebSockets/src/libsha1/libsha1.h"
 )
 
-target_include_directories(websockets INTERFACE
+target_include_directories(pac-websockets INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduinoWebSockets/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(websockets INTERFACE
+target_link_libraries(pac-websockets INTERFACE
     arduino-compat
 )

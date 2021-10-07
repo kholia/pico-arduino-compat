@@ -1,6 +1,6 @@
-add_library(nrf52_timerinterrupt INTERFACE)
+add_library(pac-nrf52_timerinterrupt INTERFACE)
 
-target_sources(nrf52_timerinterrupt INTERFACE
+target_sources(pac-nrf52_timerinterrupt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NRF52_TimerInterrupt/src_cpp/NRF52_ISR_Timer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NRF52_TimerInterrupt/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NRF52_TimerInterrupt/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
@@ -103,7 +103,7 @@ target_sources(nrf52_timerinterrupt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NRF52_TimerInterrupt/src_h/NRF52_ISR_Timer-Impl.h"
 )
 
-target_include_directories(nrf52_timerinterrupt INTERFACE
+target_include_directories(pac-nrf52_timerinterrupt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/NRF52_TimerInterrupt/src"
 )
 
@@ -111,6 +111,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(nrf52_timerinterrupt INTERFACE
+target_link_libraries(pac-nrf52_timerinterrupt INTERFACE
     arduino-compat
 )

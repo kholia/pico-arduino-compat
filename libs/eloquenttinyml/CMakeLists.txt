@@ -1,6 +1,6 @@
-add_library(eloquenttinyml INTERFACE)
+add_library(pac-eloquenttinyml INTERFACE)
 
-target_sources(eloquenttinyml INTERFACE
+target_sources(pac-eloquenttinyml INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EloquentTinyML/src/tensorflow/lite/micro/micro_utils.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EloquentTinyML/src/tensorflow/lite/micro/test_helpers.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EloquentTinyML/src/tensorflow/lite/micro/debug_log_numbers.cpp"
@@ -144,7 +144,7 @@ target_sources(eloquenttinyml INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EloquentTinyML/examples/SineCosineExample/sine_cosine_model.h"
 )
 
-target_include_directories(eloquenttinyml INTERFACE
+target_include_directories(pac-eloquenttinyml INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EloquentTinyML/src"
 )
 
@@ -152,6 +152,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(eloquenttinyml INTERFACE
+target_link_libraries(pac-eloquenttinyml INTERFACE
     arduino-compat
 )

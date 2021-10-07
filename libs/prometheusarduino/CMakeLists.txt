@@ -1,6 +1,6 @@
-add_library(prometheusarduino INTERFACE)
+add_library(pac-prometheusarduino INTERFACE)
 
-target_sources(prometheusarduino INTERFACE
+target_sources(pac-prometheusarduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/prometheus-arduino/src/PromClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/prometheus-arduino/src/WriteRequest.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/prometheus-arduino/src/TimeSeries.cpp"
@@ -18,7 +18,7 @@ target_sources(prometheusarduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/prometheus-arduino/examples/prom_01_local/config.h"
 )
 
-target_include_directories(prometheusarduino INTERFACE
+target_include_directories(pac-prometheusarduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/prometheus-arduino/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(prometheusarduino INTERFACE
+target_link_libraries(pac-prometheusarduino INTERFACE
     arduino-compat
 )

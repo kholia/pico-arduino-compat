@@ -1,6 +1,6 @@
-add_library(rrdtool INTERFACE)
+add_library(pac-rrdtool INTERFACE)
 
-target_sources(rrdtool INTERFACE
+target_sources(pac-rrdtool INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/rrdtool_ESP32/src/rrd_create.c"
   "${CMAKE_CURRENT_LIST_DIR}/rrdtool_ESP32/src/rrd_hw_update.c"
   "${CMAKE_CURRENT_LIST_DIR}/rrdtool_ESP32/src/rrd_diff.c"
@@ -50,7 +50,7 @@ target_sources(rrdtool INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/rrdtool_ESP32/src/rrd_tool.h"
 )
 
-target_include_directories(rrdtool INTERFACE
+target_include_directories(pac-rrdtool INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/rrdtool_ESP32/src"
 )
 
@@ -58,6 +58,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(rrdtool INTERFACE
+target_link_libraries(pac-rrdtool INTERFACE
     arduino-compat
 )

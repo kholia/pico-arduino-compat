@@ -1,6 +1,6 @@
-add_library(pf INTERFACE)
+add_library(pac-pf INTERFACE)
 
-target_sources(pf INTERFACE
+target_sources(pac-pf INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PF/src/pff.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PF/src/avr_mmcp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PF/src/PetitSerial.h"
@@ -12,7 +12,7 @@ target_sources(pf INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PF/src/pffconf.h"
 )
 
-target_include_directories(pf INTERFACE
+target_include_directories(pac-pf INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PF/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pf INTERFACE
+target_link_libraries(pac-pf INTERFACE
     arduino-compat
 )

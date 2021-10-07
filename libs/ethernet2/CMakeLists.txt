@@ -1,6 +1,6 @@
-add_library(ethernet2 INTERFACE)
+add_library(pac-ethernet2 INTERFACE)
 
-target_sources(ethernet2 INTERFACE
+target_sources(pac-ethernet2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Ethernet2/src/EthernetClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Ethernet2/src/Dhcp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Ethernet2/src/EthernetServer.cpp"
@@ -23,7 +23,7 @@ target_sources(ethernet2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Ethernet2/src/utility/socket.h"
 )
 
-target_include_directories(ethernet2 INTERFACE
+target_include_directories(pac-ethernet2 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Ethernet2/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ethernet2 INTERFACE
+target_link_libraries(pac-ethernet2 INTERFACE
     arduino-compat
 )

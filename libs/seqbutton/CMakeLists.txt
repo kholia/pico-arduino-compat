@@ -1,11 +1,11 @@
-add_library(seqbutton INTERFACE)
+add_library(pac-seqbutton INTERFACE)
 
-target_sources(seqbutton INTERFACE
+target_sources(pac-seqbutton INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SeqButton/src/SeqButton.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SeqButton/src/SeqButton.h"
 )
 
-target_include_directories(seqbutton INTERFACE
+target_include_directories(pac-seqbutton INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SeqButton/src"
 )
 
@@ -13,6 +13,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(seqbutton INTERFACE
+target_link_libraries(pac-seqbutton INTERFACE
     arduino-compat
 )

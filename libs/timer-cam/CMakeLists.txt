@@ -1,6 +1,6 @@
-add_library(timer-cam INTERFACE)
+add_library(pac-timer-cam INTERFACE)
 
-target_sources(timer-cam INTERFACE
+target_sources(pac-timer-cam INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TimerCam-arduino/src/app_httpd.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TimerCam-arduino/src/battery.c"
   "${CMAKE_CURRENT_LIST_DIR}/TimerCam-arduino/src/bmm8563.c"
@@ -12,7 +12,7 @@ target_sources(timer-cam INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TimerCam-arduino/src/camera_pins.h"
 )
 
-target_include_directories(timer-cam INTERFACE
+target_include_directories(pac-timer-cam INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TimerCam-arduino/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(timer-cam INTERFACE
+target_link_libraries(pac-timer-cam INTERFACE
     arduino-compat
 )

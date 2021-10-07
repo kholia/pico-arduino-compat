@@ -1,6 +1,6 @@
-add_library(ds323x_generic INTERFACE)
+add_library(pac-ds323x_generic INTERFACE)
 
-target_sources(ds323x_generic INTERFACE
+target_sources(pac-ds323x_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DS323x_Generic/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DS323x_Generic/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DS323x_Generic/LibraryPatches/UIPEthernet-2.0.9/UIPEthernet.cpp"
@@ -127,7 +127,7 @@ target_sources(ds323x_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DS323x_Generic/examples/Time/ESP/RTC_ESP/defines.h"
 )
 
-target_include_directories(ds323x_generic INTERFACE
+target_include_directories(pac-ds323x_generic INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/DS323x_Generic/src"
 )
 
@@ -135,6 +135,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ds323x_generic INTERFACE
+target_link_libraries(pac-ds323x_generic INTERFACE
     arduino-compat
 )

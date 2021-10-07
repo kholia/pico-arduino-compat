@@ -1,6 +1,6 @@
-add_library(jtag INTERFACE)
+add_library(pac-jtag INTERFACE)
 
-target_sources(jtag INTERFACE
+target_sources(pac-jtag INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/JTAG/src/JTAGTAP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/JTAG/src/PlayXSVFJTAGArduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/JTAG/src/XSVFPlayerJTAG.cpp"
@@ -25,7 +25,7 @@ target_sources(jtag INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/JTAG/src/PlayXSVF.h"
 )
 
-target_include_directories(jtag INTERFACE
+target_include_directories(pac-jtag INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/JTAG/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(jtag INTERFACE
+target_link_libraries(pac-jtag INTERFACE
     arduino-compat
 )

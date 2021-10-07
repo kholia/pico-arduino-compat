@@ -1,6 +1,6 @@
-add_library(lora-serialization INTERFACE)
+add_library(pac-lora-serialization INTERFACE)
 
-target_sources(lora-serialization INTERFACE
+target_sources(pac-lora-serialization INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/lora-serialization/test/test.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/lora-serialization/test/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/lora-serialization/test/helpers.cpp"
@@ -156,7 +156,7 @@ target_sources(lora-serialization INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/lora-serialization/src/LoraEncoder.h"
 )
 
-target_include_directories(lora-serialization INTERFACE
+target_include_directories(pac-lora-serialization INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/lora-serialization/src"
 )
 
@@ -164,6 +164,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(lora-serialization INTERFACE
+target_link_libraries(pac-lora-serialization INTERFACE
     arduino-compat
 )

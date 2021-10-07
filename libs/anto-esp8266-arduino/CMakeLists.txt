@@ -1,6 +1,6 @@
-add_library(anto-esp8266-arduino INTERFACE)
+add_library(pac-anto-esp8266-arduino INTERFACE)
 
-target_sources(anto-esp8266-arduino INTERFACE
+target_sources(pac-anto-esp8266-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/anto-esp8266-arduino/src/AntoHTTP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/anto-esp8266-arduino/src/AntoIO.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/anto-esp8266-arduino/src/AntoMQTT.cpp"
@@ -94,7 +94,7 @@ target_sources(anto-esp8266-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/anto-esp8266-arduino/src/mqtt/lib/MQTTConnect.h"
 )
 
-target_include_directories(anto-esp8266-arduino INTERFACE
+target_include_directories(pac-anto-esp8266-arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/anto-esp8266-arduino/src"
 )
 
@@ -102,6 +102,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(anto-esp8266-arduino INTERFACE
+target_link_libraries(pac-anto-esp8266-arduino INTERFACE
     arduino-compat
 )

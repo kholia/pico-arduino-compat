@@ -1,6 +1,6 @@
-add_library(automaton INTERFACE)
+add_library(pac-automaton INTERFACE)
 
-target_sources(automaton INTERFACE
+target_sources(pac-automaton INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Automaton/src/Atm_comparator.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Automaton/src/Automaton.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Automaton/src/Atm_bit.cpp"
@@ -50,7 +50,7 @@ target_sources(automaton INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Automaton/examples/knight_rider2/Atm_sweep.h"
 )
 
-target_include_directories(automaton INTERFACE
+target_include_directories(pac-automaton INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Automaton/src"
 )
 
@@ -58,6 +58,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(automaton INTERFACE
+target_link_libraries(pac-automaton INTERFACE
     arduino-compat
 )

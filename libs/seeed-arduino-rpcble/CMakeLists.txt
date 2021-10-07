@@ -1,6 +1,6 @@
-add_library(seeed-arduino-rpcble INTERFACE)
+add_library(pac-seeed-arduino-rpcble INTERFACE)
 
-target_sources(seeed-arduino-rpcble INTERFACE
+target_sources(pac-seeed-arduino-rpcble INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_rpcBLE/src/BLERemoteService.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_rpcBLE/src/BLECharacteristic.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_rpcBLE/src/BLEScan.cpp"
@@ -56,7 +56,7 @@ target_sources(seeed-arduino-rpcble INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_rpcBLE/src/BLERemoteService.h"
 )
 
-target_include_directories(seeed-arduino-rpcble INTERFACE
+target_include_directories(pac-seeed-arduino-rpcble INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_rpcBLE/src"
 )
 
@@ -64,6 +64,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(seeed-arduino-rpcble INTERFACE
+target_link_libraries(pac-seeed-arduino-rpcble INTERFACE
     arduino-compat
 )

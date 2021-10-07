@@ -1,6 +1,6 @@
-add_library(ntpclient_generic INTERFACE)
+add_library(pac-ntpclient_generic INTERFACE)
 
-target_sources(ntpclient_generic INTERFACE
+target_sources(pac-ntpclient_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NTPClient_Generic/src_cpp/NTPClient_Generic.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NTPClient_Generic/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NTPClient_Generic/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
@@ -147,7 +147,7 @@ target_sources(ntpclient_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NTPClient_Generic/src_h/NTPClient_Generic_Impl.h"
 )
 
-target_include_directories(ntpclient_generic INTERFACE
+target_include_directories(pac-ntpclient_generic INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/NTPClient_Generic/src"
 )
 
@@ -155,6 +155,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ntpclient_generic INTERFACE
+target_link_libraries(pac-ntpclient_generic INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(printex INTERFACE)
+add_library(pac-printex INTERFACE)
 
-target_sources(printex INTERFACE
+target_sources(pac-printex INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PrintEx/src/lib/PrintExtension.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PrintEx/src/lib/StreamExtension.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PrintEx/src/lib/MemoryPrinter.cpp"
@@ -29,7 +29,7 @@ target_sources(printex INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PrintEx/src/tools/URIEncoder/URIEncoder.h"
 )
 
-target_include_directories(printex INTERFACE
+target_include_directories(pac-printex INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PrintEx/src"
 )
 
@@ -37,6 +37,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(printex INTERFACE
+target_link_libraries(pac-printex INTERFACE
     arduino-compat
 )

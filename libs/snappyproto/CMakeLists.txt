@@ -1,6 +1,6 @@
-add_library(snappyproto INTERFACE)
+add_library(pac-snappyproto INTERFACE)
 
-target_sources(snappyproto INTERFACE
+target_sources(pac-snappyproto INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-snappy-proto/src/proto/pb_decode.c"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-snappy-proto/src/proto/pb_common.c"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-snappy-proto/src/proto/pb_encode.c"
@@ -19,7 +19,7 @@ target_sources(snappyproto INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-snappy-proto/src/snappy/snappy-int.h"
 )
 
-target_include_directories(snappyproto INTERFACE
+target_include_directories(pac-snappyproto INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-snappy-proto/src"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(snappyproto INTERFACE
+target_link_libraries(pac-snappyproto INTERFACE
     arduino-compat
 )

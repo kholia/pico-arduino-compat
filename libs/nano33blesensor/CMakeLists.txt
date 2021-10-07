@@ -1,6 +1,6 @@
-add_library(nano33blesensor INTERFACE)
+add_library(pac-nano33blesensor INTERFACE)
 
-target_sources(nano33blesensor INTERFACE
+target_sources(pac-nano33blesensor INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Nano33BLESensor/src/Nano33BLETempterature.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Nano33BLESensor/src/Nano33BLEAccelerometer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Nano33BLESensor/src/Nano33BLEGesture.cpp"
@@ -22,7 +22,7 @@ target_sources(nano33blesensor INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Nano33BLESensor/src/Nano33BLEColour.h"
 )
 
-target_include_directories(nano33blesensor INTERFACE
+target_include_directories(pac-nano33blesensor INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Nano33BLESensor/src"
 )
 
@@ -30,6 +30,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(nano33blesensor INTERFACE
+target_link_libraries(pac-nano33blesensor INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(onesystemlibrary INTERFACE)
+add_library(pac-onesystemlibrary INTERFACE)
 
-target_sources(onesystemlibrary INTERFACE
+target_sources(pac-onesystemlibrary INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/one_system_library/src/Button.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/one_system_library/src/Display.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/one_system_library/src/Gripper.cpp"
@@ -42,7 +42,7 @@ target_sources(onesystemlibrary INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/one_system_library/src/Move.h"
 )
 
-target_include_directories(onesystemlibrary INTERFACE
+target_include_directories(pac-onesystemlibrary INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/one_system_library/src"
 )
 
@@ -50,6 +50,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(onesystemlibrary INTERFACE
+target_link_libraries(pac-onesystemlibrary INTERFACE
     arduino-compat
 )

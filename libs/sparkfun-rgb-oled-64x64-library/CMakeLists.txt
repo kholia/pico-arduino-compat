@@ -1,6 +1,6 @@
-add_library(sparkfun-rgb-oled-64x64-library INTERFACE)
+add_library(pac-sparkfun-rgb-oled-64x64-library INTERFACE)
 
-target_sources(sparkfun-rgb-oled-64x64-library INTERFACE
+target_sources(pac-sparkfun-rgb-oled-64x64-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Sparkfun_RGB_OLED_64x64_Arduino_Library/src/CustomFont65k.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Sparkfun_RGB_OLED_64x64_Arduino_Library/src/SparkFun_SSD1357_OLED.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Sparkfun_RGB_OLED_64x64_Arduino_Library/src/SparkFun_RGB_OLED_64x64.cpp"
@@ -24,7 +24,7 @@ target_sources(sparkfun-rgb-oled-64x64-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Sparkfun_RGB_OLED_64x64_Arduino_Library/examples/Example6_CustomFont/font8x16.h"
 )
 
-target_include_directories(sparkfun-rgb-oled-64x64-library INTERFACE
+target_include_directories(pac-sparkfun-rgb-oled-64x64-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Sparkfun_RGB_OLED_64x64_Arduino_Library/src"
 )
 
@@ -32,6 +32,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sparkfun-rgb-oled-64x64-library INTERFACE
+target_link_libraries(pac-sparkfun-rgb-oled-64x64-library INTERFACE
     arduino-compat
 )

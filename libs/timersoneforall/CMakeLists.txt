@@ -1,6 +1,6 @@
-add_library(timersoneforall INTERFACE)
+add_library(pac-timersoneforall INTERFACE)
 
-target_sources(timersoneforall INTERFACE
+target_sources(pac-timersoneforall INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TimersOneForAll/src/Internal/Registers.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TimersOneForAll/src/TimersOneForAll.h"
   "${CMAKE_CURRENT_LIST_DIR}/TimersOneForAll/src/Internal/SquareWave.h"
@@ -14,7 +14,7 @@ target_sources(timersoneforall INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TimersOneForAll/src/Internal/PlayTone.h"
 )
 
-target_include_directories(timersoneforall INTERFACE
+target_include_directories(pac-timersoneforall INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TimersOneForAll/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(timersoneforall INTERFACE
+target_link_libraries(pac-timersoneforall INTERFACE
     arduino-compat
 )

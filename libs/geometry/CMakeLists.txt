@@ -1,6 +1,6 @@
-add_library(geometry INTERFACE)
+add_library(pac-geometry INTERFACE)
 
-target_sources(geometry INTERFACE
+target_sources(pac-geometry INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Geometry/Geometry.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Geometry/OtherRotations.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Geometry/test/test_rotations.cpp"
@@ -15,7 +15,7 @@ target_sources(geometry INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Geometry/examples/InverseDynamics/InverseDynamics.h"
 )
 
-target_include_directories(geometry INTERFACE
+target_include_directories(pac-geometry INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Geometry"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(geometry INTERFACE
+target_link_libraries(pac-geometry INTERFACE
     arduino-compat
 )

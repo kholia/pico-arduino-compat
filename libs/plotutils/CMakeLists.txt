@@ -1,6 +1,6 @@
-add_library(plotutils INTERFACE)
+add_library(pac-plotutils INTERFACE)
 
-target_sources(plotutils INTERFACE
+target_sources(pac-plotutils INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/plotutils/src/plotfont/plotfont.c"
   "${CMAKE_CURRENT_LIST_DIR}/plotutils/src/graph/reader.c"
   "${CMAKE_CURRENT_LIST_DIR}/plotutils/src/graph/plotter.c"
@@ -261,7 +261,7 @@ target_sources(plotutils INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/plotutils/src/libxmi/mi_ply.h"
 )
 
-target_include_directories(plotutils INTERFACE
+target_include_directories(pac-plotutils INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/plotutils/src"
 )
 
@@ -269,6 +269,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(plotutils INTERFACE
+target_link_libraries(pac-plotutils INTERFACE
     arduino-compat
 )

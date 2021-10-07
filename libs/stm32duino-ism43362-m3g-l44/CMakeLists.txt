@@ -1,6 +1,6 @@
-add_library(stm32duino-ism43362-m3g-l44 INTERFACE)
+add_library(pac-stm32duino-ism43362-m3g-l44 INTERFACE)
 
-target_sources(stm32duino-ism43362-m3g-l44 INTERFACE
+target_sources(pac-stm32duino-ism43362-m3g-l44 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFi-ISM43362-M3G-L44/src/WiFiST.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFi-ISM43362-M3G-L44/src/ISM43362_M3G_L44_driver.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFi-ISM43362-M3G-L44/src/WiFiServerST.cpp"
@@ -19,7 +19,7 @@ target_sources(stm32duino-ism43362-m3g-l44 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFi-ISM43362-M3G-L44/src/WiFiServerST.h"
 )
 
-target_include_directories(stm32duino-ism43362-m3g-l44 INTERFACE
+target_include_directories(pac-stm32duino-ism43362-m3g-l44 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WiFi-ISM43362-M3G-L44/src"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(stm32duino-ism43362-m3g-l44 INTERFACE
+target_link_libraries(pac-stm32duino-ism43362-m3g-l44 INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(rtt-ethernet INTERFACE)
+add_library(pac-rtt-ethernet INTERFACE)
 
-target_sources(rtt-ethernet INTERFACE
+target_sources(pac-rtt-ethernet INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RTT-Ethernet/src/EthernetClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RTT-Ethernet/src/RttEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RTT-Ethernet/src/EthernetUdp.cpp"
@@ -34,7 +34,7 @@ target_sources(rtt-ethernet INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RTT-Ethernet/examples/LwipSocket/socket_examples.h"
 )
 
-target_include_directories(rtt-ethernet INTERFACE
+target_include_directories(pac-rtt-ethernet INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RTT-Ethernet/src"
 )
 
@@ -42,6 +42,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(rtt-ethernet INTERFACE
+target_link_libraries(pac-rtt-ethernet INTERFACE
     arduino-compat
 )

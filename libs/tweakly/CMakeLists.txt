@@ -1,6 +1,6 @@
-add_library(tweakly INTERFACE)
+add_library(pac-tweakly INTERFACE)
 
-target_sources(tweakly INTERFACE
+target_sources(pac-tweakly INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Tweakly/src/user_integrations.h"
   "${CMAKE_CURRENT_LIST_DIR}/Tweakly/src/Tweakly.h"
   "${CMAKE_CURRENT_LIST_DIR}/Tweakly/src/definitions.h"
@@ -23,7 +23,7 @@ target_sources(tweakly INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Tweakly/src/apps/TweaklyApps/stream/stream.h"
 )
 
-target_include_directories(tweakly INTERFACE
+target_include_directories(pac-tweakly INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Tweakly/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tweakly INTERFACE
+target_link_libraries(pac-tweakly INTERFACE
     arduino-compat
 )

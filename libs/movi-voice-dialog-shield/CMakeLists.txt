@@ -1,6 +1,6 @@
-add_library(movi-voice-dialog-shield INTERFACE)
+add_library(pac-movi-voice-dialog-shield INTERFACE)
 
-target_sources(movi-voice-dialog-shield INTERFACE
+target_sources(pac-movi-voice-dialog-shield INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MOVIArduinoAPI/MOVIShield.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MOVIArduinoAPI/piduino_light/HardwareSerial.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MOVIArduinoAPI/piduino_light/piduinowrapper.cpp"
@@ -30,7 +30,7 @@ target_sources(movi-voice-dialog-shield INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MOVIArduinoAPI/piduino_light/Server.h"
 )
 
-target_include_directories(movi-voice-dialog-shield INTERFACE
+target_include_directories(pac-movi-voice-dialog-shield INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MOVIArduinoAPI"
 )
 
@@ -38,6 +38,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(movi-voice-dialog-shield INTERFACE
+target_link_libraries(pac-movi-voice-dialog-shield INTERFACE
     arduino-compat
 )

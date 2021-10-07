@@ -1,6 +1,6 @@
-add_library(optiga-trust-m INTERFACE)
+add_library(pac-optiga-trust-m INTERFACE)
 
-target_sources(optiga-trust-m INTERFACE
+target_sources(pac-optiga-trust-m INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-optiga-trust-m/src/OPTIGATrustM.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-optiga-trust-m/src/optiga_trustm/pal_os_lock_arduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-optiga-trust-m/src/optiga_trustm/pal_logger_arduino.cpp"
@@ -230,7 +230,7 @@ target_sources(optiga-trust-m INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-optiga-trust-m/examples/encryptDecryptData/fprint.h"
 )
 
-target_include_directories(optiga-trust-m INTERFACE
+target_include_directories(pac-optiga-trust-m INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-optiga-trust-m/src"
 )
 
@@ -238,6 +238,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(optiga-trust-m INTERFACE
+target_link_libraries(pac-optiga-trust-m INTERFACE
     arduino-compat
 )

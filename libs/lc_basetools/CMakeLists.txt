@@ -1,6 +1,6 @@
-add_library(lc_basetools INTERFACE)
+add_library(pac-lc_basetools INTERFACE)
 
-target_sources(lc_basetools INTERFACE
+target_sources(pac-lc_basetools INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LC_baseTools/colorObj.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LC_baseTools/textBuff.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LC_baseTools/idlers.cpp"
@@ -31,7 +31,7 @@ target_sources(lc_basetools INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LC_baseTools/examples/oneShot/oneShot.h"
 )
 
-target_include_directories(lc_basetools INTERFACE
+target_include_directories(pac-lc_basetools INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/LC_baseTools"
 )
 
@@ -39,6 +39,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(lc_basetools INTERFACE
+target_link_libraries(pac-lc_basetools INTERFACE
     arduino-compat
 )

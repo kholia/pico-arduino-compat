@@ -1,6 +1,6 @@
-add_library(pixelmaestro INTERFACE)
+add_library(pac-pixelmaestro INTERFACE)
 
-target_sources(pixelmaestro INTERFACE
+target_sources(pac-pixelmaestro INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PixelMaestro/src/colorpresets.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PixelMaestro/src/utility.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PixelMaestro/src/cue/cuecontroller.cpp"
@@ -92,7 +92,7 @@ target_sources(pixelmaestro INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PixelMaestro/tests/tests/showtest.h"
 )
 
-target_include_directories(pixelmaestro INTERFACE
+target_include_directories(pac-pixelmaestro INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PixelMaestro/src"
 )
 
@@ -100,6 +100,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pixelmaestro INTERFACE
+target_link_libraries(pac-pixelmaestro INTERFACE
     arduino-compat
 )

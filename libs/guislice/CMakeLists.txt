@@ -1,6 +1,6 @@
-add_library(guislice INTERFACE)
+add_library(pac-guislice INTERFACE)
 
-target_sources(guislice INTERFACE
+target_sources(pac-guislice INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GUIslice/src/GUIslice_th.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GUIslice/src/GUIslice_drv_m5stack.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GUIslice/src/GUIslice_drv_adagfx.cpp"
@@ -176,7 +176,7 @@ target_sources(guislice INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GUIslice/configs/ard-shld-waveshare_28_touch.h"
 )
 
-target_include_directories(guislice INTERFACE
+target_include_directories(pac-guislice INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/GUIslice/src"
 )
 
@@ -184,16 +184,16 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(guislice INTERFACE
+target_link_libraries(pac-guislice INTERFACE
     arduino-compat
-    adafruit-gfx-library
-    official-sd
+    pac-adafruit-gfx-library
+    pac-sd
 )

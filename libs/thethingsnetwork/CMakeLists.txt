@@ -1,6 +1,6 @@
-add_library(thethingsnetwork INTERFACE)
+add_library(pac-thethingsnetwork INTERFACE)
 
-target_sources(thethingsnetwork INTERFACE
+target_sources(pac-thethingsnetwork INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-device-lib/src/CayenneLPP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-device-lib/src/TheThingsNetwork.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-device-lib/src/TheThingsMessage.cpp"
@@ -20,7 +20,7 @@ target_sources(thethingsnetwork INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-device-lib/src/TheThingsNetwork.h"
 )
 
-target_include_directories(thethingsnetwork INTERFACE
+target_include_directories(pac-thethingsnetwork INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-device-lib/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(thethingsnetwork INTERFACE
+target_link_libraries(pac-thethingsnetwork INTERFACE
     arduino-compat
 )

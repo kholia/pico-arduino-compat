@@ -1,6 +1,6 @@
-add_library(arduino_mkrmem INTERFACE)
+add_library(pac-arduino_mkrmem INTERFACE)
 
-target_sources(arduino_mkrmem INTERFACE
+target_sources(pac-arduino_mkrmem INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_MKRMEM/src/Arduino_SPIFFS.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_MKRMEM/src/Arduino_SPIFFS_File.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_MKRMEM/src/Arduino_SPIFFS_DirectoryEntry.cpp"
@@ -22,7 +22,7 @@ target_sources(arduino_mkrmem INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_MKRMEM/src/Arduino_SPIFFS.h"
 )
 
-target_include_directories(arduino_mkrmem INTERFACE
+target_include_directories(pac-arduino_mkrmem INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino_MKRMEM/src"
 )
 
@@ -30,6 +30,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduino_mkrmem INTERFACE
+target_link_libraries(pac-arduino_mkrmem INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(nokia-5110 INTERFACE)
+add_library(pac-nokia-5110 INTERFACE)
 
-target_sources(nokia-5110 INTERFACE
+target_sources(pac-nokia-5110 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Nokia_5110/src/Nokia_5110.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Nokia_5110/src/Cursor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Nokia_5110/src/Mux_Rate.h"
@@ -10,7 +10,7 @@ target_sources(nokia-5110 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Nokia_5110/src/Font.h"
 )
 
-target_include_directories(nokia-5110 INTERFACE
+target_include_directories(pac-nokia-5110 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Nokia_5110/src"
 )
 
@@ -18,6 +18,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(nokia-5110 INTERFACE
+target_link_libraries(pac-nokia-5110 INTERFACE
     arduino-compat
 )

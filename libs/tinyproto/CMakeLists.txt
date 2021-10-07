@@ -1,6 +1,6 @@
-add_library(tinyproto INTERFACE)
+add_library(pac-tinyproto INTERFACE)
 
-target_sources(tinyproto INTERFACE
+target_sources(pac-tinyproto INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/tinyproto/unittest/fd_tests.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/tinyproto/unittest/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/tinyproto/unittest/packet_tests.cpp"
@@ -74,7 +74,7 @@ target_sources(tinyproto INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/tinyproto/python/fd.h"
 )
 
-target_include_directories(tinyproto INTERFACE
+target_include_directories(pac-tinyproto INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/tinyproto/src"
 )
 
@@ -82,6 +82,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tinyproto INTERFACE
+target_link_libraries(pac-tinyproto INTERFACE
     arduino-compat
 )

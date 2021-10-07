@@ -1,6 +1,6 @@
-add_library(teensyaudiolaunchctrl INTERFACE)
+add_library(pac-teensyaudiolaunchctrl INTERFACE)
 
-target_sources(teensyaudiolaunchctrl INTERFACE
+target_sources(pac-teensyaudiolaunchctrl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/teensy-audio-launch-ctrl/extras/sample_launcher/sample_launcher.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/teensy-audio-launch-ctrl/test/test_polyphonic.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/teensy-audio-launch-ctrl/src/polyphonic.cpp"
@@ -17,7 +17,7 @@ target_sources(teensyaudiolaunchctrl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/teensy-audio-launch-ctrl/src/sdsampleplayernote.h"
 )
 
-target_include_directories(teensyaudiolaunchctrl INTERFACE
+target_include_directories(pac-teensyaudiolaunchctrl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/teensy-audio-launch-ctrl/src"
 )
 
@@ -25,11 +25,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(teensyaudiolaunchctrl INTERFACE
+target_link_libraries(pac-teensyaudiolaunchctrl INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

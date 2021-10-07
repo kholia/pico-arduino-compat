@@ -1,6 +1,6 @@
-add_library(koyn INTERFACE)
+add_library(pac-koyn INTERFACE)
 
-target_sources(koyn INTERFACE
+target_sources(pac-koyn INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/koyn/src/AddressHistory.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/koyn/src/BitcoinTransaction.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/koyn/src/Koyn.cpp"
@@ -98,7 +98,7 @@ target_sources(koyn INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/koyn/src/Ripemd160/config.h"
 )
 
-target_include_directories(koyn INTERFACE
+target_include_directories(pac-koyn INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/koyn/src"
 )
 
@@ -106,6 +106,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(koyn INTERFACE
+target_link_libraries(pac-koyn INTERFACE
     arduino-compat
 )

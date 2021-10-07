@@ -1,6 +1,6 @@
-add_library(multi-half-bridge INTERFACE)
+add_library(pac-multi-half-bridge INTERFACE)
 
-target_sources(multi-half-bridge INTERFACE
+target_sources(pac-multi-half-bridge INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-multi-half-bridge/src/spic-arduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-multi-half-bridge/src/gpio.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-multi-half-bridge/src/tle94112-logger.cpp"
@@ -31,7 +31,7 @@ target_sources(multi-half-bridge INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-multi-half-bridge/src/gpio-arduino.hpp"
 )
 
-target_include_directories(multi-half-bridge INTERFACE
+target_include_directories(pac-multi-half-bridge INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-multi-half-bridge/src"
 )
 
@@ -39,6 +39,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(multi-half-bridge INTERFACE
+target_link_libraries(pac-multi-half-bridge INTERFACE
     arduino-compat
 )

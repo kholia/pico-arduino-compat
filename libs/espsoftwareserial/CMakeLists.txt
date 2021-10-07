@@ -1,6 +1,6 @@
-add_library(espsoftwareserial INTERFACE)
+add_library(pac-espsoftwareserial INTERFACE)
 
-target_sources(espsoftwareserial INTERFACE
+target_sources(pac-espsoftwareserial INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/espsoftwareserial/src/SoftwareSerial.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/espsoftwareserial/src/SoftwareSerial.h"
   "${CMAKE_CURRENT_LIST_DIR}/espsoftwareserial/src/circular_queue/Delegate.h"
@@ -10,7 +10,7 @@ target_sources(espsoftwareserial INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/espsoftwareserial/src/circular_queue/MultiDelegate.h"
 )
 
-target_include_directories(espsoftwareserial INTERFACE
+target_include_directories(pac-espsoftwareserial INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/espsoftwareserial/src"
 )
 
@@ -18,6 +18,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(espsoftwareserial INTERFACE
+target_link_libraries(pac-espsoftwareserial INTERFACE
     arduino-compat
 )

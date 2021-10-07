@@ -1,6 +1,6 @@
-add_library(fastaccelstepper INTERFACE)
+add_library(pac-fastaccelstepper INTERFACE)
 
-target_sources(fastaccelstepper INTERFACE
+target_sources(pac-fastaccelstepper INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FastAccelStepper/src/FastAccelStepper.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FastAccelStepper/src/RampCalculator.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FastAccelStepper/src/PoorManFloat.cpp"
@@ -45,7 +45,7 @@ target_sources(fastaccelstepper INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FastAccelStepper/tests/pc_based/test_03.h"
 )
 
-target_include_directories(fastaccelstepper INTERFACE
+target_include_directories(pac-fastaccelstepper INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FastAccelStepper/src"
 )
 
@@ -53,6 +53,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(fastaccelstepper INTERFACE
+target_link_libraries(pac-fastaccelstepper INTERFACE
     arduino-compat
 )

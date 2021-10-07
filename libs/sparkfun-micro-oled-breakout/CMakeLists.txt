@@ -1,6 +1,6 @@
-add_library(sparkfun-micro-oled-breakout INTERFACE)
+add_library(pac-sparkfun-micro-oled-breakout INTERFACE)
 
-target_sources(sparkfun-micro-oled-breakout INTERFACE
+target_sources(pac-sparkfun-micro-oled-breakout INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_Micro_OLED_Arduino_Library/src/hardware.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_Micro_OLED_Arduino_Library/src/SFE_MicroOLED.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_Micro_OLED_Arduino_Library/src/SFE_MicroOLED.h"
@@ -12,7 +12,7 @@ target_sources(sparkfun-micro-oled-breakout INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SparkFun_Micro_OLED_Arduino_Library/examples/Example7_DisplayBitmap2/bitmaps.h"
 )
 
-target_include_directories(sparkfun-micro-oled-breakout INTERFACE
+target_include_directories(pac-sparkfun-micro-oled-breakout INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SparkFun_Micro_OLED_Arduino_Library/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sparkfun-micro-oled-breakout INTERFACE
+target_link_libraries(pac-sparkfun-micro-oled-breakout INTERFACE
     arduino-compat
 )

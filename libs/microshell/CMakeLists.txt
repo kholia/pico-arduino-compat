@@ -1,6 +1,6 @@
-add_library(microshell INTERFACE)
+add_library(pac-microshell INTERFACE)
 
-target_sources(microshell INTERFACE
+target_sources(pac-microshell INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/microshell/examples/DemoAdvanced/shell.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/microshell/examples/DemoAdvanced/node_bin.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/microshell/examples/DemoAdvanced/shell_cmd.cpp"
@@ -120,7 +120,7 @@ target_sources(microshell INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/microshell/tests/unit_tests/ush_config.h"
 )
 
-target_include_directories(microshell INTERFACE
+target_include_directories(pac-microshell INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/microshell/src"
 )
 
@@ -128,6 +128,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(microshell INTERFACE
+target_link_libraries(pac-microshell INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(radiolib INTERFACE)
+add_library(pac-radiolib INTERFACE)
 
-target_sources(radiolib INTERFACE
+target_sources(pac-radiolib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RadioLib/extras/template/ModuleTemplate.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RadioLib/src/ISerial.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RadioLib/src/Module.cpp"
@@ -98,7 +98,7 @@ target_sources(radiolib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RadioLib/examples/AFSK/AFSK_Imperial_March/melody.h"
 )
 
-target_include_directories(radiolib INTERFACE
+target_include_directories(pac-radiolib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RadioLib/src"
 )
 
@@ -106,6 +106,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(radiolib INTERFACE
+target_link_libraries(pac-radiolib INTERFACE
     arduino-compat
 )

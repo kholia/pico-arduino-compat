@@ -1,6 +1,6 @@
-add_library(onesheeld INTERFACE)
+add_library(pac-onesheeld INTERFACE)
 
-target_sources(onesheeld INTERFACE
+target_sources(pac-onesheeld INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/1Sheeld-Arduino-Library/GLCDAnalogGauge.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/1Sheeld-Arduino-Library/ToggleButtonShield.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/1Sheeld-Arduino-Library/SMSShield.cpp"
@@ -147,7 +147,7 @@ target_sources(onesheeld INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/1Sheeld-Arduino-Library/FingerprintScannerShield.h"
 )
 
-target_include_directories(onesheeld INTERFACE
+target_include_directories(pac-onesheeld INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/1Sheeld-Arduino-Library"
 )
 
@@ -155,6 +155,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(onesheeld INTERFACE
+target_link_libraries(pac-onesheeld INTERFACE
     arduino-compat
 )

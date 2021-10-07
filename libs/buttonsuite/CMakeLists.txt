@@ -1,6 +1,6 @@
-add_library(buttonsuite INTERFACE)
+add_library(pac-buttonsuite INTERFACE)
 
-target_sources(buttonsuite INTERFACE
+target_sources(pac-buttonsuite INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ButtonSuite-Arduino/src/CycleButton.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ButtonSuite-Arduino/src/PushEventButton.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ButtonSuite-Arduino/src/ResettableButton.cpp"
@@ -26,7 +26,7 @@ target_sources(buttonsuite INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ButtonSuite-Arduino/examples/Advanced_CustomButton_Demo_01/CustomButton.h"
 )
 
-target_include_directories(buttonsuite INTERFACE
+target_include_directories(pac-buttonsuite INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ButtonSuite-Arduino/src"
 )
 
@@ -34,6 +34,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(buttonsuite INTERFACE
+target_link_libraries(pac-buttonsuite INTERFACE
     arduino-compat
 )

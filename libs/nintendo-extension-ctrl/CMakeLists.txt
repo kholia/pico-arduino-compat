@@ -1,6 +1,6 @@
-add_library(nintendo-extension-ctrl INTERFACE)
+add_library(pac-nintendo-extension-ctrl INTERFACE)
 
-target_sources(nintendo-extension-ctrl INTERFACE
+target_sources(pac-nintendo-extension-ctrl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NintendoExtensionCtrl/src/controllers/Nunchuk.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NintendoExtensionCtrl/src/controllers/uDrawTablet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NintendoExtensionCtrl/src/controllers/DJTurntable.cpp"
@@ -27,7 +27,7 @@ target_sources(nintendo-extension-ctrl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NintendoExtensionCtrl/src/internal/NXC_Comms.h"
 )
 
-target_include_directories(nintendo-extension-ctrl INTERFACE
+target_include_directories(pac-nintendo-extension-ctrl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/NintendoExtensionCtrl/src"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(nintendo-extension-ctrl INTERFACE
+target_link_libraries(pac-nintendo-extension-ctrl INTERFACE
     arduino-compat
 )

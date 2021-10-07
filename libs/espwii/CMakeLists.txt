@@ -1,6 +1,6 @@
-add_library(espwii INTERFACE)
+add_library(pac-espwii INTERFACE)
 
-target_sources(espwii INTERFACE
+target_sources(pac-espwii INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EspWii/src/controller/ControllerFactory.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EspWii/src/controller/UdpController.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EspWii/src/server/WiiClassicServer.cpp"
@@ -16,7 +16,7 @@ target_sources(espwii INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EspWii/src/gamelogic/GameLogic.h"
 )
 
-target_include_directories(espwii INTERFACE
+target_include_directories(pac-espwii INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EspWii/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(espwii INTERFACE
+target_link_libraries(pac-espwii INTERFACE
     arduino-compat
 )

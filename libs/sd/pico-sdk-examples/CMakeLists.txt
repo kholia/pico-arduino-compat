@@ -13,7 +13,7 @@ add_executable(example-dumpfile
 )
 
 target_link_libraries(example-dumpfile 
-    official-sd
+    pac-sd
 )
 
 pico_add_extra_outputs(example-dumpfile)

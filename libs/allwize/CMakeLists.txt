@@ -1,6 +1,6 @@
-add_library(allwize INTERFACE)
+add_library(pac-allwize INTERFACE)
 
-target_sources(allwize INTERFACE
+target_sources(pac-allwize INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/allwize/src/AllWize_LoRaWAN.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/allwize/src/AllWize.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/allwize/examples/lorawan/lorawan_gateway/src/forwarder.cpp"
@@ -24,7 +24,7 @@ target_sources(allwize INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/allwize/tests/MockupTest/RC1701XX_Mockup.h"
 )
 
-target_include_directories(allwize INTERFACE
+target_include_directories(pac-allwize INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/allwize/src"
 )
 
@@ -32,6 +32,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(allwize INTERFACE
+target_link_libraries(pac-allwize INTERFACE
     arduino-compat
 )

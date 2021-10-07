@@ -1,6 +1,6 @@
-add_library(cloudchip-iot INTERFACE)
+add_library(pac-cloudchip-iot INTERFACE)
 
-target_sources(cloudchip-iot INTERFACE
+target_sources(pac-cloudchip-iot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/cloudchip-iot-arduino-sdk/src/Cloudchip.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/cloudchip-iot-arduino-sdk/src/lib/mqtt/PubSubClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/cloudchip-iot-arduino-sdk/src/lib/json/version.hpp"
@@ -89,7 +89,7 @@ target_sources(cloudchip-iot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/cloudchip-iot-arduino-sdk/src/lib/mqtt/PubSubClient.h"
 )
 
-target_include_directories(cloudchip-iot INTERFACE
+target_include_directories(pac-cloudchip-iot INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/cloudchip-iot-arduino-sdk/src"
 )
 
@@ -97,6 +97,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(cloudchip-iot INTERFACE
+target_link_libraries(pac-cloudchip-iot INTERFACE
     arduino-compat
 )

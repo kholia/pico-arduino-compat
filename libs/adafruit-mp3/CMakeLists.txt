@@ -1,6 +1,6 @@
-add_library(adafruit-mp3 INTERFACE)
+add_library(pac-adafruit-mp3 INTERFACE)
 
-target_sources(adafruit-mp3 INTERFACE
+target_sources(pac-adafruit-mp3 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_MP3/src/Adafruit_MP3.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_MP3/src/buffers.c"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_MP3/src/hufftabs.c"
@@ -29,7 +29,7 @@ target_sources(adafruit-mp3 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_MP3/examples/play_from_header/sine.h"
 )
 
-target_include_directories(adafruit-mp3 INTERFACE
+target_include_directories(pac-adafruit-mp3 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_MP3/src"
 )
 
@@ -37,6 +37,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(adafruit-mp3 INTERFACE
+target_link_libraries(pac-adafruit-mp3 INTERFACE
     arduino-compat
 )

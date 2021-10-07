@@ -1,6 +1,6 @@
-add_library(astar32u4 INTERFACE)
+add_library(pac-astar32u4 INTERFACE)
 
-target_sources(astar32u4 INTERFACE
+target_sources(pac-astar32u4 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/a-star-32u4-arduino-library/Pushbutton.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/a-star-32u4-arduino-library/PololuHD44780.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/a-star-32u4-arduino-library/PololuBuzzer.cpp"
@@ -19,7 +19,7 @@ target_sources(astar32u4 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/a-star-32u4-arduino-library/USBPause.h"
 )
 
-target_include_directories(astar32u4 INTERFACE
+target_include_directories(pac-astar32u4 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/a-star-32u4-arduino-library"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(astar32u4 INTERFACE
+target_link_libraries(pac-astar32u4 INTERFACE
     arduino-compat
 )

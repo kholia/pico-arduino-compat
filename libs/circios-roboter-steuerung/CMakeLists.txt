@@ -1,6 +1,6 @@
-add_library(circios-roboter-steuerung INTERFACE)
+add_library(pac-circios-roboter-steuerung INTERFACE)
 
-target_sources(circios-roboter-steuerung INTERFACE
+target_sources(pac-circios-roboter-steuerung INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Circios-Library/src/Hamster.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Circios-Library/src/backend/Movement.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Circios-Library/src/backend/LComs.cpp"
@@ -14,7 +14,7 @@ target_sources(circios-roboter-steuerung INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Circios-Library/src/backend/Pins.h"
 )
 
-target_include_directories(circios-roboter-steuerung INTERFACE
+target_include_directories(pac-circios-roboter-steuerung INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Circios-Library/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(circios-roboter-steuerung INTERFACE
+target_link_libraries(pac-circios-roboter-steuerung INTERFACE
     arduino-compat
 )

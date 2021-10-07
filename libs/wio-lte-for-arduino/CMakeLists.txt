@@ -1,6 +1,6 @@
-add_library(wio-lte-for-arduino INTERFACE)
+add_library(pac-wio-lte-for-arduino INTERFACE)
 
-target_sources(wio-lte-for-arduino INTERFACE
+target_sources(pac-wio-lte-for-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WioLTEforArduino/src/WioLTE.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WioLTEforArduino/src/WioLTEHardware.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WioLTEforArduino/src/WioLTEClient.cpp"
@@ -29,7 +29,7 @@ target_sources(wio-lte-for-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WioLTEforArduino/src/Internal/CMSIS/core_cm4.h"
 )
 
-target_include_directories(wio-lte-for-arduino INTERFACE
+target_include_directories(pac-wio-lte-for-arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WioLTEforArduino/src"
 )
 
@@ -37,6 +37,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wio-lte-for-arduino INTERFACE
+target_link_libraries(pac-wio-lte-for-arduino INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(ws2812fx INTERFACE)
+add_library(pac-ws2812fx INTERFACE)
 
-target_sources(ws2812fx INTERFACE
+target_sources(pac-ws2812fx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WS2812FX/src/WS2812FX.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WS2812FX/examples/esp8266_webinterface/index.html.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WS2812FX/examples/esp8266_webinterface/main.js.cpp"
@@ -31,7 +31,7 @@ target_sources(ws2812fx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WS2812FX/examples/ws2812fx_esp32/ESP32_RMT_Driver.h"
 )
 
-target_include_directories(ws2812fx INTERFACE
+target_include_directories(pac-ws2812fx INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WS2812FX/src"
 )
 
@@ -39,6 +39,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ws2812fx INTERFACE
+target_link_libraries(pac-ws2812fx INTERFACE
     arduino-compat
 )

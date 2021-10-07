@@ -1,6 +1,6 @@
-add_library(u8glib INTERFACE)
+add_library(pac-u8glib INTERFACE)
 
-target_sources(u8glib INTERFACE
+target_sources(pac-u8glib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/U8glib_Arduino/src/U8glib.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/U8glib_Arduino/src/clib/u8g_pb16v2.c"
   "${CMAKE_CURRENT_LIST_DIR}/U8glib_Arduino/src/clib/u8g_com_api_16gr.c"
@@ -127,7 +127,7 @@ target_sources(u8glib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/U8glib_Arduino/src/clib/u8g.h"
 )
 
-target_include_directories(u8glib INTERFACE
+target_include_directories(pac-u8glib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/U8glib_Arduino/src"
 )
 
@@ -135,6 +135,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(u8glib INTERFACE
+target_link_libraries(pac-u8glib INTERFACE
     arduino-compat
 )

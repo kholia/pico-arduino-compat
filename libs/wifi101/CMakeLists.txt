@@ -1,6 +1,6 @@
-add_library(wifi101 INTERFACE)
+add_library(pac-wifi101 INTERFACE)
 
-target_sources(wifi101 INTERFACE
+target_sources(pac-wifi101 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFi101/src/WiFi.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFi101/src/WiFiMDNSResponder.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFi101/src/WiFiUdp.cpp"
@@ -78,7 +78,7 @@ target_sources(wifi101 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFi101/examples/WiFiUdpSendReceiveString/arduino_secrets.h"
 )
 
-target_include_directories(wifi101 INTERFACE
+target_include_directories(pac-wifi101 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WiFi101/src"
 )
 
@@ -86,6 +86,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wifi101 INTERFACE
+target_link_libraries(pac-wifi101 INTERFACE
     arduino-compat
 )

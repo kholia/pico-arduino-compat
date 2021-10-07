@@ -1,6 +1,6 @@
-add_library(midi-library INTERFACE)
+add_library(pac-midi-library INTERFACE)
 
-target_sources(midi-library INTERFACE
+target_sources(pac-midi-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino_midi_library/test/unit-tests/unit-tests.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino_midi_library/test/unit-tests/tests/unit-tests_MidiMessage.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino_midi_library/test/unit-tests/tests/unit-tests_MidiOutput.cpp"
@@ -34,7 +34,7 @@ target_sources(midi-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino_midi_library/examples/SimpleSynth/pitches.h"
 )
 
-target_include_directories(midi-library INTERFACE
+target_include_directories(pac-midi-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino_midi_library/src"
 )
 
@@ -42,6 +42,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(midi-library INTERFACE
+target_link_libraries(pac-midi-library INTERFACE
     arduino-compat
 )

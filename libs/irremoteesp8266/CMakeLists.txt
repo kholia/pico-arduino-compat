@@ -1,6 +1,6 @@
-add_library(irremoteesp8266 INTERFACE)
+add_library(pac-irremoteesp8266 INTERFACE)
 
-target_sources(irremoteesp8266 INTERFACE
+target_sources(pac-irremoteesp8266 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IRremoteESP8266/tools/mode2_decode.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IRremoteESP8266/tools/gc_decode.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IRremoteESP8266/test/ir_Kelon_test.cpp"
@@ -219,7 +219,7 @@ target_sources(irremoteesp8266 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IRremoteESP8266/examples/Web-AC-control/Web-AC-control.h"
 )
 
-target_include_directories(irremoteesp8266 INTERFACE
+target_include_directories(pac-irremoteesp8266 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/IRremoteESP8266/src"
 )
 
@@ -227,6 +227,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(irremoteesp8266 INTERFACE
+target_link_libraries(pac-irremoteesp8266 INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(virtuino-library-for-stm32-boards INTERFACE)
+add_library(pac-virtuino-library-for-stm32-boards INTERFACE)
 
-target_sources(virtuino-library-for-stm32-boards INTERFACE
+target_sources(pac-virtuino-library-for-stm32-boards INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/virtuino_stm32/VirtuinoEsp8266_WebServer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/virtuino_stm32/VirtuinoBluetooth.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/virtuino_stm32/VirtuinoEthernet_WebServer.cpp"
@@ -11,7 +11,7 @@ target_sources(virtuino-library-for-stm32-boards INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/virtuino_stm32/Virtuino.h"
 )
 
-target_include_directories(virtuino-library-for-stm32-boards INTERFACE
+target_include_directories(pac-virtuino-library-for-stm32-boards INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/virtuino_stm32"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(virtuino-library-for-stm32-boards INTERFACE
+target_link_libraries(pac-virtuino-library-for-stm32-boards INTERFACE
     arduino-compat
 )

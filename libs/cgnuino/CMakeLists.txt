@@ -1,6 +1,6 @@
-add_library(cgnuino INTERFACE)
+add_library(pac-cgnuino INTERFACE)
 
-target_sources(cgnuino INTERFACE
+target_sources(pac-cgnuino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/cgnuino/src/CgnControl.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/cgnuino/src/CgnPeriod.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/cgnuino/src/CgnStrobe.cpp"
@@ -18,7 +18,7 @@ target_sources(cgnuino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/cgnuino/src/cgnuino.h"
 )
 
-target_include_directories(cgnuino INTERFACE
+target_include_directories(pac-cgnuino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/cgnuino/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(cgnuino INTERFACE
+target_link_libraries(pac-cgnuino INTERFACE
     arduino-compat
 )

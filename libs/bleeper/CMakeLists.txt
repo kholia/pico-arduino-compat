@@ -1,6 +1,6 @@
-add_library(bleeper INTERFACE)
+add_library(pac-bleeper INTERFACE)
 
-target_sources(bleeper INTERFACE
+target_sources(pac-bleeper INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Bleeper/src/Bleeper/BleeperClass.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Bleeper/src/Bleeper/Bleeper+Connection.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Bleeper/src/Bleeper/Bleeper+ConfigurationInterface.cpp"
@@ -50,7 +50,7 @@ target_sources(bleeper INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Bleeper/src/Connectivity/Wifi.h"
 )
 
-target_include_directories(bleeper INTERFACE
+target_include_directories(pac-bleeper INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Bleeper/src"
 )
 
@@ -58,6 +58,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(bleeper INTERFACE
+target_link_libraries(pac-bleeper INTERFACE
     arduino-compat
 )

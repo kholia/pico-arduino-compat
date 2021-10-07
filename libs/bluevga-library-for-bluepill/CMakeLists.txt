@@ -1,6 +1,6 @@
-add_library(bluevga-library-for-bluepill INTERFACE)
+add_library(pac-bluevga-library-for-bluepill INTERFACE)
 
-target_sources(bluevga-library-for-bluepill INTERFACE
+target_sources(pac-bluevga-library-for-bluepill INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BlueVGA/src/bluebitmap.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BlueVGA/src/Joystick.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BlueVGA/src/bluevga.cpp"
@@ -31,7 +31,7 @@ target_sources(bluevga-library-for-bluepill INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BlueVGA/examples/snake_byte_game/build_opt.h"
 )
 
-target_include_directories(bluevga-library-for-bluepill INTERFACE
+target_include_directories(pac-bluevga-library-for-bluepill INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/BlueVGA/src"
 )
 
@@ -39,6 +39,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(bluevga-library-for-bluepill INTERFACE
+target_link_libraries(pac-bluevga-library-for-bluepill INTERFACE
     arduino-compat
 )

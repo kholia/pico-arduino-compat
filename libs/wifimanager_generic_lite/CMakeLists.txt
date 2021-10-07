@@ -1,6 +1,6 @@
-add_library(wifimanager_generic_lite INTERFACE)
+add_library(pac-wifimanager_generic_lite INTERFACE)
 
-target_sources(wifimanager_generic_lite INTERFACE
+target_sources(pac-wifimanager_generic_lite INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiManager_Generic_Lite/LibraryPatches/Adafruit_MQTT_Library/Adafruit_MQTT.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiManager_Generic_Lite/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B112_ublox/variant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiManager_Generic_Lite/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B302_ublox/variant.cpp"
@@ -142,7 +142,7 @@ target_sources(wifimanager_generic_lite INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiManager_Generic_Lite/examples/Teensy_WiFi_MQTT/Credentials.h"
 )
 
-target_include_directories(wifimanager_generic_lite INTERFACE
+target_include_directories(pac-wifimanager_generic_lite INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WiFiManager_Generic_Lite/src"
 )
 
@@ -150,6 +150,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wifimanager_generic_lite INTERFACE
+target_link_libraries(pac-wifimanager_generic_lite INTERFACE
     arduino-compat
 )

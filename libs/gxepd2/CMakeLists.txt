@@ -1,6 +1,6 @@
-add_library(gxepd2 INTERFACE)
+add_library(pac-gxepd2 INTERFACE)
 
-target_sources(gxepd2 INTERFACE
+target_sources(pac-gxepd2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GxEPD2/extras/sw_spi/src/GxEPD2_EPD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GxEPD2/src/GxEPD2_EPD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GxEPD2/src/epd3c/GxEPD2_583c.cpp"
@@ -192,7 +192,7 @@ target_sources(gxepd2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GxEPD2/examples/GxEPD2_NotPagedExample/GxEPD2_selection_check.h"
 )
 
-target_include_directories(gxepd2 INTERFACE
+target_include_directories(pac-gxepd2 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/GxEPD2/src"
 )
 
@@ -200,11 +200,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(gxepd2 INTERFACE
+target_link_libraries(pac-gxepd2 INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

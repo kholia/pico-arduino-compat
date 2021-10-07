@@ -1,6 +1,6 @@
-add_library(tuya_wifi_mcu_sdk INTERFACE)
+add_library(pac-tuya_wifi_mcu_sdk INTERFACE)
 
-target_sources(tuya_wifi_mcu_sdk INTERFACE
+target_sources(pac-tuya_wifi_mcu_sdk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/tuya-wifi-mcu-sdk-arduino-library/src/TuyaUart.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/tuya-wifi-mcu-sdk-arduino-library/src/TuyaDataPoint.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/tuya-wifi-mcu-sdk-arduino-library/src/TuyaTools.cpp"
@@ -13,7 +13,7 @@ target_sources(tuya_wifi_mcu_sdk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/tuya-wifi-mcu-sdk-arduino-library/src/TuyaWifi.h"
 )
 
-target_include_directories(tuya_wifi_mcu_sdk INTERFACE
+target_include_directories(pac-tuya_wifi_mcu_sdk INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/tuya-wifi-mcu-sdk-arduino-library/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tuya_wifi_mcu_sdk INTERFACE
+target_link_libraries(pac-tuya_wifi_mcu_sdk INTERFACE
     arduino-compat
 )

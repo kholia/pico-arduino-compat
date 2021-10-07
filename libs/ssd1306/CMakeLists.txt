@@ -1,6 +1,6 @@
-add_library(ssd1306 INTERFACE)
+add_library(pac-ssd1306 INTERFACE)
 
-target_sources(ssd1306 INTERFACE
+target_sources(pac-ssd1306 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ssd1306/tools/oled_cli/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ssd1306/src/ssd1306_console.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ssd1306/src/nano_gfx.cpp"
@@ -204,7 +204,7 @@ target_sources(ssd1306 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ssd1306/examples/nano_engine/nano_engine/nano_bitmaps.h"
 )
 
-target_include_directories(ssd1306 INTERFACE
+target_include_directories(pac-ssd1306 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ssd1306/src"
 )
 
@@ -212,11 +212,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(ssd1306 INTERFACE
+target_link_libraries(pac-ssd1306 INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

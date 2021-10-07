@@ -1,6 +1,6 @@
-add_library(krpc INTERFACE)
+add_library(pac-krpc INTERFACE)
 
-target_sources(krpc INTERFACE
+target_sources(pac-krpc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/krpc-arduino/src/utils.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/krpc-arduino/src/pb_common.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/krpc-arduino/src/communication.cpp"
@@ -34,7 +34,7 @@ target_sources(krpc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/krpc-arduino/src/krpc/services/space_center.h"
 )
 
-target_include_directories(krpc INTERFACE
+target_include_directories(pac-krpc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/krpc-arduino/src"
 )
 
@@ -42,6 +42,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(krpc INTERFACE
+target_link_libraries(pac-krpc INTERFACE
     arduino-compat
 )

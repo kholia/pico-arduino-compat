@@ -1,6 +1,6 @@
-add_library(isolated-ise-probe-interface INTERFACE)
+add_library(pac-isolated-ise-probe-interface INTERFACE)
 
-target_sources(isolated-ise-probe-interface INTERFACE
+target_sources(pac-isolated-ise-probe-interface INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Isolated_ISE/src/uFire_pH_JSON.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Isolated_ISE/src/uFire_pH_MP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Isolated_ISE/src/uFire_ORP_MP.cpp"
@@ -19,7 +19,7 @@ target_sources(isolated-ise-probe-interface INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Isolated_ISE/src/uFire_pH_JSON.h"
 )
 
-target_include_directories(isolated-ise-probe-interface INTERFACE
+target_include_directories(pac-isolated-ise-probe-interface INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Isolated_ISE/src"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(isolated-ise-probe-interface INTERFACE
+target_link_libraries(pac-isolated-ise-probe-interface INTERFACE
     arduino-compat
 )

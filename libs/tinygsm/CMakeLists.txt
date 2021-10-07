@@ -1,6 +1,6 @@
-add_library(tinygsm INTERFACE)
+add_library(pac-tinygsm INTERFACE)
 
-target_sources(tinygsm INTERFACE
+target_sources(pac-tinygsm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TinyGSM/src/TinyGsmClientSIM5360.h"
   "${CMAKE_CURRENT_LIST_DIR}/TinyGSM/src/TinyGsmClient.h"
   "${CMAKE_CURRENT_LIST_DIR}/TinyGSM/src/TinyGSM.h"
@@ -30,7 +30,7 @@ target_sources(tinygsm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TinyGSM/examples/more/SIM800_SslSetCert/DSTRootCAX3.der.h"
 )
 
-target_include_directories(tinygsm INTERFACE
+target_include_directories(pac-tinygsm INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TinyGSM/src"
 )
 
@@ -38,6 +38,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tinygsm INTERFACE
+target_link_libraries(pac-tinygsm INTERFACE
     arduino-compat
 )

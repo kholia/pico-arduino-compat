@@ -1,6 +1,6 @@
-add_library(servoeasing INTERFACE)
+add_library(pac-servoeasing INTERFACE)
 
-target_sources(servoeasing INTERFACE
+target_sources(pac-servoeasing INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ServoEasing/src/ServoEasing.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ServoEasing/src/LightweightServo.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ServoEasing/examples/EndPositionsTest/ADCUtils.cpp"
@@ -49,7 +49,7 @@ target_sources(servoeasing INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ServoEasing/examples/SpeedTest/PinDefinitionsAndMore.h"
 )
 
-target_include_directories(servoeasing INTERFACE
+target_include_directories(pac-servoeasing INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ServoEasing/src"
 )
 
@@ -57,6 +57,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(servoeasing INTERFACE
+target_link_libraries(pac-servoeasing INTERFACE
     arduino-compat
 )

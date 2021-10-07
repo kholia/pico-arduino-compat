@@ -1,6 +1,6 @@
-add_library(tle5012b INTERFACE)
+add_library(pac-tle5012b INTERFACE)
 
-target_sources(tle5012b INTERFACE
+target_sources(pac-tle5012b INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TLE5012-Magnetic-Angle-Sensor/src/pal/gpio.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TLE5012-Magnetic-Angle-Sensor/src/pal/spic.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TLE5012-Magnetic-Angle-Sensor/src/framework/mtb/pal/spic-mtb.cpp"
@@ -66,7 +66,7 @@ target_sources(tle5012b INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TLE5012-Magnetic-Angle-Sensor/examples/sensorType/const.h"
 )
 
-target_include_directories(tle5012b INTERFACE
+target_include_directories(pac-tle5012b INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TLE5012-Magnetic-Angle-Sensor/src"
 )
 
@@ -74,6 +74,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tle5012b INTERFACE
+target_link_libraries(pac-tle5012b INTERFACE
     arduino-compat
 )

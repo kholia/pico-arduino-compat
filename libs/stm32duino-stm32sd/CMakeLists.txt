@@ -1,6 +1,6 @@
-add_library(stm32duino-stm32sd INTERFACE)
+add_library(pac-stm32duino-stm32sd INTERFACE)
 
-target_sources(stm32duino-stm32sd INTERFACE
+target_sources(pac-stm32duino-stm32sd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/STM32SD/src/SD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/STM32SD/src/Sd2Card.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/STM32SD/src/SdFatFs.cpp"
@@ -14,7 +14,7 @@ target_sources(stm32duino-stm32sd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/STM32SD/src/STM32SD.h"
 )
 
-target_include_directories(stm32duino-stm32sd INTERFACE
+target_include_directories(pac-stm32duino-stm32sd INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/STM32SD/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(stm32duino-stm32sd INTERFACE
+target_link_libraries(pac-stm32duino-stm32sd INTERFACE
     arduino-compat
 )

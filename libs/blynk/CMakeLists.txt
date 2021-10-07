@@ -1,6 +1,6 @@
-add_library(blynk INTERFACE)
+add_library(pac-blynk INTERFACE)
 
-target_sources(blynk INTERFACE
+target_sources(pac-blynk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/blynk-library/linux/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/blynk-library/src/utility/BlynkDebug.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/blynk-library/src/utility/BlynkHandlers.cpp"
@@ -151,7 +151,7 @@ target_sources(blynk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/blynk-library/examples/Blynk.Edgent/Edgent_ESP32/Console.h"
 )
 
-target_include_directories(blynk INTERFACE
+target_include_directories(pac-blynk INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/blynk-library/src"
 )
 
@@ -159,11 +159,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(blynk INTERFACE
+target_link_libraries(pac-blynk INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

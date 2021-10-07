@@ -1,6 +1,6 @@
-add_library(blynk_wifinina_wm INTERFACE)
+add_library(pac-blynk_wifinina_wm INTERFACE)
 
-target_sources(blynk_wifinina_wm INTERFACE
+target_sources(pac-blynk_wifinina_wm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_WiFiNINA_WM/LibraryPatches/Blynk-1.0.0/utility/BlynkDebug.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_WiFiNINA_WM/LibraryPatches/Blynk-0.6.1/utility/BlynkDebug.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_WiFiNINA_WM/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B112_ublox/variant.cpp"
@@ -137,7 +137,7 @@ target_sources(blynk_wifinina_wm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_WiFiNINA_WM/examples/SAMD_WiFiNINA_WM/Credentials.h"
 )
 
-target_include_directories(blynk_wifinina_wm INTERFACE
+target_include_directories(pac-blynk_wifinina_wm INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Blynk_WiFiNINA_WM/src"
 )
 
@@ -145,6 +145,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(blynk_wifinina_wm INTERFACE
+target_link_libraries(pac-blynk_wifinina_wm INTERFACE
     arduino-compat
 )

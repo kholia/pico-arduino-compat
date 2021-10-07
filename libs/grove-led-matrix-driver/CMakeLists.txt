@@ -1,6 +1,6 @@
-add_library(grove-led-matrix-driver INTERFACE)
+add_library(pac-grove-led-matrix-driver INTERFACE)
 
-target_sources(grove-led-matrix-driver INTERFACE
+target_sources(pac-grove-led-matrix-driver INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Grove_LED_Matrix_Driver/LEDMatrix.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Grove_LED_Matrix_Driver/Firmware/grove_led_matrix_mbed/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Grove_LED_Matrix_Driver/Firmware/grove_led_matrix_mbed/matrix.cpp"
@@ -257,7 +257,7 @@ target_sources(grove-led-matrix-driver INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Grove_LED_Matrix_Driver/Firmware/grove_led_matrix_mbed/mbed/hal/dma_api.h"
 )
 
-target_include_directories(grove-led-matrix-driver INTERFACE
+target_include_directories(pac-grove-led-matrix-driver INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Grove_LED_Matrix_Driver"
 )
 
@@ -265,6 +265,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(grove-led-matrix-driver INTERFACE
+target_link_libraries(pac-grove-led-matrix-driver INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(rf24 INTERFACE)
+add_library(pac-rf24 INTERFACE)
 
-target_sources(rf24 INTERFACE
+target_sources(pac-rf24 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RF24/RF24.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RF24/pyRF24/pyRF24.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.cpp"
@@ -78,7 +78,7 @@ target_sources(rf24 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RF24/utility/Teensy/RF24_arch_config.h"
 )
 
-target_include_directories(rf24 INTERFACE
+target_include_directories(pac-rf24 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RF24"
 )
 
@@ -86,6 +86,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(rf24 INTERFACE
+target_link_libraries(pac-rf24 INTERFACE
     arduino-compat
 )

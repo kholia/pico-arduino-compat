@@ -1,6 +1,6 @@
-add_library(tmcstepper INTERFACE)
+add_library(pac-tmcstepper INTERFACE)
 
-target_sources(tmcstepper INTERFACE
+target_sources(pac-tmcstepper INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TMCStepper/src/source/SMARTEN.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TMCStepper/src/source/TMC2208Stepper.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TMCStepper/src/source/IHOLD_IRUN.cpp"
@@ -47,7 +47,7 @@ target_sources(tmcstepper INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TMCStepper/src/source/TMC5130_bitfields.h"
 )
 
-target_include_directories(tmcstepper INTERFACE
+target_include_directories(pac-tmcstepper INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TMCStepper/src"
 )
 
@@ -55,6 +55,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tmcstepper INTERFACE
+target_link_libraries(pac-tmcstepper INTERFACE
     arduino-compat
 )

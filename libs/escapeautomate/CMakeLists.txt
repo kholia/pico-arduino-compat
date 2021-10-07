@@ -1,6 +1,6 @@
-add_library(escapeautomate INTERFACE)
+add_library(pac-escapeautomate INTERFACE)
 
-target_sources(escapeautomate INTERFACE
+target_sources(pac-escapeautomate INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoLib/src/EscapeAutomate2.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoLib/src/Puzzle.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoLib/src/Objects/NumberProperty.cpp"
@@ -24,7 +24,7 @@ target_sources(escapeautomate INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoLib/src/Objects/BoolProperty.h"
 )
 
-target_include_directories(escapeautomate INTERFACE
+target_include_directories(pac-escapeautomate INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoLib/src"
 )
 
@@ -32,6 +32,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(escapeautomate INTERFACE
+target_link_libraries(pac-escapeautomate INTERFACE
     arduino-compat
 )

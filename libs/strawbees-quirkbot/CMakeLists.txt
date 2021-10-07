@@ -1,6 +1,6 @@
-add_library(strawbees-quirkbot INTERFACE)
+add_library(pac-strawbees-quirkbot INTERFACE)
 
-target_sources(strawbees-quirkbot INTERFACE
+target_sources(pac-strawbees-quirkbot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/QuirkbotArduinoLibrary/src/NodeTime.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/QuirkbotArduinoLibrary/src/NodeSequence.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/QuirkbotArduinoLibrary/src/Easing.cpp"
@@ -105,7 +105,7 @@ target_sources(strawbees-quirkbot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/QuirkbotArduinoLibrary/src/Quirkbot.h"
 )
 
-target_include_directories(strawbees-quirkbot INTERFACE
+target_include_directories(pac-strawbees-quirkbot INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/QuirkbotArduinoLibrary/src"
 )
 
@@ -113,6 +113,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(strawbees-quirkbot INTERFACE
+target_link_libraries(pac-strawbees-quirkbot INTERFACE
     arduino-compat
 )

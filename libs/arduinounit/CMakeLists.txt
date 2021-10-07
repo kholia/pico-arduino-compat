@@ -1,6 +1,6 @@
-add_library(arduinounit INTERFACE)
+add_library(pac-arduinounit INTERFACE)
 
-target_sources(arduinounit INTERFACE
+target_sources(pac-arduinounit INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduinounit/firmware/mockFirmware.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduinounit/zen/mockZen.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduinounit/mocks/mockTime.cpp"
@@ -46,7 +46,7 @@ target_sources(arduinounit INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduinounit/attic/ArduinoUnitMockPrintable.h"
 )
 
-target_include_directories(arduinounit INTERFACE
+target_include_directories(pac-arduinounit INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduinounit/src"
 )
 
@@ -54,6 +54,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinounit INTERFACE
+target_link_libraries(pac-arduinounit INTERFACE
     arduino-compat
 )

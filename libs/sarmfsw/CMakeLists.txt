@@ -1,6 +1,6 @@
-add_library(sarmfsw INTERFACE)
+add_library(pac-sarmfsw INTERFACE)
 
-target_sources(sarmfsw INTERFACE
+target_sources(pac-sarmfsw INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/sarmfsw/arm_inlines.h"
   "${CMAKE_CURRENT_LIST_DIR}/sarmfsw/arm_inlines_temperature.h"
   "${CMAKE_CURRENT_LIST_DIR}/sarmfsw/arm_inlines_angle.h"
@@ -29,7 +29,7 @@ target_sources(sarmfsw INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/sarmfsw/arm_inlines_binary.h"
 )
 
-target_include_directories(sarmfsw INTERFACE
+target_include_directories(pac-sarmfsw INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/sarmfsw"
 )
 
@@ -37,6 +37,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sarmfsw INTERFACE
+target_link_libraries(pac-sarmfsw INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(ucos-ii INTERFACE)
+add_library(pac-ucos-ii INTERFACE)
 
-target_sources(ucos-ii INTERFACE
+target_sources(pac-ucos-ii INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/uCOS-II_Arduino/src/os_q.c"
   "${CMAKE_CURRENT_LIST_DIR}/uCOS-II_Arduino/src/os_core.c"
   "${CMAKE_CURRENT_LIST_DIR}/uCOS-II_Arduino/src/os_cpu_c.c"
@@ -21,7 +21,7 @@ target_sources(ucos-ii INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/uCOS-II_Arduino/src/cfg/app_cfg.h"
 )
 
-target_include_directories(ucos-ii INTERFACE
+target_include_directories(pac-ucos-ii INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/uCOS-II_Arduino/src"
 )
 
@@ -29,6 +29,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ucos-ii INTERFACE
+target_link_libraries(pac-ucos-ii INTERFACE
     arduino-compat
 )

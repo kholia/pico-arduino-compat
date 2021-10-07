@@ -1,6 +1,6 @@
-add_library(rbe1001lib INTERFACE)
+add_library(pac-rbe1001lib INTERFACE)
 
-target_sources(rbe1001lib INTERFACE
+target_sources(pac-rbe1001lib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RBE1001Lib/src/WebPage.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RBE1001Lib/src/Timer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RBE1001Lib/src/Rangefinder.cpp"
@@ -38,7 +38,7 @@ target_sources(rbe1001lib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RBE1001Lib/src/AsyncTCP/AsyncTCP.h"
 )
 
-target_include_directories(rbe1001lib INTERFACE
+target_include_directories(pac-rbe1001lib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RBE1001Lib/src"
 )
 
@@ -46,6 +46,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(rbe1001lib INTERFACE
+target_link_libraries(pac-rbe1001lib INTERFACE
     arduino-compat
 )

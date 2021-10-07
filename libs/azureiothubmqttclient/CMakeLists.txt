@@ -1,6 +1,6 @@
-add_library(azureiothubmqttclient INTERFACE)
+add_library(pac-azureiothubmqttclient INTERFACE)
 
-target_sources(azureiothubmqttclient INTERFACE
+target_sources(pac-azureiothubmqttclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AzureIoTHubMQTTClient/src/AzureIoTHubMQTTClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AzureIoTHubMQTTClient/src/MQTT.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AzureIoTHubMQTTClient/src/Utils.cpp"
@@ -18,7 +18,7 @@ target_sources(azureiothubmqttclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AzureIoTHubMQTTClient/src/AzureIoTHubMQTTClient.h"
 )
 
-target_include_directories(azureiothubmqttclient INTERFACE
+target_include_directories(pac-azureiothubmqttclient INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AzureIoTHubMQTTClient/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(azureiothubmqttclient INTERFACE
+target_link_libraries(pac-azureiothubmqttclient INTERFACE
     arduino-compat
 )

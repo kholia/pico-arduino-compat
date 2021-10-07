@@ -1,6 +1,6 @@
-add_library(isync INTERFACE)
+add_library(pac-isync INTERFACE)
 
-target_sources(isync INTERFACE
+target_sources(pac-isync INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/iSYNC/src/iSYNC.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/iSYNC/src/lib/PubSubClient/PubSubClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/iSYNC/src/lib/ArduinoJson/ArduinoJson.hpp"
@@ -126,7 +126,7 @@ target_sources(isync INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/iSYNC/src/lib/PubSubClient/PubSubClient.h"
 )
 
-target_include_directories(isync INTERFACE
+target_include_directories(pac-isync INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/iSYNC/src"
 )
 
@@ -134,6 +134,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(isync INTERFACE
+target_link_libraries(pac-isync INTERFACE
     arduino-compat
 )

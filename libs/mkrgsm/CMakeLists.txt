@@ -1,6 +1,6 @@
-add_library(mkrgsm INTERFACE)
+add_library(pac-mkrgsm INTERFACE)
 
-target_sources(mkrgsm INTERFACE
+target_sources(pac-mkrgsm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MKRGSM/src/GSMUdp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MKRGSM/src/GSMFileUtils.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MKRGSM/src/GSM.cpp"
@@ -58,7 +58,7 @@ target_sources(mkrgsm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MKRGSM/examples/GPRSUdpNtpClient/arduino_secrets.h"
 )
 
-target_include_directories(mkrgsm INTERFACE
+target_include_directories(pac-mkrgsm INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MKRGSM/src"
 )
 
@@ -66,6 +66,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mkrgsm INTERFACE
+target_link_libraries(pac-mkrgsm INTERFACE
     arduino-compat
 )

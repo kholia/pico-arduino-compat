@@ -1,6 +1,6 @@
-add_library(arduinocomponents INTERFACE)
+add_library(pac-arduinocomponents INTERFACE)
 
-target_sources(arduinocomponents INTERFACE
+target_sources(pac-arduinocomponents INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoComponents/src/ArduinoComponents/IO/IO.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoComponents/src/ArduinoComponents/IO/DigitalInput.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoComponents/src/ArduinoComponents/IO/DigitalOutput.cpp"
@@ -37,7 +37,7 @@ target_sources(arduinocomponents INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoComponents/src/ArduinoComponents/Components/RF/ContentFilter.h"
 )
 
-target_include_directories(arduinocomponents INTERFACE
+target_include_directories(pac-arduinocomponents INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoComponents/src"
 )
 
@@ -45,6 +45,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinocomponents INTERFACE
+target_link_libraries(pac-arduinocomponents INTERFACE
     arduino-compat
 )

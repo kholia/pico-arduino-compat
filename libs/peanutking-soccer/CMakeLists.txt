@@ -1,6 +1,6 @@
-add_library(peanutking-soccer INTERFACE)
+add_library(pac-peanutking-soccer INTERFACE)
 
-target_sources(peanutking-soccer INTERFACE
+target_sources(pac-peanutking-soccer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PeanutKing_Soccer/PeanutKing_Soccer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PeanutKing_Soccer/PeanutKingSoccerV2.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PeanutKing_Soccer/PeanutKing_Soccer_V2.cpp"
@@ -15,7 +15,7 @@ target_sources(peanutking-soccer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PeanutKing_Soccer/PeanutKing_Soccer_V3.h"
 )
 
-target_include_directories(peanutking-soccer INTERFACE
+target_include_directories(pac-peanutking-soccer INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PeanutKing_Soccer"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(peanutking-soccer INTERFACE
+target_link_libraries(pac-peanutking-soccer INTERFACE
     arduino-compat
 )

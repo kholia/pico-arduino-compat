@@ -1,6 +1,6 @@
-add_library(protocentral-healthypi-v4-library INTERFACE)
+add_library(pac-protocentral-healthypi-v4-library INTERFACE)
 
-target_sources(protocentral-healthypi-v4-library INTERFACE
+target_sources(pac-protocentral-healthypi-v4-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/protocentral_healthypi4_arduino/src/Protocentral_spo2_algorithm.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/protocentral_healthypi4_arduino/src/Protocentral_ecg_resp_signal_processing.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/protocentral_healthypi4_arduino/src/Protocentral_ADS1292r.cpp"
@@ -19,7 +19,7 @@ target_sources(protocentral-healthypi-v4-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/protocentral_healthypi4_arduino/src/Protocentral_ADS1292r.h"
 )
 
-target_include_directories(protocentral-healthypi-v4-library INTERFACE
+target_include_directories(pac-protocentral-healthypi-v4-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/protocentral_healthypi4_arduino/src"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(protocentral-healthypi-v4-library INTERFACE
+target_link_libraries(pac-protocentral-healthypi-v4-library INTERFACE
     arduino-compat
 )

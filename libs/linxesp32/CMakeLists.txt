@@ -1,6 +1,6 @@
-add_library(linxesp32 INTERFACE)
+add_library(pac-linxesp32 INTERFACE)
 
-target_sources(linxesp32 INTERFACE
+target_sources(pac-linxesp32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LinxESP32/src/LinxSerialListener.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LinxESP32/src/LinxESP32.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LinxESP32/src/LinxESP32WifiListener.cpp"
@@ -16,7 +16,7 @@ target_sources(linxesp32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LinxESP32/src/utility/LinxWiringDevice.h"
 )
 
-target_include_directories(linxesp32 INTERFACE
+target_include_directories(pac-linxesp32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/LinxESP32/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(linxesp32 INTERFACE
+target_link_libraries(pac-linxesp32 INTERFACE
     arduino-compat
 )

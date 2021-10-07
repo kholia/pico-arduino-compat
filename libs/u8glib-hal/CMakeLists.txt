@@ -1,6 +1,6 @@
-add_library(u8glib-hal INTERFACE)
+add_library(pac-u8glib-hal INTERFACE)
 
-target_sources(u8glib-hal INTERFACE
+target_sources(pac-u8glib-hal INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/U8glib-HAL/src/U8glib-HAL.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/U8glib-HAL/src/U8glibPrint.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/U8glib-HAL/src/clib/u8g_com_stm32duino_ssd_i2c.cpp"
@@ -150,7 +150,7 @@ target_sources(u8glib-hal INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/U8glib-HAL/src/clib/HAL_example_files/LCD_I2C_routines.h"
 )
 
-target_include_directories(u8glib-hal INTERFACE
+target_include_directories(pac-u8glib-hal INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/U8glib-HAL/src"
 )
 
@@ -158,6 +158,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(u8glib-hal INTERFACE
+target_link_libraries(pac-u8glib-hal INTERFACE
     arduino-compat
 )

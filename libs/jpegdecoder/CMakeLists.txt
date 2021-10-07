@@ -1,6 +1,6 @@
-add_library(jpegdecoder INTERFACE)
+add_library(pac-jpegdecoder INTERFACE)
 
-target_sources(jpegdecoder INTERFACE
+target_sources(pac-jpegdecoder INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/JPEGDecoder/src/JPEGDecoder.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/JPEGDecoder/src/picojpeg.c"
   "${CMAKE_CURRENT_LIST_DIR}/JPEGDecoder/src/picojpeg.h"
@@ -14,7 +14,7 @@ target_sources(jpegdecoder INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/JPEGDecoder/examples/MCUFRIEND_kbv/jpeg_kbv/jpeg1.h"
 )
 
-target_include_directories(jpegdecoder INTERFACE
+target_include_directories(pac-jpegdecoder INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/JPEGDecoder/src"
 )
 
@@ -22,11 +22,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(jpegdecoder INTERFACE
+target_link_libraries(pac-jpegdecoder INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

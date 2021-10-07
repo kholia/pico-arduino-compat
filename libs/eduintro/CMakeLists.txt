@@ -1,6 +1,6 @@
-add_library(eduintro INTERFACE)
+add_library(pac-eduintro INTERFACE)
 
-target_sources(eduintro INTERFACE
+target_sources(pac-eduintro INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EduIntro/src/EduIntro.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EduIntro/src/LM35/LM35.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EduIntro/src/Relay/Relay.cpp"
@@ -42,7 +42,7 @@ target_sources(eduintro INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EduIntro/src/Button/Button.h"
 )
 
-target_include_directories(eduintro INTERFACE
+target_include_directories(pac-eduintro INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EduIntro/src"
 )
 
@@ -50,6 +50,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(eduintro INTERFACE
+target_link_libraries(pac-eduintro INTERFACE
     arduino-compat
 )

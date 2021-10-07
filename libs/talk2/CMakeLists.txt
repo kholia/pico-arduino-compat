@@ -1,6 +1,6 @@
-add_library(talk2 INTERFACE)
+add_library(pac-talk2 INTERFACE)
 
-target_sources(talk2 INTERFACE
+target_sources(pac-talk2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Talk2Library/src/T2WhisperNode.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Talk2Library/src/utils/T2Firmware.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Talk2Library/src/utils/T2Utils.cpp"
@@ -20,7 +20,7 @@ target_sources(talk2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Talk2Library/examples/WhisperNodeFactory/WhisperNodeFactory.h"
 )
 
-target_include_directories(talk2 INTERFACE
+target_include_directories(pac-talk2 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Talk2Library/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(talk2 INTERFACE
+target_link_libraries(pac-talk2 INTERFACE
     arduino-compat
 )

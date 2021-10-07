@@ -1,6 +1,6 @@
-add_library(arduboy2 INTERFACE)
+add_library(pac-arduboy2 INTERFACE)
 
-target_sources(arduboy2 INTERFACE
+target_sources(pac-arduboy2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduboy2/src/Arduboy2Data.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduboy2/src/Arduboy2Beep.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduboy2/src/Arduboy2.cpp"
@@ -20,7 +20,7 @@ target_sources(arduboy2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduboy2/src/Sprites.h"
 )
 
-target_include_directories(arduboy2 INTERFACE
+target_include_directories(pac-arduboy2 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduboy2/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduboy2 INTERFACE
+target_link_libraries(pac-arduboy2 INTERFACE
     arduino-compat
 )

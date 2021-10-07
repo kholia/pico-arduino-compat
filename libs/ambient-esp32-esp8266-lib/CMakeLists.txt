@@ -1,6 +1,6 @@
-add_library(ambient-esp32-esp8266-lib INTERFACE)
+add_library(pac-ambient-esp32-esp8266-lib INTERFACE)
 
-target_sources(ambient-esp32-esp8266-lib INTERFACE
+target_sources(pac-ambient-esp32-esp8266-lib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Ambient_ESP8266_lib/src/Ambient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Ambient_ESP8266_lib/examples/M5Stack_ESP32/BME280_test/BME280.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Ambient_ESP8266_lib/examples/M5Stack_ESP32/Ambient_BME280/BME280.cpp"
@@ -30,7 +30,7 @@ target_sources(ambient-esp32-esp8266-lib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Ambient_ESP8266_lib/examples/ESP8266/Ambient_ESP8266/HDC1000.h"
 )
 
-target_include_directories(ambient-esp32-esp8266-lib INTERFACE
+target_include_directories(pac-ambient-esp32-esp8266-lib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Ambient_ESP8266_lib/src"
 )
 
@@ -38,6 +38,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ambient-esp32-esp8266-lib INTERFACE
+target_link_libraries(pac-ambient-esp32-esp8266-lib INTERFACE
     arduino-compat
 )

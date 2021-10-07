@@ -1,6 +1,6 @@
-add_library(aspen-sim800 INTERFACE)
+add_library(pac-aspen-sim800 INTERFACE)
 
-target_sources(aspen-sim800 INTERFACE
+target_sources(pac-aspen-sim800 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SIM800/src/SIM800.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SIM800/src/core/simserial.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SIM800/src/core/debug.cpp"
@@ -35,7 +35,7 @@ target_sources(aspen-sim800 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SIM800/src/atcmds/sms.h"
 )
 
-target_include_directories(aspen-sim800 INTERFACE
+target_include_directories(pac-aspen-sim800 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SIM800/src"
 )
 
@@ -43,6 +43,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(aspen-sim800 INTERFACE
+target_link_libraries(pac-aspen-sim800 INTERFACE
     arduino-compat
 )

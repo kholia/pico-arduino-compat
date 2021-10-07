@@ -1,6 +1,6 @@
-add_library(ulwos2 INTERFACE)
+add_library(pac-ulwos2 INTERFACE)
 
-target_sources(ulwos2 INTERFACE
+target_sources(pac-ulwos2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ULWOS2/examples/Particle/src/ledBlinker.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ULWOS2/src/ULWOS2.c"
   "${CMAKE_CURRENT_LIST_DIR}/ULWOS2/src/ULWOS2_HAL.c"
@@ -81,7 +81,7 @@ target_sources(ulwos2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ULWOS2/examples/Linux/ULWOS2_config.h"
 )
 
-target_include_directories(ulwos2 INTERFACE
+target_include_directories(pac-ulwos2 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ULWOS2/src"
 )
 
@@ -89,6 +89,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ulwos2 INTERFACE
+target_link_libraries(pac-ulwos2 INTERFACE
     arduino-compat
 )

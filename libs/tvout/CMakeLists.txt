@@ -1,6 +1,6 @@
-add_library(tvout INTERFACE)
+add_library(pac-tvout INTERFACE)
 
-target_sources(tvout INTERFACE
+target_sources(pac-tvout INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-tvout/video_gen.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-tvout/TVoutPrint.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-tvout/TVout.cpp"
@@ -38,7 +38,7 @@ target_sources(tvout INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-tvout/spec/asm_macros.h"
 )
 
-target_include_directories(tvout INTERFACE
+target_include_directories(pac-tvout INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-tvout"
 )
 
@@ -46,6 +46,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tvout INTERFACE
+target_link_libraries(pac-tvout INTERFACE
     arduino-compat
 )

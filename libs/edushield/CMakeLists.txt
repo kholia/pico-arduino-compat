@@ -1,6 +1,6 @@
-add_library(edushield INTERFACE)
+add_library(pac-edushield INTERFACE)
 
-target_sources(edushield INTERFACE
+target_sources(pac-edushield INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/edushield/src/edushield.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/edushield/_firmware/libraries/TinyWireS/TinyWireS.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/edushield/_firmware/hardware/tiny/avr/cores/empty/main.cpp"
@@ -51,7 +51,7 @@ target_sources(edushield INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/edushield/_firmware/hardware/tiny/avr/cores/tiny/core_build_options.h"
 )
 
-target_include_directories(edushield INTERFACE
+target_include_directories(pac-edushield INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/edushield/src"
 )
 
@@ -59,6 +59,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(edushield INTERFACE
+target_link_libraries(pac-edushield INTERFACE
     arduino-compat
 )

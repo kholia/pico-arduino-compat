@@ -1,6 +1,6 @@
-add_library(stm32duino-i-nucleo-lrwan1 INTERFACE)
+add_library(pac-stm32duino-i-nucleo-lrwan1 INTERFACE)
 
-target_sources(stm32duino-i-nucleo-lrwan1 INTERFACE
+target_sources(pac-stm32duino-i-nucleo-lrwan1 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/I-NUCLEO-LRWAN1/src/LoRaWANNode.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/I-NUCLEO-LRWAN1/src/hw_usart.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/I-NUCLEO-LRWAN1/src/LoRaRadio.cpp"
@@ -20,7 +20,7 @@ target_sources(stm32duino-i-nucleo-lrwan1 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/I-NUCLEO-LRWAN1/src/tiny_sscanf.h"
 )
 
-target_include_directories(stm32duino-i-nucleo-lrwan1 INTERFACE
+target_include_directories(pac-stm32duino-i-nucleo-lrwan1 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/I-NUCLEO-LRWAN1/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(stm32duino-i-nucleo-lrwan1 INTERFACE
+target_link_libraries(pac-stm32duino-i-nucleo-lrwan1 INTERFACE
     arduino-compat
 )

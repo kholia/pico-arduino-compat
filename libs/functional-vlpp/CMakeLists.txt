@@ -1,6 +1,6 @@
-add_library(functional-vlpp INTERFACE)
+add_library(pac-functional-vlpp INTERFACE)
 
-target_sources(functional-vlpp INTERFACE
+target_sources(pac-functional-vlpp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/functional-vlpp/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B112_ublox/variant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/functional-vlpp/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B302_ublox/variant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/functional-vlpp/Packages_Patches/adafruit/hardware/nrf52/0.20.5/variants/NINA_B112_ublox/variant.cpp"
@@ -94,7 +94,7 @@ target_sources(functional-vlpp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/functional-vlpp/src/Pointer.h"
 )
 
-target_include_directories(functional-vlpp INTERFACE
+target_include_directories(pac-functional-vlpp INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/functional-vlpp/src"
 )
 
@@ -102,6 +102,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(functional-vlpp INTERFACE
+target_link_libraries(pac-functional-vlpp INTERFACE
     arduino-compat
 )

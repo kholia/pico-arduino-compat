@@ -1,6 +1,6 @@
-add_library(espvgax2 INTERFACE)
+add_library(pac-espvgax2 INTERFACE)
 
-target_sources(espvgax2 INTERFACE
+target_sources(pac-espvgax2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/espvgax2/ESPVGAX2.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/espvgax2/ESPVGAX2.h"
   "${CMAKE_CURRENT_LIST_DIR}/espvgax2/espvgax2_blit.h"
@@ -27,7 +27,7 @@ target_sources(espvgax2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/espvgax2/images2/pirate320.h"
 )
 
-target_include_directories(espvgax2 INTERFACE
+target_include_directories(pac-espvgax2 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/espvgax2"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(espvgax2 INTERFACE
+target_link_libraries(pac-espvgax2 INTERFACE
     arduino-compat
 )

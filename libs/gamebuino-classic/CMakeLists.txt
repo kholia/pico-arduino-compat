@@ -1,6 +1,6 @@
-add_library(gamebuino-classic INTERFACE)
+add_library(pac-gamebuino-classic INTERFACE)
 
-target_sources(gamebuino-classic INTERFACE
+target_sources(pac-gamebuino-classic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Gamebuino-Classic/Gamebuino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Gamebuino-Classic/utility/Display.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Gamebuino-Classic/utility/Backlight.cpp"
@@ -19,7 +19,7 @@ target_sources(gamebuino-classic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Gamebuino-Classic/utility/Backlight.h"
 )
 
-target_include_directories(gamebuino-classic INTERFACE
+target_include_directories(pac-gamebuino-classic INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Gamebuino-Classic"
 )
 
@@ -27,6 +27,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(gamebuino-classic INTERFACE
+target_link_libraries(pac-gamebuino-classic INTERFACE
     arduino-compat
 )

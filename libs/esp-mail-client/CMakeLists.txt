@@ -1,6 +1,6 @@
-add_library(esp-mail-client INTERFACE)
+add_library(pac-esp-mail-client INTERFACE)
 
-target_sources(esp-mail-client INTERFACE
+target_sources(pac-esp-mail-client INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP-Mail-Client/src/ESP_Mail_Client.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP-Mail-Client/src/extras/RFC2047.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP-Mail-Client/src/extras/SD/SD.cpp"
@@ -85,7 +85,7 @@ target_sources(esp-mail-client INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP-Mail-Client/examples/SMTP/Send_RFC822_Attachment/image.h"
 )
 
-target_include_directories(esp-mail-client INTERFACE
+target_include_directories(pac-esp-mail-client INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESP-Mail-Client/src"
 )
 
@@ -93,11 +93,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(esp-mail-client INTERFACE
+target_link_libraries(pac-esp-mail-client INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

@@ -1,6 +1,6 @@
-add_library(keybrd INTERFACE)
+add_library(pac-keybrd INTERFACE)
 
-target_sources(keybrd INTERFACE
+target_sources(pac-keybrd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/keybrd/src/Code_LayerHold.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/keybrd/src/Key_LayeredKeys1.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/keybrd/src/Scanner_ShiftRegsReadStrobed.cpp"
@@ -85,7 +85,7 @@ target_sources(keybrd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/keybrd/src/ScannerInterface.h"
 )
 
-target_include_directories(keybrd INTERFACE
+target_include_directories(pac-keybrd INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/keybrd/src"
 )
 
@@ -93,6 +93,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(keybrd INTERFACE
+target_link_libraries(pac-keybrd INTERFACE
     arduino-compat
 )

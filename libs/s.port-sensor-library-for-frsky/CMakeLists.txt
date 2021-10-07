@@ -1,6 +1,6 @@
-add_library(s.port-sensor-library-for-frsky INTERFACE)
+add_library(pac-s.port-sensor-library-for-frsky INTERFACE)
 
-target_sources(s.port-sensor-library-for-frsky INTERFACE
+target_sources(pac-s.port-sensor-library-for-frsky INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FrSky/Sensors/ECU/EcuSensor/src/Ecu_Fadec.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FrSky/Sensors/ECU/EcuSensor/src/Ecu_Jetronic.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FrSky/Sensors/GPS/src/main.cpp"
@@ -18,7 +18,7 @@ target_sources(s.port-sensor-library-for-frsky INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FrSky/src/SPortHub.h"
 )
 
-target_include_directories(s.port-sensor-library-for-frsky INTERFACE
+target_include_directories(pac-s.port-sensor-library-for-frsky INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FrSky/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(s.port-sensor-library-for-frsky INTERFACE
+target_link_libraries(pac-s.port-sensor-library-for-frsky INTERFACE
     arduino-compat
 )

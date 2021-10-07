@@ -1,6 +1,6 @@
-add_library(heltec-esp8266-dev-boards INTERFACE)
+add_library(pac-heltec-esp8266-dev-boards INTERFACE)
 
-target_sources(heltec-esp8266-dev-boards INTERFACE
+target_sources(pac-heltec-esp8266-dev-boards INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Heltec_ESP8266/src/heltec.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Heltec_ESP8266/src/oled/OLEDDisplay.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Heltec_ESP8266/src/oled/OLEDDisplayUi.cpp"
@@ -14,7 +14,7 @@ target_sources(heltec-esp8266-dev-boards INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Heltec_ESP8266/examples/OLED/SSD1306SimpleDemo/images.h"
 )
 
-target_include_directories(heltec-esp8266-dev-boards INTERFACE
+target_include_directories(pac-heltec-esp8266-dev-boards INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Heltec_ESP8266/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(heltec-esp8266-dev-boards INTERFACE
+target_link_libraries(pac-heltec-esp8266-dev-boards INTERFACE
     arduino-compat
 )

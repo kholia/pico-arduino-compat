@@ -1,6 +1,6 @@
-add_library(reactorprotocol INTERFACE)
+add_library(pac-reactorprotocol INTERFACE)
 
-target_sources(reactorprotocol INTERFACE
+target_sources(pac-reactorprotocol INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ReactorProtocol/src/BluetoothClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ReactorProtocol/src/FreqCounter.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ReactorProtocol/src/BluetoothMaster.cpp"
@@ -16,7 +16,7 @@ target_sources(reactorprotocol INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ReactorProtocol/examples/StudentReactorControl/BTComms.h"
 )
 
-target_include_directories(reactorprotocol INTERFACE
+target_include_directories(pac-reactorprotocol INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ReactorProtocol/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(reactorprotocol INTERFACE
+target_link_libraries(pac-reactorprotocol INTERFACE
     arduino-compat
 )

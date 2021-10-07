@@ -1,6 +1,6 @@
-add_library(lvgl INTERFACE)
+add_library(pac-lvgl INTERFACE)
 
-target_sources(lvgl INTERFACE
+target_sources(pac-lvgl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/lvgl/src/widgets/lv_line.c"
   "${CMAKE_CURRENT_LIST_DIR}/lvgl/src/widgets/lv_table.c"
   "${CMAKE_CURRENT_LIST_DIR}/lvgl/src/widgets/lv_dropdown.c"
@@ -469,7 +469,7 @@ target_sources(lvgl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/lvgl/tests/src/lv_test_init.h"
 )
 
-target_include_directories(lvgl INTERFACE
+target_include_directories(pac-lvgl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/lvgl/src"
 )
 
@@ -477,6 +477,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(lvgl INTERFACE
+target_link_libraries(pac-lvgl INTERFACE
     arduino-compat
 )

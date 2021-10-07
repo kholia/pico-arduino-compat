@@ -1,6 +1,6 @@
-add_library(serialdebug INTERFACE)
+add_library(pac-serialdebug INTERFACE)
 
-target_sources(serialdebug INTERFACE
+target_sources(pac-serialdebug INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SerialDebug/src/SerialDebug.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SerialDebug/src/utility/Util.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SerialDebug/src/utility/Fields.cpp"
@@ -11,7 +11,7 @@ target_sources(serialdebug INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SerialDebug/src/utility/Fields.h"
 )
 
-target_include_directories(serialdebug INTERFACE
+target_include_directories(pac-serialdebug INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SerialDebug/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(serialdebug INTERFACE
+target_link_libraries(pac-serialdebug INTERFACE
     arduino-compat
 )

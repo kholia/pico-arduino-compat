@@ -1,6 +1,6 @@
-add_library(pollingtimer INTERFACE)
+add_library(pac-pollingtimer INTERFACE)
 
-target_sources(pollingtimer INTERFACE
+target_sources(pac-pollingtimer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PollingTimer/OneShotTimer.h"
   "${CMAKE_CURRENT_LIST_DIR}/PollingTimer/PollingTimer.h"
   "${CMAKE_CURRENT_LIST_DIR}/PollingTimer/IntervalCounter.h"
@@ -16,7 +16,7 @@ target_sources(pollingtimer INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PollingTimer/util/TeensyDirtySTLErrorSolution/TeensyDirtySTLErrorSolution.h"
 )
 
-target_include_directories(pollingtimer INTERFACE
+target_include_directories(pac-pollingtimer INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PollingTimer"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pollingtimer INTERFACE
+target_link_libraries(pac-pollingtimer INTERFACE
     arduino-compat
 )

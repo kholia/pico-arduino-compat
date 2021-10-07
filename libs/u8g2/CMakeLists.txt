@@ -1,6 +1,6 @@
-add_library(u8g2 INTERFACE)
+add_library(pac-u8g2 INTERFACE)
 
-target_sources(u8g2 INTERFACE
+target_sources(pac-u8g2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/U8g2_Arduino/src/U8x8lib.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/U8g2_Arduino/src/U8g2lib.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/U8g2_Arduino/src/clib/u8x8_d_ssd1306_64x32.c"
@@ -119,7 +119,7 @@ target_sources(u8g2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/U8g2_Arduino/src/clib/mui.h"
 )
 
-target_include_directories(u8g2 INTERFACE
+target_include_directories(pac-u8g2 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/U8g2_Arduino/src"
 )
 
@@ -127,6 +127,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(u8g2 INTERFACE
+target_link_libraries(pac-u8g2 INTERFACE
     arduino-compat
 )

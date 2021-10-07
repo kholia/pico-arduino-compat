@@ -1,6 +1,6 @@
-add_library(wolkconnect INTERFACE)
+add_library(pac-wolkconnect INTERFACE)
 
-target_sources(wolkconnect INTERFACE
+target_sources(pac-wolkconnect INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WolkConnect-Arduino/src/MQTTClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WolkConnect-Arduino/src/WolkConn.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WolkConnect-Arduino/src/utility/reading.cpp"
@@ -40,7 +40,7 @@ target_sources(wolkconnect INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WolkConnect-Arduino/src/utility/json_parser.h"
 )
 
-target_include_directories(wolkconnect INTERFACE
+target_include_directories(pac-wolkconnect INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WolkConnect-Arduino/src"
 )
 
@@ -48,6 +48,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wolkconnect INTERFACE
+target_link_libraries(pac-wolkconnect INTERFACE
     arduino-compat
 )

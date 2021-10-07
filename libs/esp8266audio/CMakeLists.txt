@@ -1,6 +1,6 @@
-add_library(esp8266audio INTERFACE)
+add_library(pac-esp8266audio INTERFACE)
 
-target_sources(esp8266audio INTERFACE
+target_sources(pac-esp8266audio INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP8266Audio/src/AudioOutputFilterDecimate.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP8266Audio/src/AudioOutputFilterBiquad.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP8266Audio/src/AudioOutputSPDIF.cpp"
@@ -434,7 +434,7 @@ target_sources(esp8266audio INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP8266Audio/tests/host/Arduino.h"
 )
 
-target_include_directories(esp8266audio INTERFACE
+target_include_directories(pac-esp8266audio INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESP8266Audio/src"
 )
 
@@ -442,11 +442,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(esp8266audio INTERFACE
+target_link_libraries(pac-esp8266audio INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

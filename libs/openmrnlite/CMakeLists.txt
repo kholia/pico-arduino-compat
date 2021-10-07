@@ -1,6 +1,6 @@
-add_library(openmrnlite INTERFACE)
+add_library(pac-openmrnlite INTERFACE)
 
-target_sources(openmrnlite INTERFACE
+target_sources(pac-openmrnlite INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OpenMRNLite/src/OpenMRNLite.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OpenMRNLite/src/utils/ServiceLocator.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OpenMRNLite/src/utils/CanIf.cpp"
@@ -121,7 +121,7 @@ target_sources(openmrnlite INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OpenMRNLite/examples/Stm32CanSerial/build_opt.h"
 )
 
-target_include_directories(openmrnlite INTERFACE
+target_include_directories(pac-openmrnlite INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/OpenMRNLite/src"
 )
 
@@ -129,6 +129,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(openmrnlite INTERFACE
+target_link_libraries(pac-openmrnlite INTERFACE
     arduino-compat
 )

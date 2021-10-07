@@ -1,6 +1,6 @@
-add_library(universal-inputs INTERFACE)
+add_library(pac-universal-inputs INTERFACE)
 
-target_sources(universal-inputs INTERFACE
+target_sources(pac-universal-inputs INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoUniversalInput/UniversalInputManager.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoUniversalInput/IButton.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoUniversalInput/ArduinoJoystick.cpp"
@@ -21,7 +21,7 @@ target_sources(universal-inputs INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoUniversalInput/UniversalInputManager.h"
 )
 
-target_include_directories(universal-inputs INTERFACE
+target_include_directories(pac-universal-inputs INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoUniversalInput"
 )
 
@@ -29,6 +29,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(universal-inputs INTERFACE
+target_link_libraries(pac-universal-inputs INTERFACE
     arduino-compat
 )

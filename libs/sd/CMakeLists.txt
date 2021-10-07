@@ -1,6 +1,6 @@
-add_library(sd INTERFACE)
+add_library(pac-sd INTERFACE)
 
-target_sources(sd INTERFACE
+target_sources(pac-sd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SD/src/SD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SD/src/File.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SD/src/utility/SdVolume.cpp"
@@ -16,7 +16,7 @@ target_sources(sd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SD/src/utility/FatStructs.h"
 )
 
-target_include_directories(sd INTERFACE
+target_include_directories(pac-sd INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SD/src"
 )
 
@@ -24,11 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
-endif()
-
-target_link_libraries(sd INTERFACE
+target_link_libraries(pac-sd INTERFACE
     arduino-compat
-    official-sd
 )

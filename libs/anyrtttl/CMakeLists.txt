@@ -1,6 +1,6 @@
-add_library(anyrtttl INTERFACE)
+add_library(pac-anyrtttl INTERFACE)
 
-target_sources(anyrtttl INTERFACE
+target_sources(pac-anyrtttl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AnyRtttl/test/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AnyRtttl/test/TestAnyRtttl.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AnyRtttl/src/binrtttl.cpp"
@@ -11,7 +11,7 @@ target_sources(anyrtttl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AnyRtttl/src/binrtttl.h"
 )
 
-target_include_directories(anyrtttl INTERFACE
+target_include_directories(pac-anyrtttl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AnyRtttl/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(anyrtttl INTERFACE
+target_link_libraries(pac-anyrtttl INTERFACE
     arduino-compat
 )

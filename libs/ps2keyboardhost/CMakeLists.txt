@@ -1,6 +1,6 @@
-add_library(ps2keyboardhost INTERFACE)
+add_library(pac-ps2keyboardhost INTERFACE)
 
-target_sources(ps2keyboardhost INTERFACE
+target_sources(pac-ps2keyboardhost INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PS2KeyboardHost/src/ps2_UsbTranslator.hpp"
   "${CMAKE_CURRENT_LIST_DIR}/PS2KeyboardHost/src/ps2_AnsiTranslator.hpp"
   "${CMAKE_CURRENT_LIST_DIR}/PS2KeyboardHost/src/ps2_NeutralTranslator.h"
@@ -18,7 +18,7 @@ target_sources(ps2keyboardhost INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PS2KeyboardHost/src/ps2_TypematicRate.h"
 )
 
-target_include_directories(ps2keyboardhost INTERFACE
+target_include_directories(pac-ps2keyboardhost INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PS2KeyboardHost/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ps2keyboardhost INTERFACE
+target_link_libraries(pac-ps2keyboardhost INTERFACE
     arduino-compat
 )

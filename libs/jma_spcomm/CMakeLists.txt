@@ -1,6 +1,6 @@
-add_library(jma_spcomm INTERFACE)
+add_library(pac-jma_spcomm INTERFACE)
 
-target_sources(jma_spcomm INTERFACE
+target_sources(pac-jma_spcomm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/JMASPComm/JMA_SPRange.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/JMASPComm/JMA_SPComm.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/JMASPComm/JMA_SPBuffer.cpp"
@@ -16,7 +16,7 @@ target_sources(jma_spcomm INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/JMASPComm/JMA_SPComm.h"
 )
 
-target_include_directories(jma_spcomm INTERFACE
+target_include_directories(pac-jma_spcomm INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/JMASPComm"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(jma_spcomm INTERFACE
+target_link_libraries(pac-jma_spcomm INTERFACE
     arduino-compat
 )

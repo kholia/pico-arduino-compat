@@ -1,6 +1,6 @@
-add_library(cpppotpourri INTERFACE)
+add_library(pac-cpppotpourri INTERFACE)
 
-target_sources(cpppotpourri INTERFACE
+target_sources(pac-cpppotpourri INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CppPotpourri/extras/unit_tests/AllTests.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/CppPotpourri/extras/unit_tests/StringBuilderTest.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/CppPotpourri/extras/unit_tests/ParsingConsoleTest.cpp"
@@ -116,7 +116,7 @@ target_sources(cpppotpourri INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CppPotpourri/src/cbor-cpp/cbor.h"
 )
 
-target_include_directories(cpppotpourri INTERFACE
+target_include_directories(pac-cpppotpourri INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/CppPotpourri/src"
 )
 
@@ -124,6 +124,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(cpppotpourri INTERFACE
+target_link_libraries(pac-cpppotpourri INTERFACE
     arduino-compat
 )

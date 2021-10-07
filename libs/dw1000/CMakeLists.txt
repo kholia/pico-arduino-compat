@@ -1,6 +1,6 @@
-add_library(dw1000 INTERFACE)
+add_library(pac-dw1000 INTERFACE)
 
-target_sources(dw1000 INTERFACE
+target_sources(pac-dw1000 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-dw1000/src/DW1000Ranging.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-dw1000/src/DW1000Time.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-dw1000/src/DW1000Mac.cpp"
@@ -17,7 +17,7 @@ target_sources(dw1000 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-dw1000/src/deprecated.h"
 )
 
-target_include_directories(dw1000 INTERFACE
+target_include_directories(pac-dw1000 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-dw1000/src"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(dw1000 INTERFACE
+target_link_libraries(pac-dw1000 INTERFACE
     arduino-compat
 )

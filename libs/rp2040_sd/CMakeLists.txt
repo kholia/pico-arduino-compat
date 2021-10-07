@@ -1,6 +1,6 @@
-add_library(rp2040_sd INTERFACE)
+add_library(pac-rp2040_sd INTERFACE)
 
-target_sources(rp2040_sd INTERFACE
+target_sources(pac-rp2040_sd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RP2040_SD/src/utility/SdVolume.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RP2040_SD/src/utility/Sd2Card.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RP2040_SD/src/utility/SdFile.cpp"
@@ -16,7 +16,7 @@ target_sources(rp2040_sd INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RP2040_SD/src/utility/FatStructs.h"
 )
 
-target_include_directories(rp2040_sd INTERFACE
+target_include_directories(pac-rp2040_sd INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RP2040_SD/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(rp2040_sd INTERFACE
+target_link_libraries(pac-rp2040_sd INTERFACE
     arduino-compat
 )

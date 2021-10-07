@@ -1,6 +1,6 @@
-add_library(esp_wifimanager INTERFACE)
+add_library(pac-esp_wifimanager INTERFACE)
 
-target_sources(esp_wifimanager INTERFACE
+target_sources(pac-esp_wifimanager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP_WiFiManager/src_cpp/ESP_WiFiManager.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP_WiFiManager/esp32s2_WebServer_Patch/WebServer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP_WiFiManager/src_cpp/ESP_WiFiManager.h"
@@ -17,7 +17,7 @@ target_sources(esp_wifimanager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP_WiFiManager/esp32s2_WebServer_Patch/WebServer.h"
 )
 
-target_include_directories(esp_wifimanager INTERFACE
+target_include_directories(pac-esp_wifimanager INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESP_WiFiManager/src"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(esp_wifimanager INTERFACE
+target_link_libraries(pac-esp_wifimanager INTERFACE
     arduino-compat
 )

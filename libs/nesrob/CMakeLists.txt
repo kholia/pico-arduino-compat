@@ -1,6 +1,6 @@
-add_library(nesrob INTERFACE)
+add_library(pac-nesrob INTERFACE)
 
-target_sources(nesrob INTERFACE
+target_sources(pac-nesrob INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/nes-rob/test/led_ntsc_driver.test.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/nes-rob/test/NesRob.test.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/nes-rob/test/signal_generator.test.cpp"
@@ -27,7 +27,7 @@ target_sources(nesrob INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/nes-rob/src/NesRob.h"
 )
 
-target_include_directories(nesrob INTERFACE
+target_include_directories(pac-nesrob INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/nes-rob/src"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(nesrob INTERFACE
+target_link_libraries(pac-nesrob INTERFACE
     arduino-compat
 )

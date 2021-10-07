@@ -1,6 +1,6 @@
-add_library(indhilib INTERFACE)
+add_library(pac-indhilib INTERFACE)
 
-target_sources(indhilib INTERFACE
+target_sources(pac-indhilib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/indhi-lib-arduino-esp32/src/wifi_manager.h"
   "${CMAKE_CURRENT_LIST_DIR}/indhi-lib-arduino-esp32/src/wifi_sta_manager.h"
   "${CMAKE_CURRENT_LIST_DIR}/indhi-lib-arduino-esp32/src/api_response_parser.h"
@@ -33,7 +33,7 @@ target_sources(indhilib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/indhi-lib-arduino-esp32/src/gatt_response_parser.h"
 )
 
-target_include_directories(indhilib INTERFACE
+target_include_directories(pac-indhilib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/indhi-lib-arduino-esp32/src"
 )
 
@@ -41,6 +41,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(indhilib INTERFACE
+target_link_libraries(pac-indhilib INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(lora-node INTERFACE)
+add_library(pac-lora-node INTERFACE)
 
-target_sources(lora-node INTERFACE
+target_sources(pac-lora-node INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-library-lora-node-shield/src/LoRaNode.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-library-lora-node-shield/src/boards/arduino/i2c-board.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-library-lora-node-shield/src/boards/arduino/spi-board.cpp"
@@ -84,7 +84,7 @@ target_sources(lora-node INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-library-lora-node-shield/src/boards/arduino/i2c-board.h"
 )
 
-target_include_directories(lora-node INTERFACE
+target_include_directories(pac-lora-node INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-library-lora-node-shield/src"
 )
 
@@ -92,6 +92,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(lora-node INTERFACE
+target_link_libraries(pac-lora-node INTERFACE
     arduino-compat
 )

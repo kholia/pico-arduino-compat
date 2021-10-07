@@ -1,6 +1,6 @@
-add_library(codrone INTERFACE)
+add_library(pac-codrone INTERFACE)
 
-target_sources(codrone INTERFACE
+target_sources(pac-codrone INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CoDrone/CoDrone.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/CoDrone/CoDrone_request.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/CoDrone/CoDrone_util.cpp"
@@ -16,7 +16,7 @@ target_sources(codrone INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CoDrone/utility/EEPROM.h"
 )
 
-target_include_directories(codrone INTERFACE
+target_include_directories(pac-codrone INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/CoDrone"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(codrone INTERFACE
+target_link_libraries(pac-codrone INTERFACE
     arduino-compat
 )

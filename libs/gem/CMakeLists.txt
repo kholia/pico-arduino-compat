@@ -1,6 +1,6 @@
-add_library(gem INTERFACE)
+add_library(pac-gem INTERFACE)
 
-target_sources(gem INTERFACE
+target_sources(pac-gem INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GEM/src/GEM.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GEM/src/GEMItem.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GEM/src/GEM_adafruit_gfx.cpp"
@@ -26,7 +26,7 @@ target_sources(gem INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GEM/examples/AdafruitGFX/Example-03_Party-Hard/frames.h"
 )
 
-target_include_directories(gem INTERFACE
+target_include_directories(pac-gem INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/GEM/src"
 )
 
@@ -34,11 +34,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(gem INTERFACE
+target_link_libraries(pac-gem INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

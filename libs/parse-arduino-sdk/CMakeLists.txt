@@ -1,6 +1,6 @@
-add_library(parse-arduino-sdk INTERFACE)
+add_library(pac-parse-arduino-sdk INTERFACE)
 
-target_sources(parse-arduino-sdk INTERFACE
+target_sources(pac-parse-arduino-sdk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Parse-SDK-Arduino/src/internal/ParseObjectGet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Parse-SDK-Arduino/src/internal/ParseRequest.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Parse-SDK-Arduino/src/internal/ParseCloudFunction.cpp"
@@ -39,7 +39,7 @@ target_sources(parse-arduino-sdk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Parse-SDK-Arduino/src/external/FlashStorage/FlashStorage.h"
 )
 
-target_include_directories(parse-arduino-sdk INTERFACE
+target_include_directories(pac-parse-arduino-sdk INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Parse-SDK-Arduino/src"
 )
 
@@ -47,6 +47,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(parse-arduino-sdk INTERFACE
+target_link_libraries(pac-parse-arduino-sdk INTERFACE
     arduino-compat
 )

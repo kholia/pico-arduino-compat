@@ -1,6 +1,6 @@
-add_library(ethernetwebserver_stm32 INTERFACE)
+add_library(pac-ethernetwebserver_stm32 INTERFACE)
 
-target_sources(ethernetwebserver_stm32 INTERFACE
+target_sources(pac-ethernetwebserver_stm32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EthernetWebServer_STM32/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EthernetWebServer_STM32/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EthernetWebServer_STM32/LibraryPatches/UIPEthernet-2.0.9/UIPEthernet.cpp"
@@ -140,7 +140,7 @@ target_sources(ethernetwebserver_stm32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EthernetWebServer_STM32/examples/MQTT_ThingStream/defines.h"
 )
 
-target_include_directories(ethernetwebserver_stm32 INTERFACE
+target_include_directories(pac-ethernetwebserver_stm32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EthernetWebServer_STM32/src"
 )
 
@@ -148,6 +148,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ethernetwebserver_stm32 INTERFACE
+target_link_libraries(pac-ethernetwebserver_stm32 INTERFACE
     arduino-compat
 )

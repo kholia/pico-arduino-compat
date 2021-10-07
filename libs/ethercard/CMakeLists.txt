@@ -1,6 +1,6 @@
-add_library(ethercard INTERFACE)
+add_library(pac-ethercard INTERFACE)
 
-target_sources(ethercard INTERFACE
+target_sources(pac-ethercard INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EtherCard/src/dhcp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EtherCard/src/EtherCard.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EtherCard/src/udpserver.cpp"
@@ -17,7 +17,7 @@ target_sources(ethercard INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EtherCard/src/enc28j60.h"
 )
 
-target_include_directories(ethercard INTERFACE
+target_include_directories(pac-ethercard INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EtherCard/src"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ethercard INTERFACE
+target_link_libraries(pac-ethercard INTERFACE
     arduino-compat
 )

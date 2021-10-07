@@ -1,6 +1,6 @@
-add_library(syncano-arduino-library INTERFACE)
+add_library(pac-syncano-arduino-library INTERFACE)
 
-target_sources(syncano-arduino-library INTERFACE
+target_sources(pac-syncano-arduino-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/syncano-arduino/src/lib/ArduinoJson/src/JsonVariant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/syncano-arduino/src/lib/ArduinoJson/src/JsonBuffer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/syncano-arduino/src/lib/ArduinoJson/src/JsonArray.cpp"
@@ -75,7 +75,7 @@ target_sources(syncano-arduino-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/syncano-arduino/src/syncano/SyncanoEndpointScript.h"
 )
 
-target_include_directories(syncano-arduino-library INTERFACE
+target_include_directories(pac-syncano-arduino-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/syncano-arduino/src"
 )
 
@@ -83,6 +83,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(syncano-arduino-library INTERFACE
+target_link_libraries(pac-syncano-arduino-library INTERFACE
     arduino-compat
 )

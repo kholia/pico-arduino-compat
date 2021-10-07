@@ -1,6 +1,6 @@
-add_library(azureiotutility INTERFACE)
+add_library(pac-azureiotutility INTERFACE)
 
-target_sources(azureiotutility INTERFACE
+target_sources(pac-azureiotutility INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/azure-iot-arduino-utility/src/esp32/azcpgmspace.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/azure-iot-arduino-utility/src/esp32/sample_init.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/azure-iot-arduino-utility/src/esp8266/azcpgmspace.cpp"
@@ -181,7 +181,7 @@ target_sources(azureiotutility INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/azure-iot-arduino-utility/src/adapters/tlsio_mbedtls.h"
 )
 
-target_include_directories(azureiotutility INTERFACE
+target_include_directories(pac-azureiotutility INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/azure-iot-arduino-utility/src"
 )
 
@@ -189,6 +189,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(azureiotutility INTERFACE
+target_link_libraries(pac-azureiotutility INTERFACE
     arduino-compat
 )

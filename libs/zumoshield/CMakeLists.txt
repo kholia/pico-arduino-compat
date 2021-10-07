@@ -1,6 +1,6 @@
-add_library(zumoshield INTERFACE)
+add_library(pac-zumoshield INTERFACE)
 
-target_sources(zumoshield INTERFACE
+target_sources(pac-zumoshield INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/zumo-shield-arduino-library/ZumoIMU.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/zumo-shield-arduino-library/L3G.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/zumo-shield-arduino-library/Pushbutton.cpp"
@@ -20,7 +20,7 @@ target_sources(zumoshield INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/zumo-shield-arduino-library/ZumoBuzzer.h"
 )
 
-target_include_directories(zumoshield INTERFACE
+target_include_directories(pac-zumoshield INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/zumo-shield-arduino-library"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(zumoshield INTERFACE
+target_link_libraries(pac-zumoshield INTERFACE
     arduino-compat
 )

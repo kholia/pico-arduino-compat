@@ -1,6 +1,6 @@
-add_library(optigatrustx INTERFACE)
+add_library(pac-optigatrustx INTERFACE)
 
-target_sources(optigatrustx INTERFACE
+target_sources(pac-optigatrustx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-optiga-trust-x/src/OPTIGATrustX.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-optiga-trust-x/src/optiga_trustx/pal_os_timer_arduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-optiga-trust-x/src/optiga_trustx/pal_ifx_i2c_config_arduino.cpp"
@@ -73,7 +73,7 @@ target_sources(optigatrustx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-optiga-trust-x/examples/generateKeypair/fprint.h"
 )
 
-target_include_directories(optigatrustx INTERFACE
+target_include_directories(pac-optigatrustx INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-optiga-trust-x/src"
 )
 
@@ -81,6 +81,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(optigatrustx INTERFACE
+target_link_libraries(pac-optigatrustx INTERFACE
     arduino-compat
 )

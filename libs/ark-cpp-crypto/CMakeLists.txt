@@ -1,6 +1,6 @@
-add_library(ark-cpp-crypto INTERFACE)
+add_library(pac-ark-cpp-crypto INTERFACE)
 
-target_sources(ark-cpp-crypto INTERFACE
+target_sources(pac-ark-cpp-crypto INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/cpp-crypto/test/utils/str.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/cpp-crypto/test/utils/packing.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/cpp-crypto/test/utils/base58.cpp"
@@ -175,7 +175,7 @@ target_sources(ark-cpp-crypto INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/cpp-crypto/examples/arduino/ESP8266/arkCrypto_esp8266.h"
 )
 
-target_include_directories(ark-cpp-crypto INTERFACE
+target_include_directories(pac-ark-cpp-crypto INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/cpp-crypto/src"
 )
 
@@ -183,6 +183,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ark-cpp-crypto INTERFACE
+target_link_libraries(pac-ark-cpp-crypto INTERFACE
     arduino-compat
 )

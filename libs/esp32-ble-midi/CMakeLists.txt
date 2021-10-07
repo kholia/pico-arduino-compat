@@ -1,6 +1,6 @@
-add_library(esp32-ble-midi INTERFACE)
+add_library(pac-esp32-ble-midi INTERFACE)
 
-target_sources(esp32-ble-midi INTERFACE
+target_sources(pac-esp32-ble-midi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-BLE-MIDI/src/utility/Midi.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-BLE-MIDI/src/utility/BLEMidiClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-BLE-MIDI/src/utility/Debug.cpp"
@@ -15,7 +15,7 @@ target_sources(esp32-ble-midi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP32-BLE-MIDI/src/utility/BLEMidiServer.h"
 )
 
-target_include_directories(esp32-ble-midi INTERFACE
+target_include_directories(pac-esp32-ble-midi INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESP32-BLE-MIDI/src"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(esp32-ble-midi INTERFACE
+target_link_libraries(pac-esp32-ble-midi INTERFACE
     arduino-compat
 )

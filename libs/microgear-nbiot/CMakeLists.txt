@@ -1,6 +1,6 @@
-add_library(microgear-nbiot INTERFACE)
+add_library(pac-microgear-nbiot INTERFACE)
 
-target_sources(microgear-nbiot INTERFACE
+target_sources(pac-microgear-nbiot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/microgear-nbiot-arduino/CoAP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/microgear-nbiot-arduino/NTPClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/microgear-nbiot-arduino/BC95Udp.cpp"
@@ -16,7 +16,7 @@ target_sources(microgear-nbiot INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/microgear-nbiot-arduino/settings.h"
 )
 
-target_include_directories(microgear-nbiot INTERFACE
+target_include_directories(pac-microgear-nbiot INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/microgear-nbiot-arduino"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(microgear-nbiot INTERFACE
+target_link_libraries(pac-microgear-nbiot INTERFACE
     arduino-compat
 )

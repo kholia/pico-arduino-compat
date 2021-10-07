@@ -1,6 +1,6 @@
-add_library(doubleresetdetector_generic INTERFACE)
+add_library(pac-doubleresetdetector_generic INTERFACE)
 
-target_sources(doubleresetdetector_generic INTERFACE
+target_sources(pac-doubleresetdetector_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DoubleResetDetector_Generic/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B112_ublox/variant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DoubleResetDetector_Generic/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B302_ublox/variant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DoubleResetDetector_Generic/Packages_Patches/adafruit/hardware/nrf52/0.20.5/variants/NINA_B112_ublox/variant.cpp"
@@ -96,7 +96,7 @@ target_sources(doubleresetdetector_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DoubleResetDetector_Generic/src/mbed_portenta/FlashIAPLimits.h"
 )
 
-target_include_directories(doubleresetdetector_generic INTERFACE
+target_include_directories(pac-doubleresetdetector_generic INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/DoubleResetDetector_Generic/src"
 )
 
@@ -104,6 +104,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(doubleresetdetector_generic INTERFACE
+target_link_libraries(pac-doubleresetdetector_generic INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(arduinoota INTERFACE)
+add_library(pac-arduinoota INTERFACE)
 
-target_sources(arduinoota INTERFACE
+target_sources(pac-arduinoota INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoOTA/src/InternalStorage.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoOTA/src/InternalStorageAVR.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoOTA/src/WiFiOTA.cpp"
@@ -20,7 +20,7 @@ target_sources(arduinoota INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoOTA/examples/Advanced/OTASketchDownloadWifi/arduino_secrets.h"
 )
 
-target_include_directories(arduinoota INTERFACE
+target_include_directories(pac-arduinoota INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoOTA/src"
 )
 
@@ -28,11 +28,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(arduinoota INTERFACE
+target_link_libraries(pac-arduinoota INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

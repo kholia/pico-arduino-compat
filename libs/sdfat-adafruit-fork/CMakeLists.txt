@@ -1,6 +1,6 @@
-add_library(sdfat-adafruit-fork INTERFACE)
+add_library(pac-sdfat-adafruit-fork INTERFACE)
 
-target_sources(sdfat-adafruit-fork INTERFACE
+target_sources(pac-sdfat-adafruit-fork INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SdFat/extras/AnalogBinLoggerExtras/bintocsv/bintocsv.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SdFat/extras/SdFatTestSuite/SdFatTestSuite.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SdFat/src/MinimumSerial.cpp"
@@ -78,7 +78,7 @@ target_sources(sdfat-adafruit-fork INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SdFat/examples/LowLatencyLoggerADXL345/UserTypes.h"
 )
 
-target_include_directories(sdfat-adafruit-fork INTERFACE
+target_include_directories(pac-sdfat-adafruit-fork INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SdFat/src"
 )
 
@@ -86,6 +86,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sdfat-adafruit-fork INTERFACE
+target_link_libraries(pac-sdfat-adafruit-fork INTERFACE
     arduino-compat
 )

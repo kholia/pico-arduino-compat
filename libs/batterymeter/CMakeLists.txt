@@ -1,6 +1,6 @@
-add_library(batterymeter INTERFACE)
+add_library(pac-batterymeter INTERFACE)
 
-target_sources(batterymeter INTERFACE
+target_sources(pac-batterymeter INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BatteryMeter-Arduino/src/BatteryMeterPins.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BatteryMeter-Arduino/src/BatteryMeterShiftRegister.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/BatteryMeter-Arduino/src/BatteryMeterWithOutput.cpp"
@@ -13,7 +13,7 @@ target_sources(batterymeter INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/BatteryMeter-Arduino/src/BatteryMeterWithOutput.h"
 )
 
-target_include_directories(batterymeter INTERFACE
+target_include_directories(pac-batterymeter INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/BatteryMeter-Arduino/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(batterymeter INTERFACE
+target_link_libraries(pac-batterymeter INTERFACE
     arduino-compat
 )

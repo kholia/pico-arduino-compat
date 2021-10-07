@@ -1,6 +1,6 @@
-add_library(sx126x-arduino INTERFACE)
+add_library(pac-sx126x-arduino INTERFACE)
 
-target_sources(sx126x-arduino INTERFACE
+target_sources(pac-sx126x-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SX126x-Arduino/src/ISP4520_MOD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SX126x-Arduino/src/RAK4630_MOD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SX126x-Arduino/src/mac/LoRaMac.cpp"
@@ -92,7 +92,7 @@ target_sources(sx126x-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SX126x-Arduino/examples/DeepSleep-nRF52Pio/src/main.h"
 )
 
-target_include_directories(sx126x-arduino INTERFACE
+target_include_directories(pac-sx126x-arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SX126x-Arduino/src"
 )
 
@@ -100,6 +100,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sx126x-arduino INTERFACE
+target_link_libraries(pac-sx126x-arduino INTERFACE
     arduino-compat
 )

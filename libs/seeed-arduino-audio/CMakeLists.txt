@@ -1,6 +1,6 @@
-add_library(seeed-arduino-audio INTERFACE)
+add_library(pac-seeed-arduino-audio INTERFACE)
 
-target_sources(seeed-arduino-audio INTERFACE
+target_sources(pac-seeed-arduino-audio INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_Audio/effect_multiply.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_Audio/synth_pwm.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_Audio/effect_reverb.cpp"
@@ -304,7 +304,7 @@ target_sources(seeed-arduino-audio INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_Audio/utility/sqrt_integer.h"
 )
 
-target_include_directories(seeed-arduino-audio INTERFACE
+target_include_directories(pac-seeed-arduino-audio INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_Audio"
 )
 
@@ -312,11 +312,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(seeed-arduino-audio INTERFACE
+target_link_libraries(pac-seeed-arduino-audio INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

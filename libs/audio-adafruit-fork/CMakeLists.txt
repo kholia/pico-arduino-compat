@@ -1,6 +1,6 @@
-add_library(audio-adafruit-fork INTERFACE)
+add_library(pac-audio-adafruit-fork INTERFACE)
 
-target_sources(audio-adafruit-fork INTERFACE
+target_sources(pac-audio-adafruit-fork INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Audio/effect_multiply.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Audio/synth_pwm.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Audio/output_dacs.cpp"
@@ -181,7 +181,7 @@ target_sources(audio-adafruit-fork INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Audio/utility/sqrt_integer.h"
 )
 
-target_include_directories(audio-adafruit-fork INTERFACE
+target_include_directories(pac-audio-adafruit-fork INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Audio"
 )
 
@@ -189,6 +189,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(audio-adafruit-fork INTERFACE
+target_link_libraries(pac-audio-adafruit-fork INTERFACE
     arduino-compat
 )

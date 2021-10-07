@@ -1,6 +1,6 @@
-add_library(arduinothread INTERFACE)
+add_library(pac-arduinothread INTERFACE)
 
-target_sources(arduinothread INTERFACE
+target_sources(pac-arduinothread INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoThread/Thread.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoThread/ThreadController.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoThread/Thread.h"
@@ -8,7 +8,7 @@ target_sources(arduinothread INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoThread/ThreadController.h"
 )
 
-target_include_directories(arduinothread INTERFACE
+target_include_directories(pac-arduinothread INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoThread"
 )
 
@@ -16,6 +16,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinothread INTERFACE
+target_link_libraries(pac-arduinothread INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(allthingstalk-wifi-sdk INTERFACE)
+add_library(pac-allthingstalk-wifi-sdk INTERFACE)
 
-target_sources(allthingstalk-wifi-sdk INTERFACE
+target_sources(pac-allthingstalk-wifi-sdk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-wifi-sdk/src/WifiCredentials.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-wifi-sdk/src/BinaryPayload.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-wifi-sdk/src/GeoLocation.cpp"
@@ -28,7 +28,7 @@ target_sources(allthingstalk-wifi-sdk INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-wifi-sdk/examples/SendJsonSimplestSeparateCredentials/keys.h"
 )
 
-target_include_directories(allthingstalk-wifi-sdk INTERFACE
+target_include_directories(pac-allthingstalk-wifi-sdk INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-wifi-sdk/src"
 )
 
@@ -36,6 +36,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(allthingstalk-wifi-sdk INTERFACE
+target_link_libraries(pac-allthingstalk-wifi-sdk INTERFACE
     arduino-compat
 )

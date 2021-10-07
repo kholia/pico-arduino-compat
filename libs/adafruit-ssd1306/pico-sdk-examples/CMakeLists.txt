@@ -14,7 +14,7 @@ add_executable(text
 
 target_link_libraries(text
     pico_bootsel_via_double_reset 
-    adafruit-ssd1306
+    pac-adafruit-ssd1306
 )
 
 pico_set_binary_type(text no_flash)
@@ -30,7 +30,7 @@ add_executable(graphics
 
 target_link_libraries(graphics
     pico_bootsel_via_double_reset 
-    adafruit-ssd1306
+    pac-adafruit-ssd1306
 )
 
 pico_set_binary_type(graphics no_flash)

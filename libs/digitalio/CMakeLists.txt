@@ -1,6 +1,6 @@
-add_library(digitalio INTERFACE)
+add_library(pac-digitalio INTERFACE)
 
-target_sources(digitalio INTERFACE
+target_sources(pac-digitalio INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DigitalIO/src/SoftI2cMaster.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DigitalIO/src/PinIO.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DigitalIO/extras/attic/MCP355X.h"
@@ -24,7 +24,7 @@ target_sources(digitalio INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DigitalIO/src/boards/SleepingBeautyGpioPinMap.h"
 )
 
-target_include_directories(digitalio INTERFACE
+target_include_directories(pac-digitalio INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/DigitalIO/src"
 )
 
@@ -32,6 +32,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(digitalio INTERFACE
+target_link_libraries(pac-digitalio INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(arduino_edgecontrol INTERFACE)
+add_library(pac-arduino_edgecontrol INTERFACE)
 
-target_sources(arduino_edgecontrol INTERFACE
+target_sources(pac-arduino_edgecontrol INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_EdgeControl/src/EdgeControl.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_EdgeControl/src/EdgeControl_LiquidCrystal.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_EdgeControl/src/EdgeControl_Input.cpp"
@@ -55,7 +55,7 @@ target_sources(arduino_edgecontrol INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_EdgeControl/examples/Application/LowPowerDataLogger/DebugMode.h"
 )
 
-target_include_directories(arduino_edgecontrol INTERFACE
+target_include_directories(pac-arduino_edgecontrol INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino_EdgeControl/src"
 )
 
@@ -63,11 +63,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(arduino_edgecontrol INTERFACE
+target_link_libraries(pac-arduino_edgecontrol INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

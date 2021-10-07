@@ -1,6 +1,6 @@
-add_library(arduinoble INTERFACE)
+add_library(pac-arduinoble INTERFACE)
 
-target_sources(arduinoble INTERFACE
+target_sources(pac-arduinoble INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoBLE/extras/test/src/Arduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoBLE/extras/test/src/test_main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoBLE/extras/test/src/test_discovered_device/test_discovered_device.cpp"
@@ -83,7 +83,7 @@ target_sources(arduinoble INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoBLE/src/utility/HCICordioTransport.h"
 )
 
-target_include_directories(arduinoble INTERFACE
+target_include_directories(pac-arduinoble INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoBLE/src"
 )
 
@@ -91,6 +91,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinoble INTERFACE
+target_link_libraries(pac-arduinoble INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(utimerlib INTERFACE)
+add_library(pac-utimerlib INTERFACE)
 
-target_sources(utimerlib INTERFACE
+target_sources(pac-utimerlib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/uTimerLib/src/uTimerLib.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/uTimerLib/src/hardware/uTimerLib.ATTINY.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/uTimerLib/src/hardware/uTimerLib.STM32.cpp"
@@ -15,7 +15,7 @@ target_sources(utimerlib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/uTimerLib/src/uTimerLib.h"
 )
 
-target_include_directories(utimerlib INTERFACE
+target_include_directories(pac-utimerlib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/uTimerLib/src"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(utimerlib INTERFACE
+target_link_libraries(pac-utimerlib INTERFACE
     arduino-compat
 )

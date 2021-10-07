@@ -1,6 +1,6 @@
-add_library(tinymqtt INTERFACE)
+add_library(pac-tinymqtt INTERFACE)
 
-target_sources(tinymqtt INTERFACE
+target_sources(pac-tinymqtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TinyMqtt/src/TinyMqtt.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TinyMqtt/src/StringIndexer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TinyMqtt/src/TinyMqtt.h"
@@ -9,7 +9,7 @@ target_sources(tinymqtt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TinyMqtt/src/StringIndexer.h"
 )
 
-target_include_directories(tinymqtt INTERFACE
+target_include_directories(pac-tinymqtt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TinyMqtt/src"
 )
 
@@ -17,6 +17,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tinymqtt INTERFACE
+target_link_libraries(pac-tinymqtt INTERFACE
     arduino-compat
 )

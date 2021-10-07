@@ -1,6 +1,6 @@
-add_library(codec2 INTERFACE)
+add_library(pac-codec2 INTERFACE)
 
-target_sources(codec2 INTERFACE
+target_sources(pac-codec2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/codec2-arduino/src/libsamplerate/samplerate.c"
   "${CMAKE_CURRENT_LIST_DIR}/codec2-arduino/src/libsamplerate/src_linear.c"
   "${CMAKE_CURRENT_LIST_DIR}/codec2-arduino/src/libsamplerate/src_zoh.c"
@@ -126,7 +126,7 @@ target_sources(codec2 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/codec2-arduino/src/codec2/rxdec_coeff.h"
 )
 
-target_include_directories(codec2 INTERFACE
+target_include_directories(pac-codec2 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/codec2-arduino/src"
 )
 
@@ -134,6 +134,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(codec2 INTERFACE
+target_link_libraries(pac-codec2 INTERFACE
     arduino-compat
 )

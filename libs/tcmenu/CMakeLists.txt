@@ -1,6 +1,6 @@
-add_library(tcmenu INTERFACE)
+add_library(pac-tcmenu INTERFACE)
 
-target_sources(tcmenu INTERFACE
+target_sources(pac-tcmenu INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/tcMenuLib/src/BaseDialog.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/tcMenuLib/src/ScrollChoiceMenuItem.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/tcMenuLib/src/RemoteConnector.cpp"
@@ -195,7 +195,7 @@ target_sources(tcmenu INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/tcMenuLib/tests/tcMenuCoreTests/TestCapturingRenderer.h"
 )
 
-target_include_directories(tcmenu INTERFACE
+target_include_directories(pac-tcmenu INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/tcMenuLib/src"
 )
 
@@ -203,11 +203,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(tcmenu INTERFACE
+target_link_libraries(pac-tcmenu INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

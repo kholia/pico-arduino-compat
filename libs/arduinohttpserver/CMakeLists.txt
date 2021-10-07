@@ -1,6 +1,6 @@
-add_library(arduinohttpserver INTERFACE)
+add_library(pac-arduinohttpserver INTERFACE)
 
-target_sources(arduinohttpserver INTERFACE
+target_sources(pac-arduinohttpserver INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoHttpServer/test/test_FixString.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoHttpServer/src/internals/HttpResource.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoHttpServer/src/internals/HttpVersion.cpp"
@@ -17,7 +17,7 @@ target_sources(arduinohttpserver INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoHttpServer/src/internals/ArduinoHttpServerDebug.h"
 )
 
-target_include_directories(arduinohttpserver INTERFACE
+target_include_directories(pac-arduinohttpserver INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoHttpServer/src"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinohttpserver INTERFACE
+target_link_libraries(pac-arduinohttpserver INTERFACE
     arduino-compat
 )

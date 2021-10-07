@@ -1,6 +1,6 @@
-add_library(mbedspeech INTERFACE)
+add_library(pac-mbedspeech INTERFACE)
 
-target_sources(mbedspeech INTERFACE
+target_sources(pac-mbedspeech INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MBEDSpeech/src/tflite-model/trained_model_compiled.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MBEDSpeech/src/edge-impulse-sdk/porting/arduino/ei_classifier_porting.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MBEDSpeech/src/edge-impulse-sdk/porting/arduino/debug_log.cpp"
@@ -699,7 +699,7 @@ target_sources(mbedspeech INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MBEDSpeech/src/edge-impulse-sdk/CMSIS/DSP/Include/arm_mve_tables_f16.h"
 )
 
-target_include_directories(mbedspeech INTERFACE
+target_include_directories(pac-mbedspeech INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MBEDSpeech/src"
 )
 
@@ -707,6 +707,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mbedspeech INTERFACE
+target_link_libraries(pac-mbedspeech INTERFACE
     arduino-compat
 )

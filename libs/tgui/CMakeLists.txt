@@ -1,6 +1,6 @@
-add_library(tgui INTERFACE)
+add_library(pac-tgui INTERFACE)
 
-target_sources(tgui INTERFACE
+target_sources(pac-tgui INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-tgui/lib/ODROID_Si1132/ODROID_Si1132.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-tgui/src/tgui-sensors.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-tgui/src/tgui.cpp"
@@ -16,7 +16,7 @@ target_sources(tgui INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-tgui/src/tgui-sensors.h"
 )
 
-target_include_directories(tgui INTERFACE
+target_include_directories(pac-tgui INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-tgui/src"
 )
 
@@ -24,11 +24,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(tgui INTERFACE
+target_link_libraries(pac-tgui INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

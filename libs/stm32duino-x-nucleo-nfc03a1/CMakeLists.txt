@@ -1,6 +1,6 @@
-add_library(stm32duino-x-nucleo-nfc03a1 INTERFACE)
+add_library(pac-stm32duino-x-nucleo-nfc03a1 INTERFACE)
 
-target_sources(stm32duino-x-nucleo-nfc03a1 INTERFACE
+target_sources(pac-stm32duino-x-nucleo-nfc03a1 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/X-NUCLEO-NFC03A1/src/lib_iso15693pcd.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/X-NUCLEO-NFC03A1/src/lib_NDEF_Text.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/X-NUCLEO-NFC03A1/src/drv_spi.cpp"
@@ -55,7 +55,7 @@ target_sources(stm32duino-x-nucleo-nfc03a1 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/X-NUCLEO-NFC03A1/src/lib_NDEF_URI.h"
 )
 
-target_include_directories(stm32duino-x-nucleo-nfc03a1 INTERFACE
+target_include_directories(pac-stm32duino-x-nucleo-nfc03a1 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/X-NUCLEO-NFC03A1/src"
 )
 
@@ -63,6 +63,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(stm32duino-x-nucleo-nfc03a1 INTERFACE
+target_link_libraries(pac-stm32duino-x-nucleo-nfc03a1 INTERFACE
     arduino-compat
 )

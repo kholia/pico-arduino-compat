@@ -1,6 +1,6 @@
-add_library(sdfat INTERFACE)
+add_library(pac-sdfat INTERFACE)
 
-target_sources(sdfat INTERFACE
+target_sources(pac-sdfat INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SdFat/extras/attic/PrintBasic.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SdFat/extras/attic/SysCallBareUno.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SdFat/src/MinimumSerial.cpp"
@@ -131,7 +131,7 @@ target_sources(sdfat INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SdFat/examples/AvrAdcLogger/AvrAdcLogger.h"
 )
 
-target_include_directories(sdfat INTERFACE
+target_include_directories(pac-sdfat INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SdFat/src"
 )
 
@@ -139,6 +139,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sdfat INTERFACE
+target_link_libraries(pac-sdfat INTERFACE
     arduino-compat
 )

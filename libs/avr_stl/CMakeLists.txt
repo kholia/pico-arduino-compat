@@ -1,6 +1,6 @@
-add_library(avr_stl INTERFACE)
+add_library(pac-avr_stl INTERFACE)
 
-target_sources(avr_stl INTERFACE
+target_sources(pac-avr_stl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/avr_stl/src/eh_alloc.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/avr_stl/src/new_opnt.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/avr_stl/src/iomanip.cpp"
@@ -54,7 +54,7 @@ target_sources(avr_stl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/avr_stl/src/avr_stl.h"
 )
 
-target_include_directories(avr_stl INTERFACE
+target_include_directories(pac-avr_stl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/avr_stl/src"
 )
 
@@ -62,6 +62,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(avr_stl INTERFACE
+target_link_libraries(pac-avr_stl INTERFACE
     arduino-compat
 )

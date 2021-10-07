@@ -1,6 +1,6 @@
-add_library(minds-i-drone INTERFACE)
+add_library(pac-minds-i-drone INTERFACE)
 
-target_sources(minds-i-drone INTERFACE
+target_sources(pac-minds-i-drone INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MINDS-i-Drone/src/input/Sensor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MINDS-i-Drone/src/input/APM/HMC5883L.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MINDS-i-Drone/src/APM/ServoGenerator.cpp"
@@ -80,7 +80,7 @@ target_sources(minds-i-drone INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MINDS-i-Drone/src/math/Waypoint.h"
 )
 
-target_include_directories(minds-i-drone INTERFACE
+target_include_directories(pac-minds-i-drone INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MINDS-i-Drone/src"
 )
 
@@ -88,6 +88,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(minds-i-drone INTERFACE
+target_link_libraries(pac-minds-i-drone INTERFACE
     arduino-compat
 )

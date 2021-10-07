@@ -1,6 +1,6 @@
-add_library(embeddedutils INTERFACE)
+add_library(pac-embeddedutils INTERFACE)
 
-target_sources(embeddedutils INTERFACE
+target_sources(pac-embeddedutils INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EmbeddedUtils/lib/detail/Vec4f.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EmbeddedUtils/lib/detail/Vec3f.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EmbeddedUtils/lib/detail/Vec2f.cpp"
@@ -27,7 +27,7 @@ target_sources(embeddedutils INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EmbeddedUtils/lib/detail/Vec4f.h"
 )
 
-target_include_directories(embeddedutils INTERFACE
+target_include_directories(pac-embeddedutils INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EmbeddedUtils"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(embeddedutils INTERFACE
+target_link_libraries(pac-embeddedutils INTERFACE
     arduino-compat
 )

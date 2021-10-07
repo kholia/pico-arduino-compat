@@ -1,6 +1,6 @@
-add_library(modernpidcontrolss INTERFACE)
+add_library(pac-modernpidcontrolss INTERFACE)
 
-target_sources(modernpidcontrolss INTERFACE
+target_sources(pac-modernpidcontrolss INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ModernPIDControlSS/src/dynsys/testsys_ss.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ModernPIDControlSS/src/pidkernel/PIDNet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ModernPIDControlSS/src/cplmfc/cplmfc.cpp"
@@ -16,7 +16,7 @@ target_sources(modernpidcontrolss INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ModernPIDControlSS/src/nlsig/nlsig.h"
 )
 
-target_include_directories(modernpidcontrolss INTERFACE
+target_include_directories(pac-modernpidcontrolss INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ModernPIDControlSS/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(modernpidcontrolss INTERFACE
+target_link_libraries(pac-modernpidcontrolss INTERFACE
     arduino-compat
 )

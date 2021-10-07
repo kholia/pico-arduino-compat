@@ -1,6 +1,6 @@
-add_library(espmail INTERFACE)
+add_library(pac-espmail INTERFACE)
 
-target_sources(espmail INTERFACE
+target_sources(pac-espmail INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESPMail/src/libquickmail/quickmail.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESPMail/src/libquickmail/smtpsocket.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESPMail/src/ESPMail.h"
@@ -8,7 +8,7 @@ target_sources(espmail INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESPMail/src/libquickmail/quickmail.h"
 )
 
-target_include_directories(espmail INTERFACE
+target_include_directories(pac-espmail INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESPMail/src"
 )
 
@@ -16,6 +16,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(espmail INTERFACE
+target_link_libraries(pac-espmail INTERFACE
     arduino-compat
 )

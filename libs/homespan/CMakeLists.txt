@@ -1,6 +1,6 @@
-add_library(homespan INTERFACE)
+add_library(pac-homespan INTERFACE)
 
-target_sources(homespan INTERFACE
+target_sources(pac-homespan INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/HomeSpan/src/Network.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/HomeSpan/src/HAP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/HomeSpan/src/Utils.cpp"
@@ -51,7 +51,7 @@ target_sources(homespan INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/HomeSpan/examples/11-ServiceOptions/DEV_LED.h"
 )
 
-target_include_directories(homespan INTERFACE
+target_include_directories(pac-homespan INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/HomeSpan/src"
 )
 
@@ -59,6 +59,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(homespan INTERFACE
+target_link_libraries(pac-homespan INTERFACE
     arduino-compat
 )

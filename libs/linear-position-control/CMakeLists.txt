@@ -1,6 +1,6 @@
-add_library(linear-position-control INTERFACE)
+add_library(pac-linear-position-control INTERFACE)
 
-target_sources(linear-position-control INTERFACE
+target_sources(pac-linear-position-control INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/linear-position-control/src/StateVariable.h"
   "${CMAKE_CURRENT_LIST_DIR}/linear-position-control/src/LinearPositionControl.h"
   "${CMAKE_CURRENT_LIST_DIR}/linear-position-control/src/Signal/Smoothing.h"
@@ -16,7 +16,7 @@ target_sources(linear-position-control INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/linear-position-control/src/Components/FastInterrupts.h"
 )
 
-target_include_directories(linear-position-control INTERFACE
+target_include_directories(pac-linear-position-control INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/linear-position-control/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(linear-position-control INTERFACE
+target_link_libraries(pac-linear-position-control INTERFACE
     arduino-compat
 )

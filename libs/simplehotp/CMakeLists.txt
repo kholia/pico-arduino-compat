@@ -1,6 +1,6 @@
-add_library(simplehotp INTERFACE)
+add_library(pac-simplehotp INTERFACE)
 
-target_sources(simplehotp INTERFACE
+target_sources(pac-simplehotp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SimpleHOTP/src/SimpleHMAC.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SimpleHOTP/src/SimpleHOTP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SimpleHOTP/src/Key.cpp"
@@ -11,7 +11,7 @@ target_sources(simplehotp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SimpleHOTP/src/SimpleHMAC.h"
 )
 
-target_include_directories(simplehotp INTERFACE
+target_include_directories(pac-simplehotp INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SimpleHOTP/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(simplehotp INTERFACE
+target_link_libraries(pac-simplehotp INTERFACE
     arduino-compat
 )

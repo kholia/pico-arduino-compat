@@ -1,6 +1,6 @@
-add_library(multiresetdetector_generic INTERFACE)
+add_library(pac-multiresetdetector_generic INTERFACE)
 
-target_sources(multiresetdetector_generic INTERFACE
+target_sources(pac-multiresetdetector_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MultiResetDetector_Generic/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B112_ublox/variant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MultiResetDetector_Generic/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B302_ublox/variant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MultiResetDetector_Generic/Packages_Patches/adafruit/hardware/nrf52/0.20.5/variants/NINA_B112_ublox/variant.cpp"
@@ -96,7 +96,7 @@ target_sources(multiresetdetector_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MultiResetDetector_Generic/src/mbed_portenta/FlashIAPLimits.h"
 )
 
-target_include_directories(multiresetdetector_generic INTERFACE
+target_include_directories(pac-multiresetdetector_generic INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MultiResetDetector_Generic/src"
 )
 
@@ -104,6 +104,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(multiresetdetector_generic INTERFACE
+target_link_libraries(pac-multiresetdetector_generic INTERFACE
     arduino-compat
 )

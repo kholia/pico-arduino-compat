@@ -1,6 +1,6 @@
-add_library(taskscheduler INTERFACE)
+add_library(pac-taskscheduler INTERFACE)
 
-target_sources(taskscheduler INTERFACE
+target_sources(pac-taskscheduler INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TaskScheduler/examples/Scheduler_example16_Multitab/file2.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TaskScheduler/examples/Scheduler_example16_Multitab/file1.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TaskScheduler/examples/Scheduler_example16_Multitab/ts.cpp"
@@ -18,7 +18,7 @@ target_sources(taskscheduler INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TaskScheduler/examples/Scheduler_example21_OO_Callbacks/SuperSensor.h"
 )
 
-target_include_directories(taskscheduler INTERFACE
+target_include_directories(pac-taskscheduler INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TaskScheduler/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(taskscheduler INTERFACE
+target_link_libraries(pac-taskscheduler INTERFACE
     arduino-compat
 )

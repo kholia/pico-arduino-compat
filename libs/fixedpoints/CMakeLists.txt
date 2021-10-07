@@ -1,6 +1,6 @@
-add_library(fixedpoints INTERFACE)
+add_library(pac-fixedpoints INTERFACE)
 
-target_sources(fixedpoints INTERFACE
+target_sources(pac-fixedpoints INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FixedPointsArduino/src/FixedPoints.h"
   "${CMAKE_CURRENT_LIST_DIR}/FixedPointsArduino/src/FixedPointsCommon.h"
   "${CMAKE_CURRENT_LIST_DIR}/FixedPointsArduino/src/FixedPointsCommon/SFixedCommon.h"
@@ -17,7 +17,7 @@ target_sources(fixedpoints INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FixedPointsArduino/src/FixedPoints/UFixedFreeFunctions.h"
 )
 
-target_include_directories(fixedpoints INTERFACE
+target_include_directories(pac-fixedpoints INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FixedPointsArduino/src"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(fixedpoints INTERFACE
+target_link_libraries(pac-fixedpoints INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(freertos_samd21 INTERFACE)
+add_library(pac-freertos_samd21 INTERFACE)
 
-target_sources(freertos_samd21 INTERFACE
+target_sources(pac-freertos_samd21 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-FreeRTOS-SAMD21/src/error_hooks.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-FreeRTOS-SAMD21/examples/CompilerAndLinker_Test/GameMessage.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-FreeRTOS-SAMD21/examples/CompilerAndLinker_Test/GameData.cpp"
@@ -42,7 +42,7 @@ target_sources(freertos_samd21 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-FreeRTOS-SAMD21/examples/CompilerAndLinker_Test/GameThing.h"
 )
 
-target_include_directories(freertos_samd21 INTERFACE
+target_include_directories(pac-freertos_samd21 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino-FreeRTOS-SAMD21/src"
 )
 
@@ -50,6 +50,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(freertos_samd21 INTERFACE
+target_link_libraries(pac-freertos_samd21 INTERFACE
     arduino-compat
 )

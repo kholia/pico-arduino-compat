@@ -1,6 +1,6 @@
-add_library(irlremote INTERFACE)
+add_library(pac-irlremote INTERFACE)
 
-target_sources(irlremote INTERFACE
+target_sources(pac-irlremote INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IRLremote/extra/old/IRLremote.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IRLremote/src/IRLremote.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IRLremote/extra/old/IRLremoteReceive.hpp"
@@ -21,7 +21,7 @@ target_sources(irlremote INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IRLremote/src/IRL_Receive.h"
 )
 
-target_include_directories(irlremote INTERFACE
+target_include_directories(pac-irlremote INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/IRLremote/src"
 )
 
@@ -29,6 +29,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(irlremote INTERFACE
+target_link_libraries(pac-irlremote INTERFACE
     arduino-compat
 )

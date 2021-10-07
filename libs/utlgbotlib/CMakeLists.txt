@@ -1,6 +1,6 @@
-add_library(utlgbotlib INTERFACE)
+add_library(pac-utlgbotlib INTERFACE)
 
-target_sources(utlgbotlib INTERFACE
+target_sources(pac-utlgbotlib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/uTLGBotLib-arduino/src/utlgbotlib.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/uTLGBotLib-arduino/src/utility/multihttpsclient/multihttpsclient_hals/generic/multihttpsclient_generic.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/uTLGBotLib-arduino/src/utility/multihttpsclient/multihttpsclient_hals/espidf/multihttpsclient_espidf.cpp"
@@ -16,7 +16,7 @@ target_sources(utlgbotlib INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/uTLGBotLib-arduino/src/utility/jsmn/jsmn.h"
 )
 
-target_include_directories(utlgbotlib INTERFACE
+target_include_directories(pac-utlgbotlib INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/uTLGBotLib-arduino/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(utlgbotlib INTERFACE
+target_link_libraries(pac-utlgbotlib INTERFACE
     arduino-compat
 )

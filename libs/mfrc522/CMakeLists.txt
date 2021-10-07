@@ -1,6 +1,6 @@
-add_library(mfrc522 INTERFACE)
+add_library(pac-mfrc522 INTERFACE)
 
-target_sources(mfrc522 INTERFACE
+target_sources(pac-mfrc522 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/rfid/src/MFRC522Extended.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/rfid/src/MFRC522.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/rfid/src/require_cpp11.h"
@@ -9,7 +9,7 @@ target_sources(mfrc522 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/rfid/src/MFRC522.h"
 )
 
-target_include_directories(mfrc522 INTERFACE
+target_include_directories(pac-mfrc522 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/rfid/src"
 )
 
@@ -17,6 +17,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mfrc522 INTERFACE
+target_link_libraries(pac-mfrc522 INTERFACE
     arduino-compat
 )

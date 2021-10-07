@@ -1,6 +1,6 @@
-add_library(xlr8wire INTERFACE)
+add_library(pac-xlr8wire INTERFACE)
 
-target_sources(xlr8wire INTERFACE
+target_sources(pac-xlr8wire INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/XLR8Wire/src/XLR8Wire.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/XLR8Wire/src/utility/XLR8twi.c"
   "${CMAKE_CURRENT_LIST_DIR}/XLR8Wire/src/XLR8Wire.h"
@@ -8,7 +8,7 @@ target_sources(xlr8wire INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/XLR8Wire/src/utility/XLR8twi.h"
 )
 
-target_include_directories(xlr8wire INTERFACE
+target_include_directories(pac-xlr8wire INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/XLR8Wire/src"
 )
 
@@ -16,6 +16,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(xlr8wire INTERFACE
+target_link_libraries(pac-xlr8wire INTERFACE
     arduino-compat
 )

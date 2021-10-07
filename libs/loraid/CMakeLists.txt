@@ -1,6 +1,6 @@
-add_library(loraid INTERFACE)
+add_library(pac-loraid INTERFACE)
 
-target_sources(loraid INTERFACE
+target_sources(pac-loraid INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-loraid/src/arduino-rfm/Commands.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-loraid/src/arduino-rfm/Encrypt.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-loraid/src/arduino-rfm/Conversions.cpp"
@@ -20,7 +20,7 @@ target_sources(loraid INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-loraid/src/arduino-rfm/Struct.h"
 )
 
-target_include_directories(loraid INTERFACE
+target_include_directories(pac-loraid INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-loraid/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(loraid INTERFACE
+target_link_libraries(pac-loraid INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(chronos INTERFACE)
+add_library(pac-chronos INTERFACE)
 
-target_sources(chronos INTERFACE
+target_sources(pac-chronos INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Chronos/src/test.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Chronos/src/Daily.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Chronos/src/Weekly.cpp"
@@ -35,7 +35,7 @@ target_sources(chronos INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Chronos/src/chronosinc/platform/platformArduino.h"
 )
 
-target_include_directories(chronos INTERFACE
+target_include_directories(pac-chronos INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Chronos/src"
 )
 
@@ -43,6 +43,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(chronos INTERFACE
+target_link_libraries(pac-chronos INTERFACE
     arduino-compat
 )

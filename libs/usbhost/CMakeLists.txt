@@ -1,6 +1,6 @@
-add_library(usbhost INTERFACE)
+add_library(pac-usbhost INTERFACE)
 
-target_sources(usbhost INTERFACE
+target_sources(pac-usbhost INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/USBHost/src/hid2.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/USBHost/src/Usb.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/USBHost/src/parsetools.cpp"
@@ -21,7 +21,7 @@ target_sources(usbhost INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/USBHost/src/KeyboardController.h"
 )
 
-target_include_directories(usbhost INTERFACE
+target_include_directories(pac-usbhost INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/USBHost/src"
 )
 
@@ -29,6 +29,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(usbhost INTERFACE
+target_link_libraries(pac-usbhost INTERFACE
     arduino-compat
 )

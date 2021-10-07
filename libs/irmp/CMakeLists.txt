@@ -1,6 +1,6 @@
-add_library(irmp INTERFACE)
+add_library(pac-irmp INTERFACE)
 
-target_sources(irmp INTERFACE
+target_sources(pac-irmp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IRMP/examples/AllProtocols/ADCUtils.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IRMP/src/IRFeedbackLED.hpp"
   "${CMAKE_CURRENT_LIST_DIR}/IRMP/src/TinyIRReceiver.hpp"
@@ -49,7 +49,7 @@ target_sources(irmp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IRMP/examples/Callback/PinDefinitionsAndMore.h"
 )
 
-target_include_directories(irmp INTERFACE
+target_include_directories(pac-irmp INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/IRMP/src"
 )
 
@@ -57,6 +57,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(irmp INTERFACE
+target_link_libraries(pac-irmp INTERFACE
     arduino-compat
 )

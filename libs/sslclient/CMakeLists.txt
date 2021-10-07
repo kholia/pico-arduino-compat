@@ -1,6 +1,6 @@
-add_library(sslclient INTERFACE)
+add_library(pac-sslclient INTERFACE)
 
-target_sources(sslclient INTERFACE
+target_sources(pac-sslclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SSLClient/src/SSLClientParameters.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SSLClient/src/SSLClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SSLClient/src/TLS12_only_profile.c"
@@ -328,7 +328,7 @@ target_sources(sslclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SSLClient/readme/cert.h"
 )
 
-target_include_directories(sslclient INTERFACE
+target_include_directories(pac-sslclient INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SSLClient/src"
 )
 
@@ -336,6 +336,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sslclient INTERFACE
+target_link_libraries(pac-sslclient INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(commanders INTERFACE)
+add_library(pac-commanders INTERFACE)
 
-target_sources(commanders INTERFACE
+target_sources(pac-commanders INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Commanders/VStudio/ButtonsCommanderKeyboard.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Commanders/VStudio/pch.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Commanders/VStudio/ArduinoIno.cpp"
@@ -62,7 +62,7 @@ target_sources(commanders INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Commanders/src/Events.h"
 )
 
-target_include_directories(commanders INTERFACE
+target_include_directories(pac-commanders INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Commanders/src"
 )
 
@@ -70,6 +70,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(commanders INTERFACE
+target_link_libraries(pac-commanders INTERFACE
     arduino-compat
 )

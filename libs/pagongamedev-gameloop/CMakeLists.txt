@@ -1,6 +1,6 @@
-add_library(pagongamedev-gameloop INTERFACE)
+add_library(pac-pagongamedev-gameloop INTERFACE)
 
-target_sources(pagongamedev-gameloop INTERFACE
+target_sources(pac-pagongamedev-gameloop INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PagonGameDev_GameLoop/PagonGameDev_GameLoop.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PagonGameDev_GameLoop/examples/WS001_SnakeGame/Library_For_WS001/Adafruit-GFX-Library/Adafruit_GFX.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PagonGameDev_GameLoop/examples/WS001_SnakeGame/Library_For_WS001/Espert_Adafruit_SSD1306/Espert_Adafruit_SSD1306.cpp"
@@ -61,7 +61,7 @@ target_sources(pagongamedev-gameloop INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PagonGameDev_GameLoop/examples/WS001_SnakeGame/Library_For_WS001/Espert_Adafruit_SSD1306/Espert_Adafruit_SSD1306.h"
 )
 
-target_include_directories(pagongamedev-gameloop INTERFACE
+target_include_directories(pac-pagongamedev-gameloop INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PagonGameDev_GameLoop"
 )
 
@@ -69,11 +69,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(pagongamedev-gameloop INTERFACE
+target_link_libraries(pac-pagongamedev-gameloop INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

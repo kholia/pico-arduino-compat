@@ -1,6 +1,6 @@
-add_library(melody-player INTERFACE)
+add_library(pac-melody-player INTERFACE)
 
-target_sources(melody-player INTERFACE
+target_sources(pac-melody-player INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/melody-player-arduino/src/melody_player.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/melody-player-arduino/src/melody_factory_rtttl.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/melody-player-arduino/src/melody_factory.cpp"
@@ -12,7 +12,7 @@ target_sources(melody-player INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/melody-player-arduino/src/melody.h"
 )
 
-target_include_directories(melody-player INTERFACE
+target_include_directories(pac-melody-player INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/melody-player-arduino/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(melody-player INTERFACE
+target_link_libraries(pac-melody-player INTERFACE
     arduino-compat
 )

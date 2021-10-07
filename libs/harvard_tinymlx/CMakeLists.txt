@@ -1,6 +1,6 @@
-add_library(harvard_tinymlx INTERFACE)
+add_library(pac-harvard_tinymlx INTERFACE)
 
-target_sources(harvard_tinymlx INTERFACE
+target_sources(pac-harvard_tinymlx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-library/src/OV767X_TinyMLx.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-library/src/utility/ov7670_arduino_shim.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-library/examples/multi_tenant/recognize_commands.cpp"
@@ -73,7 +73,7 @@ target_sources(harvard_tinymlx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-library/examples/micro_speech/micro_features_yes_micro_features_data.h"
 )
 
-target_include_directories(harvard_tinymlx INTERFACE
+target_include_directories(pac-harvard_tinymlx INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-library/src"
 )
 
@@ -81,6 +81,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(harvard_tinymlx INTERFACE
+target_link_libraries(pac-harvard_tinymlx INTERFACE
     arduino-compat
 )

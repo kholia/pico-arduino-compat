@@ -1,6 +1,6 @@
-add_library(gprsbee INTERFACE)
+add_library(pac-gprsbee INTERFACE)
 
-target_sources(gprsbee INTERFACE
+target_sources(pac-gprsbee INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GPRSbee/src/GPRSbee.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GPRSbee/src/Sodaq_GSM_Modem.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GPRSbee/examples/sodaq_wunderground/SQ_Command.cpp"
@@ -23,7 +23,7 @@ target_sources(gprsbee INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GPRSbee/examples/sodaq_wunderground/SQ_Diag.h"
 )
 
-target_include_directories(gprsbee INTERFACE
+target_include_directories(pac-gprsbee INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/GPRSbee/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(gprsbee INTERFACE
+target_link_libraries(pac-gprsbee INTERFACE
     arduino-compat
 )

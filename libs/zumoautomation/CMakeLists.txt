@@ -1,6 +1,6 @@
-add_library(zumoautomation INTERFACE)
+add_library(pac-zumoautomation INTERFACE)
 
-target_sources(zumoautomation INTERFACE
+target_sources(pac-zumoautomation INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Zumo-Automation/Timer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Zumo-Automation/DriveShield.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Zumo-Automation/DistanceSensor.cpp"
@@ -30,7 +30,7 @@ target_sources(zumoautomation INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Zumo-Automation/GeneralBuzzer.h"
 )
 
-target_include_directories(zumoautomation INTERFACE
+target_include_directories(pac-zumoautomation INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Zumo-Automation"
 )
 
@@ -38,6 +38,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(zumoautomation INTERFACE
+target_link_libraries(pac-zumoautomation INTERFACE
     arduino-compat
 )

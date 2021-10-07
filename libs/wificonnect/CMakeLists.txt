@@ -1,6 +1,6 @@
-add_library(wificonnect INTERFACE)
+add_library(pac-wificonnect INTERFACE)
 
-target_sources(wificonnect INTERFACE
+target_sources(pac-wificonnect INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiConnect/src/WiFiConnectOLED.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiConnect/src/WiFiConnectParam.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiConnect/src/WiFiConnect.cpp"
@@ -12,7 +12,7 @@ target_sources(wificonnect INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiConnect/src/WiFiConnectOLED.h"
 )
 
-target_include_directories(wificonnect INTERFACE
+target_include_directories(pac-wificonnect INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WiFiConnect/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wificonnect INTERFACE
+target_link_libraries(pac-wificonnect INTERFACE
     arduino-compat
 )

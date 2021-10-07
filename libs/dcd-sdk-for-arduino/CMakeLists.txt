@@ -1,6 +1,6 @@
-add_library(dcd-sdk-for-arduino INTERFACE)
+add_library(pac-dcd-sdk-for-arduino INTERFACE)
 
-target_sources(dcd-sdk-for-arduino INTERFACE
+target_sources(pac-dcd-sdk-for-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/dcd-sdk-arduino/src/dcd_hub_arduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/dcd-sdk-arduino/src/dcd_hub_arduino.h"
   "${CMAKE_CURRENT_LIST_DIR}/dcd-sdk-arduino/example/Accelerometer_nano33_dcdHub/arduino_secrets.h"
@@ -9,7 +9,7 @@ target_sources(dcd-sdk-for-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/dcd-sdk-arduino/example/GPS_nano33_dcdHub/arduino_secrets.h"
 )
 
-target_include_directories(dcd-sdk-for-arduino INTERFACE
+target_include_directories(pac-dcd-sdk-for-arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/dcd-sdk-arduino/src"
 )
 
@@ -17,6 +17,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(dcd-sdk-for-arduino INTERFACE
+target_link_libraries(pac-dcd-sdk-for-arduino INTERFACE
     arduino-compat
 )

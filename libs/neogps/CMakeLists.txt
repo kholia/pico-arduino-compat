@@ -1,6 +1,6 @@
-add_library(neogps INTERFACE)
+add_library(pac-neogps INTERFACE)
 
-target_sources(neogps INTERFACE
+target_sources(pac-neogps INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NeoGPS/src/GPSTime.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NeoGPS/src/NeoTime.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NeoGPS/src/Streamers.cpp"
@@ -51,7 +51,7 @@ target_sources(neogps INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NeoGPS/src/ublox/ubx_cfg.h"
 )
 
-target_include_directories(neogps INTERFACE
+target_include_directories(pac-neogps INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/NeoGPS/src"
 )
 
@@ -59,6 +59,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(neogps INTERFACE
+target_link_libraries(pac-neogps INTERFACE
     arduino-compat
 )

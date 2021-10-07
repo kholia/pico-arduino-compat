@@ -1,6 +1,6 @@
-add_library(taskmanager INTERFACE)
+add_library(pac-taskmanager INTERFACE)
 
-target_sources(taskmanager INTERFACE
+target_sources(pac-taskmanager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TaskManager/TaskManager.h"
   "${CMAKE_CURRENT_LIST_DIR}/TaskManager/TaskManager/TaskEmpty.h"
   "${CMAKE_CURRENT_LIST_DIR}/TaskManager/TaskManager/TaskBase.h"
@@ -60,7 +60,7 @@ target_sources(taskmanager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TaskManager/examples/task_class_subtask_manual/Speak.h"
 )
 
-target_include_directories(taskmanager INTERFACE
+target_include_directories(pac-taskmanager INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TaskManager"
 )
 
@@ -68,6 +68,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(taskmanager INTERFACE
+target_link_libraries(pac-taskmanager INTERFACE
     arduino-compat
 )

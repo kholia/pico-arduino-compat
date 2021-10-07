@@ -1,6 +1,6 @@
-add_library(iondb INTERFACE)
+add_library(pac-iondb INTERFACE)
 
-target_sources(iondb INTERFACE
+target_sources(pac-iondb INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/iondb/src/file/sd_stdio_c_iface.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/iondb/src/tests/unit/cpp_wrapper/test1/test_cpp_wrapper1.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/iondb/src/tests/unit/cpp_wrapper/test1/run_cpp_wrapper1.cpp"
@@ -139,7 +139,7 @@ target_sources(iondb INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/iondb/resources/standard_file_template.h"
 )
 
-target_include_directories(iondb INTERFACE
+target_include_directories(pac-iondb INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/iondb/src"
 )
 
@@ -147,11 +147,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(iondb INTERFACE
+target_link_libraries(pac-iondb INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

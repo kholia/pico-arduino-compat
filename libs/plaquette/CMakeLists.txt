@@ -1,6 +1,6 @@
-add_library(plaquette INTERFACE)
+add_library(pac-plaquette INTERFACE)
 
-target_sources(plaquette INTERFACE
+target_sources(pac-plaquette INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Plaquette/src/pq_time.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Plaquette/src/Ramp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Plaquette/src/TriOsc.cpp"
@@ -65,7 +65,7 @@ target_sources(plaquette INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Plaquette/src/Smoother.h"
 )
 
-target_include_directories(plaquette INTERFACE
+target_include_directories(pac-plaquette INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Plaquette/src"
 )
 
@@ -73,6 +73,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(plaquette INTERFACE
+target_link_libraries(pac-plaquette INTERFACE
     arduino-compat
 )

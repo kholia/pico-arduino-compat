@@ -1,6 +1,6 @@
-add_library(bmx280mi INTERFACE)
+add_library(pac-bmx280mi INTERFACE)
 
-target_sources(bmx280mi INTERFACE
+target_sources(pac-bmx280mi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/bmx280mi/src/BMx280I2C.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/bmx280mi/src/BMx280MI.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/bmx280mi/src/BMx280SPIClass.cpp"
@@ -13,7 +13,7 @@ target_sources(bmx280mi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/bmx280mi/src/BMx280SPI.h"
 )
 
-target_include_directories(bmx280mi INTERFACE
+target_include_directories(pac-bmx280mi INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/bmx280mi/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(bmx280mi INTERFACE
+target_link_libraries(pac-bmx280mi INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(thethingsnode INTERFACE)
+add_library(pac-thethingsnode INTERFACE)
 
-target_sources(thethingsnode INTERFACE
+target_sources(pac-thethingsnode INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-node-lib/src/PinChangeInterrupt3.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-node-lib/src/PinChangeInterrupt1.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-node-lib/src/TheThingsNode.cpp"
@@ -16,7 +16,7 @@ target_sources(thethingsnode INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-node-lib/src/PinChangeInterruptPins.h"
 )
 
-target_include_directories(thethingsnode INTERFACE
+target_include_directories(pac-thethingsnode INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-node-lib/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(thethingsnode INTERFACE
+target_link_libraries(pac-thethingsnode INTERFACE
     arduino-compat
 )

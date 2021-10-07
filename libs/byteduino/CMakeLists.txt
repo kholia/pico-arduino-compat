@@ -1,6 +1,6 @@
-add_library(byteduino INTERFACE)
+add_library(pac-byteduino INTERFACE)
 
-target_sources(byteduino INTERFACE
+target_sources(pac-byteduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Byteduino/src/byteduino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Byteduino/src/wallet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Byteduino/src/random_gen.cpp"
@@ -75,7 +75,7 @@ target_sources(byteduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Byteduino/src/libs/utility/LimbUtil.h"
 )
 
-target_include_directories(byteduino INTERFACE
+target_include_directories(pac-byteduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Byteduino/src"
 )
 
@@ -83,6 +83,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(byteduino INTERFACE
+target_link_libraries(pac-byteduino INTERFACE
     arduino-compat
 )

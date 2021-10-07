@@ -1,6 +1,6 @@
-add_library(tinycbor INTERFACE)
+add_library(pac-tinycbor INTERFACE)
 
-target_sources(tinycbor INTERFACE
+target_sources(pac-tinycbor INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/tinycbor/src/tinycbor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/tinycbor/tests/parser/tst_parser.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/tinycbor/tests/tojson/tst_tojson.cpp"
@@ -28,7 +28,7 @@ target_sources(tinycbor INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/tinycbor/src/cbor.h"
 )
 
-target_include_directories(tinycbor INTERFACE
+target_include_directories(pac-tinycbor INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/tinycbor/src"
 )
 
@@ -36,6 +36,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tinycbor INTERFACE
+target_link_libraries(pac-tinycbor INTERFACE
     arduino-compat
 )

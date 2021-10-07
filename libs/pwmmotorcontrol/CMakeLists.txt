@@ -1,6 +1,6 @@
-add_library(pwmmotorcontrol INTERFACE)
+add_library(pac-pwmmotorcontrol INTERFACE)
 
-target_sources(pwmmotorcontrol INTERFACE
+target_sources(pac-pwmmotorcontrol INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PWMMotorControl/src/EncoderMotor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PWMMotorControl/src/IMUCarData.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PWMMotorControl/src/PWMDcMotor.cpp"
@@ -40,7 +40,7 @@ target_sources(pwmmotorcontrol INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PWMMotorControl/examples/RobotCarBlueDisplay/LightweightServo.h"
 )
 
-target_include_directories(pwmmotorcontrol INTERFACE
+target_include_directories(pac-pwmmotorcontrol INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PWMMotorControl/src"
 )
 
@@ -48,6 +48,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pwmmotorcontrol INTERFACE
+target_link_libraries(pac-pwmmotorcontrol INTERFACE
     arduino-compat
 )

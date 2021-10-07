@@ -1,6 +1,6 @@
-add_library(m5stack_avatar INTERFACE)
+add_library(pac-m5stack_avatar INTERFACE)
 
-target_sources(m5stack_avatar INTERFACE
+target_sources(pac-m5stack_avatar INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/m5stack-avatar/lib/AquesTalkTTS/AquesTalkTTS.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/m5stack-avatar/src/ColorPalette.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/m5stack-avatar/src/BoundingRect.cpp"
@@ -33,7 +33,7 @@ target_sources(m5stack_avatar INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/m5stack-avatar/src/faces/DogFace.h"
 )
 
-target_include_directories(m5stack_avatar INTERFACE
+target_include_directories(pac-m5stack_avatar INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/m5stack-avatar/src"
 )
 
@@ -41,11 +41,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(m5stack_avatar INTERFACE
+target_link_libraries(pac-m5stack_avatar INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

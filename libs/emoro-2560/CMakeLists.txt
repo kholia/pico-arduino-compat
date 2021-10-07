@@ -1,6 +1,6 @@
-add_library(emoro-2560 INTERFACE)
+add_library(pac-emoro-2560 INTERFACE)
 
-target_sources(emoro-2560 INTERFACE
+target_sources(pac-emoro-2560 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/emoro-2560-library/src/emoro_ds18s20.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/emoro-2560-library/src/emoro_i2c.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/emoro-2560-library/src/HardwareSerial.cpp"
@@ -73,7 +73,7 @@ target_sources(emoro-2560 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/emoro-2560-library/examples/02. Digital/toneMultiple/pitches.h"
 )
 
-target_include_directories(emoro-2560 INTERFACE
+target_include_directories(pac-emoro-2560 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/emoro-2560-library/src"
 )
 
@@ -81,6 +81,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(emoro-2560 INTERFACE
+target_link_libraries(pac-emoro-2560 INTERFACE
     arduino-compat
 )

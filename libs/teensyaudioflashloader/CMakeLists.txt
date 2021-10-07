@@ -1,12 +1,12 @@
-add_library(teensyaudioflashloader INTERFACE)
+add_library(pac-teensyaudioflashloader INTERFACE)
 
-target_sources(teensyaudioflashloader INTERFACE
+target_sources(pac-teensyaudioflashloader INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/teensy-sample-flashloader/src/flashloader.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/teensy-sample-flashloader/src/TeensyAudioFlashLoader.h"
   "${CMAKE_CURRENT_LIST_DIR}/teensy-sample-flashloader/src/flashloader.h"
 )
 
-target_include_directories(teensyaudioflashloader INTERFACE
+target_include_directories(pac-teensyaudioflashloader INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/teensy-sample-flashloader/src"
 )
 
@@ -14,11 +14,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(teensyaudioflashloader INTERFACE
+target_link_libraries(pac-teensyaudioflashloader INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

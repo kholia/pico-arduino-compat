@@ -1,6 +1,6 @@
-add_library(eboard-shackle-the-arduino INTERFACE)
+add_library(pac-eboard-shackle-the-arduino INTERFACE)
 
-target_sources(eboard-shackle-the-arduino INTERFACE
+target_sources(pac-eboard-shackle-the-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/eBoard/eBoard.h"
   "${CMAKE_CURRENT_LIST_DIR}/eBoard/source/eagle_PreprocessorControl.h"
   "${CMAKE_CURRENT_LIST_DIR}/eBoard/source/eagle_Checks.h"
@@ -28,7 +28,7 @@ target_sources(eboard-shackle-the-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/eBoard/source/eagle_ShiftExt.h"
 )
 
-target_include_directories(eboard-shackle-the-arduino INTERFACE
+target_include_directories(pac-eboard-shackle-the-arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/eBoard"
 )
 
@@ -36,6 +36,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(eboard-shackle-the-arduino INTERFACE
+target_link_libraries(pac-eboard-shackle-the-arduino INTERFACE
     arduino-compat
 )

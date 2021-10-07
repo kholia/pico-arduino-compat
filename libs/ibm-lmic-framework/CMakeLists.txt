@@ -1,6 +1,6 @@
-add_library(ibm-lmic-framework INTERFACE)
+add_library(pac-ibm-lmic-framework INTERFACE)
 
-target_sources(ibm-lmic-framework INTERFACE
+target_sources(pac-ibm-lmic-framework INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lmic/src/hal/hal.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lmic/src/aes/ideetron/AES-128_V10.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lmic/src/lmic/oslmic.c"
@@ -17,7 +17,7 @@ target_sources(ibm-lmic-framework INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lmic/src/lmic/lorabase.h"
 )
 
-target_include_directories(ibm-lmic-framework INTERFACE
+target_include_directories(pac-ibm-lmic-framework INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-lmic/src"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ibm-lmic-framework INTERFACE
+target_link_libraries(pac-ibm-lmic-framework INTERFACE
     arduino-compat
 )

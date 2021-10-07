@@ -1,6 +1,6 @@
-add_library(jpegdec INTERFACE)
+add_library(pac-jpegdec INTERFACE)
 
-target_sources(jpegdec INTERFACE
+target_sources(pac-jpegdec INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/JPEGDEC/src/JPEGDEC.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/JPEGDEC/examples/epd_demo/Grayscale_IL0398.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/JPEGDEC/linux/main.c"
@@ -29,7 +29,7 @@ target_sources(jpegdec INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/JPEGDEC/test_images/thumb_test.h"
 )
 
-target_include_directories(jpegdec INTERFACE
+target_include_directories(pac-jpegdec INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/JPEGDEC/src"
 )
 
@@ -37,6 +37,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(jpegdec INTERFACE
+target_link_libraries(pac-jpegdec INTERFACE
     arduino-compat
 )

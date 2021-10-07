@@ -1,6 +1,6 @@
-add_library(thermistorlibrary INTERFACE)
+add_library(pac-thermistorlibrary INTERFACE)
 
-target_sources(thermistorlibrary INTERFACE
+target_sources(pac-thermistorlibrary INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-ThermistorLibrary/thermistor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-ThermistorLibrary/src/thermistor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-ThermistorLibrary/thermistor.h"
@@ -72,7 +72,7 @@ target_sources(thermistorlibrary INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-ThermistorLibrary/src/tables/thermistortable_3.h"
 )
 
-target_include_directories(thermistorlibrary INTERFACE
+target_include_directories(pac-thermistorlibrary INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino-ThermistorLibrary/src"
 )
 
@@ -80,6 +80,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(thermistorlibrary INTERFACE
+target_link_libraries(pac-thermistorlibrary INTERFACE
     arduino-compat
 )

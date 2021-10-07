@@ -1,6 +1,6 @@
-add_library(megunolink INTERFACE)
+add_library(pac-megunolink INTERFACE)
 
-target_sources(megunolink INTERFACE
+target_sources(pac-megunolink INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MLP/DataStore.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MLP/DeviceAddress.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MLP/ArduinoTimer.cpp"
@@ -53,7 +53,7 @@ target_sources(megunolink INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MLP/utility/Map.h"
 )
 
-target_include_directories(megunolink INTERFACE
+target_include_directories(pac-megunolink INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MLP"
 )
 
@@ -61,6 +61,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(megunolink INTERFACE
+target_link_libraries(pac-megunolink INTERFACE
     arduino-compat
 )

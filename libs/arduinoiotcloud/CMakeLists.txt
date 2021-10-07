@@ -1,6 +1,6 @@
-add_library(arduinoiotcloud INTERFACE)
+add_library(pac-arduinoiotcloud INTERFACE)
 
-target_sources(arduinoiotcloud INTERFACE
+target_sources(pac-arduinoiotcloud INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoIoTCloud/extras/test/src/test_CloudLocation.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoIoTCloud/extras/test/src/test_encode.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoIoTCloud/extras/test/src/test_writeOnly.cpp"
@@ -409,7 +409,7 @@ target_sources(arduinoiotcloud INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoIoTCloud/examples/ArduinoIoTCloud-Callbacks/arduino_secrets.h"
 )
 
-target_include_directories(arduinoiotcloud INTERFACE
+target_include_directories(pac-arduinoiotcloud INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoIoTCloud/src"
 )
 
@@ -417,6 +417,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinoiotcloud INTERFACE
+target_link_libraries(pac-arduinoiotcloud INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(emotibit-featherwing INTERFACE)
+add_library(pac-emotibit-featherwing INTERFACE)
 
-target_sources(emotibit-featherwing INTERFACE
+target_sources(pac-emotibit-featherwing INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EmotiBit_FW_FeatherWing/EmotiBit.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EmotiBit_FW_FeatherWing/EmotiBitWiFi.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EmotiBit_FW_FeatherWing/AdcCorrection.cpp"
@@ -22,7 +22,7 @@ target_sources(emotibit-featherwing INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EmotiBit_FW_FeatherWing/AdcCorrection.h"
 )
 
-target_include_directories(emotibit-featherwing INTERFACE
+target_include_directories(pac-emotibit-featherwing INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EmotiBit_FW_FeatherWing"
 )
 
@@ -30,11 +30,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(emotibit-featherwing INTERFACE
+target_link_libraries(pac-emotibit-featherwing INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

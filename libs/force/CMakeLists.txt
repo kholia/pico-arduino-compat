@@ -1,11 +1,11 @@
-add_library(force INTERFACE)
+add_library(pac-force INTERFACE)
 
-target_sources(force INTERFACE
+target_sources(pac-force INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FORCE_library/src/Force.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FORCE_library/src/Force.h"
 )
 
-target_include_directories(force INTERFACE
+target_include_directories(pac-force INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FORCE_library/src"
 )
 
@@ -13,11 +13,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(force INTERFACE
+target_link_libraries(pac-force INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

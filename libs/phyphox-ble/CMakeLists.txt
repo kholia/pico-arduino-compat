@@ -1,6 +1,6 @@
-add_library(phyphox-ble INTERFACE)
+add_library(pac-phyphox-ble INTERFACE)
 
-target_sources(phyphox-ble INTERFACE
+target_sources(pac-phyphox-ble INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/phyphox-arduino/src/view.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/phyphox-arduino/src/phyphoxBLE_NanoIOT.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/phyphox-arduino/src/element.cpp"
@@ -15,7 +15,7 @@ target_sources(phyphox-ble INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/phyphox-arduino/src/phyphoxBleExperiment.h"
 )
 
-target_include_directories(phyphox-ble INTERFACE
+target_include_directories(pac-phyphox-ble INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/phyphox-arduino/src"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(phyphox-ble INTERFACE
+target_link_libraries(pac-phyphox-ble INTERFACE
     arduino-compat
 )

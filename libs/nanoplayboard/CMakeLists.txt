@@ -1,6 +1,6 @@
-add_library(nanoplayboard INTERFACE)
+add_library(pac-nanoplayboard INTERFACE)
 
-target_sources(nanoplayboard INTERFACE
+target_sources(pac-nanoplayboard INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NanoPlayBoard-Arduino-Library/src/Button.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NanoPlayBoard-Arduino-Library/src/NewPing.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NanoPlayBoard-Arduino-Library/src/DHT.cpp"
@@ -41,7 +41,7 @@ target_sources(nanoplayboard INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NanoPlayBoard-Arduino-Library/examples/14.midi/midi_note_potentiometer/MIDINoteNumbers.h"
 )
 
-target_include_directories(nanoplayboard INTERFACE
+target_include_directories(pac-nanoplayboard INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/NanoPlayBoard-Arduino-Library/src"
 )
 
@@ -49,6 +49,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(nanoplayboard INTERFACE
+target_link_libraries(pac-nanoplayboard INTERFACE
     arduino-compat
 )

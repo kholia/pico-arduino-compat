@@ -1,6 +1,6 @@
-add_library(fastledmanager INTERFACE)
+add_library(pac-fastledmanager INTERFACE)
 
-target_sources(fastledmanager INTERFACE
+target_sources(pac-fastledmanager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FastLEDManager/FastLEDManager.h"
   "${CMAKE_CURRENT_LIST_DIR}/FastLEDManager/FastLEDManager/LEDController.h"
   "${CMAKE_CURRENT_LIST_DIR}/FastLEDManager/FastLEDManager/LEDSequencer.h"
@@ -18,7 +18,7 @@ target_sources(fastledmanager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FastLEDManager/FastLEDManager/LEDSequencer/Triangle.h"
 )
 
-target_include_directories(fastledmanager INTERFACE
+target_include_directories(pac-fastledmanager INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FastLEDManager"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(fastledmanager INTERFACE
+target_link_libraries(pac-fastledmanager INTERFACE
     arduino-compat
 )

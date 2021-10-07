@@ -1,6 +1,6 @@
-add_library(windows-virtual-shields-for-arduino INTERFACE)
+add_library(pac-windows-virtual-shields-for-arduino INTERFACE)
 
-target_sources(windows-virtual-shields-for-arduino INTERFACE
+target_sources(pac-windows-virtual-shields-for-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/virtual-shields-arduino/src/Geolocator.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/virtual-shields-arduino/src/VirtualShield.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/virtual-shields-arduino/src/Gyrometer.cpp"
@@ -55,7 +55,7 @@ target_sources(windows-virtual-shields-for-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/virtual-shields-arduino/examples/LedMatrix/RGBStripMatrix.h"
 )
 
-target_include_directories(windows-virtual-shields-for-arduino INTERFACE
+target_include_directories(pac-windows-virtual-shields-for-arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/virtual-shields-arduino/src"
 )
 
@@ -63,6 +63,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(windows-virtual-shields-for-arduino INTERFACE
+target_link_libraries(pac-windows-virtual-shields-for-arduino INTERFACE
     arduino-compat
 )

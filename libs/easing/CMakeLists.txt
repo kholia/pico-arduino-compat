@@ -1,6 +1,6 @@
-add_library(easing INTERFACE)
+add_library(pac-easing INTERFACE)
 
-target_sources(easing INTERFACE
+target_sources(pac-easing INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Easing/Easing.h"
   "${CMAKE_CURRENT_LIST_DIR}/Easing/Easing/CubicEase.h"
   "${CMAKE_CURRENT_LIST_DIR}/Easing/Easing/BounceEase.h"
@@ -17,7 +17,7 @@ target_sources(easing INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Easing/Easing/QuinticEase.h"
 )
 
-target_include_directories(easing INTERFACE
+target_include_directories(pac-easing INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Easing"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(easing INTERFACE
+target_link_libraries(pac-easing INTERFACE
     arduino-compat
 )

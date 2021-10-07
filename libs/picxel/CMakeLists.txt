@@ -1,11 +1,11 @@
-add_library(picxel INTERFACE)
+add_library(pac-picxel INTERFACE)
 
-target_sources(picxel INTERFACE
+target_sources(pac-picxel INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PICxel/PICxel.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PICxel/PICxel.h"
 )
 
-target_include_directories(picxel INTERFACE
+target_include_directories(pac-picxel INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PICxel"
 )
 
@@ -13,6 +13,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(picxel INTERFACE
+target_link_libraries(pac-picxel INTERFACE
     arduino-compat
 )

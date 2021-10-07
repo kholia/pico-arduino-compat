@@ -1,6 +1,6 @@
-add_library(modi INTERFACE)
+add_library(pac-modi INTERFACE)
 
-target_sources(modi INTERFACE
+target_sources(pac-modi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MODI-Arduino/src/MODI.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MODI-Arduino/src/MODI_Interface.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MODI-Arduino/src/mcp_can.cpp"
@@ -12,7 +12,7 @@ target_sources(modi INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MODI-Arduino/src/MODI_Interface.h"
 )
 
-target_include_directories(modi INTERFACE
+target_include_directories(pac-modi INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MODI-Arduino/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(modi INTERFACE
+target_link_libraries(pac-modi INTERFACE
     arduino-compat
 )

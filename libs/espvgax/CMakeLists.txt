@@ -1,6 +1,6 @@
-add_library(espvgax INTERFACE)
+add_library(pac-espvgax INTERFACE)
 
-target_sources(espvgax INTERFACE
+target_sources(pac-espvgax INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/espvgax/ESPVGAX.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/espvgax/espvgax_blit.h"
   "${CMAKE_CURRENT_LIST_DIR}/espvgax/espvgax_hspi.h"
@@ -24,7 +24,7 @@ target_sources(espvgax INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/espvgax/fonts/mssans10.h"
 )
 
-target_include_directories(espvgax INTERFACE
+target_include_directories(pac-espvgax INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/espvgax"
 )
 
@@ -32,6 +32,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(espvgax INTERFACE
+target_link_libraries(pac-espvgax INTERFACE
     arduino-compat
 )

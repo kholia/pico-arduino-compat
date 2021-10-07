@@ -1,6 +1,6 @@
-add_library(onewireng INTERFACE)
+add_library(pac-onewireng INTERFACE)
 
-target_sources(onewireng INTERFACE
+target_sources(pac-onewireng INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OneWireNg/extras/test/t01_OneWireNg_Test.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OneWireNg/extras/test/t03_DSTherm_Test.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OneWireNg/extras/test/t02_OneWireNg_BitBang_Test.cpp"
@@ -29,7 +29,7 @@ target_sources(onewireng INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OneWireNg/src/platform/Platform_TimeCritical.h"
 )
 
-target_include_directories(onewireng INTERFACE
+target_include_directories(pac-onewireng INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/OneWireNg/src"
 )
 
@@ -37,6 +37,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(onewireng INTERFACE
+target_link_libraries(pac-onewireng INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(homekit-esp8266 INTERFACE)
+add_library(pac-homekit-esp8266 INTERFACE)
 
-target_sources(homekit-esp8266 INTERFACE
+target_sources(pac-homekit-esp8266 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-HomeKit-ESP8266/extras/ESP8266WiFi_nossl_noleak/src/WiFiUdp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-HomeKit-ESP8266/extras/ESP8266WiFi_nossl_noleak/src/WiFiClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-HomeKit-ESP8266/extras/ESP8266WiFi_nossl_noleak/src/WiFiServer.cpp"
@@ -163,7 +163,7 @@ target_sources(homekit-esp8266 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino-HomeKit-ESP8266/examples/Example06_makesmart_lock/wifi_info.h"
 )
 
-target_include_directories(homekit-esp8266 INTERFACE
+target_include_directories(pac-homekit-esp8266 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino-HomeKit-ESP8266/src"
 )
 
@@ -171,6 +171,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(homekit-esp8266 INTERFACE
+target_link_libraries(pac-homekit-esp8266 INTERFACE
     arduino-compat
 )

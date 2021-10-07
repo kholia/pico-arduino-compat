@@ -1,6 +1,6 @@
-add_library(azureiothub INTERFACE)
+add_library(pac-azureiothub INTERFACE)
 
-target_sources(azureiothub INTERFACE
+target_sources(pac-azureiothub INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/azure-iot-arduino/src/multitree.c"
   "${CMAKE_CURRENT_LIST_DIR}/azure-iot-arduino/src/iothubtransportmqtt.c"
   "${CMAKE_CURRENT_LIST_DIR}/azure-iot-arduino/src/jsonencoder.c"
@@ -107,7 +107,7 @@ target_sources(azureiothub INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/azure-iot-arduino/examples/esp8266/iothub_ll_telemetry_sample/sample_init.h"
 )
 
-target_include_directories(azureiothub INTERFACE
+target_include_directories(pac-azureiothub INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/azure-iot-arduino/src"
 )
 
@@ -115,6 +115,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(azureiothub INTERFACE
+target_link_libraries(pac-azureiothub INTERFACE
     arduino-compat
 )

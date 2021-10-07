@@ -1,6 +1,6 @@
-add_library(softtimers INTERFACE)
+add_library(pac-softtimers INTERFACE)
 
-target_sources(softtimers INTERFACE
+target_sources(pac-softtimers INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SoftTimers/test/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SoftTimers/test/TestSoftTimers.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SoftTimers/src/SoftTimers.cpp"
@@ -8,7 +8,7 @@ target_sources(softtimers INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SoftTimers/src/SoftTimers.h"
 )
 
-target_include_directories(softtimers INTERFACE
+target_include_directories(pac-softtimers INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SoftTimers/src"
 )
 
@@ -16,6 +16,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(softtimers INTERFACE
+target_link_libraries(pac-softtimers INTERFACE
     arduino-compat
 )

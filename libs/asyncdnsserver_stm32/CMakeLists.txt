@@ -1,6 +1,6 @@
-add_library(asyncdnsserver_stm32 INTERFACE)
+add_library(pac-asyncdnsserver_stm32 INTERFACE)
 
-target_sources(asyncdnsserver_stm32 INTERFACE
+target_sources(pac-asyncdnsserver_stm32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AsyncDNSServer_STM32/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AsyncDNSServer_STM32/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AsyncDNSServer_STM32/LibraryPatches/UIPEthernet-2.0.9/UIPEthernet.cpp"
@@ -55,7 +55,7 @@ target_sources(asyncdnsserver_stm32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AsyncDNSServer_STM32/examples/AsyncDNServerFull_STM32/defines.h"
 )
 
-target_include_directories(asyncdnsserver_stm32 INTERFACE
+target_include_directories(pac-asyncdnsserver_stm32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AsyncDNSServer_STM32/src"
 )
 
@@ -63,6 +63,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(asyncdnsserver_stm32 INTERFACE
+target_link_libraries(pac-asyncdnsserver_stm32 INTERFACE
     arduino-compat
 )

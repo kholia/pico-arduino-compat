@@ -1,6 +1,6 @@
-add_library(blynk_async_gsm_manager INTERFACE)
+add_library(pac-blynk_async_gsm_manager INTERFACE)
 
-target_sources(blynk_async_gsm_manager INTERFACE
+target_sources(pac-blynk_async_gsm_manager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_Async_GSM_Manager/src/BlynkSimpleEsp8266_GSM_Async_WF.h"
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_Async_GSM_Manager/src/BlynkSimpleTinyGSM_Async_M.h"
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_Async_GSM_Manager/src/BlynkSimpleEsp8266_GSM_Async_WFM.h"
@@ -37,7 +37,7 @@ target_sources(blynk_async_gsm_manager INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Blynk_Async_GSM_Manager/examples/Async_ESP32_GSM_SHT3x/Credentials.h"
 )
 
-target_include_directories(blynk_async_gsm_manager INTERFACE
+target_include_directories(pac-blynk_async_gsm_manager INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Blynk_Async_GSM_Manager/src"
 )
 
@@ -45,6 +45,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(blynk_async_gsm_manager INTERFACE
+target_link_libraries(pac-blynk_async_gsm_manager INTERFACE
     arduino-compat
 )

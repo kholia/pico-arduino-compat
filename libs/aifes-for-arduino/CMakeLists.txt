@@ -1,6 +1,6 @@
-add_library(aifes-for-arduino INTERFACE)
+add_library(pac-aifes-for-arduino INTERFACE)
 
-target_sources(aifes-for-arduino INTERFACE
+target_sources(pac-aifes-for-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AIfES_for_Arduino/src/basic/base/aialgo/aialgo_sequential_inference.c"
   "${CMAKE_CURRENT_LIST_DIR}/AIfES_for_Arduino/src/basic/base/aialgo/aialgo_sequential_training.c"
   "${CMAKE_CURRENT_LIST_DIR}/AIfES_for_Arduino/src/basic/base/ailoss/ailoss_mse.c"
@@ -74,7 +74,7 @@ target_sources(aifes-for-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AIfES_for_Arduino/src/core/aifes_math.h"
 )
 
-target_include_directories(aifes-for-arduino INTERFACE
+target_include_directories(pac-aifes-for-arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AIfES_for_Arduino/src"
 )
 
@@ -82,6 +82,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(aifes-for-arduino INTERFACE
+target_link_libraries(pac-aifes-for-arduino INTERFACE
     arduino-compat
 )

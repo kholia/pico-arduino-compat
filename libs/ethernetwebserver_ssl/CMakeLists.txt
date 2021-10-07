@@ -1,6 +1,6 @@
-add_library(ethernetwebserver_ssl INTERFACE)
+add_library(pac-ethernetwebserver_ssl INTERFACE)
 
-target_sources(ethernetwebserver_ssl INTERFACE
+target_sources(pac-ethernetwebserver_ssl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EthernetWebServer_SSL/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EthernetWebServer_SSL/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EthernetWebServer_SSL/LibraryPatches/UIPEthernet-2.0.9/UIPEthernet.cpp"
@@ -592,7 +592,7 @@ target_sources(ethernetwebserver_ssl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EthernetWebServer_SSL/examples/MQTT_ThingStream/defines.h"
 )
 
-target_include_directories(ethernetwebserver_ssl INTERFACE
+target_include_directories(pac-ethernetwebserver_ssl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EthernetWebServer_SSL/src"
 )
 
@@ -600,6 +600,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ethernetwebserver_ssl INTERFACE
+target_link_libraries(pac-ethernetwebserver_ssl INTERFACE
     arduino-compat
 )

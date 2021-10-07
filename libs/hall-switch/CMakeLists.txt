@@ -1,6 +1,6 @@
-add_library(hall-switch INTERFACE)
+add_library(pac-hall-switch INTERFACE)
 
-target_sources(hall-switch INTERFACE
+target_sources(pac-hall-switch INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/hall-switch/src/hall-switch-ino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/hall-switch/src/hall-speed-ino.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/hall-switch/src/framework/raspberrypi/pal/hall-pal-rpi.cpp"
@@ -37,7 +37,7 @@ target_sources(hall-switch INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/hall-switch/src/corelib/hall-speed.hpp"
 )
 
-target_include_directories(hall-switch INTERFACE
+target_include_directories(pac-hall-switch INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/hall-switch/src"
 )
 
@@ -45,6 +45,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(hall-switch INTERFACE
+target_link_libraries(pac-hall-switch INTERFACE
     arduino-compat
 )

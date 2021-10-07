@@ -1,6 +1,6 @@
-add_library(remotedebug INTERFACE)
+add_library(pac-remotedebug INTERFACE)
 
-target_sources(remotedebug INTERFACE
+target_sources(pac-remotedebug INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RemoteDebug/src/RemoteDebug.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RemoteDebug/src/RemoteDebugWS.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RemoteDebug/src/utility/WebSockets.cpp"
@@ -21,7 +21,7 @@ target_sources(remotedebug INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RemoteDebug/src/utility/libsha1/libsha1.h"
 )
 
-target_include_directories(remotedebug INTERFACE
+target_include_directories(pac-remotedebug INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RemoteDebug/src"
 )
 
@@ -29,6 +29,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(remotedebug INTERFACE
+target_link_libraries(pac-remotedebug INTERFACE
     arduino-compat
 )

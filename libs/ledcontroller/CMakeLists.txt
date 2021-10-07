@@ -1,6 +1,6 @@
-add_library(ledcontroller INTERFACE)
+add_library(pac-ledcontroller INTERFACE)
 
-target_sources(ledcontroller INTERFACE
+target_sources(pac-ledcontroller INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LedController/test/common/Move.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LedController/test/common/display.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/LedController/test/common/main.cpp"
@@ -27,7 +27,7 @@ target_sources(ledcontroller INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/LedController/src/implementations/LedController_transformation.hpp"
 )
 
-target_include_directories(ledcontroller INTERFACE
+target_include_directories(pac-ledcontroller INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/LedController/src"
 )
 
@@ -35,6 +35,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ledcontroller INTERFACE
+target_link_libraries(pac-ledcontroller INTERFACE
     arduino-compat
 )

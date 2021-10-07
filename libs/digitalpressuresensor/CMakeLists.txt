@@ -1,6 +1,6 @@
-add_library(digitalpressuresensor INTERFACE)
+add_library(pac-digitalpressuresensor INTERFACE)
 
-target_sources(digitalpressuresensor INTERFACE
+target_sources(pac-digitalpressuresensor INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DPS310-Pressure-Sensor/src/Dps310.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DPS310-Pressure-Sensor/src/Dps422.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DPS310-Pressure-Sensor/src/DpsClass.cpp"
@@ -13,7 +13,7 @@ target_sources(digitalpressuresensor INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DPS310-Pressure-Sensor/src/util/DpsRegister.h"
 )
 
-target_include_directories(digitalpressuresensor INTERFACE
+target_include_directories(pac-digitalpressuresensor INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/DPS310-Pressure-Sensor/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(digitalpressuresensor INTERFACE
+target_link_libraries(pac-digitalpressuresensor INTERFACE
     arduino-compat
 )

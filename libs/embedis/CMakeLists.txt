@@ -1,6 +1,6 @@
-add_library(embedis INTERFACE)
+add_library(pac-embedis INTERFACE)
 
-target_sources(embedis INTERFACE
+target_sources(pac-embedis INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/embedis/arduino/Stream.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/embedis/arduino/WString.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/embedis/arduino/Print.cpp"
@@ -23,7 +23,7 @@ target_sources(embedis INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/embedis/tests/main.h"
 )
 
-target_include_directories(embedis INTERFACE
+target_include_directories(pac-embedis INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/embedis/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(embedis INTERFACE
+target_link_libraries(pac-embedis INTERFACE
     arduino-compat
 )

@@ -15,7 +15,7 @@ add_executable(hw
 target_link_libraries(hw
     pico_bootsel_via_double_reset 
     pico_stdlib
-    official-liquid-crystal
+    pac-liquidcrystal
 )
 
 pico_set_binary_type(hw no_flash)

@@ -1,6 +1,6 @@
-add_library(autoanalogaudio INTERFACE)
+add_library(pac-autoanalogaudio INTERFACE)
 
-target_sources(autoanalogaudio INTERFACE
+target_sources(pac-autoanalogaudio INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AutoAnalogAudio/src/avr/AutoAnalogAudio.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AutoAnalogAudio/src/esp32/AutoAnalogAudio.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AutoAnalogAudio/src/sam/AutoAnalogAudio.cpp"
@@ -20,7 +20,7 @@ target_sources(autoanalogaudio INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AutoAnalogAudio/examples/SimpleSine/myRadio.h"
 )
 
-target_include_directories(autoanalogaudio INTERFACE
+target_include_directories(pac-autoanalogaudio INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AutoAnalogAudio/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(autoanalogaudio INTERFACE
+target_link_libraries(pac-autoanalogaudio INTERFACE
     arduino-compat
 )

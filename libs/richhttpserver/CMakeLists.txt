@@ -1,6 +1,6 @@
-add_library(richhttpserver INTERFACE)
+add_library(pac-richhttpserver INTERFACE)
 
-target_sources(richhttpserver INTERFACE
+target_sources(pac-richhttpserver INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/rich_http_server/src/AuthProviders.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/rich_http_server/src/RichResponse.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/rich_http_server/src/Platforms/PlatformAsyncWebServer.cpp"
@@ -15,7 +15,7 @@ target_sources(richhttpserver INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/rich_http_server/src/Platforms/PlatformEspressif.h"
 )
 
-target_include_directories(richhttpserver INTERFACE
+target_include_directories(pac-richhttpserver INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/rich_http_server/src"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(richhttpserver INTERFACE
+target_link_libraries(pac-richhttpserver INTERFACE
     arduino-compat
 )

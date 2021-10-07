@@ -1,6 +1,6 @@
-add_library(emgui INTERFACE)
+add_library(pac-emgui INTERFACE)
 
-target_sources(emgui INTERFACE
+target_sources(pac-emgui INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/emGUI-arduino/examples/current-sensor/emGUIGlue.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/emGUI-arduino/examples/current-sensor/src/TouchWrapper/TouchWrapper.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/emGUI-arduino/examples/current-sensor/src/GUI/WindowPack.cpp"
@@ -215,7 +215,7 @@ target_sources(emgui INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/emGUI-arduino/examples/demo-menu/src/TFT/Fonts/Custom/Yellowtail_32.h"
 )
 
-target_include_directories(emgui INTERFACE
+target_include_directories(pac-emgui INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/emGUI-arduino/src"
 )
 
@@ -223,11 +223,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(emgui INTERFACE
+target_link_libraries(pac-emgui INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

@@ -1,6 +1,6 @@
-add_library(adafruit-arcada-library INTERFACE)
+add_library(pac-adafruit-arcada-library INTERFACE)
 
-target_sources(adafruit-arcada-library INTERFACE
+target_sources(pac-adafruit-arcada-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_Arcada/Adafruit_Arcada_USBMSD.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_Arcada/Adafruit_Arcada_Alerts.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_Arcada/Adafruit_Arcada_ImageReader.cpp"
@@ -39,7 +39,7 @@ target_sources(adafruit-arcada-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_Arcada/examples/full_board_tests/pyportal_arcada_test/coin.h"
 )
 
-target_include_directories(adafruit-arcada-library INTERFACE
+target_include_directories(pac-adafruit-arcada-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_Arcada"
 )
 
@@ -47,11 +47,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(adafruit-arcada-library INTERFACE
+target_link_libraries(pac-adafruit-arcada-library INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

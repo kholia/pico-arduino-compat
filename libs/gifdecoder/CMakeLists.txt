@@ -1,6 +1,6 @@
-add_library(gifdecoder INTERFACE)
+add_library(pac-gifdecoder INTERFACE)
 
-target_sources(gifdecoder INTERFACE
+target_sources(pac-gifdecoder INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GifDecoder/examples/SmartMatrixGifProfiling/FilenameFunctions.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GifDecoder/examples/SmartMatrixGifPlayer/FilenameFunctions.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/GifDecoder/src/GifDecoder_Impl.h"
@@ -11,7 +11,7 @@ target_sources(gifdecoder INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/GifDecoder/examples/SmartMatrixGifPlayer/FilenameFunctions.h"
 )
 
-target_include_directories(gifdecoder INTERFACE
+target_include_directories(pac-gifdecoder INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/GifDecoder/src"
 )
 
@@ -19,11 +19,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(gifdecoder INTERFACE
+target_link_libraries(pac-gifdecoder INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

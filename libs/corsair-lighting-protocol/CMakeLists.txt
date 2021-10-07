@@ -1,6 +1,6 @@
-add_library(corsair-lighting-protocol INTERFACE)
+add_library(pac-corsair-lighting-protocol INTERFACE)
 
-target_sources(corsair-lighting-protocol INTERFACE
+target_sources(pac-corsair-lighting-protocol INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CorsairLightingProtocol/src/LEDController.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/CorsairLightingProtocol/src/CLPAdditionalFeatures.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/CorsairLightingProtocol/src/CorsairLightingProtocolSerial.cpp"
@@ -42,7 +42,7 @@ target_sources(corsair-lighting-protocol INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/CorsairLightingProtocol/examples/CommanderPRO/SimpleFanController.h"
 )
 
-target_include_directories(corsair-lighting-protocol INTERFACE
+target_include_directories(pac-corsair-lighting-protocol INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/CorsairLightingProtocol/src"
 )
 
@@ -50,6 +50,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(corsair-lighting-protocol INTERFACE
+target_link_libraries(pac-corsair-lighting-protocol INTERFACE
     arduino-compat
 )

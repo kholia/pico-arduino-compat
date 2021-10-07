@@ -1,6 +1,6 @@
-add_library(educationshield INTERFACE)
+add_library(pac-educationshield INTERFACE)
 
-target_sources(educationshield INTERFACE
+target_sources(pac-educationshield INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EducationShield/src/Button.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EducationShield/src/LightSensor.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EducationShield/src/TiltSwitch.cpp"
@@ -31,7 +31,7 @@ target_sources(educationshield INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EducationShield/examples/Block3-Magic/Projects/BinaryLP_Workshop/pitches.h"
 )
 
-target_include_directories(educationshield INTERFACE
+target_include_directories(pac-educationshield INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EducationShield/src"
 )
 
@@ -39,11 +39,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(educationshield INTERFACE
+target_link_libraries(pac-educationshield INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

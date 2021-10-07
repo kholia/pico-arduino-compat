@@ -1,6 +1,6 @@
-add_library(wavehc INTERFACE)
+add_library(pac-wavehc INTERFACE)
 
-target_sources(wavehc INTERFACE
+target_sources(pac-wavehc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WaveHC/SdReader.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WaveHC/WaveHC.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WaveHC/WaveUtil.cpp"
@@ -16,7 +16,7 @@ target_sources(wavehc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WaveHC/WaveHC.h"
 )
 
-target_include_directories(wavehc INTERFACE
+target_include_directories(pac-wavehc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WaveHC"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wavehc INTERFACE
+target_link_libraries(pac-wavehc INTERFACE
     arduino-compat
 )

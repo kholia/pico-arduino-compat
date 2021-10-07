@@ -1,6 +1,6 @@
-add_library(mutila INTERFACE)
+add_library(pac-mutila INTERFACE)
 
-target_sources(mutila INTERFACE
+target_sources(pac-mutila INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Mutila/src/PersistentSetting.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Mutila/src/DiscretePot.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Mutila/src/BrownoutMode.cpp"
@@ -102,7 +102,7 @@ target_sources(mutila INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Mutila/examples/NamedPersistentSetting/Settings.h"
 )
 
-target_include_directories(mutila INTERFACE
+target_include_directories(pac-mutila INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Mutila/src"
 )
 
@@ -110,6 +110,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mutila INTERFACE
+target_link_libraries(pac-mutila INTERFACE
     arduino-compat
 )

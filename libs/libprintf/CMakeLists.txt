@@ -1,6 +1,6 @@
-add_library(libprintf INTERFACE)
+add_library(pac-libprintf INTERFACE)
 
-target_sources(libprintf INTERFACE
+target_sources(pac-libprintf INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-printf/extras/sketch_cpp/override_putchar.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-printf/extras/sketch_cpp/default_to_serial.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-printf/extras/sketch_cpp/specify_print_class.cpp"
@@ -11,7 +11,7 @@ target_sources(libprintf INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-printf/src/LibPrintf.h"
 )
 
-target_include_directories(libprintf INTERFACE
+target_include_directories(pac-libprintf INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-printf/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(libprintf INTERFACE
+target_link_libraries(pac-libprintf INTERFACE
     arduino-compat
 )

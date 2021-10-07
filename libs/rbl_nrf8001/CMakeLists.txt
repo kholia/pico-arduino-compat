@@ -1,6 +1,6 @@
-add_library(rbl_nrf8001 INTERFACE)
+add_library(pac-rbl_nrf8001 INTERFACE)
 
-target_sources(rbl_nrf8001 INTERFACE
+target_sources(pac-rbl_nrf8001 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/nRF8001/src/RBL_nRF8001.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/nRF8001/examples/BLE_RGB/Adafruit_NeoPixel.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/nRF8001/examples/BLEFirmataSketch/BLEFirmata.cpp"
@@ -12,7 +12,7 @@ target_sources(rbl_nrf8001 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/nRF8001/examples/BLEFirmataSketch/BLEFirmata.h"
 )
 
-target_include_directories(rbl_nrf8001 INTERFACE
+target_include_directories(pac-rbl_nrf8001 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/nRF8001/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(rbl_nrf8001 INTERFACE
+target_link_libraries(pac-rbl_nrf8001 INTERFACE
     arduino-compat
 )

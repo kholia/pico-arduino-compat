@@ -1,10 +1,10 @@
-add_library(unixtime INTERFACE)
+add_library(pac-unixtime INTERFACE)
 
-target_sources(unixtime INTERFACE
+target_sources(pac-unixtime INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/UnixTime/src/UnixTime.h"
 )
 
-target_include_directories(unixtime INTERFACE
+target_include_directories(pac-unixtime INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/UnixTime/src"
 )
 
@@ -12,6 +12,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(unixtime INTERFACE
+target_link_libraries(pac-unixtime INTERFACE
     arduino-compat
 )

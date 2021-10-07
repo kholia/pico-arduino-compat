@@ -1,6 +1,6 @@
-add_library(pubsubclient INTERFACE)
+add_library(pac-pubsubclient INTERFACE)
 
-target_sources(pubsubclient INTERFACE
+target_sources(pac-pubsubclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/pubsubclient/src/PubSubClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/pubsubclient/tests/src/keepalive_spec.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/pubsubclient/tests/src/connect_spec.cpp"
@@ -24,7 +24,7 @@ target_sources(pubsubclient INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/pubsubclient/tests/src/lib/Arduino.h"
 )
 
-target_include_directories(pubsubclient INTERFACE
+target_include_directories(pac-pubsubclient INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/pubsubclient/src"
 )
 
@@ -32,6 +32,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pubsubclient INTERFACE
+target_link_libraries(pac-pubsubclient INTERFACE
     arduino-compat
 )

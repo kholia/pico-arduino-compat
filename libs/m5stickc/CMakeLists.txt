@@ -1,6 +1,6 @@
-add_library(m5stickc INTERFACE)
+add_library(pac-m5stickc INTERFACE)
 
-target_sources(m5stickc INTERFACE
+target_sources(pac-m5stickc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5StickC/src/IMU.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5StickC/src/AXP192.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5StickC/src/RTC.cpp"
@@ -190,7 +190,7 @@ target_sources(m5stickc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5StickC/examples/Hat/BeetleC/setTimer.h"
 )
 
-target_include_directories(m5stickc INTERFACE
+target_include_directories(pac-m5stickc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/M5StickC/src"
 )
 
@@ -198,6 +198,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(m5stickc INTERFACE
+target_link_libraries(pac-m5stickc INTERFACE
     arduino-compat
 )

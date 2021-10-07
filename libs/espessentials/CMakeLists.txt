@@ -1,6 +1,6 @@
-add_library(espessentials INTERFACE)
+add_library(pac-espessentials INTERFACE)
 
-target_sources(espessentials INTERFACE
+target_sources(pac-espessentials INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESPEssentials/OTA.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESPEssentials/ESPEssentials.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESPEssentials/Wifi.cpp"
@@ -12,7 +12,7 @@ target_sources(espessentials INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESPEssentials/Wifi.h"
 )
 
-target_include_directories(espessentials INTERFACE
+target_include_directories(pac-espessentials INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESPEssentials"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(espessentials INTERFACE
+target_link_libraries(pac-espessentials INTERFACE
     arduino-compat
 )

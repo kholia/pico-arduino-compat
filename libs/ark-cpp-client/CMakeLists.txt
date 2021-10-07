@@ -1,6 +1,6 @@
-add_library(ark-cpp-client INTERFACE)
+add_library(pac-ark-cpp-client INTERFACE)
 
-target_sources(ark-cpp-client INTERFACE
+target_sources(pac-ark-cpp-client INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/cpp-client/test/connection/connection.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/cpp-client/test/http/http.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/cpp-client/test/api/bridgechains.cpp"
@@ -62,7 +62,7 @@ target_sources(ark-cpp-client INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/cpp-client/src/include/cpp-client/host/host.h"
 )
 
-target_include_directories(ark-cpp-client INTERFACE
+target_include_directories(pac-ark-cpp-client INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/cpp-client/src"
 )
 
@@ -70,6 +70,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ark-cpp-client INTERFACE
+target_link_libraries(pac-ark-cpp-client INTERFACE
     arduino-compat
 )

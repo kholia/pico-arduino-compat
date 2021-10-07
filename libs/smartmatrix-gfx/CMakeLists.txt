@@ -1,6 +1,6 @@
-add_library(smartmatrix-gfx INTERFACE)
+add_library(pac-smartmatrix-gfx INTERFACE)
 
-target_sources(smartmatrix-gfx INTERFACE
+target_sources(pac-smartmatrix-gfx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SmartMatrix_GFX/SmartMatrix_GFX.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SmartMatrix_GFX/SmartMatrix_GFX.h"
   "${CMAKE_CURRENT_LIST_DIR}/SmartMatrix_GFX/examples/MatrixGFXDemo/smileytongue24.h"
@@ -11,7 +11,7 @@ target_sources(smartmatrix-gfx INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SmartMatrix_GFX/examples/MatrixGFXDemo/google32.h"
 )
 
-target_include_directories(smartmatrix-gfx INTERFACE
+target_include_directories(pac-smartmatrix-gfx INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SmartMatrix_GFX"
 )
 
@@ -19,11 +19,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(smartmatrix-gfx INTERFACE
+target_link_libraries(pac-smartmatrix-gfx INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

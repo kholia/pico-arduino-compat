@@ -1,6 +1,6 @@
-add_library(pu2clr-akc695x INTERFACE)
+add_library(pac-pu2clr-akc695x INTERFACE)
 
-target_sources(pu2clr-akc695x INTERFACE
+target_sources(pac-pu2clr-akc695x INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AKC695X/AKC695X.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AKC695X/examples/UNDER_CONSTRUCTION/SI47XX_02_TFT_TOUCH_SHIELD/Rotary.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AKC695X/examples/UNDER_CONSTRUCTION/SI47XX_03_TFT_ATMEGA328_ST7735/Rotary.cpp"
@@ -15,7 +15,7 @@ target_sources(pu2clr-akc695x INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AKC695X/examples/AKC_02_OLED/Rotary.h"
 )
 
-target_include_directories(pu2clr-akc695x INTERFACE
+target_include_directories(pac-pu2clr-akc695x INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AKC695X"
 )
 
@@ -23,6 +23,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pu2clr-akc695x INTERFACE
+target_link_libraries(pac-pu2clr-akc695x INTERFACE
     arduino-compat
 )

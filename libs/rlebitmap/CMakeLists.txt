@@ -1,6 +1,6 @@
-add_library(rlebitmap INTERFACE)
+add_library(pac-rlebitmap INTERFACE)
 
-target_sources(rlebitmap INTERFACE
+target_sources(pac-rlebitmap INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RLEBitmap/extras/bmper/bmper.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RLEBitmap/extras/bmper/CBitmapHandler.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RLEBitmap/src/RLEBitmap.cpp"
@@ -838,7 +838,7 @@ target_sources(rlebitmap INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RLEBitmap/examples/Moon_Phases/HtmlColors.h"
 )
 
-target_include_directories(rlebitmap INTERFACE
+target_include_directories(pac-rlebitmap INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RLEBitmap/src"
 )
 
@@ -846,6 +846,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(rlebitmap INTERFACE
+target_link_libraries(pac-rlebitmap INTERFACE
     arduino-compat
 )

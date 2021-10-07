@@ -1,6 +1,6 @@
-add_library(timezone_generic INTERFACE)
+add_library(pac-timezone_generic INTERFACE)
 
-target_sources(timezone_generic INTERFACE
+target_sources(pac-timezone_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Timezone_Generic/src_cpp/Timezone_Generic.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Timezone_Generic/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Timezone_Generic/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
@@ -142,7 +142,7 @@ target_sources(timezone_generic INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Timezone_Generic/src_h/Timezone_Generic.h"
 )
 
-target_include_directories(timezone_generic INTERFACE
+target_include_directories(pac-timezone_generic INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Timezone_Generic/src"
 )
 
@@ -150,6 +150,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(timezone_generic INTERFACE
+target_link_libraries(pac-timezone_generic INTERFACE
     arduino-compat
 )

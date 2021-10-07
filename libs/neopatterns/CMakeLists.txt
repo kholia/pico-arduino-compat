@@ -1,6 +1,6 @@
-add_library(neopatterns INTERFACE)
+add_library(pac-neopatterns INTERFACE)
 
-target_sources(neopatterns INTERFACE
+target_sources(pac-neopatterns INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NeoPatterns/src/MatrixNeoPixel.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NeoPatterns/src/NeoPatterns.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NeoPatterns/src/NeoPixel.cpp"
@@ -30,7 +30,7 @@ target_sources(neopatterns INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NeoPatterns/examples/TwoPatternsOnOneStrip/EasyButtonAtInt01.cpp.h"
 )
 
-target_include_directories(neopatterns INTERFACE
+target_include_directories(pac-neopatterns INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/NeoPatterns/src"
 )
 
@@ -38,6 +38,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(neopatterns INTERFACE
+target_link_libraries(pac-neopatterns INTERFACE
     arduino-compat
 )

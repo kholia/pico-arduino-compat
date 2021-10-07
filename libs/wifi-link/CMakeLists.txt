@@ -1,6 +1,6 @@
-add_library(wifi-link INTERFACE)
+add_library(pac-wifi-link INTERFACE)
 
-target_sources(wifi-link INTERFACE
+target_sources(pac-wifi-link INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-library-wifilink/src/WiFiUdp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-library-wifilink/src/WiFiClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-library-wifilink/src/WiFiServer.cpp"
@@ -29,7 +29,7 @@ target_sources(wifi-link INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-library-wifilink/src/utility/spi/spi_drv.h"
 )
 
-target_include_directories(wifi-link INTERFACE
+target_include_directories(pac-wifi-link INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-library-wifilink/src"
 )
 
@@ -37,6 +37,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wifi-link INTERFACE
+target_link_libraries(pac-wifi-link INTERFACE
     arduino-compat
 )

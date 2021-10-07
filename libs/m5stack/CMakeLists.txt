@@ -1,6 +1,6 @@
-add_library(m5stack INTERFACE)
+add_library(pac-m5stack INTERFACE)
 
-target_sources(m5stack INTERFACE
+target_sources(pac-m5stack INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5Stack/src/M5Stack.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5Stack/src/M5LoRa.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5Stack/src/M5Faces.cpp"
@@ -253,7 +253,7 @@ target_sources(m5stack INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5Stack/examples/Advanced/Blynk/Post-DHT12/DHT12.h"
 )
 
-target_include_directories(m5stack INTERFACE
+target_include_directories(pac-m5stack INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/M5Stack/src"
 )
 
@@ -261,11 +261,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(m5stack INTERFACE
+target_link_libraries(pac-m5stack INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

@@ -7546,12 +7546,6 @@
 [submodule "libs/axisjoystick/AxisJoystick"]
 	path = libs/axisjoystick/AxisJoystick
 	url = https://github.com/YuriiSalimov/AxisJoystick
-[submodule "official-libs/liquid-crystal/LiquidCrystal"]
-	path = official-libs/liquid-crystal/LiquidCrystal
-	url = https://github.com/arduino-libraries/LiquidCrystal.git
-[submodule "official-libs/sd/SD"]
-	path = official-libs/sd/SD
-	url = https://github.com/arduino-libraries/SD.git
 [submodule "libs/jm_cppm/jm_CPPM"]
 	path = libs/jm_cppm/jm_CPPM
 	url = https://github.com/jmparatte/jm_CPPM

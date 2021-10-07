@@ -1,6 +1,6 @@
-add_library(m5stickcplus INTERFACE)
+add_library(pac-m5stickcplus INTERFACE)
 
-target_sources(m5stickcplus INTERFACE
+target_sources(pac-m5stickcplus INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5StickC-Plus/src/M5StickCPlus.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5StickC-Plus/src/AXP192.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/M5StickC-Plus/src/RTC.cpp"
@@ -176,7 +176,7 @@ target_sources(m5stickcplus INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/M5StickC-Plus/examples/Hat/YUN/yunBoard.h"
 )
 
-target_include_directories(m5stickcplus INTERFACE
+target_include_directories(pac-m5stickcplus INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/M5StickC-Plus/src"
 )
 
@@ -184,6 +184,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(m5stickcplus INTERFACE
+target_link_libraries(pac-m5stickcplus INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(promlokitransport INTERFACE)
+add_library(pac-promlokitransport INTERFACE)
 
-target_sources(promlokitransport INTERFACE
+target_sources(pac-promlokitransport INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-prom-loki-transport/src/PLTransport.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-prom-loki-transport/src/clients/MKRGSM1400Client.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-prom-loki-transport/src/clients/MKRWIFI1010Client.cpp"
@@ -23,7 +23,7 @@ target_sources(promlokitransport INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-prom-loki-transport/src/bear/brssl.h"
 )
 
-target_include_directories(promlokitransport INTERFACE
+target_include_directories(pac-promlokitransport INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-prom-loki-transport/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(promlokitransport INTERFACE
+target_link_libraries(pac-promlokitransport INTERFACE
     arduino-compat
 )

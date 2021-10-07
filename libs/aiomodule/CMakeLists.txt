@@ -1,6 +1,6 @@
-add_library(aiomodule INTERFACE)
+add_library(pac-aiomodule INTERFACE)
 
-target_sources(aiomodule INTERFACE
+target_sources(pac-aiomodule INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AIO-module-nodemcu-arduino/src/AIOModule.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AIO-module-nodemcu-arduino/src/socketIOClient/SocketIO_Client.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AIO-module-nodemcu-arduino/src/socketIOClient/SIOCommnuicationChannel.cpp"
@@ -16,7 +16,7 @@ target_sources(aiomodule INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AIO-module-nodemcu-arduino/src/command/AIOCommand.h"
 )
 
-target_include_directories(aiomodule INTERFACE
+target_include_directories(pac-aiomodule INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AIO-module-nodemcu-arduino/src"
 )
 
@@ -24,6 +24,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(aiomodule INTERFACE
+target_link_libraries(pac-aiomodule INTERFACE
     arduino-compat
 )

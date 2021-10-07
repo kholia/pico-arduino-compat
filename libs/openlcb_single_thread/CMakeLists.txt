@@ -1,6 +1,6 @@
-add_library(openlcb_single_thread INTERFACE)
+add_library(pac-openlcb_single_thread INTERFACE)
 
-target_sources(openlcb_single_thread INTERFACE
+target_sources(pac-openlcb_single_thread INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OpenLCB_Single_Thread/src/Tiva/tivacan.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OpenLCB_Single_Thread/src/Tiva/TivaCANv0.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/OpenLCB_Single_Thread/src/ESP32/ESPcan.cpp"
@@ -79,7 +79,7 @@ target_sources(openlcb_single_thread INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/OpenLCB_Single_Thread/examples/OlcbBasicNode/boardChoices.h"
 )
 
-target_include_directories(openlcb_single_thread INTERFACE
+target_include_directories(pac-openlcb_single_thread INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/OpenLCB_Single_Thread/src"
 )
 
@@ -87,6 +87,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(openlcb_single_thread INTERFACE
+target_link_libraries(pac-openlcb_single_thread INTERFACE
     arduino-compat
 )

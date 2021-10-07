@@ -1,6 +1,6 @@
-add_library(adafruit-seesaw-library INTERFACE)
+add_library(pac-adafruit-seesaw-library INTERFACE)
 
-target_sources(adafruit-seesaw-library INTERFACE
+target_sources(pac-adafruit-seesaw-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_Seesaw/Adafruit_seesaw.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_Seesaw/Adafruit_NeoKey_1x4.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_Seesaw/Adafruit_miniTFTWing.cpp"
@@ -20,7 +20,7 @@ target_sources(adafruit-seesaw-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_Seesaw/Adafruit_seesaw.h"
 )
 
-target_include_directories(adafruit-seesaw-library INTERFACE
+target_include_directories(pac-adafruit-seesaw-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_Seesaw"
 )
 
@@ -28,11 +28,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-busio)
-    add_subdirectory(../../libs/adafruit-busio build_adafruit-busio)
+if (NOT TARGET pac-adafruit-busio)
+    add_subdirectory(../../libs/adafruit-busio build_pac-adafruit-busio)
 endif()
 
-target_link_libraries(adafruit-seesaw-library INTERFACE
+target_link_libraries(pac-adafruit-seesaw-library INTERFACE
     arduino-compat
-    adafruit-busio
+    pac-adafruit-busio
 )

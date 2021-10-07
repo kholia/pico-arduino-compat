@@ -1,6 +1,6 @@
-add_library(seeed-arduino-rpcunified INTERFACE)
+add_library(pac-seeed-arduino-rpcunified INTERFACE)
 
-target_sources(seeed-arduino-rpcunified INTERFACE
+target_sources(pac-seeed-arduino-rpcunified INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_rpcUnified/src/rpc_unified_log.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_rpcUnified/src/erpc_Unified_init.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_rpcUnified/src/rtl_wifi/rpc_wifi_mdns.cpp"
@@ -245,7 +245,7 @@ target_sources(seeed-arduino-rpcunified INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_rpcUnified/src/erpc/erpc_transport_setup.h"
 )
 
-target_include_directories(seeed-arduino-rpcunified INTERFACE
+target_include_directories(pac-seeed-arduino-rpcunified INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Seeed_Arduino_rpcUnified/src"
 )
 
@@ -253,6 +253,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(seeed-arduino-rpcunified INTERFACE
+target_link_libraries(pac-seeed-arduino-rpcunified INTERFACE
     arduino-compat
 )

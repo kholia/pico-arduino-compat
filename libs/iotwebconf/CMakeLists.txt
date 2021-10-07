@@ -1,6 +1,6 @@
-add_library(iotwebconf INTERFACE)
+add_library(pac-iotwebconf INTERFACE)
 
-target_sources(iotwebconf INTERFACE
+target_sources(pac-iotwebconf INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IotWebConf/src/IotWebConfOptionalGroup.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IotWebConf/src/IotWebConfParameter.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/IotWebConf/src/IotWebConfMultipleWifi.cpp"
@@ -18,7 +18,7 @@ target_sources(iotwebconf INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/IotWebConf/src/IotWebConfTParameter.h"
 )
 
-target_include_directories(iotwebconf INTERFACE
+target_include_directories(pac-iotwebconf INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/IotWebConf/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(iotwebconf INTERFACE
+target_link_libraries(pac-iotwebconf INTERFACE
     arduino-compat
 )

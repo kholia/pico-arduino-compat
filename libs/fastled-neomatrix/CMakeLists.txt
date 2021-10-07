@@ -1,6 +1,6 @@
-add_library(fastled-neomatrix INTERFACE)
+add_library(pac-fastled-neomatrix INTERFACE)
 
-target_sources(fastled-neomatrix INTERFACE
+target_sources(pac-fastled-neomatrix INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FastLED_NeoMatrix/FastLED_NeoMatrix.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FastLED_NeoMatrix/FastLED_NeoMatrix.h"
   "${CMAKE_CURRENT_LIST_DIR}/FastLED_NeoMatrix/examples/fontzoom/fonts.h"
@@ -21,7 +21,7 @@ target_sources(fastled-neomatrix INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FastLED_NeoMatrix/examples/NeoMatrix_LEDMatrix/config.h"
 )
 
-target_include_directories(fastled-neomatrix INTERFACE
+target_include_directories(pac-fastled-neomatrix INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FastLED_NeoMatrix"
 )
 
@@ -29,11 +29,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET adafruit-gfx-library)
-    add_subdirectory(../../libs/adafruit-gfx-library build_adafruit-gfx-library)
+if (NOT TARGET pac-adafruit-gfx-library)
+    add_subdirectory(../../libs/adafruit-gfx-library build_pac-adafruit-gfx-library)
 endif()
 
-target_link_libraries(fastled-neomatrix INTERFACE
+target_link_libraries(pac-fastled-neomatrix INTERFACE
     arduino-compat
-    adafruit-gfx-library
+    pac-adafruit-gfx-library
 )

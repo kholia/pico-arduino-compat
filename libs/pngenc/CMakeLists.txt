@@ -1,6 +1,6 @@
-add_library(pngenc INTERFACE)
+add_library(pac-pngenc INTERFACE)
 
-target_sources(pngenc INTERFACE
+target_sources(pac-pngenc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PNGenc/linux/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PNGenc/src/PNGenc.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/PNGenc/src/zutil.c"
@@ -18,7 +18,7 @@ target_sources(pngenc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/PNGenc/src/crc32.h"
 )
 
-target_include_directories(pngenc INTERFACE
+target_include_directories(pac-pngenc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/PNGenc/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(pngenc INTERFACE
+target_link_libraries(pac-pngenc INTERFACE
     arduino-compat
 )

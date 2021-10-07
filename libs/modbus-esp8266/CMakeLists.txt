@@ -1,6 +1,6 @@
-add_library(modbus-esp8266 INTERFACE)
+add_library(pac-modbus-esp8266 INTERFACE)
 
-target_sources(modbus-esp8266 INTERFACE
+target_sources(pac-modbus-esp8266 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/modbus-esp8266/src/Modbus.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/modbus-esp8266/src/ModbusRTU.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/modbus-esp8266/src/ModbusEthernet.h"
@@ -20,7 +20,7 @@ target_sources(modbus-esp8266 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/modbus-esp8266/tests/read.h"
 )
 
-target_include_directories(modbus-esp8266 INTERFACE
+target_include_directories(pac-modbus-esp8266 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/modbus-esp8266/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(modbus-esp8266 INTERFACE
+target_link_libraries(pac-modbus-esp8266 INTERFACE
     arduino-compat
 )

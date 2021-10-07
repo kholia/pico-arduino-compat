@@ -1,6 +1,6 @@
-add_library(ftoled INTERFACE)
+add_library(pac-ftoled INTERFACE)
 
-target_sources(ftoled INTERFACE
+target_sources(pac-ftoled INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FTOLED/FTOLED.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FTOLED/FTOLED_BMP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/FTOLED/FTOLED_TextBox.cpp"
@@ -22,7 +22,7 @@ target_sources(ftoled INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FTOLED/examples/sprite/frames.h"
 )
 
-target_include_directories(ftoled INTERFACE
+target_include_directories(pac-ftoled INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FTOLED"
 )
 
@@ -30,11 +30,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(ftoled INTERFACE
+target_link_libraries(pac-ftoled INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

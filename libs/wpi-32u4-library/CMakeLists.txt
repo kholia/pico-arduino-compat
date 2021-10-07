@@ -1,6 +1,6 @@
-add_library(wpi-32u4-library INTERFACE)
+add_library(pac-wpi-32u4-library INTERFACE)
 
-target_sources(wpi-32u4-library INTERFACE
+target_sources(pac-wpi-32u4-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/wpi-32u4-library/src/Timer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/wpi-32u4-library/src/Pushbutton.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/wpi-32u4-library/src/Gyro.cpp"
@@ -32,7 +32,7 @@ target_sources(wpi-32u4-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/wpi-32u4-library/examples/RotationResist/TurnSensor.h"
 )
 
-target_include_directories(wpi-32u4-library INTERFACE
+target_include_directories(pac-wpi-32u4-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/wpi-32u4-library/src"
 )
 
@@ -40,6 +40,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wpi-32u4-library INTERFACE
+target_link_libraries(pac-wpi-32u4-library INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(nokia5110_text INTERFACE)
+add_library(pac-nokia5110_text INTERFACE)
 
-target_sources(nokia5110_text INTERFACE
+target_sources(pac-nokia5110_text INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NOKIA5110_TEXT/src/NOKIA5110_TEXT.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/NOKIA5110_TEXT/src/NOKIA5110_TEXT_FONT_SIX.h"
   "${CMAKE_CURRENT_LIST_DIR}/NOKIA5110_TEXT/src/NOKIA5110_TEXT_FONT_SEVEN.h"
@@ -14,7 +14,7 @@ target_sources(nokia5110_text INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/NOKIA5110_TEXT/src/NOKIA5110_TEXT_FONT_THREE.h"
 )
 
-target_include_directories(nokia5110_text INTERFACE
+target_include_directories(pac-nokia5110_text INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/NOKIA5110_TEXT/src"
 )
 
@@ -22,6 +22,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(nokia5110_text INTERFACE
+target_link_libraries(pac-nokia5110_text INTERFACE
     arduino-compat
 )

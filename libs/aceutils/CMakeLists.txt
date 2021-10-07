@@ -1,6 +1,6 @@
-add_library(aceutils INTERFACE)
+add_library(pac-aceutils INTERFACE)
 
-target_sources(aceutils INTERFACE
+target_sources(pac-aceutils INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceUtils/src/crc_eeprom/CrcEeprom.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceUtils/src/buffered_eeprom_stm32/BufferedEEPROMClass.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceUtils/src/cli/ChannelProcessorCoroutine.cpp"
@@ -29,7 +29,7 @@ target_sources(aceutils INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceUtils/src/freemem/freemem.h"
 )
 
-target_include_directories(aceutils INTERFACE
+target_include_directories(pac-aceutils INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AceUtils/src"
 )
 
@@ -37,6 +37,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(aceutils INTERFACE
+target_link_libraries(pac-aceutils INTERFACE
     arduino-compat
 )

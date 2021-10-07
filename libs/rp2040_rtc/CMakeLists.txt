@@ -1,6 +1,6 @@
-add_library(rp2040_rtc INTERFACE)
+add_library(pac-rp2040_rtc INTERFACE)
 
-target_sources(rp2040_rtc INTERFACE
+target_sources(pac-rp2040_rtc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RP2040_RTC/LibraryPatches/UIPEthernet/UIPEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RP2040_RTC/LibraryPatches/UIPEthernet/utility/Enc28J60Network.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/RP2040_RTC/LibraryPatches/UIPEthernet-2.0.9/UIPEthernet.cpp"
@@ -36,7 +36,7 @@ target_sources(rp2040_rtc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/RP2040_RTC/examples/Time/RP2040_RTC_Time_WiFiNINA/defines.h"
 )
 
-target_include_directories(rp2040_rtc INTERFACE
+target_include_directories(pac-rp2040_rtc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/RP2040_RTC/src"
 )
 
@@ -44,6 +44,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(rp2040_rtc INTERFACE
+target_link_libraries(pac-rp2040_rtc INTERFACE
     arduino-compat
 )

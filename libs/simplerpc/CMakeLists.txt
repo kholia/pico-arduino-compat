@@ -1,6 +1,6 @@
-add_library(simplerpc INTERFACE)
+add_library(pac-simplerpc INTERFACE)
 
-target_sources(simplerpc INTERFACE
+target_sources(pac-simplerpc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/simpleRPC/src/plugins/half_duplex/stream.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/simpleRPC/src/defs.h"
   "${CMAKE_CURRENT_LIST_DIR}/simpleRPC/src/simpleRPC.h"
@@ -12,7 +12,7 @@ target_sources(simplerpc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/simpleRPC/tests/plugins/Wire.h"
 )
 
-target_include_directories(simplerpc INTERFACE
+target_include_directories(pac-simplerpc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/simpleRPC/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(simplerpc INTERFACE
+target_link_libraries(pac-simplerpc INTERFACE
     arduino-compat
 )

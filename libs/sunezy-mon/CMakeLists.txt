@@ -1,6 +1,6 @@
-add_library(sunezy-mon INTERFACE)
+add_library(pac-sunezy-mon INTERFACE)
 
-target_sources(sunezy-mon INTERFACE
+target_sources(pac-sunezy-mon INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-pv/inverter.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-pv/frame.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-pv/status.cpp"
@@ -10,7 +10,7 @@ target_sources(sunezy-mon INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-pv/debug.h"
 )
 
-target_include_directories(sunezy-mon INTERFACE
+target_include_directories(pac-sunezy-mon INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-pv"
 )
 
@@ -18,6 +18,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sunezy-mon INTERFACE
+target_link_libraries(pac-sunezy-mon INTERFACE
     arduino-compat
 )

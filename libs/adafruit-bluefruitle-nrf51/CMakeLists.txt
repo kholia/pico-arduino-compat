@@ -1,6 +1,6 @@
-add_library(adafruit-bluefruitle-nrf51 INTERFACE)
+add_library(pac-adafruit-bluefruitle-nrf51 INTERFACE)
 
-target_sources(adafruit-bluefruitle-nrf51 INTERFACE
+target_sources(pac-adafruit-bluefruitle-nrf51 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_BluefruitLE_nRF51/Adafruit_BluefruitLE_SPI.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_BluefruitLE_nRF51/Adafruit_BluefruitLE_UART.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_BluefruitLE_nRF51/Adafruit_BLEBattery.cpp"
@@ -54,7 +54,7 @@ target_sources(adafruit-bluefruitle-nrf51 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_BluefruitLE_nRF51/utility/sdep.h"
 )
 
-target_include_directories(adafruit-bluefruitle-nrf51 INTERFACE
+target_include_directories(pac-adafruit-bluefruitle-nrf51 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_BluefruitLE_nRF51"
 )
 
@@ -62,6 +62,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(adafruit-bluefruitle-nrf51 INTERFACE
+target_link_libraries(pac-adafruit-bluefruitle-nrf51 INTERFACE
     arduino-compat
 )

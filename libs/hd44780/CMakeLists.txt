@@ -1,6 +1,6 @@
-add_library(hd44780 INTERFACE)
+add_library(pac-hd44780 INTERFACE)
 
-target_sources(hd44780 INTERFACE
+target_sources(pac-hd44780 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/hd44780/hd44780.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/hd44780/hd44780.h"
   "${CMAKE_CURRENT_LIST_DIR}/hd44780/hd44780ioClass/hd44780_I2Cexp.h"
@@ -12,7 +12,7 @@ target_sources(hd44780 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/hd44780/hd44780ioClass/hd44780_NTCU20025ECPB_pinIO.h"
 )
 
-target_include_directories(hd44780 INTERFACE
+target_include_directories(pac-hd44780 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/hd44780"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(hd44780 INTERFACE
+target_link_libraries(pac-hd44780 INTERFACE
     arduino-compat
 )

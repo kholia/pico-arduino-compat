@@ -1,6 +1,6 @@
-add_library(acecrc INTERFACE)
+add_library(pac-acecrc INTERFACE)
 
-target_sources(acecrc INTERFACE
+target_sources(pac-acecrc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceCRC/src/ace_crc/crc8_bit.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceCRC/src/ace_crc/crc8_nibblem.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceCRC/src/ace_crc/crc32_nibble.cpp"
@@ -30,7 +30,7 @@ target_sources(acecrc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceCRC/examples/benchmarks/CpuBenchmark/Benchmark.h"
 )
 
-target_include_directories(acecrc INTERFACE
+target_include_directories(pac-acecrc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AceCRC/src"
 )
 
@@ -38,6 +38,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(acecrc INTERFACE
+target_link_libraries(pac-acecrc INTERFACE
     arduino-compat
 )

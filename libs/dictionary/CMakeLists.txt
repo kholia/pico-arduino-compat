@@ -1,6 +1,6 @@
-add_library(dictionary INTERFACE)
+add_library(pac-dictionary INTERFACE)
 
-target_sources(dictionary INTERFACE
+target_sources(pac-dictionary INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Dictionary/src/BufferStream/ReadBufferStream.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Dictionary/src/BufferStream/BaseBufferStream.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Dictionary/src/BufferStream/WriteBufferStream.cpp"
@@ -23,7 +23,7 @@ target_sources(dictionary INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Dictionary/src/smaz/smaz.h"
 )
 
-target_include_directories(dictionary INTERFACE
+target_include_directories(pac-dictionary INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Dictionary/src"
 )
 
@@ -31,6 +31,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(dictionary INTERFACE
+target_link_libraries(pac-dictionary INTERFACE
     arduino-compat
 )

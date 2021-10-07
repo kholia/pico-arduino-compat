@@ -1,6 +1,6 @@
-add_library(timoneltwim INTERFACE)
+add_library(pac-timoneltwim INTERFACE)
 
-target_sources(timoneltwim INTERFACE
+target_sources(pac-timoneltwim INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Nb_TimonelTwiM/src/TimonelTwiM.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Nb_TimonelTwiM/examples/PlatformIO/timonel-twim-ss/src/timonel-twim-ss.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Nb_TimonelTwiM/examples/PlatformIO/timonel-twim-ms/src/timonel-twim-ms.cpp"
@@ -21,7 +21,7 @@ target_sources(timoneltwim INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Nb_TimonelTwiM/examples/PlatformIO/timonel-twim-ms/data/payloads/payload.h"
 )
 
-target_include_directories(timoneltwim INTERFACE
+target_include_directories(pac-timoneltwim INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Nb_TimonelTwiM/src"
 )
 
@@ -29,6 +29,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(timoneltwim INTERFACE
+target_link_libraries(pac-timoneltwim INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(alternativelss INTERFACE)
+add_library(pac-alternativelss INTERFACE)
 
-target_sources(alternativelss INTERFACE
+target_sources(pac-alternativelss INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AlternativeLSS/src/LssCommunication.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AlternativeLSS/src/LynxmotionLSS.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AlternativeLSS/examples/LssUnitTests/LssTesting.cpp"
@@ -13,7 +13,7 @@ target_sources(alternativelss INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AlternativeLSS/examples/LssUnitTests/LssTesting.h"
 )
 
-target_include_directories(alternativelss INTERFACE
+target_include_directories(pac-alternativelss INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AlternativeLSS/src"
 )
 
@@ -21,6 +21,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(alternativelss INTERFACE
+target_link_libraries(pac-alternativelss INTERFACE
     arduino-compat
 )

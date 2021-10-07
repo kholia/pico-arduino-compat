@@ -1,6 +1,6 @@
-add_library(aceroutine INTERFACE)
+add_library(pac-aceroutine INTERFACE)
 
-target_sources(aceroutine INTERFACE
+target_sources(pac-aceroutine INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceRoutine/src/ace_routine/Coroutine.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceRoutine/src/ace_routine/testing/TestableClockInterface.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/AceRoutine/examples/SoundManager/SoundManagerRoutine.cpp"
@@ -17,7 +17,7 @@ target_sources(aceroutine INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/AceRoutine/examples/SoundManager/SoundRoutine.h"
 )
 
-target_include_directories(aceroutine INTERFACE
+target_include_directories(pac-aceroutine INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/AceRoutine/src"
 )
 
@@ -25,6 +25,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(aceroutine INTERFACE
+target_link_libraries(pac-aceroutine INTERFACE
     arduino-compat
 )

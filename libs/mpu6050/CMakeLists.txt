@@ -1,6 +1,6 @@
-add_library(mpu6050 INTERFACE)
+add_library(pac-mpu6050 INTERFACE)
 
-target_sources(mpu6050 INTERFACE
+target_sources(pac-mpu6050 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mpu6050/src/MPU6050.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/mpu6050/src/I2Cdev.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/mpu6050/src/MPU6050_6Axis_MotionApps_V6_12.h"
@@ -11,7 +11,7 @@ target_sources(mpu6050 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/mpu6050/src/MPU6050.h"
 )
 
-target_include_directories(mpu6050 INTERFACE
+target_include_directories(pac-mpu6050 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/mpu6050/src"
 )
 
@@ -19,6 +19,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mpu6050 INTERFACE
+target_link_libraries(pac-mpu6050 INTERFACE
     arduino-compat
 )

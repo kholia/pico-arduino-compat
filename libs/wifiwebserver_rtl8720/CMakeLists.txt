@@ -1,6 +1,6 @@
-add_library(wifiwebserver_rtl8720 INTERFACE)
+add_library(pac-wifiwebserver_rtl8720 INTERFACE)
 
-target_sources(wifiwebserver_rtl8720 INTERFACE
+target_sources(pac-wifiwebserver_rtl8720 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiWebServer_RTL8720/src/libb64/base64.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiWebServer_RTL8720/src/RTL8720_HTTPClient/RTL8720_URLEncoder.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiWebServer_RTL8720/src/RTL8720_HTTPClient/RTL8720_HttpClient.cpp"
@@ -54,7 +54,7 @@ target_sources(wifiwebserver_rtl8720 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiWebServer_RTL8720/examples/MQTT_ThingStream/defines.h"
 )
 
-target_include_directories(wifiwebserver_rtl8720 INTERFACE
+target_include_directories(pac-wifiwebserver_rtl8720 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WiFiWebServer_RTL8720/src"
 )
 
@@ -62,6 +62,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wifiwebserver_rtl8720 INTERFACE
+target_link_libraries(pac-wifiwebserver_rtl8720 INTERFACE
     arduino-compat
 )

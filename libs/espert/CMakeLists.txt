@@ -1,6 +1,6 @@
-add_library(espert INTERFACE)
+add_library(pac-espert INTERFACE)
 
-target_sources(espert INTERFACE
+target_sources(pac-espert INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESPert/src/JS_HttpClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESPert/src/ESPert.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESPert/examples/_9100_Game_All_in_One/PacMan.cpp"
@@ -67,7 +67,7 @@ target_sources(espert INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESPert/examples/_9003_Game_Pac-Man/Game.h"
 )
 
-target_include_directories(espert INTERFACE
+target_include_directories(pac-espert INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESPert/src"
 )
 
@@ -75,6 +75,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(espert INTERFACE
+target_link_libraries(pac-espert INTERFACE
     arduino-compat
 )

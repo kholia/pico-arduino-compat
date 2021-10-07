@@ -1,6 +1,6 @@
-add_library(google-cloud-iot-core-jwt INTERFACE)
+add_library(pac-google-cloud-iot-core-jwt INTERFACE)
 
-target_sources(google-cloud-iot-core-jwt INTERFACE
+target_sources(pac-google-cloud-iot-core-jwt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/google-cloud-iot-arduino/src/CloudIoTCoreMqtt.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/google-cloud-iot-arduino/src/CloudIoTCoreDevice.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/google-cloud-iot-arduino/src/jwt.cpp"
@@ -35,7 +35,7 @@ target_sources(google-cloud-iot-core-jwt INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/google-cloud-iot-arduino/examples/Esp32-lwmqtt/ciotc_config.h"
 )
 
-target_include_directories(google-cloud-iot-core-jwt INTERFACE
+target_include_directories(pac-google-cloud-iot-core-jwt INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/google-cloud-iot-arduino/src"
 )
 
@@ -43,6 +43,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(google-cloud-iot-core-jwt INTERFACE
+target_link_libraries(pac-google-cloud-iot-core-jwt INTERFACE
     arduino-compat
 )

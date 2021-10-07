@@ -1,6 +1,6 @@
-add_library(moduleinterface INTERFACE)
+add_library(pac-moduleinterface INTERFACE)
 
-target_sources(moduleinterface INTERFACE
+target_sources(pac-moduleinterface INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ModuleInterface/src/utils/MITime.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ModuleInterface/src/utils/MIUptime.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ModuleInterface/src/MI/ModuleInterface.cpp"
@@ -59,7 +59,7 @@ target_sources(moduleinterface INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ModuleInterface/examples/WebPage/WINDOWS_LINUX_LF/GenericModuleMasterMqtt/EventTester/stdafx.h"
 )
 
-target_include_directories(moduleinterface INTERFACE
+target_include_directories(pac-moduleinterface INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ModuleInterface/src"
 )
 
@@ -67,6 +67,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(moduleinterface INTERFACE
+target_link_libraries(pac-moduleinterface INTERFACE
     arduino-compat
 )

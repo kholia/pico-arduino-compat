@@ -1,6 +1,6 @@
-add_library(wio-3g-for-arduino INTERFACE)
+add_library(pac-wio-3g-for-arduino INTERFACE)
 
-target_sources(wio-3g-for-arduino INTERFACE
+target_sources(pac-wio-3g-for-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Wio_3G_for_Arduino/src/Wio3GClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Wio_3G_for_Arduino/src/Wio3GHardware.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Wio_3G_for_Arduino/src/Wio3G.cpp"
@@ -25,7 +25,7 @@ target_sources(wio-3g-for-arduino INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Wio_3G_for_Arduino/src/Internal/slre.901d42c/slre.h"
 )
 
-target_include_directories(wio-3g-for-arduino INTERFACE
+target_include_directories(pac-wio-3g-for-arduino INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Wio_3G_for_Arduino/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wio-3g-for-arduino INTERFACE
+target_link_libraries(pac-wio-3g-for-arduino INTERFACE
     arduino-compat
 )

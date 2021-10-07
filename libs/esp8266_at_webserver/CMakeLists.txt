@@ -1,6 +1,6 @@
-add_library(esp8266_at_webserver INTERFACE)
+add_library(pac-esp8266_at_webserver INTERFACE)
 
-target_sources(esp8266_at_webserver INTERFACE
+target_sources(pac-esp8266_at_webserver INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP8266_AT_WebServer/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B112_ublox/variant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP8266_AT_WebServer/Packages_Patches/adafruit/hardware/nrf52/1.0.0/variants/NINA_B302_ublox/variant.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP8266_AT_WebServer/Packages_Patches/adafruit/hardware/nrf52/0.20.5/variants/NINA_B112_ublox/variant.cpp"
@@ -133,7 +133,7 @@ target_sources(esp8266_at_webserver INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP8266_AT_WebServer/examples/MQTT_ThingStream/defines.h"
 )
 
-target_include_directories(esp8266_at_webserver INTERFACE
+target_include_directories(pac-esp8266_at_webserver INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESP8266_AT_WebServer/src"
 )
 
@@ -141,6 +141,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(esp8266_at_webserver INTERFACE
+target_link_libraries(pac-esp8266_at_webserver INTERFACE
     arduino-compat
 )

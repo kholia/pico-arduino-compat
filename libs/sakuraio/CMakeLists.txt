@@ -1,6 +1,6 @@
-add_library(sakuraio INTERFACE)
+add_library(pac-sakuraio INTERFACE)
 
-target_sources(sakuraio INTERFACE
+target_sources(pac-sakuraio INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SakuraIOArduino/src/SakuraIOUtils.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SakuraIOArduino/src/SakuraIOAlphaCompat.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/SakuraIOArduino/src/SakuraIO.cpp"
@@ -34,7 +34,7 @@ target_sources(sakuraio INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/SakuraIOArduino/examples/Shell/ntshell/util/ntopt.h"
 )
 
-target_include_directories(sakuraio INTERFACE
+target_include_directories(pac-sakuraio INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/SakuraIOArduino/src"
 )
 
@@ -42,6 +42,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(sakuraio INTERFACE
+target_link_libraries(pac-sakuraio INTERFACE
     arduino-compat
 )

@@ -1,6 +1,6 @@
-add_library(mcci-arduino-lorawan-library INTERFACE)
+add_library(pac-mcci-arduino-lorawan-library INTERFACE)
 
-target_sources(mcci-arduino-lorawan-library INTERFACE
+target_sources(pac-mcci-arduino-lorawan-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lorawan/src/lib/ttn_kr920_netbeginregioninit.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lorawan/src/lib/arduino_lorawan_loop.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lorawan/src/lib/ttn_eu868_netjoin.cpp"
@@ -96,7 +96,7 @@ target_sources(mcci-arduino-lorawan-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/arduino-lorawan/src/Arduino_LoRaWAN_Senet.h"
 )
 
-target_include_directories(mcci-arduino-lorawan-library INTERFACE
+target_include_directories(pac-mcci-arduino-lorawan-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/arduino-lorawan/src"
 )
 
@@ -104,6 +104,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(mcci-arduino-lorawan-library INTERFACE
+target_link_libraries(pac-mcci-arduino-lorawan-library INTERFACE
     arduino-compat
 )

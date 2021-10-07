@@ -1,6 +1,6 @@
-add_library(iotappstory-esp INTERFACE)
+add_library(pac-iotappstory-esp INTERFACE)
 
-target_sources(iotappstory-esp INTERFACE
+target_sources(pac-iotappstory-esp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP-Library/src/IOTAppStory.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP-Library/src/espressif/ConfigServer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ESP-Library/src/espressif/WiFiConnector.cpp"
@@ -33,7 +33,7 @@ target_sources(iotappstory-esp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ESP-Library/examples/LOLIN(WEMOS) D1 mini/Wemos-IASLoader/logo.h"
 )
 
-target_include_directories(iotappstory-esp INTERFACE
+target_include_directories(pac-iotappstory-esp INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ESP-Library/src"
 )
 
@@ -41,6 +41,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(iotappstory-esp INTERFACE
+target_link_libraries(pac-iotappstory-esp INTERFACE
     arduino-compat
 )

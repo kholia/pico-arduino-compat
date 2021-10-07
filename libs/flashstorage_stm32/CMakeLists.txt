@@ -1,6 +1,6 @@
-add_library(flashstorage_stm32 INTERFACE)
+add_library(pac-flashstorage_stm32 INTERFACE)
 
-target_sources(flashstorage_stm32 INTERFACE
+target_sources(pac-flashstorage_stm32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FlashStorage_STM32/src/utility/stm32_eeprom.hpp"
   "${CMAKE_CURRENT_LIST_DIR}/FlashStorage_STM32/Packages_Patches/STM32/hardware/stm32/1.9.0/variants/NUCLEO_L053R8/variant.h"
   "${CMAKE_CURRENT_LIST_DIR}/FlashStorage_STM32/Packages_Patches/STM32/hardware/stm32/1.9.0/variants/NUCLEO_F767ZI/variant.h"
@@ -18,7 +18,7 @@ target_sources(flashstorage_stm32 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/FlashStorage_STM32/src/utility/stm32_eeprom.h"
 )
 
-target_include_directories(flashstorage_stm32 INTERFACE
+target_include_directories(pac-flashstorage_stm32 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/FlashStorage_STM32/src"
 )
 
@@ -26,6 +26,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(flashstorage_stm32 INTERFACE
+target_link_libraries(pac-flashstorage_stm32 INTERFACE
     arduino-compat
 )

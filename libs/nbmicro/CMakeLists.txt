@@ -1,6 +1,6 @@
-add_library(nbmicro INTERFACE)
+add_library(pac-nbmicro INTERFACE)
 
-target_sources(nbmicro INTERFACE
+target_sources(pac-nbmicro INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Nb_Micro/src/NbMicro.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Nb_Micro/examples/PlatformIO/timonel-twim-ss/src/timonel-twim-ss.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Nb_Micro/examples/PlatformIO/blink-twi-demo/blink-wires-ino-io/src/blink-wires-ino-io.cpp"
@@ -25,7 +25,7 @@ target_sources(nbmicro INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Nb_Micro/examples/PlatformIO/timonel-twim-ms/data/payloads/payload.h"
 )
 
-target_include_directories(nbmicro INTERFACE
+target_include_directories(pac-nbmicro INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Nb_Micro/src"
 )
 
@@ -33,6 +33,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(nbmicro INTERFACE
+target_link_libraries(pac-nbmicro INTERFACE
     arduino-compat
 )

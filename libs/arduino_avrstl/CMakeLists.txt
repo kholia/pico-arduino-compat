@@ -1,6 +1,6 @@
-add_library(arduino_avrstl INTERFACE)
+add_library(pac-arduino_avrstl INTERFACE)
 
-target_sources(arduino_avrstl INTERFACE
+target_sources(pac-arduino_avrstl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_AVRSTL/src/eh_alloc.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_AVRSTL/src/new_opnt.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_AVRSTL/src/iomanip.cpp"
@@ -53,7 +53,7 @@ target_sources(arduino_avrstl INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Arduino_AVRSTL/src/Arduino_AVRSTL.h"
 )
 
-target_include_directories(arduino_avrstl INTERFACE
+target_include_directories(pac-arduino_avrstl INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Arduino_AVRSTL/src"
 )
 
@@ -61,6 +61,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduino_avrstl INTERFACE
+target_link_libraries(pac-arduino_avrstl INTERFACE
     arduino-compat
 )

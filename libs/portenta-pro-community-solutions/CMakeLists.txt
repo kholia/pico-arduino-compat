@@ -1,6 +1,6 @@
-add_library(portenta-pro-community-solutions INTERFACE)
+add_library(pac-portenta-pro-community-solutions INTERFACE)
 
-target_sources(portenta-pro-community-solutions INTERFACE
+target_sources(pac-portenta-pro-community-solutions INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/portenta-pro-community-solutions/src/TinyMqttPortentaEthernet.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/portenta-pro-community-solutions/src/TinyMqttPortentaWifi.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/portenta-pro-community-solutions/src/StringIndexer.cpp"
@@ -22,7 +22,7 @@ target_sources(portenta-pro-community-solutions INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/portenta-pro-community-solutions/examples/b-portenta-h7-with-accessories/b-a-sensors/b-a-b-pixy2-SPI/Pixy2UART.h"
 )
 
-target_include_directories(portenta-pro-community-solutions INTERFACE
+target_include_directories(pac-portenta-pro-community-solutions INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/portenta-pro-community-solutions/src"
 )
 
@@ -30,6 +30,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(portenta-pro-community-solutions INTERFACE
+target_link_libraries(pac-portenta-pro-community-solutions INTERFACE
     arduino-compat
 )

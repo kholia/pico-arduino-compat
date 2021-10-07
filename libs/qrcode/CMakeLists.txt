@@ -1,6 +1,6 @@
-add_library(qrcode INTERFACE)
+add_library(pac-qrcode INTERFACE)
 
-target_sources(qrcode INTERFACE
+target_sources(pac-qrcode INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/QRCode/tests/QrCode.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/QRCode/tests/run-tests.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/QRCode/tests/QrSegment.cpp"
@@ -12,7 +12,7 @@ target_sources(qrcode INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/QRCode/src/qrcode.h"
 )
 
-target_include_directories(qrcode INTERFACE
+target_include_directories(pac-qrcode INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/QRCode/src"
 )
 
@@ -20,6 +20,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(qrcode INTERFACE
+target_link_libraries(pac-qrcode INTERFACE
     arduino-compat
 )

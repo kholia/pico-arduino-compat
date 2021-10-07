@@ -1,6 +1,6 @@
-add_library(msgpack INTERFACE)
+add_library(pac-msgpack INTERFACE)
 
-target_sources(msgpack INTERFACE
+target_sources(pac-msgpack INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MsgPack/tests/original/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MsgPack/tests/cpp/main.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/MsgPack/MsgPack.h"
@@ -43,7 +43,7 @@ target_sources(msgpack INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/MsgPack/MsgPack/util/DebugLog/DebugLog/util/ArxContainer/ArxContainer/has_libstdcplusplus.h"
 )
 
-target_include_directories(msgpack INTERFACE
+target_include_directories(pac-msgpack INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/MsgPack"
 )
 
@@ -51,6 +51,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(msgpack INTERFACE
+target_link_libraries(pac-msgpack INTERFACE
     arduino-compat
 )

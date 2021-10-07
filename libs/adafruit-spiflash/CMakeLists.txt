@@ -1,6 +1,6 @@
-add_library(adafruit-spiflash INTERFACE)
+add_library(pac-adafruit-spiflash INTERFACE)
 
-target_sources(adafruit-spiflash INTERFACE
+target_sources(pac-adafruit-spiflash INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_SPIFlash/src/Adafruit_FlashCache.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_SPIFlash/src/Adafruit_SPIFlashBase.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_SPIFlash/src/Adafruit_SPIFlash.cpp"
@@ -22,7 +22,7 @@ target_sources(adafruit-spiflash INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/Adafruit_SPIFlash/examples/SdFat_format/ff.h"
 )
 
-target_include_directories(adafruit-spiflash INTERFACE
+target_include_directories(pac-adafruit-spiflash INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/Adafruit_SPIFlash/src"
 )
 
@@ -30,6 +30,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(adafruit-spiflash INTERFACE
+target_link_libraries(pac-adafruit-spiflash INTERFACE
     arduino-compat
 )

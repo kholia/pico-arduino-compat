@@ -1,6 +1,6 @@
-add_library(ethernetenc INTERFACE)
+add_library(pac-ethernetenc INTERFACE)
 
-target_sources(ethernetenc INTERFACE
+target_sources(pac-ethernetenc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EthernetENC/src/EthernetClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EthernetENC/src/EthernetUdp.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/EthernetENC/src/Ethernet.cpp"
@@ -31,7 +31,7 @@ target_sources(ethernetenc INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/EthernetENC/src/utility/enc28j60.h"
 )
 
-target_include_directories(ethernetenc INTERFACE
+target_include_directories(pac-ethernetenc INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/EthernetENC/src"
 )
 
@@ -39,6 +39,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(ethernetenc INTERFACE
+target_link_libraries(pac-ethernetenc INTERFACE
     arduino-compat
 )

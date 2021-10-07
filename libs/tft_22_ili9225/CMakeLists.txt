@@ -1,6 +1,6 @@
-add_library(tft_22_ili9225 INTERFACE)
+add_library(pac-tft_22_ili9225 INTERFACE)
 
-target_sources(tft_22_ili9225 INTERFACE
+target_sources(pac-tft_22_ili9225 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TFT_22_ILI9225/src/TFT_22_ILI9225.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/TFT_22_ILI9225/src/DefaultFonts.c"
   "${CMAKE_CURRENT_LIST_DIR}/TFT_22_ILI9225/fonts/FreeSerifBold24pt7b.h"
@@ -66,7 +66,7 @@ target_sources(tft_22_ili9225 INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/TFT_22_ILI9225/src/TFT_22_ILI9225.h"
 )
 
-target_include_directories(tft_22_ili9225 INTERFACE
+target_include_directories(pac-tft_22_ili9225 INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/TFT_22_ILI9225/src"
 )
 
@@ -74,6 +74,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(tft_22_ili9225 INTERFACE
+target_link_libraries(pac-tft_22_ili9225 INTERFACE
     arduino-compat
 )

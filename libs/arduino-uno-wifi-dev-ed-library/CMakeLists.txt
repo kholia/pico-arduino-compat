@@ -1,6 +1,6 @@
-add_library(arduino-uno-wifi-dev-ed-library INTERFACE)
+add_library(pac-arduino-uno-wifi-dev-ed-library INTERFACE)
 
-target_sources(arduino-uno-wifi-dev-ed-library INTERFACE
+target_sources(pac-arduino-uno-wifi-dev-ed-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/UnoWiFi-Developer-Edition-Lib/src/UnoWiFiDevEd.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/UnoWiFi-Developer-Edition-Lib/src/lib/FP.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/UnoWiFi-Developer-Edition-Lib/src/lib/mqtt.cpp"
@@ -20,7 +20,7 @@ target_sources(arduino-uno-wifi-dev-ed-library INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/UnoWiFi-Developer-Edition-Lib/src/lib/ringbuf.h"
 )
 
-target_include_directories(arduino-uno-wifi-dev-ed-library INTERFACE
+target_include_directories(pac-arduino-uno-wifi-dev-ed-library INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/UnoWiFi-Developer-Edition-Lib/src"
 )
 
@@ -28,6 +28,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduino-uno-wifi-dev-ed-library INTERFACE
+target_link_libraries(pac-arduino-uno-wifi-dev-ed-library INTERFACE
     arduino-compat
 )

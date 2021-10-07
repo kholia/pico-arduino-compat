@@ -1,6 +1,6 @@
-add_library(dccpp INTERFACE)
+add_library(pac-dccpp INTERFACE)
 
-target_sources(dccpp INTERFACE
+target_sources(pac-dccpp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DCCpp/VStudio/ArduinoIno.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DCCpp/src/Turnout.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/DCCpp/src/CurrentMonitor.cpp"
@@ -26,7 +26,7 @@ target_sources(dccpp INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/DCCpp/src/PacketRegister.h"
 )
 
-target_include_directories(dccpp INTERFACE
+target_include_directories(pac-dccpp INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/DCCpp/src"
 )
 
@@ -34,6 +34,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(dccpp INTERFACE
+target_link_libraries(pac-dccpp INTERFACE
     arduino-compat
 )

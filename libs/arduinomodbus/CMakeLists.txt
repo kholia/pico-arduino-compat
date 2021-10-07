@@ -1,6 +1,6 @@
-add_library(arduinomodbus INTERFACE)
+add_library(pac-arduinomodbus INTERFACE)
 
-target_sources(arduinomodbus INTERFACE
+target_sources(pac-arduinomodbus INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoModbus/src/ModbusRTUServer.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoModbus/src/ModbusRTUClient.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoModbus/src/ModbusClient.cpp"
@@ -29,7 +29,7 @@ target_sources(arduinomodbus INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/ArduinoModbus/examples/TCP/WiFiModbusServerLED/arduino_secrets.h"
 )
 
-target_include_directories(arduinomodbus INTERFACE
+target_include_directories(pac-arduinomodbus INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/ArduinoModbus/src"
 )
 
@@ -37,6 +37,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(arduinomodbus INTERFACE
+target_link_libraries(pac-arduinomodbus INTERFACE
     arduino-compat
 )

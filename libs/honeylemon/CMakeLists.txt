@@ -1,6 +1,6 @@
-add_library(honeylemon INTERFACE)
+add_library(pac-honeylemon INTERFACE)
 
-target_sources(honeylemon INTERFACE
+target_sources(pac-honeylemon INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/HONEYLemon/src/HONEYLemon.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/HONEYLemon/src/lemon_utility.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/HONEYLemon/src/lemon_led_rgb_on_board.cpp"
@@ -144,7 +144,7 @@ target_sources(honeylemon INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/HONEYLemon/src/lib/ESP32Servo/ESP32Tone.h"
 )
 
-target_include_directories(honeylemon INTERFACE
+target_include_directories(pac-honeylemon INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/HONEYLemon/src"
 )
 
@@ -152,11 +152,11 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-if (NOT TARGET official-sd)
-    add_subdirectory(../../official-libs/sd build_official-sd)
+if (NOT TARGET pac-sd)
+    add_subdirectory(../../libs/sd build_pac-sd)
 endif()
 
-target_link_libraries(honeylemon INTERFACE
+target_link_libraries(pac-honeylemon INTERFACE
     arduino-compat
-    official-sd
+    pac-sd
 )

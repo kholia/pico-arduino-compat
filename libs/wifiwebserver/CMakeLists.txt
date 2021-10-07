@@ -1,6 +1,6 @@
-add_library(wifiwebserver INTERFACE)
+add_library(pac-wifiwebserver INTERFACE)
 
-target_sources(wifiwebserver INTERFACE
+target_sources(pac-wifiwebserver INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiWebServer/Packages_Patches/SparkFun/hardware/samd/1.8.3/cores/arduino51/Print.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiWebServer/Packages_Patches/SparkFun/hardware/samd/1.8.3/cores/arduino/Print.cpp"
   "${CMAKE_CURRENT_LIST_DIR}/WiFiWebServer/Packages_Patches/adafruit/hardware/nrf52/1.0.0/cores/nRF5/Print.cpp"
@@ -223,7 +223,7 @@ target_sources(wifiwebserver INTERFACE
   "${CMAKE_CURRENT_LIST_DIR}/WiFiWebServer/examples/MQTT_ThingStream/defines.h"
 )
 
-target_include_directories(wifiwebserver INTERFACE
+target_include_directories(pac-wifiwebserver INTERFACE
  "${CMAKE_CURRENT_LIST_DIR}/WiFiWebServer/src"
 )
 
@@ -231,6 +231,6 @@ if (NOT TARGET arduino-compat)
     add_subdirectory(../../arduino-compat build_arduino-compat)
 endif()
 
-target_link_libraries(wifiwebserver INTERFACE
+target_link_libraries(pac-wifiwebserver INTERFACE
     arduino-compat
 )
