@@ -51,6 +51,7 @@ target_include_directories(arduino-compat INTERFACE
     ${CMAKE_CURRENT_LIST_DIR}/arduino-pico/cores/rp2040/
     ${CMAKE_CURRENT_LIST_DIR}/arduino-pico/libraries/Wire/src/
     ${CMAKE_CURRENT_LIST_DIR}/arduino-pico/libraries/SPI/
+    ${CMAKE_CURRENT_LIST_DIR}/arduino-pico/cores/rp2040/api/deprecated
     ${CMAKE_CURRENT_LIST_DIR}/arduino-pico/cores/rp2040/api/deprecated-avr-comp
 )
 

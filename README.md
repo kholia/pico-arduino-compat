@@ -3,10 +3,9 @@ A compatibility layer that allows the use of Arduino libraries with the Pico C/C
     
 ## Installation
 
-Clone pico-arduino-compat into somewhere convenient. Here we'll use /home/fhdm-dev/pico
+Clone the pico-arduino-compat repository
 
 ````
-cd /home/fhdm-dev/pico
 git clone https://github.com/fhdm-dev/pico-arduino-compat.git
 ````
 
@@ -18,9 +17,14 @@ git submodule update --init arduino-compat/arduino-pico
 
 ## How to include an Arduino library into an existing project
 
+First find the library from the list [here](arduino-libraries.md). Take note of the ID and the cmake target name.
+
 Get the submodule for the library and dependent libraries
-eg. if we're including the adafruit-ssd1306 library
 ````
+
+# cd into libs/<id>
+# where id is the library ID you found previously
+# eg.
 cd libs/adafruit-ssd1306
 ./init.sh
 ````
@@ -32,11 +36,13 @@ eg.
 add_subdirectory(/home/fhdm-dev/pico/pico-arduino-compat/libs/adafruit-ssd1306)
 ````
 
+Add the library target name to target_link_libraries. Note that the target names all begin with 'pac-'
+
 eg.   
 ````
 target_link_libraries(boom
   pico_stdlib
-  adafruit-ssd1306
+  pac-adafruit-ssd1306
 )
 ````
 
