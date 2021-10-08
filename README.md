@@ -17,7 +17,7 @@ git submodule update --init arduino-compat/arduino-pico
 
 ## How to include an Arduino library into an existing project
 
-First find the library from the list [here](docs/README.md). Take note of the ID and the cmake target name.
+First find the library from the list [here](https://fhdm-dev.github.io/pico-arduino-compat/libraries.html). Take note of the ID and the cmake target name.
 
 Get the submodule for the library and dependent libraries
 ````
