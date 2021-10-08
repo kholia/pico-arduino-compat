@@ -17,7 +17,7 @@ target_link_libraries(text
     pac-adafruit-ssd1306
 )
 
-pico_set_binary_type(text no_flash)
+#pico_set_binary_type(text no_flash)
 
 # create map/bin/hex file etc.
 pico_add_extra_outputs(text)
@@ -33,7 +33,7 @@ target_link_libraries(graphics
     pac-adafruit-ssd1306
 )
 
-pico_set_binary_type(graphics no_flash)
+#pico_set_binary_type(graphics no_flash)
 
 # create map/bin/hex file etc.
 pico_add_extra_outputs(graphics)
