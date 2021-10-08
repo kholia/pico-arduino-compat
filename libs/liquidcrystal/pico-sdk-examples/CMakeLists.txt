@@ -18,7 +18,7 @@ target_link_libraries(hw
     pac-liquidcrystal
 )
 
-pico_set_binary_type(hw no_flash)
+#pico_set_binary_type(hw no_flash)
 
 # create map/bin/hex file etc.
 pico_add_extra_outputs(hw)
