@@ -1,4 +1,4 @@
-A C wrapper for the Adafruit_SSD1306 library.
+AC wrapper for the Adafruit_SSD1306 library.
 
 ## Usage
 
@@ -42,5 +42,4 @@ make
 ````
 
 ### Pin Assignments
-text-i2c - i2c1 gpio 10 & 11    
-ssd1306_128x32_i2c - i2c0, gpio 4 & 5    
+i2c0, gpio 4 & 5    
