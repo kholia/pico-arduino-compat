@@ -18,6 +18,8 @@ target_link_libraries(sram
     pac-sram_23lc
 )
 
+pico_enable_stdio_usb(sram 1)
+
 #pico_set_binary_type(sram no_flash)
 
 # create map/bin/hex file etc.

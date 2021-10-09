@@ -28,6 +28,9 @@
 #include "Arduino.h"
 #include "SPI.h"
 #include "SRAM_23LC.h"
+
+#include <tusb.h>
+#include <stdio.h>
 #include "pico/stdlib.h"
 
 // SPI bus can be SPI, SPI1 (if present), etc.
@@ -51,6 +54,7 @@ SRAM_23LC SRAM(&SPI_PERIPHERAL, CHIP_SELECT_PIN, SRAM_23K256);
 //uint8_t buffer[BUFFER_SIZE];
 //#define BUFFER_SIZE  320
 
+char c = '0';
 char write_buffer[] = "The MattairTech MT-D21E is a development board.";
 #define BUFFER_SIZE  (sizeof(write_buffer) / sizeof(uint8_t))
 char read_buffer[BUFFER_SIZE];
@@ -84,8 +88,8 @@ void loop(void)
   }
 
   // Clear buffers
-  memset(&read_buffer[0], 0xAA, BUFFER_SIZE);
-  memset(&write_buffer[0], 0x00, BUFFER_SIZE);
+  //memset(&read_buffer[0], 0xAA, BUFFER_SIZE);
+  //memset(&write_buffer[0], 0x00, BUFFER_SIZE);
 
   // Read Byte, print to serial monitor
   Serial.print("Read Byte:  ");
@@ -95,7 +99,12 @@ void loop(void)
   }
   Serial.println();
 
-  strcpy(write_buffer, "Hello World!");
+  // Change first char
+  write_buffer[0] = c++;
+  write_buffer[BUFFER_SIZE-1] = c;
+  if (c >= 'z') {
+    c = '0';
+  }
 
   // Write Byte, print to serial monitor
   Serial.print("Write Byte:  ");
@@ -105,8 +114,8 @@ void loop(void)
   }
   Serial.println();
 
-  memset(&read_buffer[0], 0xBB, BUFFER_SIZE);
-  memset(&write_buffer[0], 0xFF, BUFFER_SIZE);
+  //memset(&read_buffer[0], 0xBB, BUFFER_SIZE);
+  //memset(&write_buffer[0], 0xFF, BUFFER_SIZE);
 
   // Read block
   Serial.print("Read Block:  ");
@@ -120,14 +129,27 @@ void loop(void)
   }
   Serial.println();
 
+  // Change first char
+  write_buffer[0] = c++;
+  write_buffer[BUFFER_SIZE-1] = c;
+  if (c >= 'z') {
+    c = '0';
+  }
   delay(1000);
 }
 
 int main() {
     stdio_init_all();
-    setup();
-    loop();
-    while(1) {
-        sleep_ms(1000);
+    while (!tud_cdc_connected()) {
+        sleep_ms(100);
     }
+
+  Serial.println("SRAM_Example");
+  sleep_ms(1000);
+  setup();
+  while(1) {
+    loop();
+    sleep_ms(1000);
+    Serial.println("\n################\n");
+  }
 }
