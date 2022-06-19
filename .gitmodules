@@ -1870,6 +1870,9 @@
 [submodule "libs/rp2040_isr_servo/RP2040_ISR_Servo"]
 	path = libs/rp2040_isr_servo/RP2040_ISR_Servo
 	url = https://github.com/khoih-prog/RP2040_ISR_Servo
+[submodule "libs/time/Time"]
+	path = libs/time/Time
+	url = https://github.com/PaulStoffregen/Time
 [submodule "libs/tinygpsplus/TinyGPSPlus"]
 	path = libs/tinygpsplus/TinyGPSPlus
 	url = https://github.com/Tinyu-Zhao/TinyGPSPlus
