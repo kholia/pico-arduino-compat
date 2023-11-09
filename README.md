@@ -6,7 +6,7 @@ A compatibility layer that allows the use of Arduino libraries with the Pico C/C
 Clone the pico-arduino-compat repository
 
 ````
-git clone https://github.com/fhdm-dev/pico-arduino-compat.git
+git clone https://github.com/kholia/pico-arduino-compat.git
 ````
 
 Get the arduino-pico submodule
