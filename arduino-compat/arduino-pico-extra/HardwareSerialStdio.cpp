@@ -51,6 +51,12 @@ size_t HardwareSerialStdio::write(uint8_t c) {
     return 1;
 }
 
+size_t HardwareSerialStdio::write(uint8_t *c, uint8_t n) {
+    for (int i = 0; i < n; i++)
+      ::putchar(c[i]);
+    return n;
+}
+
 void HardwareSerialStdio::read_next_char() {
     if (peeked >= 0) {
         // We already have a character

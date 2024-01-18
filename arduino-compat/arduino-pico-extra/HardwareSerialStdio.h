@@ -17,6 +17,7 @@ public:
     int availableForWrite(void);
     void flush(void);
     size_t write(uint8_t);
+    size_t write(uint8_t *c, uint8_t n);
     operator bool() override;
 
 private:
